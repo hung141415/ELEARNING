@@ -382,7 +382,7 @@ export default function Home() {
                   zIndex: 1
                 }} />
                 <img
-                  src="/image/cutout/1.png"
+                  src="/image/cutout/NEW.png"
                   alt="Thầy Phạm Việt Hưng - 985/990 TOEIC"
                   style={{
                     width: '100%',
