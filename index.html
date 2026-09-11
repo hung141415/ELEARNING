@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOEIC ALL-IN-ONE | Bứt Phá 650+ Đến 800+ TOEIC Trong 60 Ngày Cùng Thầy Phạm Việt Hưng</title>
+  <meta name="description" content="Khóa học TOEIC ALL-IN-ONE đột phá dành cho sinh viên và người đi làm. Lộ trình 60 ngày bứt phá điểm số chuẩn ETS cùng Thầy Phạm Việt Hưng 985 TOEIC. Nhận ngay 5 phần quà độc quyền trị giá 2.750.000đ.">
+
+  <!-- Google Fonts: Outfit (Display) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Claymorphism Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="public/image/Logo_navy.png">
+</head>
+<body>
+
+  <!-- Three.js 3D Background Canvas -->
+  <div id="webgl-canvas-container" aria-hidden="true"></div>
+
+  <!-- Live Social Proof Order Toast Notification -->
+  <div id="live-order-toast" class="live-toast" role="alert" aria-live="polite">
+    <div class="toast-avatar" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+    </div>
+    <div class="toast-text">
+      <div style="font-weight: 800; font-size: 0.92rem; color: var(--navy-900);">
+        <span id="toast-student-name">Nguyễn Hải Đăng</span>
+      </div>
+      <div style="font-size: 0.82rem; color: var(--slate-600);" id="toast-detail">
+        Đã giữ suất ưu đãi 499.000đ + 5 Quà tặng
+      </div>
+      <div style="font-size: 0.72rem; color: var(--accent-coral); font-weight: 700;" id="toast-time">
+        Vừa xong
+      </div>
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+
+    <!-- ==========================================
+         TOP BAR: URGENCY & SCARCITY COUNTDOWN
+         ========================================== -->
+    <aside class="top-alert-strip" aria-label="Thông báo ưu đãi">
+      <div class="container top-alert-content">
+        <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 700;">
+          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#FF5E36; box-shadow:0 0 8px #FF5E36;"></span>
+          ƯU ĐÃI ĐẶC BIỆT: Giảm 80% Học Phí Khóa TOEIC ALL-IN-ONE
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span>Ưu đãi kết thúc sau:</span>
+          <div class="timer-box" aria-label="Thời gian còn lại">
+            <span class="timer-hours">23</span>h : 
+            <span class="timer-minutes">47</span>m : 
+            <span class="timer-seconds">35</span>s
+          </div>
+        </div>
+        <div style="font-weight: 700; color: #FCD34D;">
+          Chỉ còn 15 suất ưu đãi 499.000 VNĐ hôm nay!
+        </div>
+      </div>
+    </aside>
+
+    <!-- ==========================================
+         STICKY NAVIGATION BAR
+         ========================================== -->
+    <header class="navbar-wrapper">
+      <div class="container">
+        <nav class="clay-nav" aria-label="Menu chính">
+          <a href="#" class="nav-brand" aria-label="TOEIC Mr H Trang chủ">
+            <img src="public/image/Logo_navy.png" alt="TOEIC Mr H - Your Goal Is Ours" class="brand-logo-img">
+            <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; color: var(--navy-900); letter-spacing: -0.01em;">
+              TOEIC <span style="color: var(--navy-600);">Mr H</span>
+            </span>
+          </a>
+
+          <ul class="nav-menu" role="list">
+            <li><a href="#noi-dau" class="nav-link">Vấn Đề</a></li>
+            <li><a href="#he-thong" class="nav-link">Phương Pháp</a></li>
+            <li><a href="#lo-trinh" class="nav-link">Lộ Trình 60 Ngày</a></li>
+            <li><a href="#qua-tang" class="nav-link">Quà Tặng (Bonus)</a></li>
+            <li><a href="#giang-vien" class="nav-link">Thầy Phạm Việt Hưng</a></li>
+            <li><a href="#faq" class="nav-link">Hỏi Đáp</a></li>
+          </ul>
+
+          <a href="#dang-ky" class="clay-btn clay-btn-primary nav-cta-btn pulse-cta">
+            <span>Giữ Suất 499K</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ==========================================
+         SECTION 1: HERO SECTION (TRANSFORMATION HOOK)
+         ========================================== -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text-col">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 1rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            HỆ THỐNG ĐÀO TẠO TOEIC ĐỘT PHÁ 2025 - 2026
+          </div>
+
+          <h1 class="hero-headline">
+            Bứt Phá <span class="text-gradient-navy">650+ Đến 800+ TOEIC</span> Trong 60 Ngày Dù Mất Gốc Hay Từng Thất Bại
+          </h1>
+
+          <p class="hero-subhead">
+            Giải pháp số All-in-One toàn diện cho Sinh viên & Người đi làm: Xóa bỏ nỗi sợ tiếng Anh, làm chủ phản xạ âm thanh ETS, giải đề 30s/câu với sự kèm cặp trực tiếp từ <strong>Thầy Phạm Việt Hưng (985/990 TOEIC)</strong>.
+          </p>
+
+          <div class="price-card-clay">
+            <div>
+              <div style="font-size: 0.85rem; color: var(--slate-600); font-weight: 600;">Học phí ưu đãi hôm nay:</div>
+              <div class="price-tag-big">499.000 <span style="font-size: 1.1rem;">VNĐ</span></div>
+            </div>
+            <div style="border-left: 1.5px solid var(--slate-200); padding-left: 1rem;">
+              <div class="price-strike">2.500.000 VNĐ</div>
+              <div class="discount-badge">TIẾT KIỆM 80%</div>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#dang-ky" class="clay-btn clay-btn-primary pulse-cta" style="font-size: 1.15rem; padding: 1.15rem 2.5rem;">
+              <span>ĐĂNG KÝ HỌC & GIỮ ƯU ĐÃI NGAY</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-guarantee-micro">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Cam kết chuẩn đầu ra bằng văn bản &bull; Hoàn tiền 100% nếu học đúng lộ trình không tiến bộ</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Cutout Portrait -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-clay-frame">
+            <img src="public/image/cutout/4.png" alt="Giảng viên Phạm Việt Hưng 985 TOEIC" class="hero-instructor-img">
+
+            <!-- Floating Clay Badge 1 -->
+            <div class="hero-float-badge-1">
+              <div class="float-stat-card">
+                <div class="stat-icon-clay">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; color: var(--navy-900); line-height:1.1;">985/990</div>
+                  <div style="font-size: 0.78rem; font-weight: 700; color: var(--slate-600);">Điểm TOEIC Giảng Viên</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Clay Badge 2 -->
+            <div class="hero-float-badge-2">
+              <div class="float-stat-card">
+                <div class="stat-icon-clay" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; color: var(--navy-900); line-height:1.1;">400+ Học Viên</div>
+                  <div style="font-size: 0.78rem; font-weight: 700; color: var(--slate-600);">Đã Bứt Phá Mục Tiêu</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TRUST STATS STRIP
+         ========================================== -->
+    <section class="trust-strip" aria-label="Thống kê uy tín">
+      <div class="container trust-inner">
+        <div class="trust-item">
+          <div class="trust-number">985</div>
+          <div>Chứng chỉ TOEIC Quốc Tế<br><span style="font-size: 0.82rem; color: var(--slate-600); font-weight: 500;">Xác thực bởi IIG Việt Nam</span></div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">5+ Năm</div>
+          <div>Kinh Nghiệm Giảng Dạy<br><span style="font-size: 0.82rem; color: var(--slate-600); font-weight: 500;">Chuyên sâu TOEIC 2 kỹ năng</span></div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">95.8%</div>
+          <div>Tỷ Lệ Đạt Target<br><span style="font-size: 0.82rem; color: var(--slate-600); font-weight: 500;">Học viên đạt hoặc vượt điểm kỳ vọng</span></div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-number">60 Ngày</div>
+          <div>Lộ Trình Tối Ưu Hóa<br><span style="font-size: 0.82rem; color: var(--slate-600); font-weight: 500;">Tiết kiệm 50% thời gian tự học mò mẫm</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: NỖI ĐAU & VÒNG XOÁY THẤT BẠI
+         ========================================== -->
+    <section class="section" id="noi-dau">
+      <div class="container">
+        <div class="text-center" style="max-width: 780px; margin: 0 auto;">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">THẤU HIỂU NỖI ĐAU CỦA BẠN</div>
+          <h2>Có Phải Bạn Đang Mắc Kẹt Trong “Vòng Xoáy Bế Tắc” Khi Học TOEIC?</h2>
+          <p style="color: var(--slate-600); margin-top: 1rem;">
+            <em>"Em đã cày rất nhiều đề thi thử trên mạng, học thuộc cả sổ tay từ vựng dày cộp nhưng khi làm bài thi thật điểm số vẫn mãi lẹt đẹt 350 - 450, không đủ điều kiện ra trường..."</em>
+          </p>
+        </div>
+
+        <div class="pain-grid">
+          <!-- Pain 1 -->
+          <article class="pain-card">
+            <span class="pain-number-tag" aria-hidden="true">01</span>
+            <div class="pain-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Nghe Như "Vịt Nghe Sấm"</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem;">
+              Băng đài đọc quá nhanh, các từ nối âm, nuốt âm dính liền nhau khiến bạn bị ngợp. Khi não vừa dịch xong câu trước thì băng đã đọc sang câu sau.
+            </p>
+          </article>
+
+          <!-- Pain 2 -->
+          <article class="pain-card">
+            <span class="pain-number-tag" aria-hidden="true">02</span>
+            <div class="pain-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Học Vẹt Trước - Quên Ngay Sau</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem;">
+              Chép hàng trăm từ vựng vào sổ nhưng học chay không ngữ cảnh. Vào đề thi nhìn mặt chữ thấy rất quen nhưng hoàn toàn không nhớ nổi nghĩa và cách dùng.
+            </p>
+          </article>
+
+          <!-- Pain 3 -->
+          <article class="pain-card">
+            <span class="pain-number-tag" aria-hidden="true">03</span>
+            <div class="pain-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Lạc Vào "Ma Trận" Ngữ Pháp</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem;">
+              Cố học thuộc toàn bộ ngữ pháp tiếng Anh hàn lâm khiến đầu óc quá tải. Làm Part 5 mất 1-2 phút/câu, đến Part 7 dài dằng dặc thì hết giờ phải đánh lụi.
+            </p>
+          </article>
+
+          <!-- Pain 4 -->
+          <article class="pain-card">
+            <span class="pain-number-tag" aria-hidden="true">04</span>
+            <div class="pain-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Thiếu Kỷ Luật & Người Đồng Hành</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem;">
+              Hừng hực khí thế mua tài liệu về nhưng tự học 3 bữa là nản lòng. Gặp câu khó không ai giải thích tận tường, dần sinh ra tâm lý sợ hãi tiếng Anh.
+            </p>
+          </article>
+
+          <!-- Pain 5 -->
+          <article class="pain-card">
+            <span class="pain-number-tag" aria-hidden="true">05</span>
+            <div class="pain-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Áp Lực Ra Trường & Bỏ Lỡ Cơ Hội</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem;">
+              Hạn nộp bằng chuẩn đầu ra tốt nghiệp cận kề; cơ hội việc làm lương 15 - 25 triệu tại các tập đoàn đa quốc gia bị vụt mất chỉ vì thiếu chứng chỉ TOEIC.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: 5 CÁCH HỌC CŨ ĐÃ THỬ NHƯNG THẤT BẠI
+         ========================================== -->
+    <section class="section" style="background: rgba(255,255,255,0.6);">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">NGUYÊN NHÂN GỐC RỄ</div>
+          <h2>Bạn Đã Thử Mọi Cách Nhưng Điểm Số Vẫn Dậm Chân Tại Chỗ?</h2>
+          <p style="color: var(--slate-600); margin-top: 1rem;">
+            Đừng tự trách bản thân kém thông minh. Bạn thất bại không phải vì bạn không cố gắng, mà vì bạn đang sử dụng những phương pháp học lỗi thời!
+          </p>
+        </div>
+
+        <div class="comparison-grid">
+          <!-- Cột Thất bại cũ -->
+          <div class="fail-box">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background: #FEE2E2; color: #DC2626; display: flex; align-items: center; justify-content: center; font-weight: 800;">✕</div>
+              <h3 style="font-size: 1.35rem; color: #991B1B;">5 Cách Cũ Bạn Từng Thử (Và Lý Do Thất Bại)</h3>
+            </div>
+
+            <ul class="comparison-list">
+              <li class="comparison-item">
+                <span style="color: #DC2626; font-weight: 800;">1.</span>
+                <div>
+                  <strong>Cày đề tràn lan trên mạng:</strong> Càng cày càng sai, không hiểu vì sao mình sai dẫn đến chai lì phản xạ và hoang mang tột độ.
+                </div>
+              </li>
+              <li class="comparison-item">
+                <span style="color: #DC2626; font-weight: 800;">2.</span>
+                <div>
+                  <strong>Mua đống sách dày cộp về tự ngắm:</strong> Quá nhiều lý thuyết ngữ pháp hàn lâm, không sát thực tế đề thi ETS hiện hành.
+                </div>
+              </li>
+              <li class="comparison-item">
+                <span style="color: #DC2626; font-weight: 800;">3.</span>
+                <div>
+                  <strong>Học trung tâm đông đúc 30 - 40 người:</strong> Giảng viên không thể chỉ ra từng lỗi sai phát âm hay sửa tư duy làm bài cho riêng bạn.
+                </div>
+              </li>
+              <li class="comparison-item">
+                <span style="color: #DC2626; font-weight: 800;">4.</span>
+                <div>
+                  <strong>Tải các app học từ vựng rời rạc:</strong> Học thuộc từ đơn lẻ không đặt vào ngữ cảnh bài thi, khi nghe băng đọc không kịp phản xạ.
+                </div>
+              </li>
+              <li class="comparison-item">
+                <span style="color: #DC2626; font-weight: 800;">5.</span>
+                <div>
+                  <strong>Học "Mẹo vặt" truyền tai nhau:</strong> ETS liên tục cập nhật format và bẫy mới; học mẹo đi thi trúng tủ thì ít mà "tủ đè" thì nhiều!
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Cột Giải pháp mới -->
+          <div class="success-box">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background: #DCFCE7; color: #16A34A; display: flex; align-items: center; justify-content: center; font-weight: 800;">✓</div>
+              <h3 style="font-size: 1.35rem; color: #166534;">Hệ Thống TOEIC ALL-IN-ONE (Chuẩn Thực Chiến)</h3>
+            </div>
+
+            <ul class="comparison-list">
+              <li class="comparison-item">
+                <span style="color: #16A34A; font-weight: 800;">1.</span>
+                <div>
+                  <strong>Học sâu theo cơ chế phản hồi lỗi sai:</strong> Phân tích từng bẫy ETS giăng ra để không bao giờ tái phạm lần thứ hai.
+                </div>
+              </li>
+              <li class="comparison-item">
+                <span style="color: #16A34A; font-weight: 800;">2.</span>
+                <div>
+                  <strong>Bộ tài liệu rút gọn tinh hoa:</strong> Chỉ tập trung đúng 12 chủ điểm ngữ pháp và 1.200 từ vựng cốt lõi thường xuyên xuất hiện.
+                </div>
+              </li>
+              <li class="comparison-item">
+                <span style="color: #16A34A; font-weight: 800;">3.</span>
+                <div>
+                  <strong>Kèm cặp trực tiếp cùng Chuyên gia 985 TOEIC:</strong> Được Thầy Hưng sửa bài, giải đáp chi tiết 1-1 qua Zalo group mỗi ngày.
+                </div>
+              </li>
+              <li class="comparison-item">
+                <span style="color: #16A34A; font-weight: 800;">4.</span>
+                <div>
+                  <strong>Kỹ thuật Acoustic Decoding:</strong> Huấn luyện tai nghe bắt chuẩn âm thanh gốc và từ khóa trọng tâm không cần dịch thô sang tiếng Việt.
+                </div>
+              </li>
+              <li class="comparison-item">
+                <span style="color: #16A34A; font-weight: 800;">5.</span>
+                <div>
+                  <strong>Tư duy giải đề 30s/câu:</strong> Nắm vững bản chất cấu trúc câu và từ loại để quét nhanh đáp án chính xác tuyệt đối.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="#dang-ky" class="clay-btn clay-btn-primary pulse-cta">
+            <span>TÔI MUỐN CHẤM DỨT THẤT BẠI - ĐĂNG KÝ HỌC NGAY</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: SỰ THẬT CHẤN ĐỘNG & BƯỚC NGOẶT
+         ========================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="clay-card-navy" style="padding: 3.5rem 3rem; border-radius: var(--radius-xl);">
+          <div class="text-center" style="max-width: 820px; margin: 0 auto 3rem;">
+            <div class="clay-badge clay-badge-navy" style="margin-bottom: 1rem;">GÓC NHÌN CHUYÊN GIA 985 TOEIC</div>
+            <h2 style="color: var(--white); margin-bottom: 1.2rem;">Sự Thật Chấn Động: Tại Sao Đa Số Mọi Người Đều Kẹt Dưới 500 TOEIC?</h2>
+            <p style="color: #CBD5E1; font-size: 1.05rem;">
+              Qua 5 năm trực tiếp nghiên cứu đề thi ETS và đào tạo hơn 400 học viên, Thầy Phạm Việt Hưng nhận thấy 90% người học mắc phải một lỗi chí mạng: <strong>Não bộ bị nghẽn thông tin do thói quen "Dịch nhẩm sang tiếng Việt" trong lúc nghe!</strong>
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.75rem;">
+            <div style="background: rgba(255,255,255,0.06); padding: 1.8rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1);">
+              <div style="color: #38BDF8; font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; font-family: var(--font-heading);">01. Âm Thanh Ảo</div>
+              <p style="font-size: 0.92rem; color: #E2E8F0;">
+                Bạn nghe từ tiếng Anh theo cách phát âm của người Việt, nên khi người bản xứ nối âm hoặc nuốt âm, tai bạn không nhận diện được.
+              </p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.06); padding: 1.8rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1);">
+              <div style="color: #38BDF8; font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; font-family: var(--font-heading);">02. Delay 3 Giây</div>
+              <p style="font-size: 0.92rem; color: #E2E8F0;">
+                Thói quen dịch từng từ làm não bị trễ 2-3 giây. Đến Part 3-4 bạn sẽ hoàn toàn mất dấu nội dung đoạn hội thoại.
+              </p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.06); padding: 1.8rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1);">
+              <div style="color: #38BDF8; font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; font-family: var(--font-heading);">03. Bẫy Paraphrase</div>
+              <p style="font-size: 0.92rem; color: #E2E8F0;">
+                ETS không bao giờ bê nguyên từ trong bài nghe vào đáp án mà luôn đổi sang từ đồng nghĩa. Ai nghe bắt từ khóa mù quáng sẽ dính bẫy 100%.
+              </p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.06); padding: 1.8rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1);">
+              <div style="color: #38BDF8; font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; font-family: var(--font-heading);">04. Chiến Thuật Thi</div>
+              <p style="font-size: 0.92rem; color: #E2E8F0;">
+                Làm 200 câu hỏi trong 120 phút đòi hỏi chiến lược phân bổ thể lực và tốc độ xử lý câu hỏi mà sách giáo khoa không bao giờ dạy bạn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: GIẢI PHÁP ĐỘT PHÁ - TOEIC ALL-IN-ONE
+         ========================================== -->
+    <section class="section" id="he-thong">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">GIẢI PHÁP ĐỘT PHÁ</div>
+          <h2>Hệ Thống Đào Tạo “TOEIC ALL-IN-ONE”</h2>
+          <p style="color: var(--slate-600); margin-top: 1rem;">
+            Bộ phương pháp độc quyền giúp chuyển hóa từ trạng thái <em>"mù mờ sợ hãi tiếng Anh"</em> sang trạng thái <em>"làm chủ tốc độ và tư duy đề thi"</em> chỉ trong 60 ngày.
+          </p>
+        </div>
+
+        <div class="pillar-grid">
+          <!-- Trụ cột 1 -->
+          <div class="clay-card pillar-card">
+            <div class="pillar-badge-num">01</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.85rem;">Chuẩn Hóa Âm Học & Phản Xạ Nghe</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem; line-height: 1.6;">
+              Giải mã toàn bộ quy tắc nối âm, nuốt âm, trọng âm câu của 4 giọng đọc phổ biến nhất trong đề ETS: Mỹ, Anh, Úc, Canada. Nghe hiểu trực tiếp không qua bước dịch nhẩm.
+            </p>
+          </div>
+
+          <!-- Trụ cột 2 -->
+          <div class="clay-card pillar-card">
+            <div class="pillar-badge-num">02</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.85rem;">Tư Duy Định Vị Ngữ Pháp 5 Giây</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem; line-height: 1.6;">
+              Phương pháp quét vị trí từ loại và cấu trúc cốt lõi giúp bạn xử lý 70% câu hỏi Part 5 chỉ trong 15 - 30 giây mà không cần đọc hết cả câu dài loằng ngoằng.
+            </p>
+          </div>
+
+          <!-- Trụ cột 3 -->
+          <div class="clay-card pillar-card">
+            <div class="pillar-badge-num">03</div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.85rem;">Bản Đồ Bẫy & Kỹ Thuật Quét Đề</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem; line-height: 1.6;">
+              Lật tẩy 20+ bẫy kinh điển của đề thi TOEIC hiện đại; làm chủ kỹ thuật đọc lướt tìm ý chính (Skimming & Scanning) cho Part 7 để không bao giờ bị thiếu giờ.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5 Lợi ích lớn nhận được -->
+        <div class="clay-card" style="margin-top: 3.5rem; padding: 2.5rem; border-radius: var(--radius-xl);">
+          <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.45rem;">5 Lợi Ích Lớn Bạn Sẽ Đạt Được Sau Khóa Học:</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <div style="color: #10B981; font-weight: 800; font-size: 1.25rem;">✓</div>
+              <div style="font-size: 0.95rem;">Tự tin nghe hiểu trọn vẹn Part 1 & Part 2, đạt tối thiểu 70 - 85% độ chính xác cho phần Nghe.</div>
+            </div>
+            <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <div style="color: #10B981; font-weight: 800; font-size: 1.25rem;">✓</div>
+              <div style="font-size: 0.95rem;">Giải quyết nhanh gọn Part 5-6 trong vòng 18 phút, dư ít nhất 55 phút để đọc kỹ Part 7.</div>
+            </div>
+            <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <div style="color: #10B981; font-weight: 800; font-size: 1.25rem;">✓</div>
+              <div style="font-size: 0.95rem;">Sở hữu vốn từ vựng 1.200 từ công sở trọng tâm, ứng dụng ngay vào viết CV và giao tiếp đi làm.</div>
+            </div>
+            <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <div style="color: #10B981; font-weight: 800; font-size: 1.25rem;">✓</div>
+              <div style="font-size: 0.95rem;">Cầm chắc chứng chỉ TOEIC 650+ / 800+ để nộp tốt nghiệp đúng hạn và ứng tuyển công ty mơ ước.</div>
+            </div>
+            <div style="display: flex; gap: 0.85rem; align-items: flex-start;">
+              <div style="color: #10B981; font-weight: 800; font-size: 1.25rem;">✓</div>
+              <div style="font-size: 0.95rem;">Xóa bỏ hoàn toàn mặc cảm tự ti, mở ra cánh cửa học tiếp IELTS hoặc nâng cao kỹ năng Nói - Viết.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: 4 PHẨM CHẤT & KỸ NĂNG CỐT LÕI
+         ========================================== -->
+    <section class="section" style="background: rgba(255,255,255,0.5);">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">CHÌA KHÓA BỨT PHÁ</div>
+          <h2>4 Kỹ Năng Tách Biệt Người Đạt 800+ Và Người Mắc Kẹt Ở 450 TOEIC</h2>
+          <p style="color: var(--slate-600); margin-top: 1rem;">
+            Những kỹ năng tối quan trọng mà các khóa học truyền thống không bao giờ trang bị cho bạn:
+          </p>
+        </div>
+
+        <div class="pain-grid" style="grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));">
+          <div class="clay-card" style="padding: 2.2rem 1.8rem;">
+            <div class="pain-icon-box" style="background: #EFF6FF; color: #2563EB;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="2"></circle>
+                <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.65rem;">1. Phản Xạ Nối Âm Tự Nhiên</h3>
+            <p style="font-size: 0.92rem; color: var(--slate-600);">
+              Nghe và nhận diện lập tức các hiện tượng nuốt âm, biến âm thường gặp. Không có kỹ năng này, bạn sẽ luôn nghe sót từ khóa và đánh lụi ở Part 2 & Part 3.
+            </p>
+          </div>
+
+          <div class="clay-card" style="padding: 2.2rem 1.8rem;">
+            <div class="pain-icon-box" style="background: #FDF4FF; color: #C026D3;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.65rem;">2. Định Vị Từ Loại Siêu Tốc</h3>
+            <p style="font-size: 0.92rem; color: var(--slate-600);">
+              Nhìn vào chỗ trống và 4 đáp án để biết ngay cần điền Danh, Động, Tính hay Trạng từ. Thiếu kỹ năng này, bạn sẽ mất quá nhiều thời gian dịch nghĩa vô bổ.
+            </p>
+          </div>
+
+          <div class="clay-card" style="padding: 2.2rem 1.8rem;">
+            <div class="pain-icon-box" style="background: #F0FDF4; color: #16A34A;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.65rem;">3. Paraphrasing Đỉnh Cao</h3>
+            <p style="font-size: 0.92rem; color: var(--slate-600);">
+              Nhận diện tức thì mối liên hệ giữa câu hỏi và đoạn văn bản qua các cặp từ đồng nghĩa. Đây là chìa khóa duy nhất để bạn ẵm trọn 400+ điểm Reading.
+            </p>
+          </div>
+
+          <div class="clay-card" style="padding: 2.2rem 1.8rem;">
+            <div class="pain-icon-box" style="background: #FFFBEB; color: #D97706;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.65rem;">4. Quản Trị Thể Lực & Thời Gian</h3>
+            <p style="font-size: 0.92rem; color: var(--slate-600);">
+              Biết buông bỏ những câu khó để tập trung sức lực lấy trọn điểm những câu dễ. Thiếu chiến thuật này, bạn sẽ kiệt sức ở nửa sau của đề thi và bỏ trống bài.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: VALUE STACK & 5 SIÊU QUÀ TẶNG (BONUSES)
+         ========================================== -->
+    <section class="section bonus-section" id="qua-tang">
+      <div class="container">
+        <div class="text-center" style="max-width: 820px; margin: 0 auto;">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">TRỌN BỘ QUYỀN LỢI ĐẶC QUYỀN</div>
+          <h2 style="color: var(--white);">Đăng Ký Hôm Nay - Nhận Trọn Bộ Khóa Học + 5 Quà Tặng Độc Quyền</h2>
+          <p style="color: #94A3B8; margin-top: 1rem; font-size: 1.05rem;">
+            Mỗi phần quà được thiết kế tỉ mỉ nhằm giải quyết triệt để từng vấn đề nhỏ nhặt nhất trong quá trình ôn luyện của bạn:
+          </p>
+        </div>
+
+        <div class="bonus-grid">
+          <!-- Bonus 1 -->
+          <div class="bonus-card-clay">
+            <div>
+              <div class="bonus-header">
+                <span class="bonus-tag">🎁 QUÀ TẶNG #1</span>
+                <span class="bonus-val">Trị giá: 500.000đ</span>
+              </div>
+              <h3 style="color: var(--white); font-size: 1.25rem; margin-bottom: 0.75rem;">Bộ 1.200 Từ Vựng Trọng Tâm ETS 2024 - 2026</h3>
+              <p style="color: #CBD5E1; font-size: 0.92rem; line-height: 1.6;">
+                <strong>Giải quyết vấn đề:</strong> Học trước quên sau, học từ vựng thiếu ngữ cảnh.<br>
+                <strong>Bạn nhận được:</strong> File Flashcard Anki thông minh + Audio phát âm người bản xứ chuẩn format đề thi, giúp bạn ghi nhớ sâu vào tiềm thức chỉ với 15 phút mỗi ngày.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; color: #38BDF8; font-weight: 700;">
+              ✓ Tặng MIỄN PHÍ hôm nay
+            </div>
+          </div>
+
+          <!-- Bonus 2 -->
+          <div class="bonus-card-clay">
+            <div>
+              <div class="bonus-header">
+                <span class="bonus-tag">🎁 QUÀ TẶNG #2</span>
+                <span class="bonus-val">Trị giá: 450.000đ</span>
+              </div>
+              <h3 style="color: var(--white); font-size: 1.25rem; margin-bottom: 0.75rem;">Bí Kíp Vượt Bẫy Part 1-2-3-4 Không Cần Dịch Thô</h3>
+              <p style="color: #CBD5E1; font-size: 0.92rem; line-height: 1.6;">
+                <strong>Giải quyết vấn đề:</strong> Nghe không kịp tốc độ đài, dịch nhẩm bị trễ nhịp.<br>
+                <strong>Bạn nhận được:</strong> Sổ tay nhận diện 18 bẫy âm thanh phổ biến nhất của Part 1 và Part 2 (từ đồng âm, câu hỏi đuôi, câu trả lời gián tiếp) giúp ăn chắc 80% điểm nghe.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; color: #38BDF8; font-weight: 700;">
+              ✓ Tặng MIỄN PHÍ hôm nay
+            </div>
+          </div>
+
+          <!-- Bonus 3 -->
+          <div class="bonus-card-clay">
+            <div>
+              <div class="bonus-header">
+                <span class="bonus-tag">🎁 QUÀ TẶNG #3</span>
+                <span class="bonus-val">Trị giá: 400.000đ</span>
+              </div>
+              <h3 style="color: var(--white); font-size: 1.25rem; margin-bottom: 0.75rem;">Hack Tốc Độ Part 5-6 Trong 30s & Bản Đồ 12 Chủ Điểm</h3>
+              <p style="color: #CBD5E1; font-size: 0.92rem; line-height: 1.6;">
+                <strong>Giải quyết vấn đề:</strong> Làm bài đọc quá chậm, hết giờ không kịp làm Part 7.<br>
+                <strong>Bạn nhận được:</strong> Bản đồ tư duy 12 chủ điểm ngữ pháp chắc chắn ra trong đề thi và công thức 3 bước nhìn đáp án loại trừ siêu tốc.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; color: #38BDF8; font-weight: 700;">
+              ✓ Tặng MIỄN PHÍ hôm nay
+            </div>
+          </div>
+
+          <!-- Bonus 4 -->
+          <div class="bonus-card-clay">
+            <div>
+              <div class="bonus-header">
+                <span class="bonus-tag">🎁 QUÀ TẶNG #4</span>
+                <span class="bonus-val">Trị giá: 600.000đ</span>
+              </div>
+              <h3 style="color: var(--white); font-size: 1.25rem; margin-bottom: 0.75rem;">Ngân Hàng 10 Đề Thi Thử Có Giải Thích Chi Tiết Từng Câu</h3>
+              <p style="color: #CBD5E1; font-size: 0.92rem; line-height: 1.6;">
+                <strong>Giải quyết vấn đề:</strong> Luyện đề mò mẫm sai không biết hỏi ai.<br>
+                <strong>Bạn nhận được:</strong> 10 đề thi sát sườn format ETS thật, đi kèm bản transcript giải nghĩa chi tiết từng từ, chỉ rõ bẫy và bảng quy đổi điểm số chuẩn xác.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; color: #38BDF8; font-weight: 700;">
+              ✓ Tặng MIỄN PHÍ hôm nay
+            </div>
+          </div>
+
+          <!-- Bonus 5 -->
+          <div class="bonus-card-clay">
+            <div>
+              <div class="bonus-header">
+                <span class="bonus-tag">🎁 QUÀ TẶNG #5 (ĐẶC QUYỀN)</span>
+                <span class="bonus-val">Trị giá: 800.000đ</span>
+              </div>
+              <h3 style="color: var(--white); font-size: 1.25rem; margin-bottom: 0.75rem;">Lịch Trình 60 Ngày + Group Zalo Đồng Hành 1-1 Cùng Thầy Hưng</h3>
+              <p style="color: #CBD5E1; font-size: 0.92rem; line-height: 1.6;">
+                <strong>Giải quyết vấn đề:</strong> Thiếu kỷ luật, học được vài hôm là bỏ dở giữa chừng.<br>
+                <strong>Bạn nhận được:</strong> Lịch học chi tiết từng ngày và quyền tham gia nhóm hỗ trợ kín, được Thầy Hưng trực tiếp kiểm tra tiến độ và sửa lỗi giải đề mỗi ngày.
+              </p>
+            </div>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; color: #38BDF8; font-weight: 700;">
+              ✓ Tặng MIỄN PHÍ hôm nay
+            </div>
+          </div>
+        </div>
+
+        <!-- Value Summary Box -->
+        <div class="value-summary-box">
+          <div style="font-size: 1.15rem; color: #CBD5E1; margin-bottom: 0.5rem;">
+            Tổng Giá Trị Khóa Học & Toàn Bộ Quà Tặng: <span style="text-decoration: line-through; color: #94A3B8; font-weight: 700;">5.250.000 VNĐ</span>
+          </div>
+          <div style="font-family: var(--font-heading); font-size: clamp(2rem, 3.5vw, 2.75rem); font-weight: 900; color: #FF5E36; margin-bottom: 1rem;">
+            HỌC PHÍ TRỌN GÓI HÔM NAY: CHỈ 499.000 VNĐ
+          </div>
+          <p style="color: #E2E8F0; max-width: 680px; margin: 0 auto 2rem; font-size: 0.95rem;">
+            Tiết kiệm hơn 90% chi phí. Sở hữu trọn đời toàn bộ bài giảng, tài liệu và quyền được Thầy Phạm Việt Hưng hỗ trợ đến khi đạt mục tiêu!
+          </p>
+          <a href="#dang-ky" class="clay-btn clay-btn-primary pulse-cta" style="font-size: 1.15rem; padding: 1.1rem 2.5rem;">
+            <span>GIỮ SUẤT ƯU ĐÃI 499.000Đ & NHẬN TOÀN BỘ 5 QUÀ TẶNG</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: BẢNG SO SÁNH TRƯỚC VÀ SAU (BEFORE & AFTER)
+         ========================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">SỰ CHUYỂN HÓA RÕ RỆT</div>
+          <h2>Bảng So Sánh Sự Thay Đổi Trước & Sau Khi Tham Gia Khóa Học</h2>
+          <p style="color: var(--slate-600); margin-top: 1rem;">
+            Đừng để chứng chỉ TOEIC tiếp tục là vật cản ngăn bạn tốt nghiệp ra trường và thăng tiến sự nghiệp!
+          </p>
+        </div>
+
+        <div class="before-after-table">
+          <!-- Cột Trước -->
+          <div class="before-col">
+            <h3 style="color: #991B1B; font-size: 1.4rem; margin-bottom: 1.75rem; display: flex; align-items: center; gap: 0.75rem;">
+              <span style="width:32px; height:32px; border-radius:50%; background:#FEE2E2; color:#DC2626; display:flex; align-items:center; justify-content:center; font-size:1rem;">✕</span>
+              Trước Khi Học Khóa TOEIC ALL-IN-ONE
+            </h3>
+
+            <div class="state-item">
+              <div class="state-icon icon-cross">✕</div>
+              <div>Mất gốc, hoang mang không biết bắt đầu học từ tài liệu nào, học ở đâu.</div>
+            </div>
+            <div class="state-item">
+              <div class="state-icon icon-cross">✕</div>
+              <div>Nghe băng như vịt nghe sấm, liên tục bỏ lỡ thông tin và đánh lụi 70% đề thi.</div>
+            </div>
+            <div class="state-item">
+              <div class="state-icon icon-cross">✕</div>
+              <div>Đọc câu nào cũng phải tra từ điển, làm Part 5 mất 15-20 phút mà sai tùm lum.</div>
+            </div>
+            <div class="state-item">
+              <div class="state-icon icon-cross">✕</div>
+              <div>Luôn bị thiếu giờ ở Part 7, bỏ trống cả chục câu hoặc tô bừa hy vọng may mắn.</div>
+            </div>
+            <div class="state-item">
+              <div class="state-icon icon-cross">✕</div>
+              <div>Tự ti, xấu hổ khi bạn bè cùng lớp đều đã có bằng tốt nghiệp ra trường đi làm.</div>
+            </div>
+            <div class="state-item">
+              <div class="state-icon icon-cross">✕</div>
+              <div>Tốn hàng triệu đồng học ở các trung tâm đại trà nhưng điểm số vẫn giậm chân tại chỗ.</div>
+            </div>
+          </div>
+
+          <!-- Cột Sau -->
+          <div class="after-col">
+            <h3 style="color: #166534; font-size: 1.4rem; margin-bottom: 1.75rem; display: flex; align-items: center; gap: 0.75rem;">
+              <span style="width:32px; height:32px; border-radius:50%; background:#DCFCE7; color:#16A34A; display:flex; align-items:center; justify-content:center; font-size:1rem;">✓</span>
+              Sau 60 Ngày Cùng Thầy Phạm Việt Hưng
+            </h3>
+
+            <div class="state-item">
+              <div class="state-icon icon-check">✓</div>
+              <div>Nắm rõ lộ trình từng ngày, biết chính xác hôm nay cần học gì để tăng thêm 15 điểm.</div>
+            </div>
+            <div class="state-item">
+              <div class="state-icon icon-check">✓</div>
+              <div>Bắt trọn vẹn từ khóa Part 1-2-3-4, nghe đến đâu hiểu đến đó mà không cần dịch nhẩm.</div>
+            </div>
+            <div class="state-item">
+              <div class="state-icon icon-check">✓</div>
+              <div>Quét đáp án Part 5 chỉ trong 15-30 giây/câu nhờ tư duy định vị vị trí từ loại chuẩn xác.</div>
+            </div>
+            <div class="state-item">
+              <div class="state-icon icon-check">✓</div>
+              <div>Xử lý gọn gàng Part 7 với kỹ thuật Skimming & Scanning, dư ít nhất 5-10 phút để soát lại bài.</div>
+            </div>
+            <div class="state-item">
+              <div class="state-icon icon-check">✓</div>
+              <div>Tự tin cầm tấm bằng 650+ / 800+ TOEIC ra trường đúng hạn, apply việc lương nghìn đô.</div>
+            </div>
+            <div class="state-item">
+              <div class="state-icon icon-check">✓</div>
+              <div>Tiết kiệm hàng chục triệu đồng và hàng trăm giờ mò mẫm tự học sai phương pháp.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 9: LỘ TRÌNH 5 GIAI ĐOẠN CHUYỂN HÓA (ROADMAP)
+         ========================================== -->
+    <section class="section" id="lo-trinh" style="background: rgba(255,255,255,0.45);">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">LỘ TRÌNH TINH GỌN 60 NGÀY</div>
+          <h2>5 Giai Đoạn Bứt Phá Mục Tiêu Điểm Số Đi Thi Thật</h2>
+          <p style="color: var(--slate-600); margin-top: 1rem;">
+            Từng chặng được tính toán khoa học giúp bạn tích lũy kiến thức từng bước vững chắc mà không bị quá tải:
+          </p>
+        </div>
+
+        <div class="roadmap-timeline">
+          <!-- Chặng 1 -->
+          <div class="roadmap-card">
+            <div class="roadmap-stage-badge">
+              <div style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800;">CHẶNG 1</div>
+              <div class="stage-time">Tuần 1 &bull; Nền Tảng</div>
+            </div>
+            <div>
+              <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--navy-900);">Xóa Mù & Phá Băng Phát Âm Chuẩn ETS</h3>
+              <p style="color: var(--slate-600); font-size: 0.95rem; margin-bottom: 0.75rem;">
+                Chuẩn hóa bảng ngữ âm quốc tế IPA theo ngữ điệu đề thi; rèn luyện phản xạ bắt âm thanh nối, nuốt âm của người bản ngữ.
+              </p>
+              <div style="font-size: 0.88rem; color: var(--navy-600); font-weight: 700;">
+                🎯 Mục tiêu: Ăn trọn 6/6 câu Part 1 tranh mô tả & nhận diện bẫy âm Part 2.
+              </div>
+            </div>
+          </div>
+
+          <!-- Chặng 2 -->
+          <div class="roadmap-card">
+            <div class="roadmap-stage-badge">
+              <div style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800;">CHẶNG 2</div>
+              <div class="stage-time">Tuần 2 - 3 &bull; Tăng Tốc</div>
+            </div>
+            <div>
+              <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--navy-900);">Giải Mã 12 Điểm Ngữ Pháp & 600 Từ Vựng Cốt Lõi</h3>
+              <p style="color: var(--slate-600); font-size: 0.95rem; margin-bottom: 0.75rem;">
+                Rút gọn toàn bộ ngữ pháp TOEIC chỉ vào 12 chủ điểm thực chiến; nạp nhanh 600 từ vựng xuất hiện với tần suất cao nhất trong đề thi ETS.
+              </p>
+              <div style="font-size: 0.88rem; color: var(--navy-600); font-weight: 700;">
+                🎯 Mục tiêu: Quét 20 câu đầu Part 5 trong 10 phút với độ chính xác trên 85%.
+              </div>
+            </div>
+          </div>
+
+          <!-- Chặng 3 -->
+          <div class="roadmap-card">
+            <div class="roadmap-stage-badge">
+              <div style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800;">CHẶNG 3</div>
+              <div class="stage-time">Tuần 4 - 5 &bull; Chuyên Sâu</div>
+            </div>
+            <div>
+              <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--navy-900);">Làm Chủ Kỹ Năng Nghe Listening Master (Part 3 & 4)</h3>
+              <p style="color: var(--slate-600); font-size: 0.95rem; margin-bottom: 0.75rem;">
+                Kỹ thuật đọc trước câu hỏi và dự đoán đáp án trong 15s chuyển tiếp; phương pháp theo dõi mạch hội thoại dài mà không bị mất phương hướng.
+              </p>
+              <div style="font-size: 0.88rem; color: var(--navy-600); font-weight: 700;">
+                🎯 Mục tiêu: Đạt 350 - 420+ điểm Listening dễ dàng.
+              </div>
+            </div>
+          </div>
+
+          <!-- Chặng 4 -->
+          <div class="roadmap-card">
+            <div class="roadmap-stage-badge">
+              <div style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800;">CHẶNG 4</div>
+              <div class="stage-time">Tuần 6 - 7 &bull; Đột Phá</div>
+            </div>
+            <div>
+              <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--navy-900);">Tăng Tốc Kỹ Năng Đọc Reading Sniper (Part 6 & 7)</h3>
+              <p style="color: var(--slate-600); font-size: 0.95rem; margin-bottom: 0.75rem;">
+                Làm chủ kỹ thuật đọc lướt Skimming & Scanning, nhận diện bẫy đoạn văn kép/ba; xây dựng phản xạ từ đồng nghĩa (Paraphrasing) thần tốc.
+              </p>
+              <div style="font-size: 0.88rem; color: var(--navy-600); font-weight: 700;">
+                🎯 Mục tiêu: Hoàn thành trọn vẹn 100 câu Reading trong 75 phút, không bỏ trống câu nào.
+              </div>
+            </div>
+          </div>
+
+          <!-- Chặng 5 -->
+          <div class="roadmap-card">
+            <div class="roadmap-stage-badge">
+              <div style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800;">CHẶNG 5</div>
+              <div class="stage-time">Tuần 8 &bull; Về Đích</div>
+            </div>
+            <div>
+              <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--navy-900);">Thực Chiến Đề Thi Mới Nhất & Tối Ưu Hóa Max Score</h3>
+              <p style="color: var(--slate-600); font-size: 0.95rem; margin-bottom: 0.75rem;">
+                Giải bộ 10 đề thi thử chuẩn áp lực phòng thi thật; Thầy Hưng trực tiếp sửa chi tiết từng câu và tư vấn chiến thuật làm bài cá nhân hóa.
+              </p>
+              <div style="font-size: 0.88rem; color: var(--navy-600); font-weight: 700;">
+                🎯 Mục tiêu: Tự tin bước vào phòng thi và ẵm trọn mục tiêu 650+ / 800+ TOEIC.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 10: GIỚI THIỆU GIẢNG VIÊN - THẦY PHẠM VIỆT HƯNG
+         ========================================== -->
+    <section class="section instructor-section" id="giang-vien">
+      <div class="container instructor-grid">
+        <!-- Chân dung Giảng viên (Ảnh tách nền 2.png) -->
+        <div>
+          <div class="instructor-portrait-card">
+            <img src="public/image/cutout/2.png" alt="Chuyên gia đào tạo TOEIC Phạm Việt Hưng" class="instructor-img-cutout">
+          </div>
+        </div>
+
+        <!-- Thông tin chi tiết Thầy Hưng -->
+        <div>
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">CHUYÊN GIA DẪN ĐƯỜNG CỦA BẠN</div>
+          <h2>Thầy Phạm Việt Hưng</h2>
+          <div style="font-size: 1.2rem; font-weight: 800; color: var(--navy-700); margin: 0.5rem 0 1rem; font-family: var(--font-heading);">
+            Chuyên Gia Đào Tạo TOEIC &bull; 985/990 TOEIC ETS
+          </div>
+
+          <p style="color: var(--slate-700); font-size: 1.02rem; margin-bottom: 1.5rem; line-height: 1.7;">
+            Với hơn <strong>5 năm chuyên sâu giảng dạy và luyện thi TOEIC</strong>, Thầy Phạm Việt Hưng đã đồng hành và giúp đỡ hơn <strong>400 học viên</strong> là sinh viên các trường đại học hàng đầu và người đi làm tại các tập đoàn lớn vượt qua rào cản tiếng Anh, đạt chuẩn đầu ra và bứt phá mục tiêu 650+, 750+, 850+ TOEIC.
+          </p>
+
+          <div class="credential-chips">
+            <div class="chip-item">
+              <span style="color: #FF5E36; font-size: 1.1rem;">🏆</span>
+              <span>Chứng chỉ 985/990 TOEIC</span>
+            </div>
+            <div class="chip-item">
+              <span style="color: #FF5E36; font-size: 1.1rem;">🎓</span>
+              <span>5 Năm Kinh Nghiệm Đào Tạo</span>
+            </div>
+            <div class="chip-item">
+              <span style="color: #FF5E36; font-size: 1.1rem;">👥</span>
+              <span>400+ Học Viên Đạt Mục Tiêu</span>
+            </div>
+            <div class="chip-item">
+              <span style="color: #FF5E36; font-size: 1.1rem;">🤝</span>
+              <span>Kèm Cặp 1-1 Tận Tâm</span>
+            </div>
+          </div>
+
+          <div class="clay-card" style="padding: 1.5rem 1.8rem; background: #F8FAFC; border-left: 4px solid var(--navy-700); margin-top: 1.5rem;">
+            <div style="font-weight: 800; color: var(--navy-900); margin-bottom: 0.35rem;">Triết Lý Giảng Dạy Khác Biệt:</div>
+            <p style="font-size: 0.92rem; color: var(--slate-600); font-style: italic;">
+              "Tôi không dạy học viên học vẹt hay ghi nhớ hàng nghìn cấu trúc sáo rỗng. Mục tiêu của tôi là giúp các bạn hiểu bản chất tư duy ra đề của ETS, sửa từng lỗi sai phát âm nhỏ nhất để tiếng Anh trở thành phản xạ tự nhiên của bạn trong phòng thi và trong công việc sau này."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 11: CẢM NHẬN HỌC VIÊN & BẰNG CHỨNG THÀNH CÔNG
+         ========================================== -->
+    <section class="section" style="background: rgba(255,255,255,0.6);">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">KẾT QUẢ THỰC TẾ</div>
+          <h2>Học Viên Nói Gì Sau Khi Học Cùng Thầy Phạm Việt Hưng?</h2>
+          <p style="color: var(--slate-600); margin-top: 1rem;">
+            Những câu chuyện người thật việc thật đã chứng minh hiệu quả đột phá của phương pháp TOEIC ALL-IN-ONE:
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="clay-card testimonial-card">
+            <div>
+              <div style="display: flex; gap: 0.25rem; color: #F59E0B; margin-bottom: 1rem;">
+                ★★★★★
+              </div>
+              <p style="color: var(--slate-700); font-size: 0.98rem; font-style: italic; line-height: 1.7;">
+                "Trước đây em sợ phần Nghe lắm, thi thử chỉ được tầm 180 điểm nghe. Sau 7 tuần học lộ trình của Thầy Hưng, em hiểu được cách nối âm và bẫy Part 2-3. Kết quả thi thật em đạt <strong>785 TOEIC</strong>, kịp nộp bằng tốt nghiệp ĐH Bách Khoa loại Giỏi. Cảm ơn Thầy rất nhiều!"
+              </p>
+            </div>
+            <div class="student-meta">
+              <div class="student-avatar-clay">Đ</div>
+              <div>
+                <div style="font-weight: 800; color: var(--navy-900);">Nguyễn Hải Đăng</div>
+                <div style="font-size: 0.82rem; color: var(--slate-600);">Sinh viên ĐH Bách Khoa HN</div>
+              </div>
+              <div class="score-badge-clay">350 → 785 TOEIC</div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="clay-card testimonial-card">
+            <div>
+              <div style="display: flex; gap: 0.25rem; color: #F59E0B; margin-bottom: 1rem;">
+                ★★★★★
+              </div>
+              <p style="color: var(--slate-700); font-size: 0.98rem; font-style: italic; line-height: 1.7;">
+                "Mình đi làm bận rộn từ sáng đến tối, từng bỏ dở 2 khóa ở trung tâm vì không theo kịp. Bộ khóa học số của Thầy Hưng cực kỳ linh hoạt, mỗi video chỉ 15-20 phút mà đọng lại kiến thức sâu. Thầy còn trực tiếp sửa bài trong Zalo group. Thi lần đầu mình đạt <strong>820 TOEIC</strong>, được công ty tăng 25% lương!"
+              </p>
+            </div>
+            <div class="student-meta">
+              <div class="student-avatar-clay">T</div>
+              <div>
+                <div style="font-weight: 800; color: var(--navy-900);">Trần Minh Tuấn</div>
+                <div style="font-size: 0.82rem; color: var(--slate-600);">Kỹ sư Phần mềm (FPT Software)</div>
+              </div>
+              <div class="score-badge-clay">420 → 820 TOEIC</div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="clay-card testimonial-card">
+            <div>
+              <div style="display: flex; gap: 0.25rem; color: #F59E0B; margin-bottom: 1rem;">
+                ★★★★★
+              </div>
+              <p style="color: var(--slate-700); font-size: 0.98rem; font-style: italic; line-height: 1.7;">
+                "Bản thân em là đứa mất gốc hoàn toàn, nhìn vào đề thi là đau đầu. Phương pháp quét Part 5 trong 30s của Thầy Hưng như cứu rỗi em vậy. Em làm bài đọc không còn bị thiếu giờ nữa. Ngày nhận kết quả <strong>740 TOEIC</strong> em mừng rơi nước mắt vì không bị nợ bằng ra trường!"
+              </p>
+            </div>
+            <div class="student-meta">
+              <div class="student-avatar-clay">L</div>
+              <div>
+                <div style="font-weight: 800; color: var(--navy-900);">Lê Mai Phương</div>
+                <div style="font-size: 0.82rem; color: var(--slate-600);">Sinh viên ĐH Kinh Tế Quốc Dân</div>
+              </div>
+              <div class="score-badge-clay">290 → 740 TOEIC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 12: 3 TẦNG CAM KẾT VÀNG
+         ========================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">BẢO CHỨNG AN TÂM 100%</div>
+          <h2>3 Tầng Cam Kết Vàng Bảo Vệ Tuyệt Đối Quyền Lợi Của Bạn</h2>
+          <p style="color: var(--slate-600); margin-top: 1rem;">
+            Bạn không chịu bất kỳ rủi ro nào khi đăng ký tham gia khóa học hôm nay:
+          </p>
+        </div>
+
+        <div class="guarantee-grid">
+          <!-- Cam kết 1 -->
+          <div class="guarantee-card">
+            <div class="guarantee-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">1. Cam Kết Chuẩn Đầu Ra</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem; line-height: 1.6;">
+              Cam kết đồng hành kèm cặp đến khi bạn đạt mục tiêu điểm số kỳ vọng (550+, 650+, 750+). Được học lại hoàn toàn miễn phí nếu chưa đạt target.
+            </p>
+          </div>
+
+          <!-- Cam kết 2 -->
+          <div class="guarantee-card">
+            <div class="guarantee-icon" style="background: linear-gradient(135deg, #FF6F48 0%, #EA481D 100%);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">2. Hoàn Tiền 100% Không Điều Kiện</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem; line-height: 1.6;">
+              Nếu bạn hoàn thành đúng bài tập và lộ trình trong 14 ngày đầu tiên mà cảm thấy phương pháp không hiệu quả, Thầy Hưng sẽ hoàn lại 100% học phí mà không hỏi thêm câu nào.
+            </p>
+          </div>
+
+          <!-- Cam kết 3 -->
+          <div class="guarantee-card">
+            <div class="guarantee-icon" style="background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">3. Bảo Mật Thông Tin Tuyệt Đối</h3>
+            <p style="color: var(--slate-600); font-size: 0.95rem; line-height: 1.6;">
+              Toàn bộ thông tin cá nhân và số điện thoại của học viên được mã hóa bảo mật chuẩn SSL 256-bit, cam kết không bị lộ lọt hay làm phiền từ bên thứ ba.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 13: FORM ĐĂNG KÝ & FINAL CTA (CHUYỂN ĐỔI CAO)
+         ========================================== -->
+    <section class="section" id="dang-ky">
+      <div class="container checkout-wrapper">
+        <div class="clay-card checkout-card">
+
+          <!-- Alert Success Box (Hidden initially) -->
+          <div id="form-success-alert" style="display: none; background: #DCFCE7; border: 1.5px solid #86EFAC; border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 2rem; color: #166534;">
+            <div style="font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              Xác Nhận Giữ Chỗ Thành Công!
+            </div>
+            <p style="font-size: 0.95rem;">
+              Chúc mừng bạn đã giữ thành công suất ưu đãi <strong>499.000 VNĐ</strong> kèm trọn bộ <strong>5 Quà Tặng Độc Quyền</strong>. Thầy Phạm Việt Hưng và ban tuyển sinh sẽ liên hệ trực tiếp qua số điện thoại của bạn trong ít phút tới.
+            </p>
+          </div>
+
+          <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+            <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.75rem;">ĐĂNG KÝ GIỮ SUẤT ƯU ĐÃI NGAY</div>
+            <h2>Nhận Trọn Bộ TOEIC ALL-IN-ONE & 5 Siêu Quà Tặng</h2>
+            <p style="color: var(--slate-600); margin-top: 0.75rem;">
+              Ưu đãi giảm 80% chỉ áp dụng cho <strong>15 học viên nhanh tay nhất trong ngày hôm nay</strong>:
+            </p>
+
+            <!-- Countdown Timer on Form -->
+            <div style="display: inline-flex; align-items: center; gap: 0.75rem; margin-top: 1.25rem; background: #FFF1EE; padding: 0.6rem 1.4rem; border-radius: var(--radius-full); border: 1px solid #FFD8CF;">
+              <span style="font-size: 0.9rem; font-weight: 700; color: var(--navy-900);">Ưu đãi hết hạn sau:</span>
+              <div class="timer-box" style="font-size: 1.05rem;">
+                <span class="timer-hours">23</span>h : 
+                <span class="timer-minutes">47</span>m : 
+                <span class="timer-seconds">35</span>s
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-grid">
+            <!-- Order Summary Column -->
+            <div class="order-summary-box">
+              <h3 style="font-size: 1.2rem; margin-bottom: 1.25rem; color: var(--navy-900); display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                Quyền Lợi Bạn Nhận Được:
+              </h3>
+
+              <div class="summary-line">
+                <span>Khóa học số TOEIC ALL-IN-ONE trọn đời</span>
+                <span style="font-weight: 700;">2.500.000đ</span>
+              </div>
+              <div class="summary-line" style="color: #059669;">
+                <span>🎁 1.200 Từ Vựng Flashcard Anki + Audio</span>
+                <span style="font-weight: 700;">MIỄN PHÍ</span>
+              </div>
+              <div class="summary-line" style="color: #059669;">
+                <span>🎁 Bí kíp vượt bẫy Part 1-2-3-4</span>
+                <span style="font-weight: 700;">MIỄN PHÍ</span>
+              </div>
+              <div class="summary-line" style="color: #059669;">
+                <span>🎁 Hack tốc độ Part 5-6 trong 30s/câu</span>
+                <span style="font-weight: 700;">MIỄN PHÍ</span>
+              </div>
+              <div class="summary-line" style="color: #059669;">
+                <span>🎁 Ngân hàng 10 đề thi thử có giải chi tiết</span>
+                <span style="font-weight: 700;">MIỄN PHÍ</span>
+              </div>
+              <div class="summary-line" style="color: #059669;">
+                <span>🎁 Group Zalo kèm 1-1 cùng Thầy Hưng</span>
+                <span style="font-weight: 700;">MIỄN PHÍ</span>
+              </div>
+
+              <div class="summary-total">
+                <div>
+                  <div style="font-size: 0.85rem; color: var(--slate-600); font-weight: 600;">Học phí thanh toán:</div>
+                  <div class="total-price">499.000đ</div>
+                </div>
+                <div class="discount-badge" style="font-size: 0.85rem; padding: 0.35rem 0.75rem;">TIẾT KIỆM 80%</div>
+              </div>
+
+              <div style="margin-top: 1.25rem; font-size: 0.82rem; color: var(--slate-600); display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Cam kết hoàn tiền 100% nếu học đúng lộ trình không tiến bộ
+              </div>
+            </div>
+
+            <!-- Form Column -->
+            <div>
+              <form id="registration-form" novalidate>
+                <div class="form-group">
+                  <label for="fullname" class="form-label">Họ và tên của bạn *</label>
+                  <input type="text" id="fullname" class="form-input" placeholder="Ví dụ: Phạm Việt Hưng" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" class="form-label">Số điện thoại (Nhận tài khoản & tư vấn) *</label>
+                  <input type="tel" id="phone" class="form-input" placeholder="Ví dụ: 0904244824" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Địa chỉ Email (Nhận bộ tài liệu quà tặng) *</label>
+                  <input type="email" id="email" class="form-input" placeholder="Ví dụ: viethung.toeic@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="target-score" class="form-label">Mục tiêu điểm số TOEIC mong muốn</label>
+                  <select id="target-score" class="form-select">
+                    <option value="650">Mục tiêu 550 - 650+ TOEIC (Chuẩn tốt nghiệp)</option>
+                    <option value="750" selected>Mục tiêu 650 - 750+ TOEIC (Ra trường & Đi làm)</option>
+                    <option value="850">Mục tiêu 750 - 850+ TOEIC (Apply cty đa quốc gia)</option>
+                    <option value="900">Mục tiêu 850+ - 900+ TOEIC (Bứt phá đỉnh cao)</option>
+                  </select>
+                </div>
+
+                <button type="submit" id="submit-btn" class="clay-btn clay-btn-primary pulse-cta" style="width: 100%; font-size: 1.15rem; padding: 1.2rem; margin-top: 0.5rem;">
+                  <span>XÁC NHẬN GIỮ CHỖ & NHẬN QUÀ TẶNG</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+
+                <div style="text-align: center; margin-top: 0.85rem; font-size: 0.8rem; color: var(--slate-400);">
+                  🔒 Thông tin của bạn được bảo mật tuyệt đối. Không spam.
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 14: FAQ ACCORDION (CÂU HỎI THƯỜNG GẶP)
+         ========================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+          <div class="clay-badge clay-badge-coral" style="margin-bottom: 0.85rem;">GIẢI ĐÁP TẬN TÌNH</div>
+          <h2>Những Câu Hỏi Thường Gặp Về Khóa Học TOEIC ALL-IN-ONE</h2>
+          <p style="color: var(--slate-600); margin-top: 1rem;">
+            Nếu bạn còn băn khoăn, dưới đây là những câu trả lời chi tiết nhất:
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-question" type="button" aria-expanded="true">
+              <span>Em mất gốc tiếng Anh hoàn toàn có học được khóa này không?</span>
+              <div class="faq-icon-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <strong>Hoàn toàn học được!</strong> Khóa học được thiết kế bắt đầu từ Giai đoạn 1: Chuẩn hóa lại toàn bộ bảng ngữ âm và nền tảng từ vựng cơ bản nhất. Thầy Hưng giải thích hoàn toàn bằng tiếng Việt với ví dụ trực quan, sinh động nên dù bạn mất gốc nhiều năm vẫn có thể theo kịp dễ dàng.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Hình thức học như thế nào? Em bận đi làm có học được không?</span>
+              <div class="faq-icon-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              Khóa học là hệ thống sản phẩm số All-in-One hoàn chỉnh bao gồm video bài giảng chất lượng cao 4K, tài liệu PDF độc quyền và flashcard. Bạn có thể học linh hoạt trên điện thoại, máy tính bảng hoặc laptop bất cứ lúc nào rảnh rỗi. Ngoài ra còn có Group Zalo đồng hành để Thầy Hưng sửa bài mỗi ngày.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Sau bao lâu thì em bắt đầu nhận thấy sự tiến bộ?</span>
+              <div class="faq-icon-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              Ngay sau <strong>7 đến 10 ngày đầu tiên</strong> khi hoàn thành kỹ thuật Acoustic Decoding, bạn sẽ nhận thấy tai mình bắt đầu nghe rõ từng từ trong Part 1 và Part 2 mà không còn cảm giác bị ù tai hay dịch nhẩm. Sau 30 ngày, điểm thi thử của bạn thường tăng từ 120 - 200 điểm.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Khóa học có được sở hữu trọn đời không?</span>
+              <div class="faq-icon-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              <strong>Có!</strong> Bạn được sở hữu tài khoản và tài liệu học tập trọn đời, được cập nhật miễn phí tất cả các đề thi và bộ từ vựng mới nhất theo format ETS trong tương lai mà không phải đóng thêm bất kỳ khoản phí nào.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Chính sách hoàn tiền 100% hoạt động như thế nào?</span>
+              <div class="faq-icon-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              Nếu trong vòng 14 ngày đầu tiên, bạn đã hoàn thành bài giảng và bài tập theo đúng hướng dẫn mà cảm thấy phương pháp không phù hợp, bạn chỉ cần nhắn tin cho Thầy Hưng qua Zalo. Toàn bộ 499.000 VNĐ sẽ được chuyển khoản hoàn trả về tài khoản ngân hàng của bạn trong vòng 24 giờ.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Sau khi đăng ký thì bao lâu em được kích hoạt khóa học?</span>
+              <div class="faq-icon-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </button>
+            <div class="faq-answer">
+              Ngay sau khi điền form đăng ký, bộ phận đào tạo và Thầy Hưng sẽ liên hệ qua số điện thoại để xác nhận và gửi ngay tài khoản kích hoạt cùng link tải 5 bộ quà tặng qua Email và Zalo trong vòng 5 - 15 phút.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 15: FOOTER & LEGAL DISCLAIMERS
+         ========================================== -->
+    <footer class="footer-main">
+      <div class="container">
+        <div class="footer-top-grid">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+              <img src="public/image/Logo.webp" alt="TOEIC Mr H Logo" style="height: 48px; width: auto;">
+              <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.35rem; color: var(--white);">
+                TOEIC Mr H
+              </span>
+            </div>
+            <p style="font-size: 0.9rem; line-height: 1.7; color: #94A3B8; max-width: 400px;">
+              Hệ thống đào tạo TOEIC chuẩn thực chiến hàng đầu dành cho sinh viên và người đi làm. Giúp người học làm chủ tiếng Anh, tự tin vượt qua kỳ thi TOEIC ETS với điểm số cao nhất.
+            </p>
+            <div style="margin-top: 1rem; font-size: 0.88rem; color: #E2E8F0;">
+              <strong>Giảng viên phụ trách:</strong> Thầy Phạm Việt Hưng (985/990 TOEIC)<br>
+              <strong>Hotline / Zalo hỗ trợ:</strong> 0904.244.824
+            </div>
+          </div>
+
+          <div>
+            <h4 style="color: var(--white); font-size: 1.1rem; margin-bottom: 1.25rem;">Liên Kết Nhanh</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem;">
+              <li><a href="#hero" style="color: #94A3B8; transition: color 0.2s;">Trang Chủ</a></li>
+              <li><a href="#he-thong" style="color: #94A3B8; transition: color 0.2s;">Hệ Thống Đào Tạo</a></li>
+              <li><a href="#lo-trinh" style="color: #94A3B8; transition: color 0.2s;">Lộ Trình 60 Ngày</a></li>
+              <li><a href="#qua-tang" style="color: #94A3B8; transition: color 0.2s;">5 Quà Tặng Độc Quyền</a></li>
+              <li><a href="#giang-vien" style="color: #94A3B8; transition: color 0.2s;">Thông Tin Giảng Viên</a></li>
+              <li><a href="#dang-ky" style="color: #FF5E36; font-weight: 700;">Đăng Ký Khóa Học</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="color: var(--white); font-size: 1.1rem; margin-bottom: 1.25rem;">Cam Kết & Chính Sách</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.9rem;">
+              <li><a href="#dang-ky" style="color: #94A3B8;">Chính Sách Hoàn Tiền 100%</a></li>
+              <li><a href="#dang-ky" style="color: #94A3B8;">Cam Kết Chuẩn Đầu Ra</a></li>
+              <li><a href="#" style="color: #94A3B8;">Chính Sách Bảo Mật</a></li>
+              <li><a href="#" style="color: #94A3B8;">Điều Khoản Sử Dụng</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Compliance & Legal Disclaimers as required by PLAN -->
+        <div class="footer-disclaimer-box">
+          <p style="margin-bottom: 0.85rem;">
+            <strong>COPYRIGHT 2025 - 2026 | TOEIC MR H | ALL RIGHTS RESERVED.</strong>
+          </p>
+          <p style="margin-bottom: 0.85rem;">
+            <strong>TUYÊN BỐ MIỄN TRỪ TRÁCH NHIỆM (DISCLAIMER):</strong> Xin lưu ý rằng kết quả học tập của từng học viên có thể khác nhau và phụ thuộc vào nhiều yếu tố bao gồm nhưng không giới hạn ở nền tảng ban đầu, kinh nghiệm, sự nỗ lực và mức độ cam kết thực hiện đúng theo lộ trình học tập của mỗi cá nhân. Bất kỳ kết quả hay điểm số nào được nhắc đến trên trang web này chỉ mang tính chất minh họa cho tiềm năng phương pháp và không phải là lời hứa hay bảo đảm kết quả chính xác tuyệt đối cho tất cả mọi người nếu không có sự rèn luyện kiên trì.
+          </p>
+          <p style="margin-bottom: 0.85rem;">
+            <strong>THÔNG BÁO VỀ FACEBOOK (NOT FACEBOOK):</strong> Trang web này không phải là một phần của trang web Facebook™ hay Facebook Inc. Ngoài ra, trang web này KHÔNG được Facebook xác nhận dưới bất kỳ hình thức nào. FACEBOOK là thương hiệu đã đăng ký của FACEBOOK, Inc.
+          </p>
+        </div>
+
+        <div class="footer-bottom">
+          <div>Thiết kế theo chuẩn Claymorphism hiện đại &bull; Tối ưu hóa trải nghiệm học tập đỉnh cao.</div>
+          <div>Thầy Phạm Việt Hưng - 985 TOEIC ETS &bull; Hotline: 0904.244.824</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Three.js Library CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Custom 3D Claymorphism Scene -->
+  <script src="js/three-scene.js"></script>
+
+  <!-- Interactive JavaScript Logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>

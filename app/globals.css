@@ -1,0 +1,677 @@
+/* ==========================================================================
+   TOEIC ALL-IN-ONE - LIGHTER NAVY & LIGHT BROWN DESIGN SYSTEM (120 FPS)
+   Theme: Xanh Navy Nhạt Tinh Tế (giống image 3) & Điểm Nhấn Light Brown
+   Navbar: Logo.webp tinh gọn, không chữ thừa
+   Hero: Bố cục 2 cột (Giới thiệu bên trái, Hình ảnh bên phải)
+   Giá cả: Ghi "Liên Hệ"
+   Smooth Scroll: Lenis 120 FPS High-Refresh Inertial Engine
+   ========================================================================== */
+
+:root {
+  /* Lighter Navy Palette (Inspired by image 3 - #10233F / #132B4F) */
+  --bg-navy-main: #10233F;
+  --bg-navy-surface: #142A4C;
+  --bg-navy-surface-alt: #0E1F38;
+  --bg-navy-card: #18355E;
+  --bg-navy-card-subtle: #1D3F6E;
+  --bg-navy-card-hover: #21487D;
+  --bg-navy-card-light: #26528D;
+
+  /* Text Colors */
+  --text-white: #FFFFFF;
+  --text-white-pure: #FFFFFF;
+  --text-body: #E2EBF5;
+  --text-muted: #A3B8CC;
+  --text-dim: #7991A8;
+
+  /* Luxury Light Brown Palette (Thay thế Golden) */
+  --brown-300: #E6C9A8;
+  --brown-400: #DDB892;
+  --brown-500: #C59B6D;
+  --brown-600: #B08958;
+  --brown-700: #9C6644;
+  --brown-gradient: linear-gradient(135deg, #E6C9A8 0%, #D4A373 50%, #B08958 100%);
+  --brown-glow: 0 0 20px rgba(212, 163, 115, 0.35);
+
+  /* Borders & Shadows */
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.08);
+  --border-card: 1px solid rgba(255, 255, 255, 0.12);
+  --border-card-hover: 1px solid rgba(212, 163, 115, 0.45);
+  --border-brown: 1px solid rgba(212, 163, 115, 0.35);
+  --shadow-card: 0 8px 30px -4px rgba(6, 14, 26, 0.4);
+  --shadow-hover: 0 14px 36px -4px rgba(6, 14, 26, 0.55), 0 0 20px rgba(212, 163, 115, 0.15);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* 120 FPS Easing */
+  --ease-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   RESET & 120 FPS PERFORMANCE ENHANCEMENTS
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+}
+
+html {
+  background-color: var(--bg-navy-main) !important;
+  color: var(--text-white) !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lenis 120 FPS Smooth Scroll Support */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+body {
+  font-family: var(--font-sans), 'Be Vietnam Pro', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-navy-main) !important;
+  /* Image 3 Signature Dot Grid Pattern */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--text-body) !important;
+  line-height: 1.68;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Hardware Acceleration Helpers for 120Hz Displays */
+.hw-accel,
+.story-card,
+.btn-brown,
+.btn-navy-outline,
+.sticky-floating-cta,
+.story-toast,
+.pill-badge {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY & LIGHT BROWN HIGHLIGHTS
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-white-pure);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 3.8vw, 3.3rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 1.9vw, 1.6rem);
+}
+
+p {
+  color: var(--text-body);
+  font-size: 1.05rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Light Brown Text Utilities */
+.text-brown {
+  color: var(--brown-400) !important;
+}
+
+.text-brown-gradient {
+  background: var(--brown-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.highlight-brown {
+  color: var(--brown-400);
+  font-weight: 700;
+}
+
+/* Luxury Golden Gradient for Requested Section Titles */
+.text-golden-title {
+  background: linear-gradient(135deg, #FFF4D0 0%, #F59E0B 45%, #D97706 80%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  filter: drop-shadow(0 2px 14px rgba(245, 158, 11, 0.25));
+}
+
+/* Bonus Urgency Countdown Badge */
+.bonus-countdown-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.38);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 1.15rem;
+  font-size: 0.85rem;
+  color: #FDE68A;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.15);
+}
+
+.bonus-timer-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(16, 35, 63, 0.95);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #FBBF24;
+  padding: 0.15rem 0.55rem;
+  border-radius: 6px;
+  font-weight: 800;
+  font-family: monospace;
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   CONTAINERS & SECTIONS
+   ========================================================================== */
+.story-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.story-container-wide {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.story-section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.story-section-surface {
+  background-color: var(--bg-navy-surface);
+}
+
+.story-section-main {
+  background-color: var(--bg-navy-main);
+}
+
+.story-section-surface-alt {
+  background-color: var(--bg-navy-surface-alt);
+}
+
+@media (max-width: 768px) {
+  .story-section {
+    padding: 3.5rem 0;
+  }
+}
+
+/* ==========================================================================
+   PILL BADGES (LIGHT BROWN & NAVY)
+   ========================================================================== */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.15rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pill-badge-brown {
+  background: rgba(212, 163, 115, 0.14);
+  color: var(--brown-300);
+  border: 1px solid rgba(212, 163, 115, 0.35);
+  box-shadow: 0 0 12px rgba(212, 163, 115, 0.12);
+}
+
+.pill-badge-navy {
+  background: rgba(29, 63, 110, 0.6);
+  color: #BAE6FD;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   CARDS (XANH NAVY NHẠT SẮC SẢO)
+   ========================================================================== */
+.story-card {
+  background: var(--bg-navy-card);
+  border-radius: var(--radius-lg);
+  border: var(--border-card);
+  box-shadow: var(--shadow-card);
+  padding: 2.25rem 2rem;
+  transition: var(--ease-smooth);
+  position: relative;
+}
+
+.story-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 163, 115, 0.45);
+  box-shadow: var(--shadow-hover);
+  background: var(--bg-navy-card-hover);
+}
+
+.story-card-brown-accent {
+  border-top: 3px solid var(--brown-500);
+}
+
+/* ==========================================================================
+   BUTTONS (LIGHT BROWN & NAVY)
+   ========================================================================== */
+.btn-brown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: var(--brown-gradient);
+  color: #0E1E38;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.95rem 2.25rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: var(--ease-smooth);
+  box-shadow: 0 8px 24px -2px rgba(212, 163, 115, 0.35);
+  white-space: nowrap;
+}
+
+.btn-brown:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px 0 rgba(212, 163, 115, 0.5);
+  background: linear-gradient(135deg, #FFF 0%, #E6C9A8 40%, #D4A373 100%);
+}
+
+.btn-brown:active {
+  transform: translateY(0);
+}
+
+.btn-navy-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: rgba(24, 53, 94, 0.7);
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  transition: var(--ease-smooth);
+}
+
+.btn-navy-outline:hover {
+  background: var(--bg-navy-card-light);
+  border-color: var(--brown-400);
+  color: var(--brown-300);
+}
+
+/* ==========================================================================
+   STICKY FLOATING CTA (BOTTOM RIGHT - 120 FPS)
+   ========================================================================== */
+.sticky-floating-cta {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--brown-gradient);
+  color: #0E1E38;
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 12px 30px rgba(6, 14, 26, 0.55), 0 0 18px rgba(212, 163, 115, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: var(--ease-smooth);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sticky-floating-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 36px rgba(6, 14, 26, 0.65), 0 0 26px rgba(212, 163, 115, 0.5);
+}
+
+/* ==========================================================================
+   STORYTELLER QUOTE BOX (LIGHT BROWN ACCENT)
+   ========================================================================== */
+.story-quote {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--text-white);
+  line-height: 1.75;
+  padding: 1.75rem 2.25rem;
+  background: rgba(24, 53, 94, 0.75);
+  border-left: 3px solid var(--brown-500);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 2.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   NAVBAR (LOGO.WEBP ONLY, NO TEXT, PRO GLASS)
+   ========================================================================== */
+.pro-navbar {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(16, 35, 63, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  transition: var(--ease-smooth);
+}
+
+.pro-navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand-logo-link {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+/* Nav Links with Flex Gap & Light Brown Hover */
+.pro-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pro-nav-item {
+  color: #D5E0ED;
+  font-size: 0.92rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: var(--ease-smooth);
+  position: relative;
+  padding: 0.4rem 0;
+  cursor: pointer;
+}
+
+.pro-nav-item:hover {
+  color: var(--brown-300);
+}
+
+.pro-nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 2px;
+  background: var(--brown-400);
+  border-radius: 2px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pro-nav-item:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Mobile Nav Toggle */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-white);
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .pro-nav-links {
+    display: none;
+  }
+  .mobile-nav-toggle {
+    display: flex;
+  }
+}
+
+.mobile-drawer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #142A4C;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==========================================
+   MODULE NUMBER (STORYTELLER FORMAT)
+   ========================================== */
+.module-number {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--brown-400);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+/* ==========================================
+   FORM CONTROLS (NAVY THEME)
+   ========================================== */
+.story-input, .story-select {
+  width: 100%;
+  padding: 0.95rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #10233F;
+  color: var(--text-white);
+  font-size: 1rem;
+  outline: none;
+  transition: var(--ease-smooth);
+}
+
+.story-input:focus, .story-select:focus {
+  border-color: var(--brown-500);
+  box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.25);
+}
+
+.form-field {
+  margin-bottom: 1.35rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================
+   BUTTONS & MENTOR CUTOUT
+   ========================================== */
+.btn-brown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--brown-gradient);
+  color: #150E05 !important;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(212, 163, 115, 0.35);
+  transition: var(--ease-smooth);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.btn-brown:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(212, 163, 115, 0.5);
+  filter: brightness(1.05);
+}
+
+.btn-brown:active {
+  transform: translateY(0);
+}
+
+.mentor-cutout-img {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 15px 30px rgba(6, 14, 26, 0.65));
+  mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+}
+
+/* ==========================================
+   FAQ ACCORDION (NAVY CARDS)
+   ========================================== */
+.faq-row {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  background: var(--bg-navy-card);
+  padding: 1.35rem 1.75rem;
+  margin-bottom: 0.85rem;
+  cursor: pointer;
+  transition: var(--ease-smooth);
+}
+
+.faq-row:hover {
+  border-color: rgba(212, 163, 115, 0.4);
+  background: var(--bg-navy-card-hover);
+}
+
+.faq-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--text-white);
+  user-select: none;
+}
+
+.faq-row-content {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #D5E0ED;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ==========================================
+   SOCIAL PROOF TOAST (BOTTOM LEFT)
+   ========================================== */
+.story-toast {
+  position: fixed;
+  bottom: 1.75rem;
+  left: 1.75rem;
+  z-index: 100;
+  background: rgba(20, 42, 76, 0.95);
+  border: 1px solid rgba(212, 163, 115, 0.4);
+  box-shadow: 0 12px 30px rgba(6, 14, 26, 0.5), 0 0 16px rgba(212, 163, 115, 0.2);
+  border-radius: var(--radius-md);
+  padding: 0.95rem 1.25rem;
+  max-width: 330px;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  backdrop-filter: blur(12px);
+  animation: slideInLeft 0.35s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Footer */
+.story-footer {
+  background: #0B192E;
+  color: #A3B8CC;
+  padding: 4.5rem 0 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
