@@ -1494,7 +1494,7 @@ export default function Home() {
             <div>
               <h4 style={{ color: '#FFFFFF', fontSize: '1rem', marginBottom: '1rem' }}>Thông Tin Hỗ Trợ</h4>
               <p style={{ color: '#D5E0ED', fontSize: '0.92rem', lineHeight: 1.7 }}>
-                Hotline Tư Vấn: <strong className="text-brown">0987 654 321</strong><br />
+                Hotline Tư Vấn: <strong className="text-brown">0904 244 824</strong><br />
                 Email: support@mrhtoeic.com<br />
                 Thời gian hỗ trợ: 08:00 - 22:00 (Tất cả các ngày trong tuần)
               </p>
@@ -1513,7 +1513,7 @@ export default function Home() {
               © 2025 - 2026 TOEIC ALL-IN-ONE. All Rights Reserved. Bản quyền thuộc về Giảng viên Phạm Việt Hưng.
             </p>
             <p style={{ maxWidth: '780px', margin: '0 auto', fontSize: '0.76rem' }}>
-              pham viet hung 
+              Lưu ý: ĐÂY KHÔNG PHẢI WEB ĐỘC QUYỀN CỦA TỔ CHỨC ETS
             </p>
             <p style={{ marginTop: '0.5rem', fontSize: '0.75rem' }}>
               
