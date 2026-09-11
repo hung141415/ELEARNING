@@ -1513,7 +1513,7 @@ export default function Home() {
               © 2025 - 2026 TOEIC ALL-IN-ONE. All Rights Reserved. Bản quyền thuộc về Giảng viên Phạm Việt Hưng.
             </p>
             <p style={{ maxWidth: '780px', margin: '0 auto', fontSize: '0.76rem' }}>
-              Tuyên bố từ chối trách nhiệm: TOEIC® là nhãn hiệu đã đăng ký của Viện Khảo thí Giáo dục Hoa Kỳ (ETS). Trang web này không được xác nhận hoặc phê duyệt bởi ETS. Kết quả học tập có thể khác nhau tùy thuộc vào mức độ cam kết và thực hành của từng học viên.
+              pham viet hung 
             </p>
             <p style={{ marginTop: '0.5rem', fontSize: '0.75rem' }}>
               
