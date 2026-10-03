@@ -1,4 +1,10 @@
-node_modules
-.next
-.env*.local
+node_modules/
+dist/
+scratch/
+.tempmediaStorage/
+.agents/
 .DS_Store
+Thumbs.db
+
+.git_elearning_mrh_backup/
+.next/
