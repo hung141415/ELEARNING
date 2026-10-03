@@ -1,13 +1,8 @@
-/* ==========================================================================
-   TOEIC PRO 600 – 800+ — High-End Sales Landing Page
-   Palette: Dark Navy Blue (#071120, #112659) & Light Brown (#C4A07C) & White (#FFFFFF)
-   Style: Luxury Minimalist, High-Ticket Course (5.400.000₫)
-   Inspired by: mrhtoeic.com & storyteller.manhvibe.vn
-   ========================================================================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-
-/* --- DESIGN SYSTEM & CSS TOKENS (EXACT MATCH: MRHTOEIC.COM) --- */
+@layer base {
 :root {
   /* Signature Navy Palette from mrhtoeic.com */
   --bg-primary: #112659;        /* Signature Deep Navy from mrhtoeic.com */
@@ -82,6 +77,29 @@
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+  }
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+/* ==========================================================================
+   TOEIC PRO 600 – 800+ — High-End Sales Landing Page
+   Palette: Dark Navy Blue (#071120, #112659) & Light Brown (#C4A07C) & White (#FFFFFF)
+   Style: Luxury Minimalist, High-Ticket Course (5.400.000₫)
+   Inspired by: mrhtoeic.com & storyteller.manhvibe.vn
+   ========================================================================== */
+
+
+
+/* --- DESIGN SYSTEM & CSS TOKENS (EXACT MATCH: MRHTOEIC.COM) --- */
+
 
 /* --- BASE STYLES & RESET --- */
 *, *::before, *::after {
@@ -4993,4 +5011,6 @@ ul, ol {
   background: linear-gradient(180deg, #C4A07C 0%, #FFFFFF 65%, #C4A07C 100%);
   box-shadow: 0 0 15px rgba(196, 160, 124, 0.9), 0 0 30px rgba(255, 255, 255, 0.8);
   will-change: transform;
+}
+
 }
