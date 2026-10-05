@@ -50,7 +50,7 @@ export default function Home() {
         <h1 className="hero-headline-centered">
           <span className="hero-brand-name">TOEIC ONLINE PRO</span>
           <span className="hero-title-main">
-            Hành trình lấy <span className="highlight-capsule">600 – 800+ TOEIC</span>
+            Hành trình lấy <span className="highlight-capsule">600 + TOEIC</span>
             <span className="hero-title-break">Sau 36 Buổi THỰC CHIẾN</span>
           </span>
           <span className="hero-title-sub">Học Trực Tuyến 100% Zoom Live — Đảm Bảo Chuẩn 600+ • Tự Tin Bứt Phá 800+!</span>
@@ -60,7 +60,7 @@ export default function Home() {
           Xóa bỏ nỗi sợ tiếng Anh với lộ trình 36 buổi bứt phá trọn vẹn CẤP TỐC trong 90 ngày. Trải nghiệm hệ thống cô đọng, tập trung 100% vào <strong className="text-light-brown">KĨ NĂNG THỰC CHIẾN PHÒNG THI</strong> thay vì cày cuốc lý thuyết rập khuôn. Khóa học đảm bảo chuẩn đầu ra 600+ sau khi học xong, đồng thời tối ưu hóa kỹ năng xử lý bài thi để bạn hoàn toàn có thể bứt phá 800+ bình thường.
         </p>
         <p className="hero-lead-zero-note">
-          (Nếu như bạn Mất Gốc thì KHÔNG SAO vì đây là lộ trình dạy CHI TIẾT từ CON SỐ 0)
+          (Nếu như bạn MẤT GỐC thì KHÔNG SAO vì đây là lộ trình dạy CHI TIẾT TỪ CON SỐ 0)
         </p>
       </div>
 
@@ -780,7 +780,7 @@ export default function Home() {
     <div className="container">
       <div className="text-center">
         <span className="section-badge">• NỘI DUNG CHƯƠNG TRÌNH ĐÀO TẠO</span>
-        <h2 className="section-title">Lộ Trình Bứt Phá <span className="highlight">600 – 800+ TOEIC Thực Chiến</span><br /><span className="title-sub-break">Trong 36 Buổi</span></h2>
+        <h2 className="section-title">Lộ Trình Bứt Phá <span className="highlight">600 + TOEIC Thực Chiến</span><br /><span className="title-sub-break">Trong 36 Buổi</span></h2>
         <p className="section-subtitle">
           Đảm bảo chuẩn 600+ sau khóa học cho người mất gốc — Đồng thời rèn luyện kỹ năng xử lý đề ETS để bạn hoàn toàn có thể bứt phá 800+ bình thường. Được thiết kế theo trục thời gian 6 chặng liên hoàn:
         </p>
@@ -800,6 +800,14 @@ export default function Home() {
               <span className="mv-stage-pill">• GIAI ĐOẠN 01</span>
               <h3 className="mv-stage-left-title">Xây Nền & Phản Xạ Nghe</h3>
               <div className="mv-stage-sessions-tag">Buổi 01 – 06 • 2 tuần đầu</div>
+              <div className="mv-stage-illustration-wrap">
+                <img
+                  src="/image/stage-1-illustration.jpg"
+                  alt="Minh họa Giai đoạn 01: Chuẩn Hóa Ngữ Âm IPA & Xóa Mù Nghe Part 1 - Part 2"
+                  className="mv-stage-illustration-img"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="mv-roadmap-center">
               <div className="mv-roadmap-node">01</div>
@@ -810,6 +818,14 @@ export default function Home() {
                 <div className="mv-mobile-stage-bar">
                   <span className="mv-stage-pill">• GIAI ĐOẠN 01</span>
                   <span className="mv-stage-sessions-tag">Buổi 01 – 06 • 2 tuần đầu</span>
+                </div>
+                <div className="mv-mobile-stage-illustration">
+                  <img
+                    src="/image/stage-1-illustration.jpg"
+                    alt="Minh họa Giai đoạn 01: Chuẩn Hóa Ngữ Âm IPA & Xóa Mù Nghe Part 1 - Part 2"
+                    className="mv-stage-illustration-img"
+                    loading="lazy"
+                  />
                 </div>
                 <h4 className="mv-card-headline">Chuẩn Hóa Ngữ Âm IPA & Xóa Mù Nghe Part 1 - Part 2</h4>
                 <p className="mv-card-summary">
@@ -839,6 +855,14 @@ export default function Home() {
               <span className="mv-stage-pill">• GIAI ĐOẠN 02</span>
               <h3 className="mv-stage-left-title">Bắt Nhịp Part 3 - Part 4</h3>
               <div className="mv-stage-sessions-tag">Buổi 07 – 12 • Tuần 3-4</div>
+              <div className="mv-stage-illustration-wrap">
+                <img
+                  src="/image/stage-2-illustration.jpg"
+                  alt="Minh họa Giai đoạn 02: Bắt Nhịp Part 3 - Part 4 & Săn Keyword"
+                  className="mv-stage-illustration-img"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="mv-roadmap-center">
               <div className="mv-roadmap-node">02</div>
@@ -849,6 +873,14 @@ export default function Home() {
                 <div className="mv-mobile-stage-bar">
                   <span className="mv-stage-pill">• GIAI ĐOẠN 02</span>
                   <span className="mv-stage-sessions-tag">Buổi 07 – 12 • Tuần 3-4</span>
+                </div>
+                <div className="mv-mobile-stage-illustration">
+                  <img
+                    src="/image/stage-2-illustration.jpg"
+                    alt="Minh họa Giai đoạn 02: Bắt Nhịp Part 3 - Part 4 & Săn Keyword"
+                    className="mv-stage-illustration-img"
+                    loading="lazy"
+                  />
                 </div>
                 <h4 className="mv-card-headline">Luyện Sâu Kỹ Thuật Đọc Trước Đề & Săn Keyword Part 3 - 4</h4>
                 <p className="mv-card-summary">
@@ -878,6 +910,14 @@ export default function Home() {
               <span className="mv-stage-pill">• GIAI ĐOẠN 03</span>
               <h3 className="mv-stage-left-title">Ngữ Pháp & Part 5 Siêu Tốc</h3>
               <div className="mv-stage-sessions-tag">Buổi 13 – 20 • Tuần 5-7</div>
+              <div className="mv-stage-illustration-wrap">
+                <img
+                  src="/image/stage-3-illustration.jpg"
+                  alt="Minh họa Giai đoạn 03: Ngữ Pháp Cốt Lõi & Part 5 Siêu Tốc Trong 15s"
+                  className="mv-stage-illustration-img"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="mv-roadmap-center">
               <div className="mv-roadmap-node">03</div>
@@ -888,6 +928,14 @@ export default function Home() {
                 <div className="mv-mobile-stage-bar">
                   <span className="mv-stage-pill">• GIAI ĐOẠN 03</span>
                   <span className="mv-stage-sessions-tag">Buổi 13 – 20 • Tuần 5-7</span>
+                </div>
+                <div className="mv-mobile-stage-illustration">
+                  <img
+                    src="/image/stage-3-illustration.jpg"
+                    alt="Minh họa Giai đoạn 03: Ngữ Pháp Cốt Lõi & Part 5 Siêu Tốc Trong 15s"
+                    className="mv-stage-illustration-img"
+                    loading="lazy"
+                  />
                 </div>
                 <h4 className="mv-card-headline">Làm Chủ Ngữ Pháp Cốt Lõi & Xử Lý Part 5 Trong 15s/Câu</h4>
                 <p className="mv-card-summary">
@@ -917,6 +965,14 @@ export default function Home() {
               <span className="mv-stage-pill">• GIAI ĐOẠN 04</span>
               <h3 className="mv-stage-left-title">Scanning & Skimming Part 6 - 7</h3>
               <div className="mv-stage-sessions-tag">Buổi 21 – 28 • Tuần 8-9</div>
+              <div className="mv-stage-illustration-wrap">
+                <img
+                  src="/image/stage-4-illustration.jpg"
+                  alt="Minh họa Giai đoạn 04: Chiến Thuật Scanning - Skimming & Đọc Hiểu Part 6 - 7"
+                  className="mv-stage-illustration-img"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="mv-roadmap-center">
               <div className="mv-roadmap-node">04</div>
@@ -927,6 +983,14 @@ export default function Home() {
                 <div className="mv-mobile-stage-bar">
                   <span className="mv-stage-pill">• GIAI ĐOẠN 04</span>
                   <span className="mv-stage-sessions-tag">Buổi 21 – 28 • Tuần 8-9</span>
+                </div>
+                <div className="mv-mobile-stage-illustration">
+                  <img
+                    src="/image/stage-4-illustration.jpg"
+                    alt="Minh họa Giai đoạn 04: Chiến Thuật Scanning - Skimming & Đọc Hiểu Part 6 - 7"
+                    className="mv-stage-illustration-img"
+                    loading="lazy"
+                  />
                 </div>
                 <h4 className="mv-card-headline">Chiến Thuật Scanning - Skimming & Đọc Hiểu Part 6 - Part 7</h4>
                 <p className="mv-card-summary">
@@ -956,6 +1020,14 @@ export default function Home() {
               <span className="mv-stage-pill">• GIAI ĐOẠN 05</span>
               <h3 className="mv-stage-left-title">Part 7 Nâng Cao & Bứt Tốc</h3>
               <div className="mv-stage-sessions-tag">Buổi 29 – 34 • Tuần 10-11</div>
+              <div className="mv-stage-illustration-wrap">
+                <img
+                  src="/image/stage-5-illustration.jpg"
+                  alt="Minh họa Giai đoạn 05: Xử Lý Văn Bản Khó Part 7 & Bứt Tốc Về Đích"
+                  className="mv-stage-illustration-img"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="mv-roadmap-center">
               <div className="mv-roadmap-node">05</div>
@@ -966,6 +1038,14 @@ export default function Home() {
                 <div className="mv-mobile-stage-bar">
                   <span className="mv-stage-pill">• GIAI ĐOẠN 05</span>
                   <span className="mv-stage-sessions-tag">Buổi 29 – 34 • Tuần 10-11</span>
+                </div>
+                <div className="mv-mobile-stage-illustration">
+                  <img
+                    src="/image/stage-5-illustration.jpg"
+                    alt="Minh họa Giai đoạn 05: Xử Lý Văn Bản Khó Part 7 & Bứt Tốc Về Đích"
+                    className="mv-stage-illustration-img"
+                    loading="lazy"
+                  />
                 </div>
                 <h4 className="mv-card-headline">Kỹ Năng Xử Lý Văn Bản Khó Part 7 & Bứt Tốc Về Đích</h4>
                 <p className="mv-card-summary">
@@ -995,6 +1075,14 @@ export default function Home() {
               <span className="mv-stage-pill">• GIAI ĐOẠN 06</span>
               <h3 className="mv-stage-left-title">Tổng Duyệt & Chạm Đích 800+</h3>
               <div className="mv-stage-sessions-tag">Buổi 35 – 36 • Tuần 12</div>
+              <div className="mv-stage-illustration-wrap">
+                <img
+                  src="/image/stage-6-illustration.jpg"
+                  alt="Minh họa Giai đoạn 06: Tổng Duyệt Phòng Thi & Chạm Đích 800+ TOEIC"
+                  className="mv-stage-illustration-img"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="mv-roadmap-center">
               <div className="mv-roadmap-node">06</div>
@@ -1005,6 +1093,14 @@ export default function Home() {
                 <div className="mv-mobile-stage-bar">
                   <span className="mv-stage-pill">• GIAI ĐOẠN 06</span>
                   <span className="mv-stage-sessions-tag">Buổi 35 – 36 • Tuần 12</span>
+                </div>
+                <div className="mv-mobile-stage-illustration">
+                  <img
+                    src="/image/stage-6-illustration.jpg"
+                    alt="Minh họa Giai đoạn 06: Tổng Duyệt Phòng Thi & Chạm Đích 800+ TOEIC"
+                    className="mv-stage-illustration-img"
+                    loading="lazy"
+                  />
                 </div>
                 <h4 className="mv-card-headline">Tổng Duyệt Phòng Thi & Hướng Dẫn Tự Ôn Tập Bứt Phá 800+ TOEIC</h4>
                 <p className="mv-card-summary">
@@ -1106,10 +1202,10 @@ export default function Home() {
             <span>BẢNG ĐIỂM THỰC TẾ IIG VIỆT NAM • ETS</span>
           </div>
           <h3 className="certificates-showcase-title">
-            Chứng Chỉ Điểm Số TOEIC ETS Thầy Hưng & Bảng Vàng Học Viên
+            Chứng Chỉ Điểm Số TOEIC ETS Thầy Hưng
           </h3>
           <p className="certificates-showcase-subtitle">
-            Minh chứng năng lực từ người thầy đạt 985/990 TOEIC ETS thực chiến. Khóa học đảm bảo chuẩn đầu ra 600+ sau khi học xong cho học viên mất gốc, đồng thời kỹ năng xử lý đề thực chiến giúp các bạn hoàn toàn có thể bứt phá lên 700, 800+ và thậm chí 895 TOEIC bình thường sau 3 tháng:
+            Minh chứng năng lực từ người thầy đạt 985/990 TOEIC ETS thực chiến.
           </p>
         </div>
 
@@ -1128,7 +1224,7 @@ export default function Home() {
             </div>
             <div className="cert-meta-details">
               <div className="cert-org-title">Chứng Chỉ Khảo Thí Quốc Tế Do ETS & IIG Việt Nam Cấp</div>
-              <div className="cert-org-desc">Thầy Hưng (985 TOEIC) trực tiếp đứng lớp 100% các buổi Zoom Live. Dù khóa học chỉ đảm bảo chuẩn đầu ra 600+ sau khi học xong, nhưng học viên được rèn luyện trọn vẹn kỹ năng làm bài, chiến thuật bóc tách bẫy và tư duy phòng thi đỉnh cao — đem lại giá trị thực chiến lớn để bạn hoàn toàn có thể đạt 800+ bình thường và tối ưu hóa điểm số tuyệt đối.</div>
+              <div className="cert-org-desc">Thầy Hưng (985 TOEIC) trực tiếp đứng lớp 100% các buổi Zoom Live.</div>
             </div>
           </div>
         </div>
