@@ -196,13 +196,14 @@ function initRegistrationModal() {
   const modal = document.getElementById('vietqr-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
 
-  if (!form || !modal) return;
+  if (!form) return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = form.querySelector('[name="fullname"]')?.value.trim() || '';
-    const phone = form.querySelector('[name="phone"]')?.value.trim() || '';
+    const name = (form.querySelector('[name="name"]')?.value || form.querySelector('[name="fullname"]')?.value || '').trim();
+    const phone = (form.querySelector('[name="phone"]')?.value || '').trim();
+    const email = (form.querySelector('[name="email"]')?.value || '').trim();
 
     if (!name || !phone) {
       alert('Vui lòng nhập đầy đủ Họ tên và Số điện thoại!');
@@ -215,25 +216,26 @@ function initRegistrationModal() {
       return;
     }
 
-    const bankId = 'MB'; // MB Bank
-    const accountNo = '0375688888';
-    const accountName = 'NGUYEN THE HUNG';
-    const amount = '5400000';
-    const transferMemo = `${cleanPhone}_TOEICPRO`;
+    // Save buyer info to localStorage for instant hydration on /payment
+    try {
+      localStorage.setItem('mrh_buyer_info', JSON.stringify({
+        fullname: name,
+        phone: cleanPhone,
+        email: email
+      }));
+    } catch (err) {}
 
-    const qrUrl = `https://api.vietqr.io/image/${bankId}-${accountNo}-compact2.jpg?amount=${amount}&addInfo=${encodeURIComponent(transferMemo)}&accountName=${encodeURIComponent(accountName)}`;
+    // Immediately redirect to payment page with query params
+    const query = new URLSearchParams({
+      name: name,
+      phone: cleanPhone,
+      email: email
+    }).toString();
 
-    const qrImg = document.getElementById('modal-qr-img');
-    const memoEl = document.getElementById('modal-transfer-memo');
-    const phoneNotice = document.getElementById('modal-user-phone');
-
-    if (qrImg) qrImg.src = qrUrl;
-    if (memoEl) memoEl.textContent = transferMemo;
-    if (phoneNotice) phoneNotice.textContent = `${name} (${phone})`;
-
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    window.location.href = `/payment?${query}`;
   });
+
+  if (!modal) return;
 
   function closeModal() {
     modal.classList.remove('active');

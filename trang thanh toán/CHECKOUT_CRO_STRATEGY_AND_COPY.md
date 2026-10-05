@@ -202,7 +202,7 @@ Khi hoàn tất chuyển khoản, hệ thống sẽ kích hoạt ngay cho bạn:
 ### 7. Nội dung xác nhận sau khi thanh toán
 - Sau khi bấm nút xác nhận, bạn sẽ nhận được thông báo:  
   *"Giao dịch chuyển khoản của bạn đã được ghi nhận vào hệ thống. Thầy Hưng và đội ngũ hỗ trợ sẽ gửi tin nhắn xác nhận kèm link nhóm VIP qua Zalo trong vòng 5–15 phút. Hãy chuẩn bị sẵn sàng cho hành trình bứt phá 600 - 800+ TOEIC!"*
-- Hotline/Zalo hỗ trợ trực tiếp Thầy Hưng: **0375.688.888** hoặc **0904.244.824**
+- Hotline/Zalo hỗ trợ trực tiếp Thầy Hưng: **0904.244.824**
 
 ### 8. 3-5 Bullets giảm lo ngại khi thanh toán
 - 🔒 **Giao dịch an toàn 100%:** Tài khoản chính chủ Thầy Hưng tại Vietcombank - ngân hàng số 1 Việt Nam, có mã giao dịch đối soát minh bạch.
@@ -337,7 +337,7 @@ Tuyệt đối an toàn. Tài khoản nhận thanh toán là tài khoản chính
 Có. Nền tảng Zoom hoạt động mượt mà trên cả Điện thoại (iOS/Android), iPad, Máy tính bảng và Laptop/PC. Tuy nhiên, để có trải nghiệm học tập và tương tác sửa bài tốt nhất, Thầy Hưng khuyến khích bạn nên sử dụng Laptop hoặc Máy tính để bàn có tai nghe và mic rõ ràng.
 
 #### 11. Nếu sau khi chuyển khoản mà tôi không nhận được email/Zalo thì sao?
-Đừng lo lắng! Bạn có thể chủ động liên hệ ngay tới Hotline/Zalo cá nhân của Thầy Hưng qua số **0375.688.888** hoặc **0904.244.824** kèm ảnh chụp màn hình chuyển khoản. Thầy Hưng sẽ trực tiếp kiểm tra và hỗ trợ kích hoạt suất học cho bạn trong vòng 60 giây.
+Đừng lo lắng! Bạn có thể chủ động liên hệ ngay tới Hotline/Zalo cá nhân của Thầy Hưng qua số **0904.244.824** kèm ảnh chụp màn hình chuyển khoản. Thầy Hưng sẽ trực tiếp kiểm tra và hỗ trợ kích hoạt suất học cho bạn trong vòng 60 giây.
 
 #### 12. Tôi có được tải tài liệu về máy in ra học không? Có được cập nhật đề mới không?
 Toàn bộ file PDF tài liệu 1.000 từ vựng và bài tập đều được thiết kế định dạng chuẩn in ấn (A4) để bạn có thể tải về in ra ghi chép thuận tiện. Ngân hàng đề thi trên App cũng liên tục được cập nhật các format câu hỏi mới nhất từ các kỳ thi thật của ETS tại IIG Việt Nam.
@@ -414,4 +414,4 @@ Yêu cầu cốt lõi:
   - Nút **"Lưu ảnh QR vào thư viện ảnh"** (để mở app ngân hàng quét từ photo album mà không cần thiết bị thứ 2).
   - Các nút Copy to bản to, có khoảng cách bấm thoải mái (minimum tap target 48x48px).
   - Thanh Sticky CTA ở dưới cùng hiển thị: `5.400.000₫ [Ưu đãi còn 23:59] | [BẤM THANH TOÁN QR]`.
-  - Mở thẳng Zalo app qua deep link `https://zalo.me/0375688888` sau khi bấm xác nhận chuyển khoản.
+  - Mở thẳng Zalo app qua deep link `https://zalo.me/0904244824` sau khi bấm xác nhận chuyển khoản.

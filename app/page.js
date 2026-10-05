@@ -1732,10 +1732,10 @@ export default function Home() {
             Đừng để nỗi sợ mất gốc tiếp tục giữ bạn lại — trong khi hàng trăm học viên đã tự tin bứt phá 600 – 800+ TOEIC để ra trường đúng hạn và nhân đôi cơ hội việc làm.
           </p>
 
-          <form id="toeic-registration-form" className="pricing-direct-form">
+          <form id="toeic-registration-form" action="/payment" method="GET" className="pricing-direct-form">
             <div className="form-group-clean">
               <label className="form-clean-label" htmlFor="fullname">Họ & tên <span className="req">*</span></label>
-              <input type="text" id="fullname" name="fullname" className="form-clean-input" placeholder="Nhập họ và tên của bạn" required />
+              <input type="text" id="fullname" name="name" className="form-clean-input" placeholder="Nhập họ và tên của bạn" required />
             </div>
 
             <div className="form-group-clean">
@@ -1923,7 +1923,7 @@ export default function Home() {
           <div className="bank-row">
             <span className="bank-label">Số tài khoản:</span>
             <div className="bank-value">
-              <span id="modal-bank-acc">0375688888</span>
+              <span id="modal-bank-acc">0904244824</span>
               <button className="btn-copy" data-copy-target="modal-bank-acc">Sao chép</button>
             </div>
           </div>
@@ -1955,7 +1955,7 @@ export default function Home() {
           </div>
         </div>
 
-        <a href="https://zalo.me/0375688888" target="_blank" rel="noopener noreferrer" className="btn btn-accent" style={{ width: '100%', textAlign: 'center', marginBottom: '0.65rem' }}>
+        <a href="https://zalo.me/0904244824" target="_blank" rel="noopener noreferrer" className="btn btn-accent" style={{ width: '100%', textAlign: 'center', marginBottom: '0.65rem' }}>
           <i data-lucide="check-circle" style={{ width: '18px', height: '18px' }}></i>
           <span>TÔI ĐÃ CHUYỂN KHOẢN (XÁC NHẬN QUA ZALO)</span>
         </a>

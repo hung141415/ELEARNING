@@ -128,7 +128,7 @@ const FAQ_LIST = [
   },
   {
     q: '11. Nếu sau khi chuyển khoản mà tôi không nhận được email/Zalo thì sao?',
-    a: 'Đừng lo lắng! Bạn có thể chủ động liên hệ ngay tới Hotline/Zalo cá nhân của Thầy Hưng qua số 0375.688.888 hoặc 0904.244.824 kèm ảnh chụp màn hình chuyển khoản. Thầy Hưng sẽ trực tiếp kiểm tra và hỗ trợ kích hoạt suất học cho bạn trong vòng 60 giây.'
+    a: 'Đừng lo lắng! Bạn có thể chủ động liên hệ ngay tới Hotline/Zalo cá nhân của Thầy Hưng qua số 0904.244.824 kèm ảnh chụp màn hình chuyển khoản. Thầy Hưng sẽ trực tiếp kiểm tra và hỗ trợ kích hoạt suất học cho bạn trong vòng 60 giây.'
   },
   {
     q: '12. Tôi có được tải tài liệu về máy in ra học không? Có được cập nhật đề mới không?',
@@ -139,24 +139,54 @@ const FAQ_LIST = [
 export default function PaymentContent() {
   const searchParams = useSearchParams();
 
-  // Active Offer State
-  const initialOffer = searchParams.get('offer');
-  const [activeOfferKey, setActiveOfferKey] = useState(
-    initialOffer && OFFERS[initialOffer] ? initialOffer : 'course'
-  );
+  // Single Course Offer (Live Zoom 36 Buổi)
+  const activeOffer = OFFERS.course;
 
   // Student State
+  const initialPhone = (searchParams.get('phone') || '').replace(/\D/g, '') || '0904244824';
   const [student, setStudent] = useState({
     fullname: searchParams.get('name') || 'Nguyễn Thế Hưng',
-    phone: searchParams.get('phone') || '0904244824',
+    phone: initialPhone,
     email: searchParams.get('email') || 'hung.pham@example.com'
   });
 
+  // Hydrate from URL query or localStorage
+  useEffect(() => {
+    const qName = searchParams.get('name');
+    const qPhone = searchParams.get('phone');
+    const qEmail = searchParams.get('email');
+
+    if (qPhone || qName || qEmail) {
+      const clean = (qPhone || '').replace(/\D/g, '') || '0904244824';
+      const updated = {
+        fullname: qName || 'Học viên TOEIC',
+        phone: clean,
+        email: qEmail || ''
+      };
+      setStudent(updated);
+      setEditForm(updated);
+    } else {
+      try {
+        const stored = localStorage.getItem('mrh_buyer_info');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (parsed && (parsed.fullname || parsed.phone)) {
+            const clean = (parsed.phone || '').replace(/\D/g, '') || '0904244824';
+            const updated = {
+              fullname: parsed.fullname || 'Học viên TOEIC',
+              phone: clean,
+              email: parsed.email || ''
+            };
+            setStudent(updated);
+            setEditForm(updated);
+          }
+        }
+      } catch (e) {}
+    }
+  }, [searchParams]);
+
   // Edit Form Temporary State
   const [editForm, setEditForm] = useState({ ...student });
-
-  // QR Display Mode ('dynamic' | 'ticket')
-  const [qrMode, setQrMode] = useState('dynamic');
 
   // Modals State
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -177,15 +207,16 @@ export default function PaymentContent() {
   const canvasContainerRef = useRef(null);
   const paymentGatewayRef = useRef(null);
 
-  const activeOffer = OFFERS[activeOfferKey] || OFFERS.course;
-  const transferMemo = `${activeOffer.memoPrefix} ${student.phone}`;
+  // Dynamic transfer memo: TOEIC + [Student Phone Number]
+  const cleanPhoneForMemo = (student.phone || '').replace(/\D/g, '') || '0904244824';
+  const transferMemo = `TOEIC ${cleanPhoneForMemo}`;
 
   // Currency Formatter
   const formatMoney = (num) => {
     return num.toLocaleString('vi-VN') + '₫';
   };
 
-  // VietQR URL Generator
+  // VietQR URL Generator with dynamic memo
   const vietQrUrl = `https://api.vietqr.io/image/970436-${BANK_INFO.accountNumber}-compact2.jpg?amount=${activeOffer.price}&addInfo=${encodeURIComponent(transferMemo)}&accountName=${encodeURIComponent(BANK_INFO.accountName)}`;
 
   // Scroll to top on arrival
@@ -463,10 +494,9 @@ export default function PaymentContent() {
 
   // Download QR Code
   const handleDownloadQr = () => {
-    const activeSrc = qrMode === 'ticket' ? '/images/vietcombank-qr-ticket.jpg' : vietQrUrl;
     const link = document.createElement('a');
-    link.href = activeSrc;
-    link.download = `VietQR-Vietcombank-${student.phone}.jpg`;
+    link.href = vietQrUrl;
+    link.download = `VietQR-Vietcombank-${cleanPhoneForMemo}.jpg`;
     link.target = '_blank';
     document.body.appendChild(link);
     link.click();
@@ -534,69 +564,17 @@ export default function PaymentContent() {
                 <span>Trang Chủ</span>
               </Link>
               <a
-                href="https://zalo.me/0375688888"
+                href="https://zalo.me/0904244824"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Chat Zalo với Thầy Hưng"
               >
                 <MessageCircle style={{ width: '16px', height: '16px', color: 'var(--color-accent)' }} />
-                <span>Zalo Thầy Hưng</span>
+                <span>Zalo Thầy Hưng (0904.244.824)</span>
               </a>
             </div>
           </div>
         </header>
-
-        {/* Offer Switcher Tabs (Course / Ebook / Bundle) */}
-        <section className="offer-tabs-container" aria-label="Lựa chọn gói thanh toán">
-          <div className="container">
-            <div className="offer-tabs-bar" role="tablist">
-              <button
-                type="button"
-                className={`offer-tab-btn ${activeOfferKey === 'course' ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveOfferKey('course');
-                  showToast('Đã chuyển sang: Khóa Live Zoom 36 Buổi');
-                }}
-                role="tab"
-                aria-selected={activeOfferKey === 'course'}
-              >
-                <Video style={{ width: '16px', height: '16px' }} />
-                <span>Khóa Học Live Zoom 36 Buổi</span>
-                <span className="offer-tab-pill">Khuyên Dùng • 5.400.000₫</span>
-              </button>
-
-              <button
-                type="button"
-                className={`offer-tab-btn ${activeOfferKey === 'ebook' ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveOfferKey('ebook');
-                  showToast('Đã chuyển sang: Ebook 1000 Từ Vựng ETS');
-                }}
-                role="tab"
-                aria-selected={activeOfferKey === 'ebook'}
-              >
-                <BookOpen style={{ width: '16px', height: '16px' }} />
-                <span>Ebook 1000 Từ Vựng ETS</span>
-                <span className="offer-tab-pill">299.000₫</span>
-              </button>
-
-              <button
-                type="button"
-                className={`offer-tab-btn ${activeOfferKey === 'bundle' ? 'active' : ''}`}
-                onClick={() => {
-                  setActiveOfferKey('bundle');
-                  showToast('Đã chuyển sang: Bundle VIP Toàn Diện');
-                }}
-                role="tab"
-                aria-selected={activeOfferKey === 'bundle'}
-              >
-                <Crown style={{ width: '16px', height: '16px' }} />
-                <span>Bundle VIP Toàn Diện</span>
-                <span className="offer-tab-pill">6.900.000₫</span>
-              </button>
-            </div>
-          </div>
-        </section>
 
         {/* Hero / Decision Confirmation Section (Section 1) */}
         <section className="checkout-hero">
@@ -871,22 +849,24 @@ export default function PaymentContent() {
                   <p className="gateway-subtitle">Mở App Ngân hàng bất kỳ để quét mã — Tự động điền 100% thông tin</p>
                 </div>
 
-                {/* QR View Toggle Switch (Dynamic vs. Original Card) */}
-                <div className="qr-view-toggle">
-                  <button
-                    type="button"
-                    className={`qr-toggle-btn ${qrMode === 'dynamic' ? 'active' : ''}`}
-                    onClick={() => setQrMode('dynamic')}
+                {/* Prominent Pre-Scan Confirmation Notice */}
+                <div className="payment-receipt-notice">
+                  <div className="receipt-notice-header">
+                    <AlertCircle className="receipt-notice-icon" />
+                    <span>LƯU Ý QUAN TRỌNG TRƯỚC KHI QUÉT MÃ</span>
+                  </div>
+                  <p className="receipt-notice-desc">
+                    Sau khi thanh toán thành công, bạn vui lòng <strong>chụp lại màn hình giao dịch (lệnh chuyển tiền)</strong> và gửi lại qua Zalo cho Thầy Hưng (<strong className="highlight-phone">0904.244.824</strong>) để được xác nhận và kích hoạt suất học ngay nhé!
+                  </p>
+                  <a
+                    href="https://zalo.me/0904244824"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-send-receipt-zalo"
                   >
-                    ⚡ Mã VietQR Tự Động Điền
-                  </button>
-                  <button
-                    type="button"
-                    className={`qr-toggle-btn ${qrMode === 'ticket' ? 'active' : ''}`}
-                    onClick={() => setQrMode('ticket')}
-                  >
-                    🎫 Thẻ Vietcombank Gốc
-                  </button>
+                    <MessageCircle style={{ width: '16px', height: '16px' }} />
+                    <span>Gửi Bill Chuyển Khoản Qua Zalo Thầy Hưng (0904.244.824)</span>
+                  </a>
                 </div>
 
                 {/* Central QR Display Box */}
@@ -899,31 +879,18 @@ export default function PaymentContent() {
                     </span>
                   </div>
 
-                  {/* Mode 1: Dynamic VietQR */}
-                  {qrMode === 'dynamic' && (
-                    <div className="qr-image-wrapper" id="qr-dynamic-view">
-                      <img
-                        id="dynamic-qr-img"
-                        src={vietQrUrl}
-                        alt="Mã QR Chuyển khoản Vietcombank"
-                        width={250}
-                        height={250}
-                      />
-                    </div>
-                  )}
-
-                  {/* Mode 2: Original Ticket Image */}
-                  {qrMode === 'ticket' && (
-                    <div className="qr-ticket-wrapper" id="qr-ticket-view">
-                      <img
-                        src="/images/vietcombank-qr-ticket.jpg"
-                        alt="Thẻ Vietcombank QR Chính Thức PHAM VIET HUNG"
-                      />
-                    </div>
-                  )}
+                  <div className="qr-image-wrapper" id="qr-dynamic-view">
+                    <img
+                      id="dynamic-qr-img"
+                      src={vietQrUrl}
+                      alt="Mã QR Chuyển khoản Vietcombank"
+                      width={250}
+                      height={250}
+                    />
+                  </div>
 
                   <p className="qr-caption-note">
-                    Quét mã để số tiền <strong style={{ color: '#0f172a' }}>{formatMoney(activeOffer.price)}</strong> và nội dung được tự động điền chính xác.
+                    Quét mã để số tiền <strong style={{ color: '#0f172a' }}>{formatMoney(activeOffer.price)}</strong> và nội dung <strong style={{ color: '#1e3a8a' }}>{transferMemo}</strong> được tự động điền chính xác.
                   </p>
 
                   <button
@@ -1012,7 +979,7 @@ export default function PaymentContent() {
                 <div className="memo-warning-box">
                   <AlertCircle style={{ width: '18px', height: '18px', flexShrink: 0 }} />
                   <span>
-                    <strong>Lưu ý:</strong> Vui lòng giữ đúng nội dung chuyển khoản là Số điện thoại của bạn để hệ thống tự động ghi nhận và kích hoạt tài khoản trong vòng 5–15 phút.
+                    <strong>Lưu ý:</strong> Vui lòng giữ đúng nội dung chuyển khoản là <strong style={{ color: 'var(--color-accent-light)' }}>{transferMemo}</strong> để hệ thống tự động ghi nhận và kích hoạt tài khoản trong vòng 5–15 phút.
                   </span>
                 </div>
 
@@ -1029,7 +996,7 @@ export default function PaymentContent() {
                 {/* Post-Payment Step Notice */}
                 <div className="post-pay-step-notice">
                   <Check style={{ width: '14px', height: '14px', color: 'var(--accent-green)' }} />
-                  <span>Hỗ trợ xác nhận 24/7 qua Zalo Thầy Hưng (0375.688.888)</span>
+                  <span>Hỗ trợ xác nhận 24/7 qua Zalo Thầy Hưng (0904.244.824)</span>
                 </div>
 
                 {/* Trust Micro Strip */}
@@ -1106,79 +1073,6 @@ export default function PaymentContent() {
           </div>
         </section>
 
-        {/* Section 9: Short Testimonials Section */}
-        <section className="section-wrapper" id="testimonials-sec" style={{ background: 'rgba(11, 24, 56, 0.45)' }}>
-          <div className="container">
-            <div className="section-head">
-              <span className="section-badge-center">Bằng Chứng Điểm Số Thật</span>
-              <h2 className="section-heading-lg">Học Viên Lớp Live Bứt Phá 760 – 895 TOEIC</h2>
-              <p className="section-desc">Hàng trăm bạn sinh viên và người đi làm mất gốc đã cán đích thành công:</p>
-            </div>
-
-            <div className="testimonials-grid">
-              <div className="testimonial-buyer-card">
-                <div className="testi-score-badge">
-                  <span>895 TOEIC</span>
-                  <span>Nghe 475 • Đọc 420</span>
-                </div>
-                <div className="testi-media-pane" onClick={() => setIsCertModalOpen(true)}>
-                  <img src="/images/fb-card-1.webp" alt="Bảng điểm Lê Thành Hưng 895 TOEIC" loading="lazy" />
-                  <div className="testi-zoom-overlay"><span>Xem bảng điểm</span></div>
-                </div>
-                <div className="testi-text-pane">
-                  <p className="testi-quote">
-                    "Lúc chuyển khoản 5.400.000₫ mình cũng hơi đắn đo vì trước đó tự mua video học toàn bỏ dở. Nhưng học Live Zoom cùng Thầy Hưng khác biệt hoàn toàn: thầy gọi đọc dịch liên tục, sửa từng âm IPA nên tai nghe lên vù vù!"
-                  </p>
-                  <div className="testi-student-info">
-                    <span className="student-real-name">Lê Thành Hưng</span>
-                    <span className="student-tag">Sinh viên năm cuối</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="testimonial-buyer-card">
-                <div className="testi-score-badge">
-                  <span>815 TOEIC</span>
-                  <span>Nghe 425 • Đọc 390</span>
-                </div>
-                <div className="testi-media-pane" onClick={() => setIsCertModalOpen(true)}>
-                  <img src="/images/fb-card-3.webp" alt="Bảng điểm Đỗ Nhất Huy 815 TOEIC" loading="lazy" />
-                  <div className="testi-zoom-overlay"><span>Xem bảng điểm</span></div>
-                </div>
-                <div className="testi-text-pane">
-                  <p className="testi-quote">
-                    "Thầy Hưng dạy rất thực tế, không lý thuyết suông. Bộ 1.000 từ vựng của thầy đi thi gặp lại y hệt trong đề ETS. Chuyển khoản xong vào nhóm lớp học ngay, thầy hỗ trợ Zalo cực kỳ nhiệt tình."
-                  </p>
-                  <div className="testi-student-info">
-                    <span className="student-real-name">Đỗ Nhất Huy</span>
-                    <span className="student-tag">Kỹ sư phần mềm</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="testimonial-buyer-card">
-                <div className="testi-score-badge">
-                  <span>865 TOEIC</span>
-                  <span>Nghe 455 • Đọc 410</span>
-                </div>
-                <div className="testi-media-pane" onClick={() => setIsCertModalOpen(true)}>
-                  <img src="/images/fb-card-5.webp" alt="Bảng điểm Dương Tú Anh 865 TOEIC" loading="lazy" />
-                  <div className="testi-zoom-overlay"><span>Xem bảng điểm</span></div>
-                </div>
-                <div className="testi-text-pane">
-                  <p className="testi-quote">
-                    "Mất gốc tiếng Anh nhiều năm, nhờ thầy Hưng kèm cặp kỹ năng Part 5 trong 15s và mẹo quét Part 7 mà mình làm bài dư hẳn 10 phút. Khoản đầu tư xứng đáng nhất của mình!"
-                  </p>
-                  <div className="testi-student-info">
-                    <span className="student-real-name">Dương Tú Anh</span>
-                    <span className="student-tag">Nhân viên ngân hàng</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Section 10: 12 FAQ Accordion Section */}
         <section className="section-wrapper" id="faq-sec">
           <div className="container">
@@ -1231,14 +1125,14 @@ export default function PaymentContent() {
                   <span>QUÉT MÃ THANH TOÁN NGAY</span>
                 </button>
                 <a
-                  href="https://zalo.me/0375688888"
+                  href="https://zalo.me/0904244824"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-edit-info"
                   style={{ padding: '1.15rem 1.75rem', fontSize: '0.95rem', textDecoration: 'none' }}
                 >
                   <MessageCircle style={{ width: '18px', height: '18px' }} />
-                  <span>Nhắn Tin Trực Tiếp Thầy Hưng</span>
+                  <span>Nhắn Tin Trực Tiếp Thầy Hưng (0904.244.824)</span>
                 </a>
               </div>
             </div>
@@ -1379,8 +1273,11 @@ export default function PaymentContent() {
                 <p style={{ fontSize: '0.85rem', color: 'var(--accent-green-light)' }}>
                   Đội ngũ Thầy Hưng sẽ đối soát biến động số dư Vietcombank và gửi link phòng Zoom kèm tài liệu qua Zalo trong vòng <strong>5–15 phút</strong>.
                 </p>
+                <div style={{ background: 'rgba(245, 158, 11, 0.15)', border: '1px solid rgba(245, 158, 11, 0.4)', borderRadius: 'var(--radius-sm)', padding: '0.65rem 0.85rem', fontSize: '0.825rem', color: '#fbbf24', margin: '0.75rem 0 1rem', textAlign: 'center' }}>
+                  📸 <strong>Nhắc nhở:</strong> Vui lòng gửi kèm <strong>ảnh chụp màn hình chuyển khoản thành công</strong> khi nhắn Zalo để Thầy Hưng kích hoạt suất học cho bạn nhanh nhất nhé!
+                </div>
                 <a
-                  href="https://zalo.me/0375688888"
+                  href="https://zalo.me/0904244824"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-zalo-direct"
@@ -1389,7 +1286,7 @@ export default function PaymentContent() {
                   <span>Nhắn Tin Xác Nhận Ngay Qua Zalo Thầy Hưng</span>
                 </a>
                 <div style={{ marginTop: '1rem', fontSize: '0.775rem', color: 'var(--text-muted)' }}>
-                  Hotline hỗ trợ trực tiếp 24/7: <strong>0375.688.888</strong> (Thầy Hưng)
+                  Hotline / Zalo hỗ trợ trực tiếp 24/7: <strong>0904.244.824</strong> (Thầy Hưng)
                 </div>
               </div>
             </div>
