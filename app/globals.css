@@ -731,6 +731,12 @@ ul, ol {
   justify-content: flex-end;
 }
 
+@media (min-width: 993px) {
+  .hero-lowered-portrait-wrap {
+    transform: translateX(2.5cm);
+  }
+}
+
 .portrait-ambient-glow {
   position: absolute;
   top: 50%;
@@ -816,6 +822,7 @@ ul, ol {
     align-items: center;
     text-align: center;
     padding-top: 0;
+    overflow: visible;
   }
   .hero-lowered-portrait-wrap {
     width: 100%;
@@ -830,8 +837,10 @@ ul, ol {
   .teacher-lowered-cutout {
     margin: 0 auto;
     display: block;
-    max-width: 320px;
+    max-width: 310px;
     width: 100%;
+    /* Căn giữa quang học: Bù lại phần laptop bên phải ảnh để mặt và thân người thầy nằm đúng tâm màn hình */
+    transform: translateX(10.2%);
   }
   .portrait-ambient-glow {
     width: 300px;
@@ -851,10 +860,11 @@ ul, ol {
 
 @media (max-width: 480px) {
   .hero-lowered-portrait-wrap {
-    max-width: 300px;
+    max-width: 290px;
   }
   .teacher-lowered-cutout {
     max-width: 260px;
+    transform: translateX(10.2%);
   }
   .teacher-bottom-badge {
     padding: 0.65rem 0.95rem;
