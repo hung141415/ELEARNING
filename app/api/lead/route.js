@@ -13,12 +13,11 @@ export async function POST(request) {
     const paymentStatus = body.payment_status || 'Chưa thanh toán';
 
     // Format local Vietnam time: DD/MM/YYYY HH:mm:ss
-    const now = new Date();
-    const timeVN = new Intl.DateTimeFormat('vi-VN', {
-      timeZone: 'Asia/Ho_Chi_Minh',
-      dateStyle: 'short',
-      timeStyle: 'medium'
-    }).format(now);
+    const d = new Date();
+    const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+    const vnDate = new Date(utc + (3600000 * 7));
+    const pad = (n) => String(n).padStart(2, '0');
+    const timeVN = `${pad(vnDate.getDate())}/${pad(vnDate.getMonth() + 1)}/${vnDate.getFullYear()} ${pad(vnDate.getHours())}:${pad(vnDate.getMinutes())}:${pad(vnDate.getSeconds())}`;
 
     const leadData = {
       timestamp: timeVN,
