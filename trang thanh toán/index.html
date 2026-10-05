@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Thanh Toán Giữ Suất Ưu Đãi 50% — TOEIC ONLINE PRO Cùng Thầy Hưng 985 ETS</title>
+  <meta name="description" content="Hoàn tất thanh toán học phí khóa học TOEIC ONLINE PRO dạy Live 100% Zoom 36 buổi cùng Thầy Hưng 985/990 TOEIC. Đảm bảo chuẩn đầu ra 600+, tự tin bứt phá 800+." />
+  <meta name="keywords" content="thanh toán toeic online pro, chuyển khoản học toeic, thầy hưng 985, học toeic live zoom, đảm bảo đầu ra toeic 600+" />
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Xác Nhận Giữ Chỗ & Thanh Toán — TOEIC ONLINE PRO Thầy Hưng" />
+  <meta property="og:description" content="Ưu đãi 50% trọn gói 36 buổi Live Zoom tương tác 2 chiều + 5 quà tặng độc quyền trị giá 5.400.000₫. Cam kết chuẩn đầu ra 600+." />
+  <meta property="og:image" content="images/teacher-hero.webp" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js (3D Ambient Background) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+
+  <!-- 3D Three.js Background Canvas Layer -->
+  <div id="three-canvas-container" aria-hidden="true"></div>
+
+  <!-- Page Wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Top Announcement Strip -->
+    <aside class="top-notice-bar" role="region" aria-label="Thông báo ưu đãi">
+      <span class="pulse-indicator"></span>
+      <span><strong>Ưu đãi 50% có hạn:</strong> Giữ suất học Live Zoom 36 buổi cùng Thầy Hưng (Đảm bảo chuẩn đầu ra 600+ • Học lại 100% miễn phí).</span>
+    </aside>
+
+    <!-- Header Navigation Bar -->
+    <header class="checkout-header" id="checkout-nav">
+      <div class="container checkout-header-inner">
+        <a href="https://elearning.mrhtoeic.com" class="brand-wrap" title="Quay lại Sales Page MrH TOEIC">
+          <img src="images/logo-white.png" alt="MrH TOEIC Logo" class="brand-logo" />
+          <span class="brand-badge"><i data-lucide="shield-check" style="width:14px;height:14px"></i> Cổng Thanh Toán An Toàn</span>
+        </a>
+
+        <!-- Funnel Stepper Indicator -->
+        <nav class="checkout-stepper" aria-label="Tiến trình đăng ký">
+          <div class="step-item completed">
+            <i data-lucide="check-circle-2" style="width:16px;height:16px"></i>
+            <span>1. Điền thông tin</span>
+          </div>
+          <span class="step-divider"></span>
+          <div class="step-item active">
+            <i data-lucide="qr-code" style="width:16px;height:16px"></i>
+            <span>2. Quét QR thanh toán</span>
+          </div>
+          <span class="step-divider"></span>
+          <div class="step-item">
+            <i data-lucide="sparkles" style="width:16px;height:16px"></i>
+            <span>3. Vào lớp Live Zoom</span>
+          </div>
+        </nav>
+
+        <!-- Direct Instructor Support -->
+        <div class="header-support">
+          <a href="https://zalo.me/0375688888" target="_blank" rel="noopener noreferrer" title="Chat Zalo với Thầy Hưng">
+            <i data-lucide="message-circle" style="width:16px;height:16px"></i>
+            <span>Zalo Thầy Hưng: 0375.688.888</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Offer Switcher Tabs (Course / Ebook / Bundle) -->
+    <section class="offer-tabs-container" aria-label="Lựa chọn gói thanh toán">
+      <div class="container">
+        <div class="offer-tabs-bar" role="tablist">
+          <button type="button" class="offer-tab-btn active" data-offer="course" role="tab" aria-selected="true" id="tab-course">
+            <i data-lucide="video" style="width:16px;height:16px"></i>
+            <span>Khóa Học Live Zoom 36 Buổi</span>
+            <span class="offer-tab-pill">Khuyên Dùng • 5.400.000₫</span>
+          </button>
+          <button type="button" class="offer-tab-btn" data-offer="ebook" data-mode="ebook" role="tab" aria-selected="false" id="tab-ebook">
+            <i data-lucide="book-open" style="width:16px;height:16px"></i>
+            <span>Ebook 1000 Từ Vựng ETS</span>
+            <span class="offer-tab-pill">299.000₫</span>
+          </button>
+          <button type="button" class="offer-tab-btn" data-offer="bundle" data-mode="bundle" role="tab" aria-selected="false" id="tab-bundle">
+            <i data-lucide="crown" style="width:16px;height:16px"></i>
+            <span>Bundle VIP Toàn Diện</span>
+            <span class="offer-tab-pill">6.900.000₫</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero / Decision Confirmation Section (Section 1) -->
+    <section class="checkout-hero">
+      <div class="container">
+        <div class="buyer-verified-pill">
+          <i data-lucide="user-check" style="width:15px;height:15px"></i>
+          <span id="hero-buyer-tag">Học viên: Nguyễn Thế Hưng (0904.244.824)</span>
+        </div>
+
+        <h1 class="hero-main-title">
+          HOÀN TẤT ĐĂNG KÝ — GIỮ SUẤT <span class="highlight-gold">ƯU ĐÃI 50%</span>
+        </h1>
+
+        <p class="hero-sub-text">
+          Chỉ còn một bước quét mã chuyển khoản để chính thức đồng hành cùng Thầy Hưng (985/990 TOEIC ETS) trong 36 buổi Live Zoom và nhận trọn bộ 5 quà tặng độc quyền trị giá 5.400.000₫!
+        </p>
+
+        <!-- Live Urgency Countdown Bar -->
+        <div class="urgency-countdown-strip" role="timer" aria-live="polite">
+          <div class="urgency-label">
+            <i data-lucide="flame" style="width:18px;height:18px;color:#ef4444"></i>
+            <span>Ưu đãi 50% kết thúc sau:</span>
+          </div>
+          <div class="countdown-timer-group">
+            <div class="time-box">
+              <span class="time-number cd-hours">23</span>
+              <span class="time-label">Giờ</span>
+            </div>
+            <span class="time-colon">:</span>
+            <div class="time-box">
+              <span class="time-number cd-minutes">59</span>
+              <span class="time-label">Phút</span>
+            </div>
+            <span class="time-colon">:</span>
+            <div class="time-box">
+              <span class="time-number cd-seconds">59</span>
+              <span class="time-label">Giây</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content 2-Column Grid -->
+    <main class="container" id="checkout-main-area">
+      <div class="checkout-main-grid">
+
+        <!-- LEFT COLUMN: Value Confirmation, Order Summary & Reassurance -->
+        <div class="checkout-left-col">
+
+          <!-- Section 2: Order Summary Card -->
+          <article class="glass-card" id="order-summary-card">
+            <div class="card-title-row">
+              <h3><i data-lucide="shopping-cart" style="width:20px;height:20px;color:var(--color-accent)"></i> Tóm Tắt Đơn Hàng</h3>
+              <span class="card-tag-pill">Đã Giữ Suất Thành Công</span>
+            </div>
+
+            <!-- Prefilled Buyer Info Block -->
+            <div class="buyer-info-box">
+              <div class="buyer-meta-list">
+                <span class="buyer-name" id="buyer-name-display">Nguyễn Thế Hưng</span>
+                <span class="buyer-sub">SĐT Zalo: <strong id="buyer-phone-display" style="color:#fff">0904244824</strong> • Email: <span id="buyer-email-display">hung.pham@example.com</span></span>
+              </div>
+              <button type="button" class="btn-edit-info" id="btn-open-edit-info" title="Sửa thông tin học viên">
+                <i data-lucide="edit-3" style="width:13px;height:13px"></i> Sửa
+              </button>
+            </div>
+
+            <!-- Order Pricing Breakdown -->
+            <div class="order-breakdown-list">
+              <div class="breakdown-item main-item">
+                <span id="order-item-title">Khóa học TOEIC ONLINE PRO (36 Buổi Live Zoom)</span>
+                <span id="order-item-price-standard">10.800.000₫</span>
+              </div>
+              <div class="breakdown-item" style="font-size:0.85rem">
+                <span>Trọn bộ 5 Quà Tặng VIP (App luyện đề, Ebook, Record, Thi thử)</span>
+                <span style="color:var(--color-accent-light)">Được Tặng Kèm (0₫)</span>
+              </div>
+              <div class="breakdown-item discount-item">
+                <span>
+                  Mã ưu đãi giữ chỗ: <span class="coupon-applied-badge">TOEIC50</span>
+                </span>
+                <span id="order-discount-val">-5.400.000₫ (Giảm 50%)</span>
+              </div>
+            </div>
+
+            <!-- Total Price Display Hero -->
+            <div class="total-price-box">
+              <div class="total-label-wrap">
+                <span class="total-title">Số tiền cần thanh toán</span>
+                <span class="total-subtitle" id="order-saving-badge">Tiết kiệm 5.400.000₫ hôm nay</span>
+              </div>
+              <div class="total-amount-wrap">
+                <span class="original-price-strike" id="order-price-orig">10.800.000₫</span>
+                <div class="final-price-hero" id="order-price-final">5.400.000 <span class="currency">₫</span></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Section 3: What You Get Today (Core Pillars) -->
+          <article class="glass-card">
+            <div class="card-title-row">
+              <h3><i data-lucide="check-circle" style="width:20px;height:20px;color:var(--accent-green)"></i> Quyền Lợi Bạn Nhận Được Ngay Hôm Nay</h3>
+            </div>
+            <div class="what-you-get-grid">
+              <div class="benefit-bullet-card">
+                <div class="benefit-icon-wrap"><i data-lucide="video" style="width:18px;height:18px"></i></div>
+                <div class="benefit-text-wrap">
+                  <h4>Live Zoom 100% 36 Buổi</h4>
+                  <p>Học trực tiếp 90 phút/buổi cùng Thầy Hưng. Hoàn toàn không bán video thu sẵn.</p>
+                </div>
+              </div>
+              <div class="benefit-bullet-card">
+                <div class="benefit-icon-wrap"><i data-lucide="mic" style="width:18px;height:18px"></i></div>
+                <div class="benefit-text-wrap">
+                  <h4>Sửa Âm IPA & Lỗi Sai 1-1</h4>
+                  <p>Bật mic đọc dịch câu hỏi, nắn khẩu hình chuẩn bản xứ và bẻ khóa bẫy ETS mới.</p>
+                </div>
+              </div>
+              <div class="benefit-bullet-card">
+                <div class="benefit-icon-wrap"><i data-lucide="award" style="width:18px;height:18px"></i></div>
+                <div class="benefit-text-wrap">
+                  <h4>Đảm Bảo Chuẩn 600+ Đến 800+</h4>
+                  <p>Học lại 100% hoàn toàn miễn phí nếu không đạt mục tiêu đầu ra cam kết.</p>
+                </div>
+              </div>
+              <div class="benefit-bullet-card">
+                <div class="benefit-icon-wrap"><i data-lucide="message-square" style="width:18px;height:18px"></i></div>
+                <div class="benefit-text-wrap">
+                  <h4>Kèm Cặp Zalo 1-1 24/7</h4>
+                  <p>Bất cứ bài đọc hay câu ngữ pháp nào chưa hiểu, Thầy Hưng trực tiếp giải đáp cặn kẽ.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Section 4: Bonus Stack Section -->
+          <article class="glass-card">
+            <div class="card-title-row">
+              <h3><i data-lucide="gift" style="width:20px;height:20px;color:var(--color-accent)"></i> Trọn Bộ 5 Quà Tặng Độc Quyền Đi Kèm</h3>
+              <span class="card-tag-pill" style="background:var(--color-accent-subtle);color:var(--color-accent);border-color:var(--color-accent-border)">Trị Giá 5.400.000₫</span>
+            </div>
+
+            <div class="bonus-stack-list">
+              <!-- Bonus 1 -->
+              <div class="bonus-card-item">
+                <div class="bonus-thumb">
+                  <img src="images/quyen-loi-record.webp" alt="Video Record xem lại" loading="lazy" />
+                </div>
+                <div class="bonus-content">
+                  <h4>🎁 Quà #01: Video Record Xem Lại Không Giới Hạn</h4>
+                  <p>Lưu trữ sắc nét 1 tuần sau mỗi buổi học, xem lại bất cứ lúc nào khi có lịch bận đột xuất.</p>
+                </div>
+                <div class="bonus-val-tag">
+                  <span class="val-badge">1.200.000₫</span>
+                </div>
+              </div>
+
+              <!-- Bonus 2 -->
+              <div class="bonus-card-item">
+                <div class="bonus-thumb">
+                  <img src="images/quyen-loi-tracking.webp" alt="App luyện thi sát đề 90%" loading="lazy" />
+                </div>
+                <div class="bonus-content">
+                  <h4>🎁 Quà #02: Nền Tảng App Luyện Thi Sát Đề 90%</h4>
+                  <p>Hệ thống tự động tracking tiến độ mỗi ngày, luyện tập ngân hàng câu hỏi chuẩn format ETS.</p>
+                </div>
+                <div class="bonus-val-tag">
+                  <span class="val-badge">1.500.000₫</span>
+                </div>
+              </div>
+
+              <!-- Bonus 3 -->
+              <div class="bonus-card-item">
+                <div class="bonus-thumb">
+                  <img src="images/quyen-loi-tu-vung.webp" alt="File 1000 từ vựng ETS" loading="lazy" />
+                </div>
+                <div class="bonus-content">
+                  <h4>🎁 Quà #03: File 1.000 Từ Vựng Sát Đề Thi Thật ETS</h4>
+                  <p>Bộ tài liệu độc quyền lọc sát đề thi, học qua ngữ cảnh và ứng dụng tức thì vào Part 7.</p>
+                </div>
+                <div class="bonus-val-tag">
+                  <span class="val-badge">800.000₫</span>
+                </div>
+              </div>
+
+              <!-- Bonus 4 -->
+              <div class="bonus-card-item">
+                <div class="bonus-thumb">
+                  <img src="images/quyen-loi-phong-thi.webp" alt="Phòng thi thử 120 phút" loading="lazy" />
+                </div>
+                <div class="bonus-content">
+                  <h4>🎁 Quà #04: Phòng Luyện Thi & Thi Thử Định Kỳ 120 Phút</h4>
+                  <p>Mô phỏng áp lực phòng thi thật, Thầy Hưng trực tiếp chấm chữa và bóc tách ma trận lỗi sai.</p>
+                </div>
+                <div class="bonus-val-tag">
+                  <span class="val-badge">1.300.000₫</span>
+                </div>
+              </div>
+
+              <!-- Bonus 5 -->
+              <div class="bonus-card-item special-bonus">
+                <div class="bonus-thumb">
+                  <img src="images/quyen-loi-cam-ket.webp" alt="Cam kết chuẩn đầu ra 600+" loading="lazy" />
+                </div>
+                <div class="bonus-content">
+                  <h4 style="color:var(--accent-green-light)">🎁 Quà #05: Đặc Quyền Đảm Bảo Chuẩn Đầu Ra 600+</h4>
+                  <p>Học lại 100% hoàn toàn MIỄN PHÍ nếu không đạt mục tiêu. Hỗ trợ giải đáp thắc mắc 1-1 qua Zalo 24/7.</p>
+                </div>
+                <div class="bonus-val-tag">
+                  <span class="val-badge priceless">GIÁ TRỊ VÔ GIÁ</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Section 7: Instructor Reassurance & ETS Scorecard -->
+          <article class="instructor-reassurance-box">
+            <div class="instructor-avatar-wrap">
+              <img src="images/teacher-hung.webp" alt="Thầy Hưng 985/990 TOEIC ETS" />
+            </div>
+            <div class="instructor-text">
+              <h4>Thầy Hưng (Mr. Hưng TOEIC) <span class="score-pill">985/990 ETS</span></h4>
+              <p>Trực tiếp đứng lớp 100% các buổi Zoom Live. 5 năm kinh nghiệm chuyên sâu, kèm cặp hơn 400+ học viên bứt phá từ con số 0 lên 600 - 895 TOEIC.</p>
+              <button type="button" class="cert-preview-trigger trigger-cert-modal">
+                <i data-lucide="zoom-in" style="width:14px;height:14px"></i> Xem Bảng Điểm ETS 985 Chính Thức (IIG Việt Nam)
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- RIGHT COLUMN: The Sticky Central QR Payment Gateway (Section 5) -->
+        <div class="checkout-right-col">
+          <aside class="payment-gateway-card" id="payment-qr-gateway" aria-label="Cổng thanh toán QR ngân hàng">
+            <div class="gateway-header">
+              <span class="gateway-step-badge">
+                <i data-lucide="lock" style="width:13px;height:13px"></i> Bước 2/2: Quét Mã QR Thanh Toán
+              </span>
+              <h2 class="gateway-title">Thanh Toán Bằng VietQR</h2>
+              <p class="gateway-subtitle">Mở App Ngân hàng bất kỳ để quét mã — Tự động điền 100% thông tin</p>
+            </div>
+
+            <!-- QR View Toggle Switch (Dynamic vs. Original Card) -->
+            <div class="qr-view-toggle">
+              <button type="button" class="qr-toggle-btn active" data-qr-mode="dynamic" id="btn-mode-dynamic">
+                ⚡ Mã VietQR Tự Động Điền
+              </button>
+              <button type="button" class="qr-toggle-btn" data-qr-mode="ticket" id="btn-mode-ticket">
+                🎫 Thẻ Vietcombank Gốc
+              </button>
+            </div>
+
+            <!-- Central QR Display Box -->
+            <div class="qr-display-container">
+              <div class="qr-bank-header">
+                <span class="vcb-logo-text">Vietcombank</span>
+                <span class="vietqr-badge-pair">
+                  <span style="color:#ef4444">VIET</span><span style="color:#1e3a8a">QR</span> • NAPAS 247
+                </span>
+              </div>
+
+              <!-- Mode 1: Dynamic VietQR (with accurate amount and phone) -->
+              <div class="qr-image-wrapper" id="qr-dynamic-view">
+                <img id="dynamic-qr-img" src="" alt="Mã QR Chuyển khoản Vietcombank" width="250" height="250" />
+              </div>
+
+              <!-- Mode 2: Original Ticket Image (from IMG_8426.JPG) -->
+              <div class="qr-ticket-wrapper" id="qr-ticket-view">
+                <img src="images/vietcombank-qr-ticket.jpg" alt="Thẻ Vietcombank QR Chính Thức PHAM VIET HUNG" />
+              </div>
+
+              <p class="qr-caption-note">
+                Quét mã để số tiền <strong style="color:#0f172a" id="qr-caption-price">5.400.000₫</strong> và nội dung được tự động điền chính xác.
+              </p>
+
+              <button type="button" class="btn-download-qr" id="download-qr-btn">
+                <i data-lucide="download" style="width:14px;height:14px"></i> Lưu ảnh QR vào thư viện điện thoại
+              </button>
+            </div>
+
+            <!-- Bank Transfer Details with 1-Click Copy -->
+            <div class="bank-transfer-details">
+              <div class="detail-row">
+                <span class="detail-label">Ngân hàng:</span>
+                <div class="detail-value-wrap">
+                  <span>Vietcombank</span>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <span class="detail-label">Số tài khoản:</span>
+                <div class="detail-value-wrap">
+                  <span id="bank-acc-num">9904244824</span>
+                  <button type="button" class="btn-copy-chip" data-copy-target="bank-acc-num" title="Sao chép số tài khoản">
+                    <i data-lucide="copy" style="width:13px;height:13px"></i> Sao chép
+                  </button>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <span class="detail-label">Chủ tài khoản:</span>
+                <div class="detail-value-wrap">
+                  <span>PHAM VIET HUNG</span>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <span class="detail-label">Chi nhánh:</span>
+                <div class="detail-value-wrap">
+                  <span>PGD Lê Chân</span>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <span class="detail-label">Số tiền:</span>
+                <div class="detail-value-wrap highlight">
+                  <span id="transfer-amount-val">5.400.000₫</span>
+                  <button type="button" class="btn-copy-chip" data-copy-direct="current_amount" title="Sao chép số tiền">
+                    <i data-lucide="copy" style="width:13px;height:13px"></i> Sao chép
+                  </button>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <span class="detail-label">Nội dung CK:</span>
+                <div class="detail-value-wrap memo">
+                  <span id="transfer-memo-val">TOEIC 0904244824</span>
+                  <button type="button" class="btn-copy-chip" data-copy-direct="current_memo" title="Sao chép nội dung">
+                    <i data-lucide="copy" style="width:13px;height:13px"></i> Sao chép
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Memo Notice Alert -->
+            <div class="memo-warning-box">
+              <i data-lucide="alert-circle" style="width:18px;height:18px;flex-shrink:0"></i>
+              <span><strong>Lưu ý:</strong> Vui lòng giữ đúng nội dung chuyển khoản là Số điện thoại của bạn để hệ thống tự động ghi nhận và kích hoạt tài khoản trong vòng 5–15 phút.</span>
+            </div>
+
+            <!-- Big Primary CTA Button (Section 7) -->
+            <button type="button" class="btn-primary-payment trigger-payment-complete" id="btn-confirm-payment">
+              <span>TÔI ĐÃ CHUYỂN KHOẢN THÀNH CÔNG</span>
+              <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+            </button>
+
+            <!-- Post-Payment Step Notice -->
+            <div class="post-pay-step-notice">
+              <i data-lucide="check" style="width:14px;height:14px;color:var(--accent-green)"></i>
+              <span>Hỗ trợ xác nhận 24/7 qua Zalo Thầy Hưng (0375.688.888)</span>
+            </div>
+
+            <!-- Trust Micro Strip -->
+            <div class="gateway-trust-strip">
+              <div class="trust-micro-item">
+                <i data-lucide="shield-check" style="width:18px;height:18px"></i>
+                <span>Vietcombank Napas</span>
+              </div>
+              <div class="trust-micro-item">
+                <i data-lucide="zap" style="width:18px;height:18px"></i>
+                <span>Kích hoạt 5-15p</span>
+              </div>
+              <div class="trust-micro-item">
+                <i data-lucide="award" style="width:18px;height:18px"></i>
+                <span>Cam kết 600+</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Section 8: Objection Handling Section (5 Khối Xử Lý Phản Đối) -->
+    <section class="section-wrapper" id="objection-handling-sec">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-badge-center">Giải Tỏa Băn Khoăn Phút Chót</span>
+          <h2 class="section-heading-lg">Mọi Điều Bạn Cần Biết Trước Khi Chuyển Khoản</h2>
+          <p class="section-desc">Chúng tôi muốn bạn hoàn toàn yên tâm 100% trước khi bắt đầu hành trình cùng Thầy Hưng:</p>
+        </div>
+
+        <div class="objections-grid">
+          <!-- Obj 1 -->
+          <div class="objection-card">
+            <div class="objection-card-head">
+              <div class="objection-icon"><i data-lucide="clock" style="width:16px;height:16px"></i></div>
+              <h4>Chuyển tiền rồi bao lâu nhận được xác nhận?</h4>
+            </div>
+            <p>Hệ thống Napas của Vietcombank báo biến động số dư tức thì 24/7. Trong vòng <strong>5–15 phút</strong>, đội ngũ Thầy Hưng sẽ liên hệ qua Zalo theo đúng số điện thoại trong nội dung chuyển khoản để cấp link phòng Zoom và mời bạn vào nhóm VIP.</p>
+          </div>
+
+          <!-- Obj 2 -->
+          <div class="objection-card">
+            <div class="objection-card-head">
+              <div class="objection-icon"><i data-lucide="help-circle" style="width:16px;height:16px"></i></div>
+              <h4>Mất gốc tiếng Anh hoàn toàn có theo kịp không?</h4>
+            </div>
+            <p>Khóa học thiết kế riêng cho người mất gốc từ số 0. Chặng 1 bắt đầu từ chuẩn hóa 44 âm IPA và nghe ngắt nhịp cơ bản. Thầy Hưng gọi mic từng người để sửa lỗi, cam kết không để bất kỳ bạn nào bị bỏ lại phía sau.</p>
+          </div>
+
+          <!-- Obj 3 -->
+          <div class="objection-card">
+            <div class="objection-card-head">
+              <div class="objection-icon"><i data-lucide="calendar" style="width:16px;height:16px"></i></div>
+              <h4>Lỡ bận việc đột xuất phải nghỉ có bị mất bài không?</h4>
+            </div>
+            <p>Hoàn toàn không. Toàn bộ 36 buổi học Live đều có <strong>Video Record chất lượng cao lưu trữ trong 1 tuần</strong> để bạn xem lại. Bạn làm bài tập trên app và nhắn tin Zalo cho Thầy Hưng bất cứ câu nào chưa hiểu.</p>
+          </div>
+
+          <!-- Obj 4 -->
+          <div class="objection-card">
+            <div class="objection-card-head">
+              <div class="objection-icon"><i data-lucide="dollar-sign" style="width:16px;height:16px"></i></div>
+              <h4>Học phí 5.400.000₫ có phát sinh thêm chi phí nào không?</h4>
+            </div>
+            <p>Cam kết <strong>5.400.000₫ là chi phí TRỌN GÓI 100%</strong> cho 36 buổi học Live và toàn bộ 5 phần quà tặng (App luyện thi, Ebook 1.000 từ vựng, Phòng thi thử, Video record). Tuyệt đối không phát sinh thêm bất cứ khoản tiền giáo trình hay tài liệu nào.</p>
+          </div>
+
+          <!-- Obj 5 -->
+          <div class="objection-card">
+            <div class="objection-card-head">
+              <div class="objection-icon"><i data-lucide="shield" style="width:16px;height:16px"></i></div>
+              <h4>Nếu học xong đi thi mà không đạt chuẩn 600+ thì sao?</h4>
+            </div>
+            <p>Bạn được <strong>HỌC LẠI 100% HOÀN TOÀN MIỄN PHÍ</strong> ở khóa tiếp theo. Thầy Hưng sẽ trực tiếp cùng bạn phân tích lại bài thi để vá đúng lỗ hổng cho đến khi bạn cầm chắc chứng chỉ mong muốn trên tay.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Short Testimonials Section (Bằng Chứng Thực Tế) -->
+    <section class="section-wrapper" id="testimonials-sec" style="background:rgba(11, 24, 56, 0.45)">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-badge-center">Bằng Chứng Điểm Số Thật</span>
+          <h2 class="section-heading-lg">Học Viên Lớp Live Bứt Phá 760 – 895 TOEIC</h2>
+          <p class="section-desc">Hàng trăm bạn sinh viên và người đi làm mất gốc đã cán đích thành công:</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testi 1 -->
+          <div class="testimonial-buyer-card">
+            <div class="testi-score-badge">
+              <span>895 TOEIC</span>
+              <span>Nghe 475 • Đọc 420</span>
+            </div>
+            <div class="testi-media-pane trigger-cert-modal">
+              <img src="images/fb-card-1.webp" alt="Bảng điểm Lê Thành Hưng 895 TOEIC" loading="lazy" />
+              <div class="testi-zoom-overlay"><span>Xem bảng điểm</span></div>
+            </div>
+            <div class="testi-text-pane">
+              <p class="testi-quote">"Lúc chuyển khoản 5.400.000₫ mình cũng hơi đắn đo vì trước đó tự mua video học toàn bỏ dở. Nhưng học Live Zoom cùng Thầy Hưng khác biệt hoàn toàn: thầy gọi đọc dịch liên tục, sửa từng âm IPA nên tai nghe lên vù vù!"</p>
+              <div class="testi-student-info">
+                <span class="student-real-name">Lê Thành Hưng</span>
+                <span class="student-tag">Sinh viên năm cuối</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testi 2 -->
+          <div class="testimonial-buyer-card">
+            <div class="testi-score-badge">
+              <span>815 TOEIC</span>
+              <span>Nghe 425 • Đọc 390</span>
+            </div>
+            <div class="testi-media-pane trigger-cert-modal">
+              <img src="images/fb-card-3.webp" alt="Bảng điểm Đỗ Nhất Huy 815 TOEIC" loading="lazy" />
+              <div class="testi-zoom-overlay"><span>Xem bảng điểm</span></div>
+            </div>
+            <div class="testi-text-pane">
+              <p class="testi-quote">"Thầy Hưng dạy rất thực tế, không lý thuyết suông. Bộ 1.000 từ vựng của thầy đi thi gặp lại y hệt trong đề ETS. Chuyển khoản xong vào nhóm lớp học ngay, thầy hỗ trợ Zalo cực kỳ nhiệt tình."</p>
+              <div class="testi-student-info">
+                <span class="student-real-name">Đỗ Nhất Huy</span>
+                <span class="student-tag">Kỹ sư phần mềm</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testi 3 -->
+          <div class="testimonial-buyer-card">
+            <div class="testi-score-badge">
+              <span>865 TOEIC</span>
+              <span>Nghe 455 • Đọc 410</span>
+            </div>
+            <div class="testi-media-pane trigger-cert-modal">
+              <img src="images/fb-card-5.webp" alt="Bảng điểm Dương Tú Anh 865 TOEIC" loading="lazy" />
+              <div class="testi-zoom-overlay"><span>Xem bảng điểm</span></div>
+            </div>
+            <div class="testi-text-pane">
+              <p class="testi-quote">"Mất gốc tiếng Anh nhiều năm, nhờ thầy Hưng kèm cặp kỹ năng Part 5 trong 15s và mẹo quét Part 7 mà mình làm bài dư hẳn 10 phút. Khoản đầu tư xứng đáng nhất của mình!"</p>
+              <div class="testi-student-info">
+                <span class="student-real-name">Dương Tú Anh</span>
+                <span class="student-tag">Nhân viên ngân hàng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: 12 FAQ Accordion Section (Section 8 of Prompt) -->
+    <section class="section-wrapper" id="faq-sec">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-badge-center">Câu Hỏi Thường Gặp</span>
+          <h2 class="section-heading-lg">Giải Đáp 12 Thắc Mắc Trước Khi Hoàn Tất</h2>
+          <p class="section-desc">Tất cả những thông tin chi tiết về hình thức học, bảo hành, tài liệu và thanh toán:</p>
+        </div>
+
+        <div class="faq-accordion-group">
+
+          <!-- FAQ 1 -->
+          <div class="faq-checkout-item active">
+            <div class="faq-checkout-header">
+              <h4>1. Cách thanh toán bằng mã QR như thế nào?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Rất đơn giản! Bạn chỉ cần mở bất kỳ ứng dụng ngân hàng nào trên điện thoại (Vietcombank, MB Bank, Techcombank, VPBank, ACB, BIDV...), chọn tính năng <strong>"Quét mã QR"</strong> và hướng camera vào mã QR trên trang này. Hệ thống sẽ tự động điền đúng Số tài khoản (<strong>9904244824</strong>), Tên người nhận (<strong>PHAM VIET HUNG</strong>) và Số tiền 5.400.000₫. Bạn chỉ cần kiểm tra nội dung chuyển khoản là SĐT của bạn và nhấn Xác nhận.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>2. Sau khi chuyển khoản bao lâu tôi sẽ nhận được sản phẩm / xác nhận?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Hệ thống đối soát giao dịch hoạt động liên tục 24/7. Thông thường trong vòng <strong>5 đến 15 phút</strong> sau khi chuyển khoản thành công, Thầy Hưng hoặc trợ giảng sẽ liên hệ qua Zalo/Điện thoại theo số bạn đã đăng ký để gửi thông tin phòng học Zoom, tài liệu khai giảng và link nhóm lớp VIP.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>3. Cách nhận lớp học và tài liệu diễn ra như thế nào?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Bạn sẽ được mời vào nhóm Zalo kín của lớp học. Tại đây, link phòng Zoom kèm mật khẩu cho 36 buổi học sẽ được ghim cố định. Toàn bộ tài liệu học tập, file PDF 1.000 từ vựng và tài khoản app luyện thi sẽ được gửi trực tiếp vào email và nhóm Zalo của bạn trước ngày khai giảng.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>4. Thời gian truy cập video xem lại và app luyện thi là bao lâu?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                - <strong>Video Record các buổi học Live:</strong> Được lưu trữ trên hệ thống trong <strong>1 tuần</strong> kể từ ngày buổi học diễn ra để bạn linh hoạt xem lại khi bận hoặc muốn ôn tập kỹ.<br />
+                - <strong>Tài khoản App luyện thi & Bộ tài liệu PDF:</strong> Bạn được sử dụng trọn vẹn trong suốt khóa học và ôn thi đến khi thi đạt chứng chỉ.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>5. Sau giờ học nếu làm bài tập không hiểu tôi có được hỗ trợ không?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Có! Đây là đặc quyền kèm cặp 1-1 của khóa học: Bạn được <strong>nhắn tin Zalo trực tiếp cho Thầy Hưng 24/7</strong>. Bất cứ bài đọc Part 7 nào dịch chưa thoát ý, câu ngữ pháp Part 5 nào bị lừa bẫy, thầy sẽ trực tiếp phân tích nguyên nhân và giải thích cặn kẽ cho bạn.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>6. Chính sách cam kết chuẩn đầu ra và học lại hoạt động ra sao?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Chỉ cần bạn tham gia đầy đủ các buổi học Live qua Zoom và hoàn thành bài tập theo hướng dẫn của Thầy Hưng, bạn được <strong>ĐẢM BẢO CHUẨN ĐẦU RA 600+ TOEIC</strong>. Nếu đi thi không đạt chuẩn, bạn được <strong>học lại 100% HOÀN TOÀN MIỄN PHÍ</strong> ở khóa tiếp theo, không phải đóng thêm bất kỳ khoản phí nào!
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>7. Tôi mất gốc tiếng Anh hoàn toàn, không biết gì thì có theo được không?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Khóa học được thiết kế đặc thù cho người mất gốc từ con số 0. Buổi 1 đến buổi 6 sẽ bắt đầu bằng việc chuẩn hóa khẩu hình 44 âm IPA và nghe ngắt nhịp Part 1 - Part 2. Thầy Hưng sẽ gọi mic từng bạn để nắn chỉnh phát âm, đảm bảo không ai bị bỏ lại phía sau.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>8. Mua xong thì tôi cần bắt đầu từ đâu?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Sau khi hoàn tất thanh toán và được xác nhận qua Zalo, bạn sẽ nhận được một bản hướng dẫn chuẩn bị: Cài đặt Zoom, tải bộ tài liệu khai giảng chặng 1, làm một bài test đầu vào nhanh để Thầy Hưng nắm rõ điểm yếu của bạn và sẵn sàng cho buổi học Live đầu tiên.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>9. Thanh toán chuyển khoản trực tiếp có an toàn không?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Tuyệt đối an toàn. Tài khoản nhận thanh toán là tài khoản chính chủ của Thầy Hưng tại Ngân hàng Ngoại thương Việt Nam (Vietcombank) — PGD Lê Chân. Mọi giao dịch chuyển khoản đều có lịch sử sao kê điện tử minh bạch theo quy định của Ngân hàng Nhà nước.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>10. Tôi có thể tham gia học trên điện thoại hoặc máy tính bảng được không?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Có. Nền tảng Zoom hoạt động mượt mà trên cả Điện thoại (iOS/Android), iPad, Máy tính bảng và Laptop/PC. Tuy nhiên, để có trải nghiệm học tập và tương tác sửa bài tốt nhất, Thầy Hưng khuyến khích bạn nên sử dụng Laptop hoặc Máy tính để bàn có tai nghe và mic rõ ràng.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 11 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>11. Nếu sau khi chuyển khoản mà tôi không nhận được email/Zalo thì sao?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Đừng lo lắng! Bạn có thể chủ động liên hệ ngay tới Hotline/Zalo cá nhân của Thầy Hưng qua số <strong>0375.688.888</strong> hoặc <strong>0904.244.824</strong> kèm ảnh chụp màn hình chuyển khoản. Thầy Hưng sẽ trực tiếp kiểm tra và hỗ trợ kích hoạt suất học cho bạn trong vòng 60 giây.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 12 -->
+          <div class="faq-checkout-item">
+            <div class="faq-checkout-header">
+              <h4>12. Tôi có được tải tài liệu về máy in ra học không? Có được cập nhật đề mới không?</h4>
+              <span class="faq-icon-pill">+</span>
+            </div>
+            <div class="faq-checkout-body">
+              <div class="faq-body-inner">
+                Toàn bộ file PDF tài liệu 1.000 từ vựng và bài tập đều được thiết kế định dạng chuẩn in ấn (A4) để bạn có thể tải về in ra ghi chép thuận tiện. Ngân hàng đề thi trên App cũng liên tục được cập nhật các format câu hỏi mới nhất từ các kỳ thi thật của ETS tại IIG Việt Nam.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 11: Final Payment CTA Section -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-card">
+          <h2>Sẵn Sàng Bứt Phá 600 – 800+ TOEIC?</h2>
+          <p>Đừng để nỗi sợ tiếng Anh tiếp tục giữ chân bạn thêm một kỳ thi nào nữa. Hãy quét mã chuyển khoản 5.400.000₫ ngay hôm nay để giữ trọn vẹn ưu đãi 50% và bước vào lớp học Live Zoom cùng Thầy Hưng.</p>
+          <div class="final-cta-btn-wrap">
+            <button type="button" class="btn-primary-payment scroll-to-qr-btn" style="max-width:380px">
+              <i data-lucide="qr-code" style="width:20px;height:20px"></i>
+              <span>QUÉT MÃ THANH TOÁN NGAY</span>
+            </button>
+            <a href="https://zalo.me/0375688888" target="_blank" rel="noopener noreferrer" class="btn-edit-info" style="padding:1.15rem 1.75rem;font-size:0.95rem">
+              <i data-lucide="message-circle" style="width:18px;height:18px"></i> Nhắn Tin Trực Tiếp Thầy Hưng
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="checkout-footer">
+      <div class="container">
+        <p>© 2026 MrH TOEIC. All rights reserved. Khóa học TOEIC ONLINE PRO — Giảng viên Thầy Hưng 985/990 TOEIC ETS.</p>
+        <p>Bảo mật giao dịch điện tử theo tiêu chuẩn Ngân Hàng Nhà Nước Việt Nam • Cổng thanh toán VietQR & Napas 247.</p>
+        <p style="color:#64748b;font-size:0.75rem;margin-top:0.75rem">Cam kết đảm bảo chuẩn đầu ra 600+ cho học viên tham gia học đầy đủ và làm bài tập theo lộ trình. Học lại 100% miễn phí nếu không đạt mục tiêu.</p>
+      </div>
+    </footer>
+
+    <!-- Sticky Mobile Bottom Bar -->
+    <div class="mobile-sticky-bar" id="mobile-sticky-bar">
+      <div class="mobile-bar-inner">
+        <div class="mobile-price-col">
+          <span class="mobile-price-cur" id="mobile-price-val">5.400.000₫</span>
+          <span class="mobile-price-timer">Ưu đãi còn: <strong class="cd-hours">23</strong>:<strong class="cd-minutes">59</strong>:<strong class="cd-seconds">59</strong></span>
+        </div>
+        <button type="button" class="mobile-qr-jump-btn scroll-to-qr-btn">
+          <i data-lucide="qr-code" style="width:16px;height:16px"></i>
+          <span>Thanh Toán QR</span>
+        </button>
+      </div>
+    </div>
+
+  </div> <!-- End Page Wrapper -->
+
+  <!-- Modal 1: Edit Buyer Info Modal -->
+  <div class="modal-backdrop" id="edit-info-modal" role="dialog" aria-modal="true" aria-labelledby="edit-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-head">
+        <h3 id="edit-modal-title">Chỉnh Sửa Thông Tin Học Viên</h3>
+        <button type="button" class="modal-close" aria-label="Đóng">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="edit-info-form" style="display:flex;flex-direction:column;gap:1.15rem">
+          <div>
+            <label style="display:block;font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem">Họ và tên học viên:</label>
+            <input type="text" id="input-edit-name" required style="width:100%;padding:0.75rem;border-radius:var(--radius-md);background:rgba(255,255,255,0.06);border:1px solid var(--border-card);color:#fff;font-size:0.95rem" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem">Số điện thoại (Nhận tin nhắn Zalo):</label>
+            <input type="tel" id="input-edit-phone" required style="width:100%;padding:0.75rem;border-radius:var(--radius-md);background:rgba(255,255,255,0.06);border:1px solid var(--border-card);color:#fff;font-size:0.95rem" />
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;color:var(--text-secondary);margin-bottom:0.35rem">Email nhận tài liệu:</label>
+            <input type="email" id="input-edit-email" required style="width:100%;padding:0.75rem;border-radius:var(--radius-md);background:rgba(255,255,255,0.06);border:1px solid var(--border-card);color:#fff;font-size:0.95rem" />
+          </div>
+          <button type="submit" class="btn-primary-payment" style="margin-top:0.5rem">
+            Lưu Thông Tin & Cập Nhật Mã QR
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Success Celebration & Zalo Confirm Modal -->
+  <div class="modal-backdrop" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-head">
+        <h3 id="success-modal-title">Ghi Nhận Thanh Toán Thành Công</h3>
+        <button type="button" class="modal-close" aria-label="Đóng">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="success-celebration-box">
+          <div class="success-icon-ring">✓</div>
+          <h3>Cảm Ơn Bạn Đã Đăng Ký!</h3>
+          <p>
+            Yêu cầu kích hoạt suất học <strong id="success-offer-name" style="color:var(--color-accent)">TOEIC ONLINE PRO</strong> với số tiền <strong id="success-order-amount" style="color:#fff">5.400.000₫</strong> cho số điện thoại <strong id="success-student-phone" style="color:#fff">0904.244.824</strong> đã được hệ thống ghi nhận.
+          </p>
+          <p style="font-size:0.85rem;color:var(--accent-green-light)">
+            Đội ngũ Thầy Hưng sẽ đối soát biến động số dư Vietcombank và gửi link phòng Zoom kèm tài liệu qua Zalo trong vòng <strong>5–15 phút</strong>.
+          </p>
+          <a href="https://zalo.me/0375688888" target="_blank" rel="noopener noreferrer" class="btn-zalo-direct">
+            <i data-lucide="message-circle" style="width:20px;height:20px"></i>
+            <span>Nhắn Tin Xác Nhận Ngay Qua Zalo Thầy Hưng</span>
+          </a>
+          <div style="margin-top:1rem;font-size:0.775rem;color:var(--text-muted)">
+            Hotline hỗ trợ trực tiếp 24/7: <strong>0375.688.888</strong> (Thầy Hưng)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Certificate Zoom Modal -->
+  <div class="modal-backdrop" id="cert-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width:760px">
+      <div class="modal-head">
+        <h3>Bảng Điểm ETS 985/990 Chính Thức — Thầy Hưng</h3>
+        <button type="button" class="modal-close" aria-label="Đóng">✕</button>
+      </div>
+      <div class="modal-body" style="padding:1rem;background:#040912;text-align:center">
+        <img src="images/chung-chi.webp" alt="Chứng chỉ TOEIC Thầy Hưng 985/990" style="max-width:100%;height:auto;border-radius:var(--radius-md);box-shadow:0 8px 30px rgba(0,0,0,0.6)" />
+        <p style="font-size:0.85rem;color:var(--color-accent-light);margin-top:0.85rem">
+          Chứng chỉ khảo thí quốc tế ETS do IIG Việt Nam cấp. Điểm số: <strong>Listening 495 / Reading 490</strong> (Tổng 985/990).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Toast Component -->
+  <div class="toast-notice" id="toast-notification" role="status" aria-live="polite">
+    <i data-lucide="check-circle" style="width:18px;height:18px"></i>
+    <span id="toast-msg">Đã sao chép vào bộ nhớ tạm!</span>
+  </div>
+
+  <!-- Client Interaction Scripts -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/checkout.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
