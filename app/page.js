@@ -25,8 +25,22 @@ export default function Home() {
       </a>
 
       <div className="nav-actions">
+        <a href="/payment" className="nav-payment-btn" id="nav-payment-btn" title="Cổng thanh toán & giữ suất học ưu đãi 50%">
+          <span className="nav-payment-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2" />
+              <path d="M7 7h.01" />
+              <path d="M17 7h.01" />
+              <path d="M7 17h.01" />
+              <path d="M17 17h.01" />
+            </svg>
+          </span>
+          <span className="nav-payment-text">Thanh Toán</span>
+          <span className="nav-payment-pill">Ưu Đãi 50%</span>
+        </a>
+
         <a href="#dang-ky" className="btn btn-accent nav-cta-btn">
-          Đăng Ký Tư Vấn 1-1
+          Tư Vấn 1-1
         </a>
       </div>
     </div>
@@ -1763,6 +1777,13 @@ export default function Home() {
               <i data-lucide="lock" style={{ width: '14px', height: '14px', color: 'var(--color-accent)' }}></i>
               <span>Thông tin của bạn được bảo mật tuyệt đối. Sau khi nhận đăng ký bạn sẽ được chuyển đến trang xác nhận.</span>
             </div>
+
+            <div style={{ textAlign: 'center', marginTop: '0.85rem', paddingTop: '0.75rem', borderTop: '1px dashed rgba(255,255,255,0.1)' }}>
+              <a href="/payment" style={{ color: 'var(--color-accent)', fontSize: '0.875rem', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.4rem', textDecoration: 'none' }}>
+                <span>⚡ Bạn muốn chuyển khoản trực tiếp qua mã VietQR? Vào ngay trang /payment</span>
+                <i data-lucide="arrow-right" style={{ width: '14px', height: '14px' }}></i>
+              </a>
+            </div>
           </form>
         </div>
 
@@ -1937,6 +1958,11 @@ export default function Home() {
         <a href="https://zalo.me/0375688888" target="_blank" rel="noopener noreferrer" className="btn btn-accent" style={{ width: '100%', textAlign: 'center', marginBottom: '0.65rem' }}>
           <i data-lucide="check-circle" style={{ width: '18px', height: '18px' }}></i>
           <span>TÔI ĐÃ CHUYỂN KHOẢN (XÁC NHẬN QUA ZALO)</span>
+        </a>
+
+        <a href="/payment" className="btn btn-outline-accent" style={{ width: '100%', textAlign: 'center', marginBottom: '0.85rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.45rem', fontSize: '0.85rem' }}>
+          <span>Mở Cổng Thanh Toán Đầy Đủ (/payment)</span>
+          <i data-lucide="arrow-right" style={{ width: '14px', height: '14px' }}></i>
         </a>
 
         <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center' }}>
