@@ -489,6 +489,23 @@ export default function PaymentContent() {
         colors: ['#c4a07c', '#10b981', '#ffffff', '#f59e0b']
       });
     }
+
+    // Record payment confirmation to backend & Google Sheets
+    try {
+      fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: student.fullname,
+          phone: student.phone,
+          email: student.email,
+          url: typeof window !== 'undefined' ? window.location.href : '',
+          payment_status: 'Đã thanh toán (Chờ xác nhận)'
+        }),
+        keepalive: true
+      }).catch(() => {});
+    } catch (e) {}
+
     setIsSuccessModalOpen(true);
   };
 

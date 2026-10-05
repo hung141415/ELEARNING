@@ -216,6 +216,28 @@ function initRegistrationModal() {
       return;
     }
 
+    // Send lead data to backend API (to backup locally & sync to Google Sheets)
+    try {
+      const leadPayload = {
+        name: name,
+        phone: cleanPhone,
+        email: email,
+        url: window.location.href,
+        payment_status: 'Chưa thanh toán'
+      };
+
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon('/api/lead', new Blob([JSON.stringify(leadPayload)], { type: 'application/json' }));
+      } else {
+        fetch('/api/lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(leadPayload),
+          keepalive: true
+        }).catch(() => {});
+      }
+    } catch (e) {}
+
     // Save buyer info to localStorage for instant hydration on /payment
     try {
       localStorage.setItem('mrh_buyer_info', JSON.stringify({
