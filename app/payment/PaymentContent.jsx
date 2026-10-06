@@ -218,9 +218,12 @@ export default function PaymentContent() {
   // VietQR URL Generator with dynamic memo
   const vietQrUrl = `https://api.vietqr.io/image/970436-${BANK_INFO.accountNumber}-compact2.jpg?amount=${activeOffer.price}&addInfo=${encodeURIComponent(transferMemo)}&accountName=${encodeURIComponent(BANK_INFO.accountName)}`;
 
-  // Scroll to top on arrival
+  // Scroll to top on arrival and track PageView
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+      window.fbq('track', 'PageView');
+    }
   }, []);
 
   // Show Toast Helper

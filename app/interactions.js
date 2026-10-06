@@ -238,6 +238,20 @@ function initRegistrationModal() {
       }
     } catch (e) {}
 
+    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Purchase
+    try {
+      if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+        window.fbq('track', 'Purchase', {
+          value: 5400000,
+          currency: 'VND',
+          content_name: 'Khóa học TOEIC ONLINE PRO 36 Buổi Live',
+          content_type: 'product'
+        });
+      }
+    } catch (fbErr) {
+      console.warn('FB Pixel Purchase track error:', fbErr);
+    }
+
     // Save buyer info to localStorage for instant hydration on /payment
     try {
       localStorage.setItem('mrh_buyer_info', JSON.stringify({
@@ -247,14 +261,16 @@ function initRegistrationModal() {
       }));
     } catch (err) {}
 
-    // Immediately redirect to payment page with query params
+    // Redirect to payment page with query params (short delay to ensure FB Pixel event is sent)
     const query = new URLSearchParams({
       name: name,
       phone: cleanPhone,
       email: email
     }).toString();
 
-    window.location.href = `/payment?${query}`;
+    setTimeout(() => {
+      window.location.href = `/payment?${query}`;
+    }, 250);
   });
 
   if (!modal) return;
