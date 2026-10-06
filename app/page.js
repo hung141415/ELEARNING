@@ -26,7 +26,7 @@ export default function Home() {
 
       <div className="nav-actions">
         <a href="#dang-ky" className="btn btn-accent nav-cta-btn">
-          Tư Vấn 1-1
+          Đăng Ký Tư Vấn
         </a>
       </div>
     </div>
@@ -53,7 +53,7 @@ export default function Home() {
             Hành trình lấy <span className="highlight-capsule">600 + TOEIC</span>
             <span className="hero-title-break">Sau 36 Buổi THỰC CHIẾN</span>
           </span>
-          <span className="hero-title-sub">Học Trực Tuyến 100% Zoom Live — Đảm Bảo Chuẩn 600+ • Tự Tin Bứt Phá 800+!</span>
+          <span className="hero-title-sub">Học Trực Tuyến 100% Zoom Live — Đảm Bảo Chuẩn 600+ , Tự Tin Bứt Phá 800+!</span>
         </h1>
 
         <p className="hero-lead-text-center">
@@ -270,7 +270,7 @@ export default function Home() {
   <section className="section-padding proof-feedback-section" id="feedback">
     <div className="container-fluid feedback-container-wide">
       <div className="text-center feedback-header-block">
-        <span className="section-badge">Bằng Chứng Thực Tế • Chứng Chỉ ETS & Tin Nhắn Học Viên</span>
+        <span className="section-badge">BẰNG CHỨNG THỰC TẾ : CHỨNG CHỈ ETS & TIN NHẮN HỌC VIÊN</span>
         <h2 className="section-title">Học Viên Lớp Live Bứt Phá<br /><span className="highlight">600+ Đến 895 TOEIC</span></h2>
         <p className="section-subtitle">
           Khóa học chỉ đảm bảo chuẩn đầu ra 600+ sau khi học xong để các bạn mất gốc yên tâm tuyệt đối, nhưng kinh nghiệm thực chiến và kỹ năng xử lý đề của Thầy Hưng đã giúp rất nhiều bạn hoàn toàn có thể bứt phá lên <strong>700, 800+, thậm chí 895 TOEIC</strong> bình thường sau 3 tháng:
@@ -779,7 +779,7 @@ export default function Home() {
     <section className="section-padding curriculum-compact-section" id="lo-trinh">
     <div className="container">
       <div className="text-center">
-        <span className="section-badge">• NỘI DUNG CHƯƠNG TRÌNH ĐÀO TẠO</span>
+        <span className="section-badge">NỘI DUNG CHƯƠNG TRÌNH ĐÀO TẠO</span>
         <h2 className="section-title">Lộ Trình Bứt Phá <span className="highlight">600 + TOEIC Thực Chiến</span><br /><span className="title-sub-break">Trong 36 Buổi</span></h2>
         <p className="section-subtitle">
           Đảm bảo chuẩn 600+ sau khóa học cho người mất gốc — Đồng thời rèn luyện kỹ năng xử lý đề ETS để bạn hoàn toàn có thể bứt phá 800+ bình thường. Được thiết kế theo trục thời gian 6 chặng liên hoàn:
@@ -1133,6 +1133,9 @@ export default function Home() {
        ==========================================================================  */}
   <section className="section-padding instructor-spotlight-section" id="giang-vien">
     <div className="container">
+      <div className="text-center" style={{ marginBottom: '2.5rem', display: 'flex', justifyContent: 'center' }}>
+        <span className="section-badge" style={{ margin: '0 auto' }}>Người Trực Tiếp Đồng Hành Cùng Bạn</span>
+      </div>
       <div className="instructor-spotlight-grid">
         {/*  Photo Column  */}
         <div className="instructor-portrait-card">
@@ -1145,7 +1148,6 @@ export default function Home() {
 
         {/*  Instructor Details Column  */}
         <div className="instructor-details">
-          <span className="section-badge">Người Trực Tiếp Đồng Hành Cùng Bạn</span>
           <h2 className="instructor-name-title">Thầy Hưng <span className="accent-name">(Mr. Hưng TOEIC)</span></h2>
           <div className="instructor-role-badge">Người đào tạo TOEIC đạt 985/990 TOEIC • Đã thi TOEIC nhiều lần • 5 năm kinh nghiệm</div>
 
@@ -1185,8 +1187,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
-            <a href="#dang-ky" className="btn btn-accent">
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '1.75rem' }}>
+            <a href="#dang-ky" className="btn btn-accent" style={{ margin: '0 auto', textAlign: 'center' }}>
               <span>Đăng Ký Học Live Cùng Thầy Hưng</span>
               <i data-lucide="arrow-right" style={{ width: '18px', height: '18px' }}></i>
             </a>
@@ -1337,13 +1339,14 @@ export default function Home() {
       <div className="text-center">
         <span className="section-badge">Hệ Sinh Thái Kèm Cặp Toàn Diện</span>
         <h2 className="section-title">5 Phần Quà Tặng Kèm & Quyền Lợi Độc Quyền</h2>
-        <p className="section-subtitle">
-          Không đơn thuần là một khóa học, đây là giải pháp trọn gói đảm bảo bạn vững vàng 600+ và tự tin bứt phá 800+ TOEIC:
+        <p className="section-subtitle" style={{ marginBottom: '2.5rem' }}>
+          Không đơn thuần là một khóa học, đây là giải pháp trọn gói đảm bảo bạn<br />
+          vững vàng 600+ và tự tin bứt phá 800+ TOEIC:
         </p>
       </div>
 
       {/*  Mentorship Highlight Top Banner  */}
-      <div className="exclusive-mentorship-banner">
+      <div className="exclusive-mentorship-banner" style={{ marginTop: '1rem' }}>
         <div className="mentorship-highlight-card">
           <div className="mentorship-highlight-icon">
             <i data-lucide="video" style={{ width: '24px', height: '24px' }}></i>
@@ -1639,7 +1642,7 @@ export default function Home() {
         {/*  CỘT TRÁI: TIÊU ĐỀ, BẢNG TÍNH GIÁ TRỊ, GIÁ GẠCH 10.800K & 5.400K SIÊU TO, PILLS  */}
         <div className="pricing-col-left">
           <h2 className="pricing-headline">
-            Sẵn sàng bứt phá <span className="highlight">600 – 800+ TOEIC</span> cùng Thầy Hưng?
+            Sẵn sàng bứt phá <span className="highlight">600+ TOEIC</span> cùng Thầy Hưng?
           </h2>
 
           <div className="pricing-valuestack-list">
@@ -1764,12 +1767,7 @@ export default function Home() {
               <span>Thông tin của bạn được bảo mật tuyệt đối. Sau khi nhận đăng ký bạn sẽ được chuyển đến trang xác nhận.</span>
             </div>
 
-            <div style={{ textAlign: 'center', marginTop: '0.85rem', paddingTop: '0.75rem', borderTop: '1px dashed rgba(255,255,255,0.1)' }}>
-              <a href="/payment" style={{ color: 'var(--color-accent)', fontSize: '0.875rem', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.4rem', textDecoration: 'none' }}>
-                <span>⚡ Bạn muốn chuyển khoản trực tiếp qua mã VietQR? Vào ngay trang /payment</span>
-                <i data-lucide="arrow-right" style={{ width: '14px', height: '14px' }}></i>
-              </a>
-            </div>
+
           </form>
         </div>
 
@@ -1946,10 +1944,7 @@ export default function Home() {
           <span>TÔI ĐÃ CHUYỂN KHOẢN (XÁC NHẬN QUA ZALO)</span>
         </a>
 
-        <a href="/payment" className="btn btn-outline-accent" style={{ width: '100%', textAlign: 'center', marginBottom: '0.85rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.45rem', fontSize: '0.85rem' }}>
-          <span>Mở Cổng Thanh Toán Đầy Đủ (/payment)</span>
-          <i data-lucide="arrow-right" style={{ width: '14px', height: '14px' }}></i>
-        </a>
+
 
         <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center' }}>
           Học viên đăng ký: <strong id="modal-user-phone" style={{ color: '#FFFFFF' }}></strong>

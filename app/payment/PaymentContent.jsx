@@ -191,7 +191,6 @@ export default function PaymentContent() {
   // Modals State
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
-  const [isCertModalOpen, setIsCertModalOpen] = useState(false);
 
   // Active FAQ index (0 by default)
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
@@ -705,154 +704,6 @@ export default function PaymentContent() {
                   </div>
                 </div>
               </article>
-
-              {/* Section 3: What You Get Today (Core Pillars) */}
-              <article className="glass-card">
-                <div className="card-title-row">
-                  <h3>
-                    <CheckCircle style={{ width: '20px', height: '20px', color: 'var(--accent-green)' }} />
-                    Quyền Lợi Bạn Nhận Được Ngay Hôm Nay
-                  </h3>
-                </div>
-                <div className="what-you-get-grid">
-                  <div className="benefit-bullet-card">
-                    <div className="benefit-icon-wrap">
-                      <Video style={{ width: '18px', height: '18px' }} />
-                    </div>
-                    <div className="benefit-text-wrap">
-                      <h4>Live Zoom 100% 36 Buổi</h4>
-                      <p>Học trực tiếp 90 phút/buổi cùng Thầy Hưng. Hoàn toàn không bán video thu sẵn.</p>
-                    </div>
-                  </div>
-                  <div className="benefit-bullet-card">
-                    <div className="benefit-icon-wrap">
-                      <Mic style={{ width: '18px', height: '18px' }} />
-                    </div>
-                    <div className="benefit-text-wrap">
-                      <h4>Sửa Âm IPA & Lỗi Sai 1-1</h4>
-                      <p>Bật mic đọc dịch câu hỏi, nắn khẩu hình chuẩn bản xứ và bẻ khóa bẫy ETS mới.</p>
-                    </div>
-                  </div>
-                  <div className="benefit-bullet-card">
-                    <div className="benefit-icon-wrap">
-                      <Award style={{ width: '18px', height: '18px' }} />
-                    </div>
-                    <div className="benefit-text-wrap">
-                      <h4>Đảm Bảo Chuẩn 600+ Đến 800+</h4>
-                      <p>Học lại 100% hoàn toàn miễn phí nếu không đạt mục tiêu đầu ra cam kết.</p>
-                    </div>
-                  </div>
-                  <div className="benefit-bullet-card">
-                    <div className="benefit-icon-wrap">
-                      <MessageSquare style={{ width: '18px', height: '18px' }} />
-                    </div>
-                    <div className="benefit-text-wrap">
-                      <h4>Kèm Cặp Zalo 1-1 24/7</h4>
-                      <p>Bất cứ bài đọc hay câu ngữ pháp nào chưa hiểu, Thầy Hưng trực tiếp giải đáp cặn kẽ.</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              {/* Section 4: Bonus Stack Section */}
-              <article className="glass-card">
-                <div className="card-title-row">
-                  <h3>
-                    <Gift style={{ width: '20px', height: '20px', color: 'var(--color-accent)' }} />
-                    Trọn Bộ 5 Quà Tặng Độc Quyền Đi Kèm
-                  </h3>
-                  <span className="card-tag-pill" style={{ background: 'var(--color-accent-subtle)', color: 'var(--color-accent)', borderColor: 'var(--color-accent-border)' }}>
-                    Trị Giá 5.400.000₫
-                  </span>
-                </div>
-
-                <div className="bonus-stack-list">
-                  <div className="bonus-card-item">
-                    <div className="bonus-thumb">
-                      <img src="/images/quyen-loi-record.webp" alt="Video Record xem lại" loading="lazy" />
-                    </div>
-                    <div className="bonus-content">
-                      <h4>🎁 Quà #01: Video Record Xem Lại Không Giới Hạn</h4>
-                      <p>Lưu trữ sắc nét 1 tuần sau mỗi buổi học, xem lại bất cứ lúc nào khi có lịch bận đột xuất.</p>
-                    </div>
-                    <div className="bonus-val-tag">
-                      <span className="val-badge">1.200.000₫</span>
-                    </div>
-                  </div>
-
-                  <div className="bonus-card-item">
-                    <div className="bonus-thumb">
-                      <img src="/images/quyen-loi-tracking.webp" alt="App luyện thi sát đề 90%" loading="lazy" />
-                    </div>
-                    <div className="bonus-content">
-                      <h4>🎁 Quà #02: Nền Tảng App Luyện Thi Sát Đề 90%</h4>
-                      <p>Hệ thống tự động tracking tiến độ mỗi ngày, luyện tập ngân hàng câu hỏi chuẩn format ETS.</p>
-                    </div>
-                    <div className="bonus-val-tag">
-                      <span className="val-badge">1.500.000₫</span>
-                    </div>
-                  </div>
-
-                  <div className="bonus-card-item">
-                    <div className="bonus-thumb">
-                      <img src="/images/quyen-loi-tu-vung.webp" alt="File 1000 từ vựng ETS" loading="lazy" />
-                    </div>
-                    <div className="bonus-content">
-                      <h4>🎁 Quà #03: File 1.000 Từ Vựng Sát Đề Thi Thật ETS</h4>
-                      <p>Bộ tài liệu độc quyền lọc sát đề thi, học qua ngữ cảnh và ứng dụng tức thì vào Part 7.</p>
-                    </div>
-                    <div className="bonus-val-tag">
-                      <span className="val-badge">800.000₫</span>
-                    </div>
-                  </div>
-
-                  <div className="bonus-card-item">
-                    <div className="bonus-thumb">
-                      <img src="/images/quyen-loi-phong-thi.webp" alt="Phòng thi thử 120 phút" loading="lazy" />
-                    </div>
-                    <div className="bonus-content">
-                      <h4>🎁 Quà #04: Phòng Luyện Thi & Thi Thử Định Kỳ 120 Phút</h4>
-                      <p>Mô phỏng áp lực phòng thi thật, Thầy Hưng trực tiếp chấm chữa và bóc tách ma trận lỗi sai.</p>
-                    </div>
-                    <div className="bonus-val-tag">
-                      <span className="val-badge">1.300.000₫</span>
-                    </div>
-                  </div>
-
-                  <div className="bonus-card-item special-bonus">
-                    <div className="bonus-thumb">
-                      <img src="/images/quyen-loi-cam-ket.webp" alt="Cam kết chuẩn đầu ra 600+" loading="lazy" />
-                    </div>
-                    <div className="bonus-content">
-                      <h4 style={{ color: 'var(--accent-green-light)' }}>🎁 Quà #05: Đặc Quyền Đảm Bảo Chuẩn Đầu Ra 600+</h4>
-                      <p>Học lại 100% hoàn toàn MIỄN PHÍ nếu không đạt mục tiêu. Hỗ trợ giải đáp thắc mắc 1-1 qua Zalo 24/7.</p>
-                    </div>
-                    <div className="bonus-val-tag">
-                      <span className="val-badge priceless">GIÁ TRỊ VÔ GIÁ</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              {/* Section 7: Instructor Reassurance & ETS Scorecard */}
-              <article className="instructor-reassurance-box">
-                <div className="instructor-avatar-wrap">
-                  <img src="/images/teacher-hung.webp" alt="Thầy Hưng 985/990 TOEIC ETS" />
-                </div>
-                <div className="instructor-text">
-                  <h4>Thầy Hưng (Mr. Hưng TOEIC) <span className="score-pill">985/990 ETS</span></h4>
-                  <p>Trực tiếp đứng lớp 100% các buổi Zoom Live. 5 năm kinh nghiệm chuyên sâu, kèm cặp hơn 400+ học viên bứt phá từ con số 0 lên 600 - 895 TOEIC.</p>
-                  <button
-                    type="button"
-                    className="cert-preview-trigger"
-                    onClick={() => setIsCertModalOpen(true)}
-                  >
-                    <ZoomIn style={{ width: '14px', height: '14px' }} />
-                    <span>Xem Bảng Điểm ETS 985 Chính Thức (IIG Việt Nam)</span>
-                  </button>
-                </div>
-              </article>
-
             </div>
 
             {/* RIGHT COLUMN: The Sticky Central QR Payment Gateway (Section 5) */}
@@ -1037,58 +888,7 @@ export default function PaymentContent() {
           </div>
         </main>
 
-        {/* Section 8: Objection Handling Section */}
-        <section className="section-wrapper" id="objection-handling-sec">
-          <div className="container">
-            <div className="section-head">
-              <span className="section-badge-center">Giải Tỏa Băn Khoăn Phút Chót</span>
-              <h2 className="section-heading-lg">Mọi Điều Bạn Cần Biết Trước Khi Chuyển Khoản</h2>
-              <p className="section-desc">Chúng tôi muốn bạn hoàn toàn yên tâm 100% trước khi bắt đầu hành trình cùng Thầy Hưng:</p>
-            </div>
 
-            <div className="objections-grid">
-              <div className="objection-card">
-                <div className="objection-card-head">
-                  <div className="objection-icon"><Clock style={{ width: '16px', height: '16px' }} /></div>
-                  <h4>Chuyển tiền rồi bao lâu nhận được xác nhận?</h4>
-                </div>
-                <p>Hệ thống Napas của Vietcombank báo biến động số dư tức thì 24/7. Trong vòng <strong>5–15 phút</strong>, đội ngũ Thầy Hưng sẽ liên hệ qua Zalo theo đúng số điện thoại trong nội dung chuyển khoản để cấp link phòng Zoom và mời bạn vào nhóm VIP.</p>
-              </div>
-
-              <div className="objection-card">
-                <div className="objection-card-head">
-                  <div className="objection-icon"><HelpCircle style={{ width: '16px', height: '16px' }} /></div>
-                  <h4>Mất gốc tiếng Anh hoàn toàn có theo kịp không?</h4>
-                </div>
-                <p>Khóa học thiết kế riêng cho người mất gốc từ số 0. Chặng 1 bắt đầu từ chuẩn hóa 44 âm IPA và nghe ngắt nhịp cơ bản. Thầy Hưng gọi mic từng người để sửa lỗi, cam kết không để bất kỳ bạn nào bị bỏ lại phía sau.</p>
-              </div>
-
-              <div className="objection-card">
-                <div className="objection-card-head">
-                  <div className="objection-icon"><Calendar style={{ width: '16px', height: '16px' }} /></div>
-                  <h4>Lỡ bận việc đột xuất phải nghỉ có bị mất bài không?</h4>
-                </div>
-                <p>Hoàn toàn không. Toàn bộ 36 buổi học Live đều có <strong>Video Record chất lượng cao lưu trữ trong 1 tuần</strong> để bạn xem lại. Bạn làm bài tập trên app và nhắn tin Zalo cho Thầy Hưng bất cứ câu nào chưa hiểu.</p>
-              </div>
-
-              <div className="objection-card">
-                <div className="objection-card-head">
-                  <div className="objection-icon"><DollarSign style={{ width: '16px', height: '16px' }} /></div>
-                  <h4>Học phí 5.400.000₫ có phát sinh thêm chi phí nào không?</h4>
-                </div>
-                <p>Cam kết <strong>5.400.000₫ là chi phí TRỌN GÓI 100%</strong> cho 36 buổi học Live và toàn bộ 5 phần quà tặng (App luyện thi, Ebook 1.000 từ vựng, Phòng thi thử, Video record). Tuyệt đối không phát sinh thêm bất cứ khoản tiền giáo trình hay tài liệu nào.</p>
-              </div>
-
-              <div className="objection-card">
-                <div className="objection-card-head">
-                  <div className="objection-icon"><Shield style={{ width: '16px', height: '16px' }} /></div>
-                  <h4>Nếu học xong đi thi mà không đạt chuẩn 600+ thì sao?</h4>
-                </div>
-                <p>Bạn được <strong>HỌC LẠI 100% HOÀN TOÀN MIỄN PHÍ</strong> ở khóa tiếp theo. Thầy Hưng sẽ trực tiếp cùng bạn phân tích lại bài thi để vá đúng lỗ hổng cho đến khi bạn cầm chắc chứng chỉ mong muốn trên tay.</p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Section 10: 12 FAQ Accordion Section */}
         <section className="section-wrapper" id="faq-sec">
@@ -1129,7 +929,7 @@ export default function PaymentContent() {
         <section className="final-cta-section">
           <div className="container">
             <div className="final-cta-card">
-              <h2>Sẵn Sàng Bứt Phá 600 – 800+ TOEIC?</h2>
+              <h2>Sẵn Sàng Bứt Phá 600+ TOEIC?</h2>
               <p>Đừng để nỗi sợ tiếng Anh tiếp tục giữ chân bạn thêm một kỳ thi nào nữa. Hãy quét mã chuyển khoản {formatMoney(activeOffer.price)} ngay hôm nay để giữ trọn vẹn ưu đãi 50% và bước vào lớp học Live Zoom cùng Thầy Hưng.</p>
               <div className="final-cta-btn-wrap">
                 <button
@@ -1311,41 +1111,7 @@ export default function PaymentContent() {
         </div>
       )}
 
-      {/* Modal 3: Certificate Zoom Modal */}
-      {isCertModalOpen && (
-        <div
-          className="modal-backdrop active"
-          role="dialog"
-          aria-modal="true"
-          onClick={(e) => {
-            if (e.target.classList.contains('modal-backdrop')) setIsCertModalOpen(false);
-          }}
-        >
-          <div className="modal-dialog" style={{ maxWidth: '760px' }}>
-            <div className="modal-head">
-              <h3>Bảng Điểm ETS 985/990 Chính Thức — Thầy Hưng</h3>
-              <button
-                type="button"
-                className="modal-close"
-                onClick={() => setIsCertModalOpen(false)}
-                aria-label="Đóng"
-              >
-                ✕
-              </button>
-            </div>
-            <div className="modal-body" style={{ padding: '1rem', background: '#040912', textAlign: 'center' }}>
-              <img
-                src="/images/chung-chi.webp"
-                alt="Chứng chỉ TOEIC Thầy Hưng 985/990"
-                style={{ maxWidth: '100%', height: 'auto', borderRadius: 'var(--radius-md)', boxShadow: '0 8px 30px rgba(0,0,0,0.6)' }}
-              />
-              <p style={{ fontSize: '0.85rem', color: 'var(--color-accent-light)', marginTop: '0.85rem' }}>
-                Chứng chỉ khảo thí quốc tế ETS do IIG Việt Nam cấp. Điểm số: <strong>Listening 495 / Reading 490</strong> (Tổng 985/990).
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
+
 
       {/* Floating Toast Component */}
       <div className={`toast-notice ${toastMessage ? 'show' : ''}`} role="status" aria-live="polite">
