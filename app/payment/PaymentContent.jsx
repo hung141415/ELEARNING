@@ -697,10 +697,10 @@ export default function PaymentContent() {
                     </div>
                     <div className="next-step-content">
                       <h4 className="next-step-title">
-                        CHỤP LẠI LỆNH CHUYỂN TIỀN VÀ LIÊN HỆ QUA ZALO CHO THẦY HƯNG ĐỂ ĐƯỢC XÁC NHẬN GIỮ CHỖ VÀ NHẬN TÀI LIỆU HỌC.
+                        CHỤP LẠI LỆNH CHUYỂN TIỀN VÀ LIÊN HỆ QUA ZALO CHO THẦY HƯNG
                       </h4>
                       <p className="next-step-desc">
-                        Sau khi hoàn tất chuyển khoản thành công, bạn vui lòng chụp ảnh màn hình giao dịch (lệnh chuyển tiền) và gửi ngay qua Zalo cho Thầy Hưng (<strong>0904.244.824</strong>) để đội ngũ xác nhận giữ chỗ chính thức, kích hoạt tài khoản app luyện đề và gửi link lớp học Zoom.
+                        Sau khi hoàn tất chuyển khoản thành công, bạn vui lòng chụp ảnh màn hình giao dịch (lệnh chuyển tiền) và gửi ngay qua Zalo cho Thầy Hưng (<strong>0904.244.824</strong>) để đội ngũ xác nhận giữ chỗ chính thức, kích hoạt tài khoản app luyện đề và gửi tài liệu học tập.
                       </p>
                       <div className="next-step-action-row">
                         <a
@@ -724,7 +724,7 @@ export default function PaymentContent() {
                     </div>
                     <div className="next-step-content">
                       <h4 className="next-step-title">
-                        CHUẨN BỊ MINDSET, TINH THẦN HỌC ĐỂ HỌC TẬP. TẤT CẢ NHỮNG ĐIỀU CÒN LẠI THẦY HƯNG VÀ ĐỘI NGŨ SẼ LO &lt;3
+                        CHUẨN BỊ MINDSET, TINH THẦN HỌC TẬP
                       </h4>
                       <p className="next-step-desc">
                         Hãy giữ vững quyết tâm, tinh thần học tập nghiêm túc và sẵn sàng bứt phá cùng lớp Live 36 buổi. Dù mất gốc hoàn toàn hay lâu năm không học tiếng Anh, mọi lộ trình bài giảng, sửa âm IPA, bẻ khóa bẫy ETS và kèm cặp 1-1 Thầy Hưng và đội ngũ sẽ trực tiếp lo trọn gói cho bạn!
