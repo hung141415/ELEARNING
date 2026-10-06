@@ -39,39 +39,51 @@ function initCountdownTimer() {
   const cdMinutes = document.querySelectorAll('.cd-minutes');
   const cdSeconds = document.querySelectorAll('.cd-seconds');
 
-  const STORAGE_KEY = 'toeic_pro_offer_deadline';
+  const SHARED_KEY = 'mrh_offer_deadline_v1';
   let targetTime = null;
+  const now = Date.now();
+
   try {
-    targetTime = localStorage.getItem(STORAGE_KEY);
+    const stored = localStorage.getItem(SHARED_KEY) || localStorage.getItem('toeic_pro_offer_deadline') || localStorage.getItem('mrh_checkout_timer_end');
+    if (stored) {
+      targetTime = parseInt(stored, 10);
+    }
   } catch (e) {}
 
-  const now = new Date().getTime();
-  if (!targetTime || parseInt(targetTime, 10) <= now) {
+  if (!targetTime || isNaN(targetTime) || targetTime <= now) {
     targetTime = now + 24 * 60 * 60 * 1000;
     try {
-      localStorage.setItem(STORAGE_KEY, targetTime.toString());
+      localStorage.setItem(SHARED_KEY, targetTime.toString());
+      localStorage.setItem('toeic_pro_offer_deadline', targetTime.toString());
+      localStorage.setItem('mrh_checkout_timer_end', targetTime.toString());
     } catch (e) {}
   } else {
-    targetTime = parseInt(targetTime, 10);
+    try {
+      localStorage.setItem(SHARED_KEY, targetTime.toString());
+      localStorage.setItem('toeic_pro_offer_deadline', targetTime.toString());
+      localStorage.setItem('mrh_checkout_timer_end', targetTime.toString());
+    } catch (e) {}
   }
 
   function update() {
-    const currentTime = new Date().getTime();
-    let diff = targetTime - currentTime;
+    const currentTime = Date.now();
+    let diff = Math.max(0, Math.floor((targetTime - currentTime) / 1000));
 
     if (diff <= 0) {
       targetTime = currentTime + 24 * 60 * 60 * 1000;
       try {
-        localStorage.setItem(STORAGE_KEY, targetTime.toString());
+        localStorage.setItem(SHARED_KEY, targetTime.toString());
+        localStorage.setItem('toeic_pro_offer_deadline', targetTime.toString());
+        localStorage.setItem('mrh_checkout_timer_end', targetTime.toString());
       } catch (e) {}
-      diff = targetTime - currentTime;
+      diff = 24 * 3600;
     }
 
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / 1000 / 60) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
+    const hours = Math.floor(diff / 3600);
+    const minutes = Math.floor((diff % 3600) / 60);
+    const seconds = diff % 60;
 
-    const pad = (n) => (n < 10 ? '0' + n : n);
+    const pad = (n) => (n < 10 ? '0' + n : String(n));
     const timeString = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
 
     timerElements.forEach((el) => {

@@ -107,7 +107,7 @@ export default function Home() {
                 <i data-lucide="shield-check" style={{ width: '24px', height: '24px' }}></i>
               </div>
               <div className="spec-text-box">
-                <div className="spec-title">Đảm bảo đầu ra: <strong>Đảm bảo chuẩn 600+ • Tự tin đạt 800+</strong></div>
+                <div className="spec-title">Đảm bảo đầu ra: <strong>Đảm bảo chuẩn 600+, Tự tin đạt 800+</strong></div>
                 <div className="spec-desc">Đảm bảo đạt tối thiểu 600+ sau khi học xong (học lại 100% miễn phí nếu không đạt MỤC TIÊU). Tối ưu hóa kỹ năng làm bài để bứt phá 800+ bình thường.</div>
               </div>
             </div>

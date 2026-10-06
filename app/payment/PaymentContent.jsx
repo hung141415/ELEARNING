@@ -85,56 +85,7 @@ const BANK_INFO = {
   branch: 'PGD Lê Chân'
 };
 
-const FAQ_LIST = [
-  {
-    q: '1. Cách thanh toán bằng mã QR như thế nào?',
-    a: 'Rất đơn giản! Bạn chỉ cần mở bất kỳ ứng dụng ngân hàng nào trên điện thoại (Vietcombank, MB Bank, Techcombank, VPBank, ACB, BIDV...), chọn tính năng "Quét mã QR" và hướng camera vào mã QR trên trang này. Hệ thống sẽ tự động điền đúng Số tài khoản (9904244824), Tên người nhận (PHAM VIET HUNG) và Số tiền tương ứng. Bạn chỉ cần kiểm tra nội dung chuyển khoản là SĐT của bạn và nhấn Xác nhận.'
-  },
-  {
-    q: '2. Sau khi chuyển khoản bao lâu tôi sẽ nhận được sản phẩm / xác nhận?',
-    a: 'Hệ thống đối soát giao dịch hoạt động liên tục 24/7. Thông thường trong vòng 5 đến 15 phút sau khi chuyển khoản thành công, Thầy Hưng hoặc trợ giảng sẽ liên hệ qua Zalo/Điện thoại theo số bạn đã đăng ký để gửi thông tin phòng học Zoom, tài liệu khai giảng và link nhóm lớp VIP.'
-  },
-  {
-    q: '3. Cách nhận lớp học và tài liệu diễn ra như thế nào?',
-    a: 'Bạn sẽ được mời vào nhóm Zalo kín của lớp học. Tại đây, link phòng Zoom kèm mật khẩu cho 36 buổi học sẽ được ghim cố định. Toàn bộ tài liệu học tập, file PDF 1.000 từ vựng và tài khoản app luyện thi sẽ được gửi trực tiếp vào email và nhóm Zalo của bạn trước ngày khai giảng.'
-  },
-  {
-    q: '4. Thời gian truy cập video xem lại và app luyện thi là bao lâu?',
-    a: '- Video Record các buổi học Live: Được lưu trữ trên hệ thống trong 1 tuần kể từ ngày buổi học diễn ra để bạn linh hoạt xem lại khi bận hoặc muốn ôn tập kỹ.\n- Tài khoản App luyện thi & Bộ tài liệu PDF: Bạn được sử dụng trọn vẹn trong suốt khóa học và ôn thi đến khi thi đạt chứng chỉ.'
-  },
-  {
-    q: '5. Sau giờ học nếu làm bài tập không hiểu tôi có được hỗ trợ không?',
-    a: 'Có! Đây là đặc quyền kèm cặp 1-1 của khóa học: Bạn được nhắn tin Zalo trực tiếp cho Thầy Hưng 24/7. Bất cứ bài đọc Part 7 nào dịch chưa thoát ý, câu ngữ pháp Part 5 nào bị lừa bẫy, thầy sẽ trực tiếp phân tích nguyên nhân và giải thích cặn kẽ cho bạn.'
-  },
-  {
-    q: '6. Chính sách cam kết chuẩn đầu ra và học lại hoạt động ra sao?',
-    a: 'Chỉ cần bạn tham gia đầy đủ các buổi học Live qua Zoom và hoàn thành bài tập theo hướng dẫn của Thầy Hưng, bạn được ĐẢM BẢO CHUẨN ĐẦU RA 600+ TOEIC. Nếu đi thi không đạt chuẩn, bạn được học lại 100% HOÀN TOÀN MIỄN PHÍ ở khóa tiếp theo, không phải đóng thêm bất kỳ khoản phí nào!'
-  },
-  {
-    q: '7. Tôi mất gốc tiếng Anh hoàn toàn, không biết gì thì có theo được không?',
-    a: 'Khóa học được thiết kế đặc thù cho người mất gốc từ con số 0. Buổi 1 đến buổi 6 sẽ bắt đầu bằng việc chuẩn hóa khẩu hình 44 âm IPA và nghe ngắt nhịp Part 1 - Part 2. Thầy Hưng sẽ gọi mic từng bạn để nắn chỉnh phát âm, đảm bảo không ai bị bỏ lại phía sau.'
-  },
-  {
-    q: '8. Mua xong thì tôi cần bắt đầu từ đâu?',
-    a: 'Sau khi hoàn tất thanh toán và được xác nhận qua Zalo, bạn sẽ nhận được một bản hướng dẫn chuẩn bị: Cài đặt Zoom, tải bộ tài liệu khai giảng chặng 1, làm một bài test đầu vào nhanh để Thầy Hưng nắm rõ điểm yếu của bạn và sẵn sàng cho buổi học Live đầu tiên.'
-  },
-  {
-    q: '9. Thanh toán chuyển khoản trực tiếp có an toàn không?',
-    a: 'Tuyệt đối an toàn. Tài khoản nhận thanh toán là tài khoản chính chủ của Thầy Hưng tại Ngân hàng Ngoại thương Việt Nam (Vietcombank) — PGD Lê Chân. Mọi giao dịch chuyển khoản đều có lịch sử sao kê điện tử minh bạch theo quy định của Ngân hàng Nhà nước.'
-  },
-  {
-    q: '10. Tôi có thể tham gia học trên điện thoại hoặc máy tính bảng được không?',
-    a: 'Có. Nền tảng Zoom hoạt động mượt mà trên cả Điện thoại (iOS/Android), iPad, Máy tính bảng và Laptop/PC. Tuy nhiên, để có trải nghiệm học tập và tương tác sửa bài tốt nhất, Thầy Hưng khuyến khích bạn nên sử dụng Laptop hoặc Máy tính để bàn có tai nghe và mic rõ ràng.'
-  },
-  {
-    q: '11. Nếu sau khi chuyển khoản mà tôi không nhận được email/Zalo thì sao?',
-    a: 'Đừng lo lắng! Bạn có thể chủ động liên hệ ngay tới Hotline/Zalo cá nhân của Thầy Hưng qua số 0904.244.824 kèm ảnh chụp màn hình chuyển khoản. Thầy Hưng sẽ trực tiếp kiểm tra và hỗ trợ kích hoạt suất học cho bạn trong vòng 60 giây.'
-  },
-  {
-    q: '12. Tôi có được tải tài liệu về máy in ra học không? Có được cập nhật đề mới không?',
-    a: 'Toàn bộ file PDF tài liệu 1.000 từ vựng và bài tập đều được thiết kế định dạng chuẩn in ấn (A4) để bạn có thể tải về in ra ghi chép thuận tiện. Ngân hàng đề thi trên App cũng liên tục được cập nhật các format câu hỏi mới nhất từ các kỳ thi thật của ETS tại IIG Việt Nam.'
-  }
-];
+
 
 export default function PaymentContent() {
   const searchParams = useSearchParams();
@@ -192,8 +143,7 @@ export default function PaymentContent() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
 
-  // Active FAQ index (0 by default)
-  const [openFaqIndex, setOpenFaqIndex] = useState(0);
+
 
   // Toast State
   const [toastMessage, setToastMessage] = useState(null);
@@ -263,32 +213,50 @@ export default function PaymentContent() {
     }
   };
 
-  // Countdown Timer Logic
+  // Unified Countdown Timer Logic (100% in-sync with landing page)
   useEffect(() => {
-    const timerDurationSec = 24 * 60 * 60;
-    let storedEnd = localStorage.getItem('mrh_checkout_timer_end');
-    let endTime = storedEnd ? parseInt(storedEnd, 10) : null;
+    const SHARED_KEY = 'mrh_offer_deadline_v1';
+    const now = Date.now();
+    let stored = null;
+    try {
+      stored = localStorage.getItem(SHARED_KEY) || localStorage.getItem('toeic_pro_offer_deadline') || localStorage.getItem('mrh_checkout_timer_end');
+    } catch (e) {}
 
-    if (!endTime || isNaN(endTime)) {
-      endTime = Date.now() + timerDurationSec * 1000;
-      localStorage.setItem('mrh_checkout_timer_end', endTime.toString());
+    let endTime = stored ? parseInt(stored, 10) : null;
+    if (!endTime || isNaN(endTime) || endTime <= now) {
+      endTime = now + 24 * 60 * 60 * 1000;
+      try {
+        localStorage.setItem(SHARED_KEY, endTime.toString());
+        localStorage.setItem('toeic_pro_offer_deadline', endTime.toString());
+        localStorage.setItem('mrh_checkout_timer_end', endTime.toString());
+      } catch (e) {}
+    } else {
+      try {
+        localStorage.setItem(SHARED_KEY, endTime.toString());
+        localStorage.setItem('toeic_pro_offer_deadline', endTime.toString());
+        localStorage.setItem('mrh_checkout_timer_end', endTime.toString());
+      } catch (e) {}
     }
 
     const updateTimer = () => {
-      const now = Date.now();
-      let diff = Math.max(0, Math.floor((endTime - now) / 1000));
+      const currentTime = Date.now();
+      let diff = Math.max(0, Math.floor((endTime - currentTime) / 1000));
 
       if (diff <= 0) {
-        endTime = Date.now() + 6 * 3600 * 1000;
-        localStorage.setItem('mrh_checkout_timer_end', endTime.toString());
-        diff = 6 * 3600;
+        endTime = currentTime + 24 * 60 * 60 * 1000;
+        try {
+          localStorage.setItem(SHARED_KEY, endTime.toString());
+          localStorage.setItem('toeic_pro_offer_deadline', endTime.toString());
+          localStorage.setItem('mrh_checkout_timer_end', endTime.toString());
+        } catch (e) {}
+        diff = 24 * 3600;
       }
 
       const h = Math.floor(diff / 3600);
       const m = Math.floor((diff % 3600) / 60);
       const s = diff % 60;
 
-      const pad = (n) => String(n).padStart(2, '0');
+      const pad = (n) => (n < 10 ? '0' + n : String(n));
       setTimeLeft({ hours: pad(h), minutes: pad(m), seconds: pad(s) });
     };
 
@@ -707,6 +675,68 @@ export default function PaymentContent() {
                   </div>
                 </div>
               </article>
+
+              {/* Section 3: Next Steps After Transfer (Những Điều Cần Làm Tiếp Theo) */}
+              <article className="glass-card next-steps-card" id="next-steps-card">
+                <div className="card-title-row">
+                  <h3>
+                    <CheckCircle2 style={{ width: '22px', height: '22px', color: 'var(--color-accent)' }} />
+                    Những Điều Cần Làm Tiếp Theo Sau Khi Chuyển Khoản
+                  </h3>
+                  <span className="card-tag-pill" style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#34d399', borderColor: 'rgba(16, 185, 129, 0.3)' }}>
+                    2 Bước Quan Trọng
+                  </span>
+                </div>
+
+                <div className="next-steps-list">
+                  {/* Step 1 */}
+                  <div className="next-step-box step-urgent">
+                    <div className="next-step-badge-wrap">
+                      <div className="next-step-number">1</div>
+                      <span className="next-step-pill-label">BƯỚC 1</span>
+                    </div>
+                    <div className="next-step-content">
+                      <h4 className="next-step-title">
+                        CHỤP LẠI LỆNH CHUYỂN TIỀN VÀ LIÊN HỆ QUA ZALO CHO THẦY HƯNG ĐỂ ĐƯỢC XÁC NHẬN GIỮ CHỖ VÀ NHẬN TÀI LIỆU HỌC.
+                      </h4>
+                      <p className="next-step-desc">
+                        Sau khi hoàn tất chuyển khoản thành công, bạn vui lòng chụp ảnh màn hình giao dịch (lệnh chuyển tiền) và gửi ngay qua Zalo cho Thầy Hưng (<strong>0904.244.824</strong>) để đội ngũ xác nhận giữ chỗ chính thức, kích hoạt tài khoản app luyện đề và gửi link lớp học Zoom.
+                      </p>
+                      <div className="next-step-action-row">
+                        <a
+                          href="https://zalo.me/0904244824"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-zalo-step-action"
+                        >
+                          <MessageCircle style={{ width: '16px', height: '16px' }} />
+                          <span>Gửi Lệnh Chuyển Tiền Qua Zalo: 0904.244.824</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="next-step-box step-mindset">
+                    <div className="next-step-badge-wrap">
+                      <div className="next-step-number number-heart">2</div>
+                      <span className="next-step-pill-label label-gold">BƯỚC 2</span>
+                    </div>
+                    <div className="next-step-content">
+                      <h4 className="next-step-title">
+                        CHUẨN BỊ MINDSET, TINH THẦN HỌC ĐỂ HỌC TẬP. TẤT CẢ NHỮNG ĐIỀU CÒN LẠI THẦY HƯNG VÀ ĐỘI NGŨ SẼ LO &lt;3
+                      </h4>
+                      <p className="next-step-desc">
+                        Hãy giữ vững quyết tâm, tinh thần học tập nghiêm túc và sẵn sàng bứt phá cùng lớp Live 36 buổi. Dù mất gốc hoàn toàn hay lâu năm không học tiếng Anh, mọi lộ trình bài giảng, sửa âm IPA, bẻ khóa bẫy ETS và kèm cặp 1-1 Thầy Hưng và đội ngũ sẽ trực tiếp lo trọn gói cho bạn!
+                      </p>
+                      <div className="next-step-commitment-chip">
+                        <Sparkles style={{ width: '15px', height: '15px', color: 'var(--color-accent)' }} />
+                        <span>Đảm bảo chuẩn 600+, Tự tin đạt 800+</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
 
             {/* RIGHT COLUMN: The Sticky Central QR Payment Gateway (Section 5) */}
@@ -893,40 +923,7 @@ export default function PaymentContent() {
 
 
 
-        {/* Section 10: 12 FAQ Accordion Section */}
-        <section className="section-wrapper" id="faq-sec">
-          <div className="container">
-            <div className="section-head">
-              <span className="section-badge-center">Câu Hỏi Thường Gặp</span>
-              <h2 className="section-heading-lg">Giải Đáp 12 Thắc Mắc Trước Khi Hoàn Tất</h2>
-              <p className="section-desc">Tất cả những thông tin chi tiết về hình thức học, bảo hành, tài liệu và thanh toán:</p>
-            </div>
 
-            <div className="faq-accordion-group">
-              {FAQ_LIST.map((faq, index) => {
-                const isOpen = openFaqIndex === index;
-                return (
-                  <div key={index} className={`faq-checkout-item ${isOpen ? 'active' : ''}`}>
-                    <div
-                      className="faq-checkout-header"
-                      onClick={() => setOpenFaqIndex(isOpen ? -1 : index)}
-                    >
-                      <h4>{faq.q}</h4>
-                      <span className="faq-icon-pill">{isOpen ? '−' : '+'}</span>
-                    </div>
-                    {isOpen && (
-                      <div className="faq-checkout-body" style={{ maxHeight: 'none' }}>
-                        <div className="faq-body-inner" style={{ whiteSpace: 'pre-line' }}>
-                          {faq.a}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
 
         {/* Section 11: Final Payment CTA Section */}
         <section className="final-cta-section">
