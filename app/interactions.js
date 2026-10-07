@@ -197,6 +197,14 @@ function initFaqAccordion() {
     first.classList.add('active');
     const firstContent = first.querySelector('.faq-content-pane, .faq-body');
     if (firstContent) firstContent.style.maxHeight = firstContent.scrollHeight + 'px';
+
+    window.addEventListener('resize', () => {
+      const activeItem = document.querySelector('.faq-item-container.active, .faq-card.active');
+      if (activeItem) {
+        const pane = activeItem.querySelector('.faq-content-pane, .faq-body');
+        if (pane) pane.style.maxHeight = pane.scrollHeight + 'px';
+      }
+    });
   }
 }
 

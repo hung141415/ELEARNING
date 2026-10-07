@@ -1786,8 +1786,84 @@ export default function Home() {
       </div>
 
       <div style={{ marginTop: '2.5rem' }}>
-        {/*  FAQ Item 1  */}
+        {/*  FAQ Item 1: Chính sách CAM KẾT ĐẦU RA & Điều kiện đảm bảo (Đưa lên vị trí đầu tiên)  */}
         <div className="faq-item-container active">
+          <div className="faq-trigger">
+            <div className="faq-question-text">Chính sách CAM KẾT ĐẦU RA hoạt động như thế nào &amp; Điều kiện đảm bảo?</div>
+            <div className="faq-toggle-circle">+</div>
+          </div>
+          <div className="faq-content-pane">
+            <div className="faq-content-inner">
+              <p className="faq-guarantee-lead">
+                Khóa học <strong>đảm bảo chuẩn đầu ra tối thiểu 600+ TOEIC</strong> cho học viên mất gốc và tạo bệ phóng vững chắc để bứt phá <strong>800+</strong>. Nếu tham gia học nghiêm túc mà thi không đạt mục tiêu cam kết, bạn được <strong>học lại 100% hoàn toàn miễn phí</strong> trong khóa tiếp theo!
+              </p>
+
+              <div className="faq-conditions-wrap">
+                <div className="faq-conditions-title">
+                  <i data-lucide="shield-check" style={{ width: '18px', height: '18px', color: '#C4A07C' }}></i>
+                  <span>4 Điều kiện để được áp dụng chính sách đảm bảo đầu ra:</span>
+                </div>
+
+                <div className="faq-conditions-list">
+                  {/* Điều kiện 1 */}
+                  <div className="faq-condition-item">
+                    <div className="faq-condition-badge">1</div>
+                    <div className="faq-condition-body">
+                      <div className="faq-condition-heading">Không được nghỉ quá 3 buổi học</div>
+                      <div className="faq-condition-desc">
+                        Đảm bảo tính chuyên cần và liền mạch trong suốt 36 buổi học Live. Nếu có việc bận đột xuất trong số buổi cho phép, học viên cần chủ động xem lại video Record chất lượng cao và làm bài tập bù để không bị hổng kiến thức.
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Điều kiện 2 */}
+                  <div className="faq-condition-item">
+                    <div className="faq-condition-badge">2</div>
+                    <div className="faq-condition-body">
+                      <div className="faq-condition-heading">Cần làm đầy đủ bài tập về nhà</div>
+                      <div className="faq-condition-desc">
+                        Hoàn thành 100% bài tập được giao sau mỗi buổi học trên app luyện thi và tài liệu hướng dẫn để củng cố ngữ pháp, từ vựng và rèn phản xạ xử lý bẫy đề thi.
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Điều kiện 3 */}
+                  <div className="faq-condition-item">
+                    <div className="faq-condition-badge">3</div>
+                    <div className="faq-condition-body">
+                      <div className="faq-condition-heading">Bật mic tương tác trực tiếp trong quá trình học</div>
+                      <div className="faq-condition-desc">
+                        Trong mỗi buổi học Live qua Zoom, học viên cần sẵn sàng bật mic tương tác 1-1 cùng Thầy Hưng khi được gọi đọc dịch câu, trực tiếp sửa phát âm IPA và kiểm tra mức độ tiếp thu bài học ngay tại lớp.
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Điều kiện 4 */}
+                  <div className="faq-condition-item">
+                    <div className="faq-condition-badge">4</div>
+                    <div className="faq-condition-body">
+                      <div className="faq-condition-heading">Kiểm tra định kỳ &amp; định hướng ôn tập cá nhân hóa</div>
+                      <div className="faq-condition-desc">
+                        Học viên tham gia đầy đủ các bài kiểm tra định kỳ. Giáo viên sẽ trực tiếp dựa vào kết quả này để kiểm soát chuẩn đầu ra, đánh giá mức độ tiến bộ và đưa ra định hướng ôn tập, lấp lỗ hổng kiến thức phù hợp cho từng học viên.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Callout cam kết */}
+                <div className="faq-guarantee-callout">
+                  <i data-lucide="sparkles" style={{ width: '18px', height: '18px', color: '#C4A07C', flexShrink: 0, marginTop: '2px' }}></i>
+                  <div>
+                    <strong>Cam kết dựa trên kết quả thật:</strong> Các điều kiện trên nhằm đảm bảo tinh thần học tập kỷ luật và nghiêm túc. Khi bạn phối hợp chặt chẽ cùng sự kèm cặp 1-1 của Thầy Hưng, 100% học viên đều tự tin chinh phục mục tiêu!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/*  FAQ Item 2  */}
+        <div className="faq-item-container">
           <div className="faq-trigger">
             <div className="faq-question-text">Mình mất gốc tiếng Anh hoàn toàn, liệu có theo được khóa học này không?</div>
             <div className="faq-toggle-circle">+</div>
@@ -1799,7 +1875,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/*  FAQ Item 2  */}
+        {/*  FAQ Item 3  */}
         <div className="faq-item-container">
           <div className="faq-trigger">
             <div className="faq-question-text">Khóa học này là học Live trực tiếp hay là video xem sẵn?</div>
@@ -1812,7 +1888,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/*  FAQ Item 3  */}
+        {/*  FAQ Item 4  */}
         <div className="faq-item-container">
           <div className="faq-trigger">
             <div className="faq-question-text">Nếu mình bận đột xuất và phải nghỉ 1 buổi học thì có bị mất bài không?</div>
@@ -1825,7 +1901,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/*  FAQ Item 4  */}
+        {/*  FAQ Item 5  */}
         <div className="faq-item-container">
           <div className="faq-trigger">
             <div className="faq-question-text">Sau giờ học nếu làm bài tập không hiểu thì có được hỏi thầy không?</div>
@@ -1834,19 +1910,6 @@ export default function Home() {
           <div className="faq-content-pane">
             <div className="faq-content-inner">
               Có. Đây là đặc quyền kèm cặp 1-1 của khóa học: <strong>Học viên được hỗ trợ giải đáp thắc mắc 24/7 qua tin nhắn Zalo trực tiếp cùng Thầy Hưng</strong>. Bất cứ câu hỏi nào trong quá trình làm bài tập trên app hay giải đề thi thử, thầy sẽ giải thích cặn kẽ nguyên nhân và chỉ ra bẫy thi thật.
-            </div>
-          </div>
-        </div>
-
-        {/*  FAQ Item 5  */}
-        <div className="faq-item-container">
-          <div className="faq-trigger">
-            <div className="faq-question-text">Chính sách CAM KẾT ĐẦU RA hoạt động như thế nào?</div>
-            <div className="faq-toggle-circle">+</div>
-          </div>
-          <div className="faq-content-pane">
-            <div className="faq-content-inner">
-              Học viên tham gia học đầy đủ các buổi Live qua Zoom và hoàn thành bài tập theo hướng dẫn sẽ được <strong>Đảm bảo đạt chuẩn đầu ra 600+ TOEIC sau khóa học</strong>. Nếu thi không đạt chuẩn, bạn được <strong>Học lại 100% hoàn toàn miễn phí nếu không đạt MỤC TIÊU</strong> trong khóa tiếp theo!
             </div>
           </div>
         </div>
@@ -1864,7 +1927,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/*  FAQ Item 6  */}
+        {/*  FAQ Item 7  */}
         <div className="faq-item-container">
           <div className="faq-trigger">
             <div className="faq-question-text">Học phí 5.400.000₫ gồm những gì và có phát sinh chi phí nào khác không?</div>
