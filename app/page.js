@@ -776,7 +776,7 @@ export default function Home() {
   {/*  ==========================================================================
        SECTION 3: LỘ TRÌNH HỌC LUÔN (5 - 6 GẠCH ĐẦU DÒNG CÔ ĐỌNG THỰC CHIẾN)
        ==========================================================================  */}
-    <section className="section-padding curriculum-compact-section" id="lo-trinh">
+    <section className="section-padding curriculum-compact-section section-light" id="lo-trinh">
     <div className="container">
       <div className="text-center">
         <span className="section-badge">NỘI DUNG CHƯƠNG TRÌNH ĐÀO TẠO</span>
@@ -1116,7 +1116,7 @@ export default function Home() {
                     <span>Trang bị phương pháp thực chiến và lộ trình tự rèn luyện để bứt phá 700, 800+, thậm chí 895 TOEIC bình thường.</span>
                   </div>
                 </div>
-                <div className="mv-deliverable-badge" style={{ background: 'rgba(196, 160, 124, 0.15)', borderColor: 'rgba(196, 160, 124, 0.4)', color: 'var(--color-accent)' }}>
+                <div className="mv-deliverable-badge mv-deliverable-award">
                   <i data-lucide="award" style={{ width: '16px', height: '16px' }}></i>
                   <span>Mục tiêu chặng: Tự tin bước vào phòng thi thật ETS và cầm chắc chứng chỉ mong ước ngay lần thi đầu tiên!</span>
                 </div>

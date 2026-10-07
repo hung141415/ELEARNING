@@ -3192,7 +3192,7 @@ ul, ol {
    CONDENSED CURRICULUM (5-6 HIGH-IMPACT BULLET POINTS)
    ========================================================================== */
 .curriculum-compact-section {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-light-warm);
 }
 
 .compact-curriculum-grid {
@@ -3826,8 +3826,14 @@ ul, ol {
   background-color: var(--bg-light-warm);
 }
 
-/* Crisp Ice White for Curriculum & Audience Fit */
-.section-light.curriculum-compact-section,
+/* Warm White / Beige Background for Curriculum Roadmap */
+.section-light.curriculum-compact-section {
+  background-color: #FAF6F1;
+  background: linear-gradient(180deg, #FAF7F2 0%, #F5EFEB 50%, #FAF7F2 100%);
+  border-top: 1px solid rgba(196, 160, 124, 0.25);
+  border-bottom: 1px solid rgba(196, 160, 124, 0.25);
+}
+
 .section-light.audience-fit-section {
   background-color: var(--bg-light-cool);
 }
@@ -4362,14 +4368,14 @@ ul, ol {
 .mv-roadmap-track {
   position: absolute;
   top: 24px;
-  bottom: 60px;
-  left: calc(36% + 32px);
-  width: 3px;
-  background: rgba(255, 255, 255, 0.12);
+  left: calc(36% + 8.96px); /* Center of 64px column in 36fr 64px 64fr */
+  width: 4px;
+  background: #E2E8F0;
   transform: translateX(-50%);
-  z-index: 1;
-  border-radius: 3px;
-  overflow: hidden;
+  z-index: 2;
+  border-radius: 4px;
+  pointer-events: none;
+  box-shadow: 0 0 6px rgba(17, 38, 89, 0.04);
 }
 
 @media (max-width: 860px) {
@@ -4378,26 +4384,45 @@ ul, ol {
   }
 }
 
+@media (max-width: 640px) {
+  .mv-roadmap-track {
+    left: 20px;
+  }
+}
+
 .mv-roadmap-beam {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 0%;
-  background: linear-gradient(180deg, #C4A07C 0%, #FFFFFF 70%, #C4A07C 100%);
-  box-shadow: 0 0 15px rgba(196, 160, 124, 0.9), 0 0 30px rgba(255, 255, 255, 0.7);
-  transition: height 0.08s linear;
+  height: 100%;
+  transform-origin: top;
+  transform: scaleY(0);
+  background: linear-gradient(180deg, #C4A07C 0%, #9A7458 65%, #C4A07C 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(196, 160, 124, 0.9), 0 0 20px rgba(154, 116, 88, 0.45);
+  will-change: transform;
 }
 
-/* Roadmap Row: Resting / Inactive state (lướt lên lại tối nhưng vẫn rõ chữ) */
+/* Roadmap Row: Container stays solid, opacity only affects descriptive content */
 .mv-roadmap-row {
   display: grid;
   grid-template-columns: 36fr 64px 64fr;
   align-items: start;
   gap: 0;
   position: relative;
-  opacity: 0.65;
+  z-index: 4;
+}
+
+.mv-roadmap-row .mv-roadmap-left,
+.mv-roadmap-row .mv-roadmap-card {
+  opacity: 0.72;
   transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mv-roadmap-row.is-active .mv-roadmap-left,
+.mv-roadmap-row.is-active .mv-roadmap-card {
+  opacity: 1;
 }
 
 @media (max-width: 860px) {
@@ -4427,9 +4452,9 @@ ul, ol {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-accent);
-  background: rgba(196, 160, 124, 0.12);
-  border: 1px solid rgba(196, 160, 124, 0.35);
+  color: #8C6344;
+  background: rgba(196, 160, 124, 0.16);
+  border: 1px solid rgba(196, 160, 124, 0.45);
   padding: 0.3rem 0.85rem;
   border-radius: var(--radius-full);
   margin-bottom: 0.65rem;
@@ -4437,9 +4462,9 @@ ul, ol {
 }
 
 .mv-stage-left-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.85); /* Luôn rõ ràng, sắc nét kể cả khi tối */
+  color: #1E2A3A;
   line-height: 1.35;
   margin-bottom: 0.35rem;
   transition: all 0.4s ease;
@@ -4448,7 +4473,7 @@ ul, ol {
 .mv-stage-sessions-tag {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-accent-light);
+  color: #64748B;
   transition: all 0.4s ease;
 }
 
@@ -4459,23 +4484,24 @@ ul, ol {
   align-items: center;
   position: relative;
   align-self: stretch;
-  z-index: 2;
+  z-index: 10;
 }
 
 .mv-roadmap-node {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: #081222;
-  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: #FFFFFF;
+  border: 2.5px solid #D6CEBE;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.95rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  z-index: 3;
+  color: #112659;
+  box-shadow: 0 0 0 7px #FAF6F1, 0 4px 14px rgba(17, 38, 89, 0.08);
+  z-index: 12;
+  position: relative;
   flex-shrink: 0;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -4497,12 +4523,11 @@ ul, ol {
 }
 
 .mv-roadmap-card {
-  background: rgba(13, 25, 48, 0.7);
-  backdrop-filter: blur(14px);
-  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 1.5px solid #E5DFD7;
   border-radius: var(--radius-xl);
   padding: 2rem 2.25rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(17, 38, 89, 0.04), 0 2px 6px rgba(17, 38, 89, 0.02);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -4515,9 +4540,10 @@ ul, ol {
     gap: 0.75rem;
   }
   .mv-roadmap-node {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     font-size: 0.85rem;
+    box-shadow: 0 0 0 5px #FAF6F1, 0 4px 12px rgba(17, 38, 89, 0.08);
   }
   .mv-roadmap-card {
     padding: 1.25rem 1rem;
@@ -4540,35 +4566,41 @@ ul, ol {
 }
 
 .mv-roadmap-row.is-active .mv-roadmap-node {
-  background: #C4A07C;
+  background: linear-gradient(135deg, #C4A07C 0%, #A8815E 100%);
   border-color: #FFFFFF;
-  color: #071120;
+  color: #FFFFFF;
+  font-weight: 900;
   transform: scale(1.15);
-  box-shadow: 0 0 25px rgba(196, 160, 124, 0.9), 0 0 15px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 7px #FAF6F1, 0 0 25px rgba(196, 160, 124, 0.85), 0 6px 18px rgba(17, 38, 89, 0.12);
 }
 
 .mv-roadmap-row.is-active .mv-stage-pill {
-  background: rgba(196, 160, 124, 0.25);
+  background: rgba(196, 160, 124, 0.28);
   border-color: #C4A07C;
-  box-shadow: 0 0 15px rgba(196, 160, 124, 0.4);
+  color: #784E2E;
+  box-shadow: 0 0 12px rgba(196, 160, 124, 0.25);
 }
 
 .mv-roadmap-row.is-active .mv-stage-left-title {
-  color: #FFFFFF;
-  text-shadow: 0 0 18px rgba(255, 255, 255, 0.4);
+  color: #112659;
+  text-shadow: none;
+}
+
+.mv-roadmap-row.is-active .mv-stage-sessions-tag {
+  color: #9A7458;
 }
 
 .mv-roadmap-row.is-active .mv-roadmap-card {
-  background: rgba(16, 32, 60, 0.92);
-  border-color: rgba(196, 160, 124, 0.65);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 35px rgba(196, 160, 124, 0.18);
+  background: #FFFFFF;
+  border-color: #C4A07C;
+  box-shadow: 0 16px 36px rgba(196, 160, 124, 0.18), 0 4px 14px rgba(17, 38, 89, 0.05);
   transform: translateY(-3px);
 }
 
 .mv-roadmap-card:hover {
-  border-color: var(--color-accent);
+  border-color: #B08E6D;
   transform: translateX(4px);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45), 0 0 25px rgba(196, 160, 124, 0.2);
+  box-shadow: 0 18px 40px rgba(17, 38, 89, 0.08), 0 0 20px rgba(196, 160, 124, 0.14);
 }
 
 .mv-mobile-stage-bar {
@@ -4590,17 +4622,17 @@ ul, ol {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius-lg);
-  border: 1.5px solid rgba(196, 160, 124, 0.3);
-  background: #081222;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(196, 160, 124, 0.08);
+  border: 1.5px solid #E2E8F0;
+  background: #FFFFFF;
+  box-shadow: 0 8px 22px rgba(17, 38, 89, 0.06);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   display: block;
 }
 
 .mv-roadmap-row:hover .mv-stage-illustration-img,
 .mv-roadmap-row.is-active .mv-stage-illustration-img {
-  border-color: rgba(196, 160, 124, 0.75);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 25px rgba(196, 160, 124, 0.25);
+  border-color: #C4A07C;
+  box-shadow: 0 14px 32px rgba(17, 38, 89, 0.12), 0 0 20px rgba(196, 160, 124, 0.2);
   transform: translateY(-2px);
 }
 
@@ -4630,15 +4662,15 @@ ul, ol {
 .mv-card-headline {
   font-size: 1.25rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: #112659;
   line-height: 1.35;
   margin-bottom: 0.75rem;
 }
 
 .mv-card-summary {
   font-size: 0.925rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
+  color: #334155;
+  line-height: 1.7;
   margin-bottom: 1.25rem;
 }
 
@@ -4647,7 +4679,7 @@ ul, ol {
   flex-direction: column;
   gap: 0.75rem;
   padding-top: 1rem;
-  border-top: 1px dashed rgba(196, 160, 124, 0.25);
+  border-top: 1px dashed #E2E8F0;
   margin-bottom: 1.25rem;
 }
 
@@ -4657,19 +4689,19 @@ ul, ol {
   gap: 0.65rem;
   font-size: 0.875rem;
   line-height: 1.6;
-  color: #E2E8F0;
+  color: #1E293B;
 }
 
 .mv-bullet-item i {
-  color: var(--color-accent);
+  color: #059669;
   flex-shrink: 0;
   margin-top: 3px;
 }
 
 .mv-deliverable-badge {
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.35);
-  color: #34D399;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  color: #065F46;
   border-radius: var(--radius-md);
   padding: 0.65rem 1rem;
   font-size: 0.825rem;
@@ -4677,6 +4709,20 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.mv-deliverable-badge i {
+  color: #059669;
+}
+
+.mv-deliverable-badge.mv-deliverable-award {
+  background: #FDF8F3 !important;
+  border: 1px solid rgba(196, 160, 124, 0.5) !important;
+  color: #9A7458 !important;
+}
+
+.mv-deliverable-badge.mv-deliverable-award i {
+  color: #C4A07C !important;
 }
 
 /* 4. Split Gift Cards with Visual GIF Placeholder Slots */
@@ -5475,41 +5521,6 @@ ul, ol {
   text-align: center;
   margin-top: 0.75rem;
   line-height: 1.4;
-}
-
-/* ==========================================================================
-   ULTRA-SMOOTH HARDWARE ACCELERATED ROADMAP SCROLL BEAM (MẠNH VIBE STYLE)
-   ========================================================================== */
-.mv-roadmap-track {
-  position: absolute;
-  top: 24px;
-  bottom: 60px;
-  left: calc(36% + 32px);
-  width: 3px;
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateX(-50%);
-  z-index: 1;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-@media (max-width: 860px) {
-  .mv-roadmap-track {
-    left: 28px;
-  }
-}
-
-.mv-roadmap-beam {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-origin: top;
-  transform: scaleY(0);
-  background: linear-gradient(180deg, #C4A07C 0%, #FFFFFF 65%, #C4A07C 100%);
-  box-shadow: 0 0 15px rgba(196, 160, 124, 0.9), 0 0 30px rgba(255, 255, 255, 0.8);
-  will-change: transform;
 }
 
 }

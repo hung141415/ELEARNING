@@ -640,32 +640,69 @@ function initLightboxModal() {
 function initRoadmapFlowEffect() {
   const timeline = document.getElementById('mv-roadmap-timeline');
   const beam = document.getElementById('mv-roadmap-beam');
+  const track = timeline ? timeline.querySelector('.mv-roadmap-track') : null;
   const rows = document.querySelectorAll('.mv-roadmap-row');
+  const nodes = timeline ? timeline.querySelectorAll('.mv-roadmap-node') : [];
 
-  if (!timeline || !beam || !rows.length) return;
+  if (!timeline || !beam || !track || !rows.length || !nodes.length) return;
+
+  let cachedGeometry = null;
+
+  function updateGeometry() {
+    const firstNode = nodes[0];
+    const lastNode = nodes[nodes.length - 1];
+    if (!firstNode || !lastNode) return null;
+
+    const timelineRect = timeline.getBoundingClientRect();
+    const firstRect = firstNode.getBoundingClientRect();
+    const lastRect = lastNode.getBoundingClientRect();
+
+    // Exact horizontal center relative to timeline:
+    const centerX = (firstRect.left + firstRect.width / 2) - timelineRect.left;
+    // Start at the center of Node 01:
+    const startY = (firstRect.top + firstRect.height / 2) - timelineRect.top;
+    // End at the center of Node 06 (never dangles into empty space):
+    const endY = (lastRect.top + lastRect.height / 2) - timelineRect.top;
+    const trackHeight = Math.max(0, endY - startY);
+
+    track.style.left = `${centerX}px`;
+    track.style.top = `${startY}px`;
+    track.style.height = `${trackHeight}px`;
+
+    cachedGeometry = {
+      centerX,
+      startY,
+      endY,
+      trackHeight,
+    };
+    return cachedGeometry;
+  }
 
   let ticking = false;
 
   function updateRoadmap() {
-    const rect = timeline.getBoundingClientRect();
+    if (!cachedGeometry) {
+      updateGeometry();
+      if (!cachedGeometry) return;
+    }
+
+    const timelineRect = timeline.getBoundingClientRect();
     const windowH = window.innerHeight;
     const focalY = windowH * 0.52;
 
-    const timelineTop = rect.top;
-    const timelineHeight = rect.height;
-
-    const scrolledPx = focalY - timelineTop;
-    const progress = Math.min(1, Math.max(0, scrolledPx / timelineHeight));
+    const trackTopViewport = timelineRect.top + cachedGeometry.startY;
+    const scrolledPx = focalY - trackTopViewport;
+    const progress = Math.min(1, Math.max(0, scrolledPx / cachedGeometry.trackHeight));
 
     beam.style.transform = `scaleY(${progress})`;
 
     rows.forEach((row) => {
       const node = row.querySelector('.mv-roadmap-node');
-      const targetPoint = node 
-        ? (node.getBoundingClientRect().top + node.offsetHeight / 2) 
-        : row.getBoundingClientRect().top + 50;
+      if (!node) return;
+      const nodeCenter = node.getBoundingClientRect().top + node.offsetHeight / 2;
 
-      if (targetPoint <= focalY + 25) {
+      // Lights up cleanly when the focal scroll reaches the node
+      if (focalY >= nodeCenter - 25) {
         row.classList.add('is-active');
       } else {
         row.classList.remove('is-active');
@@ -683,8 +720,26 @@ function initRoadmapFlowEffect() {
     }
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll, { passive: true });
+  function onResize() {
+    updateGeometry();
+    updateRoadmap();
+  }
 
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onResize, { passive: true });
+  window.addEventListener('orientationchange', onResize, { passive: true });
+
+  // Initial calculation + fallbacks for image/font layout shifts
+  updateGeometry();
   updateRoadmap();
+
+  setTimeout(() => {
+    updateGeometry();
+    updateRoadmap();
+  }, 300);
+
+  setTimeout(() => {
+    updateGeometry();
+    updateRoadmap();
+  }, 1000);
 }
