@@ -776,7 +776,7 @@ export default function Home() {
   {/*  ==========================================================================
        SECTION 3: LỘ TRÌNH HỌC LUÔN (5 - 6 GẠCH ĐẦU DÒNG CÔ ĐỌNG THỰC CHIẾN)
        ==========================================================================  */}
-    <section className="section-padding curriculum-compact-section section-light" id="lo-trinh">
+    <section className="section-padding curriculum-compact-section" id="lo-trinh">
     <div className="container">
       <div className="text-center">
         <span className="section-badge">NỘI DUNG CHƯƠNG TRÌNH ĐÀO TẠO</span>
