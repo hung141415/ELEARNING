@@ -647,6 +647,8 @@ function initRoadmapFlowEffect() {
   if (!timeline || !beam || !track || !rows.length || !nodes.length) return;
 
   let cachedGeometry = null;
+  let cachedRows = [];
+  let lastProgressRounded = -1;
 
   function updateGeometry() {
     const firstNode = nodes[0];
@@ -663,11 +665,25 @@ function initRoadmapFlowEffect() {
     const startY = (firstRect.top + firstRect.height / 2) - timelineRect.top;
     // End at the center of Node 06 (never dangles into empty space):
     const endY = (lastRect.top + lastRect.height / 2) - timelineRect.top;
-    const trackHeight = Math.max(0, endY - startY);
+    const trackHeight = Math.max(1, endY - startY);
 
     track.style.left = `${centerX}px`;
     track.style.top = `${startY}px`;
     track.style.height = `${trackHeight}px`;
+
+    // Cache relative vertical positions once to avoid layout thrashing during scroll:
+    cachedRows = Array.from(rows).map((row) => {
+      const node = row.querySelector('.mv-roadmap-node');
+      if (!node) return null;
+      const nodeRect = node.getBoundingClientRect();
+      const relativeCenterY = (nodeRect.top + nodeRect.height / 2) - timelineRect.top;
+      return {
+        row,
+        node,
+        relativeCenterY,
+        isActive: row.classList.contains('is-active')
+      };
+    }).filter(Boolean);
 
     cachedGeometry = {
       centerX,
@@ -681,33 +697,73 @@ function initRoadmapFlowEffect() {
   let ticking = false;
 
   function updateRoadmap() {
-    if (!cachedGeometry) {
+    if (!cachedGeometry || !cachedRows.length) {
       updateGeometry();
       if (!cachedGeometry) return;
     }
 
     const timelineRect = timeline.getBoundingClientRect();
     const windowH = window.innerHeight;
-    const focalY = windowH * 0.52;
 
-    const trackTopViewport = timelineRect.top + cachedGeometry.startY;
+    // Viewport Culling: Skip work when timeline is completely offscreen
+    if (timelineRect.bottom < -80) {
+      if (lastProgressRounded !== 1) {
+        lastProgressRounded = 1;
+        beam.style.transform = 'scale3d(1, 1, 1)';
+        for (let i = 0; i < cachedRows.length; i++) {
+          const item = cachedRows[i];
+          if (!item.isActive) {
+            item.isActive = true;
+            item.row.classList.add('is-active');
+          }
+        }
+      }
+      return;
+    }
+
+    if (timelineRect.top > windowH + 80) {
+      if (lastProgressRounded !== 0) {
+        lastProgressRounded = 0;
+        beam.style.transform = 'scale3d(1, 0, 1)';
+        for (let i = 0; i < cachedRows.length; i++) {
+          const item = cachedRows[i];
+          if (item.isActive) {
+            item.isActive = false;
+            item.row.classList.remove('is-active');
+          }
+        }
+      }
+      return;
+    }
+
+    const focalY = windowH * 0.52;
+    const timelineTop = timelineRect.top;
+    const trackTopViewport = timelineTop + cachedGeometry.startY;
     const scrolledPx = focalY - trackTopViewport;
     const progress = Math.min(1, Math.max(0, scrolledPx / cachedGeometry.trackHeight));
 
-    beam.style.transform = `scaleY(${progress})`;
+    // Hardware accelerated 3D transform (120Hz/60Hz smooth, no subpixel recalculation)
+    const progressRounded = Math.round(progress * 1000) / 1000;
+    if (progressRounded !== lastProgressRounded) {
+      lastProgressRounded = progressRounded;
+      beam.style.transform = `scale3d(1, ${progressRounded}, 1)`;
+    }
 
-    rows.forEach((row) => {
-      const node = row.querySelector('.mv-roadmap-node');
-      if (!node) return;
-      const nodeCenter = node.getBoundingClientRect().top + node.offsetHeight / 2;
+    // Zero-reflow node state update: compares purely with cached relativeCenterY
+    for (let i = 0; i < cachedRows.length; i++) {
+      const item = cachedRows[i];
+      const nodeCenter = timelineTop + item.relativeCenterY;
+      const shouldBeActive = focalY >= (nodeCenter - 25);
 
-      // Lights up cleanly when the focal scroll reaches the node
-      if (focalY >= nodeCenter - 25) {
-        row.classList.add('is-active');
-      } else {
-        row.classList.remove('is-active');
+      if (item.isActive !== shouldBeActive) {
+        item.isActive = shouldBeActive;
+        if (shouldBeActive) {
+          item.row.classList.add('is-active');
+        } else {
+          item.row.classList.remove('is-active');
+        }
       }
-    });
+    }
   }
 
   function onScroll() {
@@ -729,17 +785,25 @@ function initRoadmapFlowEffect() {
   window.addEventListener('resize', onResize, { passive: true });
   window.addEventListener('orientationchange', onResize, { passive: true });
 
-  // Initial calculation + fallbacks for image/font layout shifts
+  // Handle lazy image load shifts gracefully
+  const timelineImages = timeline.querySelectorAll('img');
+  timelineImages.forEach((img) => {
+    if (!img.complete) {
+      img.addEventListener('load', onResize, { once: true });
+    }
+  });
+
+  if (typeof ResizeObserver !== 'undefined') {
+    const ro = new ResizeObserver(() => {
+      onResize();
+    });
+    ro.observe(timeline);
+  }
+
+  // Initial calculation + fallbacks for font & layout settlement
   updateGeometry();
   updateRoadmap();
 
-  setTimeout(() => {
-    updateGeometry();
-    updateRoadmap();
-  }, 300);
-
-  setTimeout(() => {
-    updateGeometry();
-    updateRoadmap();
-  }, 1000);
+  setTimeout(onResize, 300);
+  setTimeout(onResize, 1000);
 }
