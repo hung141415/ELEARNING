@@ -828,9 +828,20 @@ export default function Home() {
                   />
                 </div>
                 <h4 className="mv-card-headline">Xóa Mù Nền Tảng &amp; Làm Chủ Kỹ Thuật Nghe Thực Chiến Part 1 – Part 4</h4>
-                <p className="mv-card-summary">
-                  Bạn sẽ nắm trọn bẫy trong phần <strong>NGHE</strong> của bài thi TOEIC, kỹ thuật <strong>"săn" Keyword</strong> và cách <strong>nghe hiểu Part 1 đến Part 4</strong> mà không cần phải dịch 100% bài nghe. Kèm theo đó, mình sẽ cung cấp cho các bạn nắm vững toàn bộ kiến thức siêu nền tảng như <strong>công thức &amp; cách dùng của các thì cơ bản</strong>, <strong>công thức câu bị động tiếng Anh</strong> cùng <strong>1.000 từ vựng tiếng Anh cơ bản</strong> — giúp bạn xóa bỏ hoàn toàn tình trạng nghe tiếng Anh mãi mà không hiểu gì.
-                </p>
+                <div className="mv-card-bullets">
+                  <div className="mv-bullet-item">
+                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
+                    <span><strong>Nắm trọn bẫy phần NGHE TOEIC:</strong> Kỹ thuật "săn" Keyword và phương pháp nghe hiểu từ Part 1 đến Part 4 mà không cần phải dịch 100% bài nghe.</span>
+                  </div>
+                  <div className="mv-bullet-item">
+                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
+                    <span><strong>Kiến thức siêu nền tảng:</strong> Nắm chắc công thức, cách dùng của các thì cơ bản và công thức câu bị động trong tiếng Anh.</span>
+                  </div>
+                  <div className="mv-bullet-item">
+                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
+                    <span><strong>1.000 từ vựng cốt lõi:</strong> Tích lũy 1.000 từ vựng tiếng Anh cơ bản, giúp bạn xóa bỏ hoàn toàn tình trạng nghe tiếng Anh mãi mà không hiểu gì.</span>
+                  </div>
+                </div>
                 <div className="mv-deliverable-badge">
                   <i data-lucide="target" style={{ width: '16px', height: '16px' }}></i>
                   <span>Mục tiêu giai đoạn: Xóa sạch mất gốc, làm chủ phản xạ bẫy nghe Part 1 - 4 và tự tin đạt 350+ Listening.</span>
@@ -873,9 +884,24 @@ export default function Home() {
                   />
                 </div>
                 <h4 className="mv-card-headline">Reading Bứt Phá: Mẹo Giải Nhanh 3 Giây &amp; Tuyệt Chiêu Xử Lý Part 7</h4>
-                <p className="mv-card-summary">
-                  Mình sẽ chỉ dạy toàn bộ tất cả kiến thức nền tảng cần thiết để bạn làm thật tốt phần <strong>ĐỌC HIỂU</strong>. Bạn được trang bị <strong>kỹ năng giải nhanh Part 5, 6</strong> — nhìn phát biết ngay câu nào dùng mẹo chọn đáp án <strong>trong 3 giây</strong>, câu nào cần dịch. Ngoài ra, bạn sẽ nắm được <strong>kỹ thuật xử lý Part 7 đọc hiểu văn bản</strong>, không cần đọc hết bài văn vẫn có thể chọn được đáp án đúng. Và bởi vì đây là khóa học thực chiến nên ngoài những kiến thức nền tảng nói trên, bạn sẽ được mình chỉ dạy trọn bộ <strong>kỹ năng làm bài</strong>, <strong>chiến thuật chia thời gian</strong> và <strong>cách xử lý các dạng câu hỏi hiệu quả</strong> trong bài thi TOEIC.
-                </p>
+                <div className="mv-card-bullets">
+                  <div className="mv-bullet-item">
+                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
+                    <span><strong>Nền tảng Đọc Hiểu toàn diện:</strong> Chỉ dạy toàn bộ tất cả kiến thức nền tảng cần thiết để bạn làm thật tốt phần ĐỌC HIỂU.</span>
+                  </div>
+                  <div className="mv-bullet-item">
+                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
+                    <span><strong>Kỹ năng giải nhanh Part 5 &amp; 6:</strong> Nhìn phát biết ngay câu nào dùng mẹo chọn đáp án trong 3 giây, câu nào cần dịch nghĩa.</span>
+                  </div>
+                  <div className="mv-bullet-item">
+                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
+                    <span><strong>Kỹ thuật xử lý Part 7 đọc hiểu:</strong> Định vị thông tin chuẩn xác, không cần đọc hết cả bài văn vẫn có thể chọn được đáp án đúng.</span>
+                  </div>
+                  <div className="mv-bullet-item">
+                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
+                    <span><strong>Chiến thuật thực chiến &amp; chia thời gian:</strong> Trang bị kỹ năng làm bài, chiến thuật chia thời gian và cách xử lý các dạng câu hỏi hiệu quả trong bài thi TOEIC.</span>
+                  </div>
+                </div>
                 <div className="mv-deliverable-badge">
                   <i data-lucide="target" style={{ width: '16px', height: '16px' }}></i>
                   <span>Mục tiêu giai đoạn: Quét sạch 46 câu Part 5+Part 6 trong chớp mắt, dứt điểm Part 7 không lo cháy giờ, bứt phá 350+ Reading.</span>
@@ -918,9 +944,20 @@ export default function Home() {
                   />
                 </div>
                 <h4 className="mv-card-headline">Luyện Đề Chuẩn Format Thi Thật Trên Nền Tảng Chấm Chữa &amp; Kèm Cặp Sát Sao</h4>
-                <p className="mv-card-summary">
-                  Bạn được <strong>luyện đề trên nền tảng có chấm chữa chi tiết</strong> với hình thức, độ khó sát thi mà mình đã thiết kế dành riêng cho các bạn học viên trong lớp. Làm xong đề hệ thống sẽ <strong>chấm bạn được bao nhiêu điểm từng kỹ năng</strong> và <strong>chữa lỗi sai trực tiếp</strong> cho bạn. Và đương nhiên, bạn không học một mình! Mình sẽ <strong>đồng hành, kèm cặp sát sao</strong> đến khi nào bạn thi được thì thôi.
-                </p>
+                <div className="mv-card-bullets">
+                  <div className="mv-bullet-item">
+                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
+                    <span><strong>Luyện đề trên nền tảng riêng:</strong> Luyện đề trên nền tảng có chấm chữa chi tiết với hình thức và độ khó sát thi do Thầy Hưng thiết kế riêng cho học viên trong lớp.</span>
+                  </div>
+                  <div className="mv-bullet-item">
+                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
+                    <span><strong>Chấm điểm &amp; chữa lỗi trực tiếp:</strong> Làm xong đề hệ thống chấm bạn được bao nhiêu điểm từng kỹ năng và chữa lỗi sai trực tiếp cho bạn.</span>
+                  </div>
+                  <div className="mv-bullet-item">
+                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
+                    <span><strong>Cam kết không học một mình:</strong> Thầy Hưng sẽ trực tiếp đồng hành, kèm cặp sát sao đến khi nào bạn thi được thì thôi!</span>
+                  </div>
+                </div>
                 <div className="mv-deliverable-badge mv-deliverable-award">
                   <i data-lucide="award" style={{ width: '16px', height: '16px' }}></i>
                   <span>Cam kết đầu ra: Tự tin bước vào phòng thi thật ETS và cầm chắc chứng chỉ 600+ đến 800+ TOEIC ngay lần thi đầu tiên!</span>
