@@ -782,7 +782,7 @@ export default function Home() {
         <span className="section-badge">NỘI DUNG CHƯƠNG TRÌNH ĐÀO TẠO</span>
         <h2 className="section-title">Lộ Trình Bứt Phá <span className="highlight">600 + TOEIC Thực Chiến</span><br /><span className="title-sub-break">Trong 36 Buổi</span></h2>
         <p className="section-subtitle">
-          Đảm bảo chuẩn 600+ sau khóa học cho người mất gốc — Đồng thời rèn luyện kỹ năng xử lý đề ETS để bạn hoàn toàn có thể bứt phá 800+ bình thường. Được thiết kế theo trục thời gian 6 chặng liên hoàn:
+          Đảm bảo chuẩn 600+ sau khóa học cho người mất gốc — Đồng thời rèn luyện kỹ năng xử lý đề ETS để bạn hoàn toàn có thể bứt phá 800+ bình thường. Được thiết kế theo trục thời gian 3 giai đoạn tinh gọn &amp; thực chiến:
         </p>
       </div>
 
@@ -794,16 +794,16 @@ export default function Home() {
             <div className="mv-roadmap-beam" id="mv-roadmap-beam"></div>
           </div>
 
-          {/*  Chặng 01  */}
+          {/*  Giai Đoạn 01  */}
           <div className="mv-roadmap-row">
             <div className="mv-roadmap-left">
               <span className="mv-stage-pill">• GIAI ĐOẠN 01</span>
-              <h3 className="mv-stage-left-title">Xây Nền & Phản Xạ Nghe</h3>
-              <div className="mv-stage-sessions-tag">Buổi 01 – 06 • 2 tuần đầu</div>
+              <h3 className="mv-stage-left-title">Xóa Mù Nền Tảng &amp; Luyện Nghe Thực Chiến</h3>
+              <div className="mv-stage-sessions-tag">Xây Nền Vững Chắc • Listening Part 1 – 4</div>
               <div className="mv-stage-illustration-wrap">
                 <img
                   src="/image/stage-1-illustration.jpg"
-                  alt="Minh họa Giai đoạn 01: Chuẩn Hóa Ngữ Âm IPA & Xóa Mù Nghe Part 1 - Part 2"
+                  alt="Minh họa Giai đoạn 01: Xóa Mù Nền Tảng & Luyện Nghe Thực Chiến"
                   className="mv-stage-illustration-img"
                   loading="lazy"
                 />
@@ -817,48 +817,38 @@ export default function Home() {
               <div className="mv-roadmap-card">
                 <div className="mv-mobile-stage-bar">
                   <span className="mv-stage-pill">• GIAI ĐOẠN 01</span>
-                  <span className="mv-stage-sessions-tag">Buổi 01 – 06 • 2 tuần đầu</span>
+                  <span className="mv-stage-sessions-tag">Xây Nền Vững Chắc • Listening Part 1 – 4</span>
                 </div>
                 <div className="mv-mobile-stage-illustration">
                   <img
                     src="/image/stage-1-illustration.jpg"
-                    alt="Minh họa Giai đoạn 01: Chuẩn Hóa Ngữ Âm IPA & Xóa Mù Nghe Part 1 - Part 2"
+                    alt="Minh họa Giai đoạn 01: Xóa Mù Nền Tảng & Luyện Nghe Thực Chiến"
                     className="mv-stage-illustration-img"
                     loading="lazy"
                   />
                 </div>
-                <h4 className="mv-card-headline">Chuẩn Hóa Ngữ Âm IPA & Xóa Mù Nghe Part 1 - Part 2</h4>
+                <h4 className="mv-card-headline">Xóa Mù Nền Tảng &amp; Làm Chủ Kỹ Thuật Nghe Thực Chiến Part 1 – Part 4</h4>
                 <p className="mv-card-summary">
-                  Sửa triệt để khẩu hình và phát âm từng nguyên âm, phụ âm, hiện tượng nối âm và nuốt âm của người bản xứ. Loại bỏ hoàn toàn thói quen nghe dịch thô trong đầu.
+                  Bạn sẽ nắm trọn bẫy trong phần <strong>NGHE</strong> của bài thi TOEIC, kỹ thuật <strong>"săn" Keyword</strong> và cách <strong>nghe hiểu Part 1 đến Part 4</strong> mà không cần phải dịch 100% bài nghe. Kèm theo đó, mình sẽ cung cấp cho các bạn nắm vững toàn bộ kiến thức siêu nền tảng như <strong>công thức &amp; cách dùng của các thì cơ bản</strong>, <strong>công thức câu bị động tiếng Anh</strong> cùng <strong>1.000 từ vựng tiếng Anh cơ bản</strong> — giúp bạn xóa bỏ hoàn toàn tình trạng nghe tiếng Anh mãi mà không hiểu gì.
                 </p>
-                <div className="mv-card-bullets">
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Gọi từng học viên đọc mẫu và sửa lỗi phát âm IPA 1-1 trực tiếp qua Zoom Live.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Bẻ gãy bẫy câu hỏi WH- và các câu trả lời gián tiếp của đề thi ETS mới ("Ask David", "Not yet decided").</span>
-                  </div>
-                </div>
                 <div className="mv-deliverable-badge">
                   <i data-lucide="target" style={{ width: '16px', height: '16px' }}></i>
-                  <span>Mục tiêu chặng: Đúng &gt;80% Part 1 và làm chủ phản xạ bẫy câu hỏi Part 2 trong 3 giây.</span>
+                  <span>Mục tiêu giai đoạn: Xóa sạch mất gốc, làm chủ phản xạ bẫy nghe Part 1 - 4 và tự tin đạt 350+ Listening.</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/*  Chặng 02  */}
+          {/*  Giai Đoạn 02  */}
           <div className="mv-roadmap-row">
             <div className="mv-roadmap-left">
               <span className="mv-stage-pill">• GIAI ĐOẠN 02</span>
-              <h3 className="mv-stage-left-title">Bắt Nhịp Part 3 - Part 4</h3>
-              <div className="mv-stage-sessions-tag">Buổi 07 – 12 • Tuần 3-4</div>
+              <h3 className="mv-stage-left-title">Reading Bứt Phá &amp; Mẹo Giải Nhanh 3 Giây</h3>
+              <div className="mv-stage-sessions-tag">Đột Phá Điểm Số • Reading Part 5, 6 &amp; 7</div>
               <div className="mv-stage-illustration-wrap">
                 <img
                   src="/image/stage-2-illustration.jpg"
-                  alt="Minh họa Giai đoạn 02: Bắt Nhịp Part 3 - Part 4 & Săn Keyword"
+                  alt="Minh họa Giai đoạn 02: Reading Bứt Phá & Mẹo Giải Nhanh 3 Giây"
                   className="mv-stage-illustration-img"
                   loading="lazy"
                 />
@@ -872,48 +862,38 @@ export default function Home() {
               <div className="mv-roadmap-card">
                 <div className="mv-mobile-stage-bar">
                   <span className="mv-stage-pill">• GIAI ĐOẠN 02</span>
-                  <span className="mv-stage-sessions-tag">Buổi 07 – 12 • Tuần 3-4</span>
+                  <span className="mv-stage-sessions-tag">Đột Phá Điểm Số • Reading Part 5, 6 &amp; 7</span>
                 </div>
                 <div className="mv-mobile-stage-illustration">
                   <img
                     src="/image/stage-2-illustration.jpg"
-                    alt="Minh họa Giai đoạn 02: Bắt Nhịp Part 3 - Part 4 & Săn Keyword"
+                    alt="Minh họa Giai đoạn 02: Reading Bứt Phá & Mẹo Giải Nhanh 3 Giây"
                     className="mv-stage-illustration-img"
                     loading="lazy"
                   />
                 </div>
-                <h4 className="mv-card-headline">Luyện Sâu Kỹ Thuật Đọc Trước Đề & Săn Keyword Part 3 - 4</h4>
+                <h4 className="mv-card-headline">Reading Bứt Phá: Mẹo Giải Nhanh 3 Giây &amp; Tuyệt Chiêu Xử Lý Part 7</h4>
                 <p className="mv-card-summary">
-                  Thành thạo kỹ thuật đọc trước câu hỏi và đáp án trong 20 giây nghỉ giữa các đoạn audio, định vị trước ngữ cảnh để đón đầu đáp án trước khi người bản xứ nói dứt câu.
+                  Mình sẽ chỉ dạy toàn bộ tất cả kiến thức nền tảng cần thiết để bạn làm thật tốt phần <strong>ĐỌC HIỂU</strong>. Bạn được trang bị <strong>kỹ năng giải nhanh Part 5, 6</strong> — nhìn phát biết ngay câu nào dùng mẹo chọn đáp án <strong>trong 3 giây</strong>, câu nào cần dịch. Ngoài ra, bạn sẽ nắm được <strong>kỹ thuật xử lý Part 7 đọc hiểu văn bản</strong>, không cần đọc hết bài văn vẫn có thể chọn được đáp án đúng. Và bởi vì đây là khóa học thực chiến nên ngoài những kiến thức nền tảng nói trên, bạn sẽ được mình chỉ dạy trọn bộ <strong>kỹ năng làm bài</strong>, <strong>chiến thuật chia thời gian</strong> và <strong>cách xử lý các dạng câu hỏi hiệu quả</strong> trong bài thi TOEIC.
                 </p>
-                <div className="mv-card-bullets">
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Nắm trọn cấu trúc Mở - Thân - Kết của đoạn hội thoại & bài độc thoại thường gặp trong môi trường công sở.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Thi thử Checkpoint đánh giá sức bền nghe 100 câu liên tục không bị đuối sức.</span>
-                  </div>
-                </div>
                 <div className="mv-deliverable-badge">
                   <i data-lucide="target" style={{ width: '16px', height: '16px' }}></i>
-                  <span>Mục tiêu chặng: Bắt nhịp audio mượt mà, không bị trôi câu hỏi, tự tin đạt 350–420+ điểm Listening.</span>
+                  <span>Mục tiêu giai đoạn: Quét sạch 46 câu Part 5+Part 6 trong chớp mắt, dứt điểm Part 7 không lo cháy giờ, bứt phá 350+ Reading.</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/*  Chặng 03  */}
+          {/*  Giai Đoạn 03  */}
           <div className="mv-roadmap-row">
             <div className="mv-roadmap-left">
               <span className="mv-stage-pill">• GIAI ĐOẠN 03</span>
-              <h3 className="mv-stage-left-title">Ngữ Pháp & Part 5 Siêu Tốc</h3>
-              <div className="mv-stage-sessions-tag">Buổi 13 – 20 • Tuần 5-7</div>
+              <h3 className="mv-stage-left-title">Luyện Đề Format Chuẩn Thi Thật</h3>
+              <div className="mv-stage-sessions-tag">Sát Phòng Thi ETS • Chấm Chữa &amp; Kèm Cặp 1-1</div>
               <div className="mv-stage-illustration-wrap">
                 <img
                   src="/image/stage-3-illustration.jpg"
-                  alt="Minh họa Giai đoạn 03: Ngữ Pháp Cốt Lõi & Part 5 Siêu Tốc Trong 15s"
+                  alt="Minh họa Giai đoạn 03: Luyện Đề Format Chuẩn Thi Thật"
                   className="mv-stage-illustration-img"
                   loading="lazy"
                 />
@@ -921,204 +901,29 @@ export default function Home() {
             </div>
             <div className="mv-roadmap-center">
               <div className="mv-roadmap-node">03</div>
-              <div className="mv-roadmap-spine"></div>
-            </div>
-            <div className="mv-roadmap-right">
-              <div className="mv-roadmap-card">
-                <div className="mv-mobile-stage-bar">
-                  <span className="mv-stage-pill">• GIAI ĐOẠN 03</span>
-                  <span className="mv-stage-sessions-tag">Buổi 13 – 20 • Tuần 5-7</span>
-                </div>
-                <div className="mv-mobile-stage-illustration">
-                  <img
-                    src="/image/stage-3-illustration.jpg"
-                    alt="Minh họa Giai đoạn 03: Ngữ Pháp Cốt Lõi & Part 5 Siêu Tốc Trong 15s"
-                    className="mv-stage-illustration-img"
-                    loading="lazy"
-                  />
-                </div>
-                <h4 className="mv-card-headline">Làm Chủ Ngữ Pháp Cốt Lõi & Xử Lý Part 5 Trong 15s/Câu</h4>
-                <p className="mv-card-summary">
-                  Cô đọng 12 thì động từ thực chiến, câu bị động, trật tự từ loại (Danh/Tính/Động/Trạng), mệnh đề quan hệ và liên từ. Dạy cách ngắt cụm ngữ pháp để nhìn ra ngay đáp án.
-                </p>
-                <div className="mv-card-bullets">
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Kỹ thuật nhìn đuôi từ và vị trí ngữ pháp chọn ngay đáp án mà không cần dịch toàn bộ câu.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Tiết kiệm ít nhất 15 phút quý giá cho phần Part 5 để dồn thời gian giải quyết Part 7.</span>
-                  </div>
-                </div>
-                <div className="mv-deliverable-badge">
-                  <i data-lucide="target" style={{ width: '16px', height: '16px' }}></i>
-                  <span>Mục tiêu chặng: Hoàn thành 30 câu Part 5 trong dưới 8 phút với độ chính xác trên 85%.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/*  Chặng 04  */}
-          <div className="mv-roadmap-row">
-            <div className="mv-roadmap-left">
-              <span className="mv-stage-pill">• GIAI ĐOẠN 04</span>
-              <h3 className="mv-stage-left-title">Scanning & Skimming Part 6 - 7</h3>
-              <div className="mv-stage-sessions-tag">Buổi 21 – 28 • Tuần 8-9</div>
-              <div className="mv-stage-illustration-wrap">
-                <img
-                  src="/image/stage-4-illustration.jpg"
-                  alt="Minh họa Giai đoạn 04: Chiến Thuật Scanning - Skimming & Đọc Hiểu Part 6 - 7"
-                  className="mv-stage-illustration-img"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="mv-roadmap-center">
-              <div className="mv-roadmap-node">04</div>
-              <div className="mv-roadmap-spine"></div>
-            </div>
-            <div className="mv-roadmap-right">
-              <div className="mv-roadmap-card">
-                <div className="mv-mobile-stage-bar">
-                  <span className="mv-stage-pill">• GIAI ĐOẠN 04</span>
-                  <span className="mv-stage-sessions-tag">Buổi 21 – 28 • Tuần 8-9</span>
-                </div>
-                <div className="mv-mobile-stage-illustration">
-                  <img
-                    src="/image/stage-4-illustration.jpg"
-                    alt="Minh họa Giai đoạn 04: Chiến Thuật Scanning - Skimming & Đọc Hiểu Part 6 - 7"
-                    className="mv-stage-illustration-img"
-                    loading="lazy"
-                  />
-                </div>
-                <h4 className="mv-card-headline">Chiến Thuật Scanning - Skimming & Đọc Hiểu Part 6 - Part 7</h4>
-                <p className="mv-card-summary">
-                  Phân bổ bản đồ thời gian phòng thi chuẩn xác: Kỹ thuật đọc lướt (Skimming) nắm ý chính và đọc quét (Scanning) định vị từ khóa cho từng dạng câu hỏi trong bài đọc dài.
-                </p>
-                <div className="mv-card-bullets">
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Chiến lược xử lý triệt để đoạn đơn, đoạn đôi, đoạn ba và chuỗi tin nhắn Message Chain.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Xóa bỏ hoàn toàn nỗi sợ cháy giờ, làm xong Part 7 vẫn thừa 5–10 phút kiểm tra lại bài.</span>
-                  </div>
-                </div>
-                <div className="mv-deliverable-badge">
-                  <i data-lucide="target" style={{ width: '16px', height: '16px' }}></i>
-                  <span>Mục tiêu chặng: Không bao giờ bị thiếu giờ, tự tin giải quyết gọn gàng 100 câu Reading.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/*  Chặng 05  */}
-          <div className="mv-roadmap-row">
-            <div className="mv-roadmap-left">
-              <span className="mv-stage-pill">• GIAI ĐOẠN 05</span>
-              <h3 className="mv-stage-left-title">Part 7 Nâng Cao & Bứt Tốc</h3>
-              <div className="mv-stage-sessions-tag">Buổi 29 – 34 • Tuần 10-11</div>
-              <div className="mv-stage-illustration-wrap">
-                <img
-                  src="/image/stage-5-illustration.jpg"
-                  alt="Minh họa Giai đoạn 05: Xử Lý Văn Bản Khó Part 7 & Bứt Tốc Về Đích"
-                  className="mv-stage-illustration-img"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="mv-roadmap-center">
-              <div className="mv-roadmap-node">05</div>
-              <div className="mv-roadmap-spine"></div>
-            </div>
-            <div className="mv-roadmap-right">
-              <div className="mv-roadmap-card">
-                <div className="mv-mobile-stage-bar">
-                  <span className="mv-stage-pill">• GIAI ĐOẠN 05</span>
-                  <span className="mv-stage-sessions-tag">Buổi 29 – 34 • Tuần 10-11</span>
-                </div>
-                <div className="mv-mobile-stage-illustration">
-                  <img
-                    src="/image/stage-5-illustration.jpg"
-                    alt="Minh họa Giai đoạn 05: Xử Lý Văn Bản Khó Part 7 & Bứt Tốc Về Đích"
-                    className="mv-stage-illustration-img"
-                    loading="lazy"
-                  />
-                </div>
-                <h4 className="mv-card-headline">Kỹ Năng Xử Lý Văn Bản Khó Part 7 & Bứt Tốc Về Đích</h4>
-                <p className="mv-card-summary">
-                  Bóc tách các bài đọc suy luận phức tạp, email đa chiều và bảng biểu kỹ thuật số. Thầy Hưng trực tiếp chấm chữa, bóc tách ma trận lỗi sai cá nhân của từng học viên.
-                </p>
-                <div className="mv-card-bullets">
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Phân tích ma trận bẫy từ đồng nghĩa Paraphrase tinh vi nhất của các bộ đề ETS mới nhất.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Vá ngay các lỗ hổng kiến thức và thói quen làm bài còn thiếu sót trước kỳ thi thật.</span>
-                  </div>
-                </div>
-                <div className="mv-deliverable-badge">
-                  <i data-lucide="target" style={{ width: '16px', height: '16px' }}></i>
-                  <span>Mục tiêu chặng: Tăng thêm 80–120 điểm Reading, điểm thi thử đạt mốc 650–750+.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/*  Chặng 06  */}
-          <div className="mv-roadmap-row">
-            <div className="mv-roadmap-left">
-              <span className="mv-stage-pill">• GIAI ĐOẠN 06</span>
-              <h3 className="mv-stage-left-title">Tổng Duyệt & Chạm Đích 800+</h3>
-              <div className="mv-stage-sessions-tag">Buổi 35 – 36 • Tuần 12</div>
-              <div className="mv-stage-illustration-wrap">
-                <img
-                  src="/image/stage-6-illustration.jpg"
-                  alt="Minh họa Giai đoạn 06: Tổng Duyệt Phòng Thi & Chạm Đích 800+ TOEIC"
-                  className="mv-stage-illustration-img"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="mv-roadmap-center">
-              <div className="mv-roadmap-node">06</div>
               <div className="mv-roadmap-spine" style={{ display: 'none' }}></div>
             </div>
             <div className="mv-roadmap-right">
               <div className="mv-roadmap-card">
                 <div className="mv-mobile-stage-bar">
-                  <span className="mv-stage-pill">• GIAI ĐOẠN 06</span>
-                  <span className="mv-stage-sessions-tag">Buổi 35 – 36 • Tuần 12</span>
+                  <span className="mv-stage-pill">• GIAI ĐOẠN 03</span>
+                  <span className="mv-stage-sessions-tag">Sát Phòng Thi ETS • Chấm Chữa &amp; Kèm Cặp 1-1</span>
                 </div>
                 <div className="mv-mobile-stage-illustration">
                   <img
-                    src="/image/stage-6-illustration.jpg"
-                    alt="Minh họa Giai đoạn 06: Tổng Duyệt Phòng Thi & Chạm Đích 800+ TOEIC"
+                    src="/image/stage-3-illustration.jpg"
+                    alt="Minh họa Giai đoạn 03: Luyện Đề Format Chuẩn Thi Thật"
                     className="mv-stage-illustration-img"
                     loading="lazy"
                   />
                 </div>
-                <h4 className="mv-card-headline">Tổng Duyệt Phòng Thi & Hướng Dẫn Tự Ôn Tập Bứt Phá 800+ TOEIC</h4>
+                <h4 className="mv-card-headline">Luyện Đề Chuẩn Format Thi Thật Trên Nền Tảng Chấm Chữa &amp; Kèm Cặp Sát Sao</h4>
                 <p className="mv-card-summary">
-                  Rèn luyện tâm lý phòng thi vững vàng, mẹo tránh bẫy tâm lý khi mất tập trung giữa giờ, quy tắc phân bổ thể lực 120 phút liên tục trong phòng thi thật.
+                  Bạn được <strong>luyện đề trên nền tảng có chấm chữa chi tiết</strong> với hình thức, độ khó sát thi mà mình đã thiết kế dành riêng cho các bạn học viên trong lớp. Làm xong đề hệ thống sẽ <strong>chấm bạn được bao nhiêu điểm từng kỹ năng</strong> và <strong>chữa lỗi sai trực tiếp</strong> cho bạn. Và đương nhiên, bạn không học một mình! Mình sẽ <strong>đồng hành, kèm cặp sát sao</strong> đến khi nào bạn thi được thì thôi.
                 </p>
-                <div className="mv-card-bullets">
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Đảm bảo học xong đạt chuẩn 600+ cho học viên mất gốc (Học lại 100% MIỄN PHÍ nếu không đạt MỤC TIÊU).</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span>Trang bị phương pháp thực chiến và lộ trình tự rèn luyện để bứt phá 700, 800+, thậm chí 895 TOEIC bình thường.</span>
-                  </div>
-                </div>
                 <div className="mv-deliverable-badge mv-deliverable-award">
                   <i data-lucide="award" style={{ width: '16px', height: '16px' }}></i>
-                  <span>Mục tiêu chặng: Tự tin bước vào phòng thi thật ETS và cầm chắc chứng chỉ mong ước ngay lần thi đầu tiên!</span>
+                  <span>Cam kết đầu ra: Tự tin bước vào phòng thi thật ETS và cầm chắc chứng chỉ 600+ đến 800+ TOEIC ngay lần thi đầu tiên!</span>
                 </div>
               </div>
             </div>
@@ -1870,7 +1675,7 @@ export default function Home() {
           </div>
           <div className="faq-content-pane">
             <div className="faq-content-inner">
-              Đây chính xác là đối tượng mà khóa học TOEIC ONLINE PRO hướng tới. Khóa học được thiết kế bắt đầu ngay từ <strong>Chặng 1: Chuẩn hóa 44 âm IPA từ số 0</strong>, giúp bạn phát âm chuẩn từng từ và nghe được âm nối của người bản xứ. Trong mỗi buổi học 90 phút, Thầy Hưng sẽ gọi từng bạn đọc dịch và sửa bài 1-1, đảm bảo dù bạn mất gốc đến đâu cũng theo kịp tiến độ và tự tin đạt chuẩn 600+, làm bàn đạp bứt phá 800+.
+              Đây chính xác là đối tượng mà khóa học TOEIC ONLINE PRO hướng tới. Khóa học được thiết kế bắt đầu ngay từ <strong>Giai đoạn 1: Xóa mù nền tảng &amp; Luyện nghe thực chiến từ số 0</strong>, giúp bạn nắm vững 1.000 từ vựng cốt lõi, công thức các thì cơ bản, câu bị động và kỹ thuật săn Keyword không cần dịch 100%. Trong mỗi buổi học 90 phút, Thầy Hưng sẽ gọi từng bạn đọc dịch và sửa bài 1-1, đảm bảo dù bạn mất gốc đến đâu cũng theo kịp tiến độ và tự tin đạt chuẩn 600+, làm bàn đạp bứt phá 800+.
             </div>
           </div>
         </div>
