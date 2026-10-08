@@ -290,7 +290,7 @@ function initRegistrationModal() {
 
     setTimeout(() => {
       window.location.href = `/payment?${query}`;
-    }, 250);
+    }, 350);
   });
 
   if (!modal) return;

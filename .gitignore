@@ -8,3 +8,5 @@ Thumbs.db
 
 .git_elearning_mrh_backup/
 .next/
+.env
+.env.local

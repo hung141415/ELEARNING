@@ -1,4 +1,7 @@
+import Script from 'next/script';
 import './globals.css';
+
+const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || '1509215804565827';
 
 export const metadata = {
   metadataBase: new URL('https://mrhtoeic.com'),
@@ -26,8 +29,12 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
-        {/* Meta Pixel Code */}
-        <script
+      </head>
+      <body>
+        {/* Meta Pixel Code (Next.js deduplicated script) */}
+        <Script
+          id="fb-pixel"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -38,19 +45,17 @@ export default function RootLayout({ children }) {
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '1509215804565827');
+              fbq('init', '${FB_PIXEL_ID}');
               fbq('track', 'PageView');
             `,
           }}
         />
-      </head>
-      <body>
         <noscript>
           <img
             height="1"
             width="1"
             style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=1509215804565827&ev=PageView&noscript=1"
+            src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
             alt=""
           />
         </noscript>
