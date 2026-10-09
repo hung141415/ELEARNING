@@ -1,7 +1,7 @@
 import Script from 'next/script';
 import './globals.css';
 
-const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || '1509215804565827';
+const FB_PIXEL_ID = '1509215804565827';
 
 export const metadata = {
   metadataBase: new URL('https://mrhtoeic.com'),

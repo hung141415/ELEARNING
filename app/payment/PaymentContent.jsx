@@ -136,10 +136,22 @@ export default function PaymentContent() {
     }
   }, [searchParams]);
 
-  // Track InitiateCheckout on checkout page mount (bước phễu chuyển đổi chuẩn của Meta)
+  // Khởi tạo và ghi nhận Meta Pixel: 1509215804565827 trên trang thanh toán
   useEffect(() => {
     try {
-      if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+      if (typeof window !== 'undefined') {
+        if (!window.fbq) {
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          window.fbq('init', '1509215804565827');
+        }
+        window.fbq('track', 'PageView');
         const checkoutEventId = `init_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
         window.fbq('track', 'InitiateCheckout', {
           value: activeOffer.price || 5400000,
@@ -150,7 +162,7 @@ export default function PaymentContent() {
         }, { eventID: checkoutEventId });
       }
     } catch (err) {
-      console.warn('FB InitiateCheckout track error:', err);
+      console.warn('FB Pixel track error on /payment:', err);
     }
   }, []);
 

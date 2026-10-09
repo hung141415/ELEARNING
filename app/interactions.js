@@ -292,17 +292,9 @@ function initRegistrationModal() {
       }
     } catch (e) {}
 
-    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Cả Lead và Purchase (với eventID để khử trùng lặp CAPI)
+    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Purchase (Mã Pixel: 1509215804565827)
     try {
       if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
-        // 1. Sự kiện Lead (Khách đăng ký form giữ chỗ)
-        window.fbq('track', 'Lead', {
-          content_name: 'Khóa học TOEIC ONLINE PRO 36 Buổi Live',
-          currency: 'VND',
-          value: 5400000
-        }, { eventID: leadEventId });
-
-        // 2. Sự kiện Purchase (Mua hàng cho chiến dịch tối ưu doanh số)
         window.fbq('track', 'Purchase', {
           value: 5400000,
           currency: 'VND',
@@ -311,7 +303,7 @@ function initRegistrationModal() {
         }, { eventID: eventId });
       }
     } catch (fbErr) {
-      console.warn('FB Pixel track error:', fbErr);
+      console.warn('FB Pixel Purchase track error:', fbErr);
     }
 
     // Save buyer info to localStorage for instant hydration on /payment
