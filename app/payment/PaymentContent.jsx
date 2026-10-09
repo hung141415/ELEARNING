@@ -151,7 +151,6 @@ export default function PaymentContent() {
           'https://connect.facebook.net/en_US/fbevents.js');
           window.fbq('init', '1509215804565827');
         }
-        window.fbq('track', 'PageView');
         const checkoutEventId = `init_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
         window.fbq('track', 'InitiateCheckout', {
           value: activeOffer.price || 5400000,

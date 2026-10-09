@@ -47,21 +47,12 @@ export default function RootLayout({ children }) {
               'https://connect.facebook.net/en_US/fbevents.js');
               if (!window.__fb_pixel_initialized) {
                 window.__fb_pixel_initialized = true;
-                fbq('init', '${FB_PIXEL_ID}');
+                fbq('init', '1509215804565827');
                 fbq('track', 'PageView');
               }
             `,
           }}
         />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
-            alt=""
-          />
-        </noscript>
         {children}
       </body>
     </html>
