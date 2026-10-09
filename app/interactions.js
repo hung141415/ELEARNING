@@ -242,8 +242,18 @@ function initRegistrationModal() {
       return;
     }
 
+    // Disable nút submit để tránh bấm nhiều lần và thông báo trạng thái
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.85';
+      submitBtn.innerHTML = '<span>⏳ Đang giữ chỗ & mở trang thanh toán...</span>';
+    }
+
     // Sinh mã định danh duy nhất (event_id) để khử trùng lặp giữa Browser Pixel và Server Conversions API
     const eventId = `pur_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+    const leadEventId = `lead_${eventId}`;
     const fbp = getCookie('_fbp');
     let fbc = getCookie('_fbc');
     if (!fbc && typeof window !== 'undefined') {
@@ -282,9 +292,17 @@ function initRegistrationModal() {
       }
     } catch (e) {}
 
-    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Purchase (với eventID để khử trùng lặp CAPI)
+    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Cả Lead và Purchase (với eventID để khử trùng lặp CAPI)
     try {
       if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+        // 1. Sự kiện Lead (Khách đăng ký form giữ chỗ)
+        window.fbq('track', 'Lead', {
+          content_name: 'Khóa học TOEIC ONLINE PRO 36 Buổi Live',
+          currency: 'VND',
+          value: 5400000
+        }, { eventID: leadEventId });
+
+        // 2. Sự kiện Purchase (Mua hàng cho chiến dịch tối ưu doanh số)
         window.fbq('track', 'Purchase', {
           value: 5400000,
           currency: 'VND',
@@ -293,7 +311,7 @@ function initRegistrationModal() {
         }, { eventID: eventId });
       }
     } catch (fbErr) {
-      console.warn('FB Pixel Purchase track error:', fbErr);
+      console.warn('FB Pixel track error:', fbErr);
     }
 
     // Save buyer info to localStorage for instant hydration on /payment
@@ -305,7 +323,7 @@ function initRegistrationModal() {
       }));
     } catch (err) {}
 
-    // Redirect to payment page with query params (short delay to ensure FB Pixel event is sent)
+    // Redirect to payment page with query params (đặt 600ms để đảm bảo In-App Browser Facebook gửi xong beacon)
     const query = new URLSearchParams({
       name: name,
       phone: cleanPhone,
@@ -314,7 +332,7 @@ function initRegistrationModal() {
 
     setTimeout(() => {
       window.location.href = `/payment?${query}`;
-    }, 350);
+    }, 600);
   });
 
   if (!modal) return;

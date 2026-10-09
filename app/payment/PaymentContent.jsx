@@ -136,6 +136,24 @@ export default function PaymentContent() {
     }
   }, [searchParams]);
 
+  // Track InitiateCheckout on checkout page mount (bước phễu chuyển đổi chuẩn của Meta)
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+        const checkoutEventId = `init_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
+        window.fbq('track', 'InitiateCheckout', {
+          value: activeOffer.price || 5400000,
+          currency: 'VND',
+          content_name: activeOffer.name || 'Khóa học TOEIC ONLINE PRO 36 Buổi Live',
+          content_type: 'product',
+          num_items: 1
+        }, { eventID: checkoutEventId });
+      }
+    } catch (err) {
+      console.warn('FB InitiateCheckout track error:', err);
+    }
+  }, []);
+
   // Edit Form Temporary State
   const [editForm, setEditForm] = useState({ ...student });
 

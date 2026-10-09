@@ -132,23 +132,42 @@ export async function POST(request) {
         if (nameData.fn) userData.fn = [nameData.fn];
         if (nameData.ln) userData.ln = [nameData.ln];
 
-        const capiEvent = {
-          event_name: eventName,
-          event_time: Math.floor(Date.now() / 1000),
-          event_id: eventId,
-          event_source_url: url,
-          action_source: 'website',
-          user_data: userData,
-          custom_data: {
-            currency: 'VND',
-            value: 5400000,
-            content_name: 'Khóa học TOEIC ONLINE PRO 36 Buổi Live',
-            content_type: 'product'
+        const capiEvents = [
+          {
+            event_name: eventName,
+            event_time: Math.floor(Date.now() / 1000),
+            event_id: eventId,
+            event_source_url: url,
+            action_source: 'website',
+            user_data: userData,
+            custom_data: {
+              currency: 'VND',
+              value: 5400000,
+              content_name: 'Khóa học TOEIC ONLINE PRO 36 Buổi Live',
+              content_type: 'product'
+            }
           }
-        };
+        ];
+
+        // Nếu là sự kiện từ form trang chủ (khách giữ chỗ), gửi thêm sự kiện Lead để nuôi máy học cho Ads
+        if (eventName === 'Purchase' && paymentStatus === 'Chưa thanh toán') {
+          capiEvents.push({
+            event_name: 'Lead',
+            event_time: Math.floor(Date.now() / 1000),
+            event_id: `lead_${eventId}`,
+            event_source_url: url,
+            action_source: 'website',
+            user_data: userData,
+            custom_data: {
+              currency: 'VND',
+              value: 5400000,
+              content_name: 'Khóa học TOEIC ONLINE PRO 36 Buổi Live'
+            }
+          });
+        }
 
         const capiPayload = {
-          data: [capiEvent],
+          data: capiEvents,
           ...(process.env.FB_TEST_EVENT_CODE ? { test_event_code: process.env.FB_TEST_EVENT_CODE } : {})
         };
 
