@@ -208,6 +208,12 @@ function initFaqAccordion() {
   }
 }
 
+function getCookie(name) {
+  if (typeof document === 'undefined') return '';
+  const match = document.cookie.match(new RegExp('(^|;\\s*)' + name + '=([^;]*)'));
+  return match ? decodeURIComponent(match[2]) : '';
+}
+
 /* ==========================================================================
    4. REGISTRATION FORM & VIETQR MODAL
    ========================================================================== */
@@ -236,14 +242,32 @@ function initRegistrationModal() {
       return;
     }
 
-    // Send lead data to backend API (to backup locally & sync to Google Sheets)
+    // Sinh mã định danh duy nhất (event_id) để khử trùng lặp giữa Browser Pixel và Server Conversions API
+    const eventId = `pur_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+    const fbp = getCookie('_fbp');
+    let fbc = getCookie('_fbc');
+    if (!fbc && typeof window !== 'undefined') {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const fbclid = urlParams.get('fbclid');
+        if (fbclid) {
+          fbc = `fb.1.${Date.now()}.${fbclid}`;
+        }
+      } catch (err) {}
+    }
+
+    // Send lead data to backend API (to backup locally, sync to Google Sheets & fire Meta Conversions API)
     try {
       const leadPayload = {
         name: name,
         phone: cleanPhone,
         email: email,
         url: window.location.href,
-        payment_status: 'Chưa thanh toán'
+        payment_status: 'Chưa thanh toán',
+        event_id: eventId,
+        event_name: 'Purchase',
+        fbp: fbp || undefined,
+        fbc: fbc || undefined
       };
 
       if (navigator.sendBeacon) {
@@ -258,7 +282,7 @@ function initRegistrationModal() {
       }
     } catch (e) {}
 
-    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Purchase
+    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Purchase (với eventID để khử trùng lặp CAPI)
     try {
       if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
         window.fbq('track', 'Purchase', {
@@ -266,7 +290,7 @@ function initRegistrationModal() {
           currency: 'VND',
           content_name: 'Khóa học TOEIC ONLINE PRO 36 Buổi Live',
           content_type: 'product'
-        });
+        }, { eventID: eventId });
       }
     } catch (fbErr) {
       console.warn('FB Pixel Purchase track error:', fbErr);
