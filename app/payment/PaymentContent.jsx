@@ -446,6 +446,12 @@ export default function PaymentContent() {
     }
   };
 
+function getCookie(name) {
+  if (typeof document === 'undefined') return '';
+  const match = document.cookie.match(new RegExp('(^|;\\s*)' + name + '=([^;]*)'));
+  return match ? decodeURIComponent(match[2]) : '';
+}
+
   // Payment Confirmation Action
   const handleConfirmPayment = () => {
     if (typeof confetti === 'function') {
@@ -457,7 +463,34 @@ export default function PaymentContent() {
       });
     }
 
-    // Record payment confirmation to backend & Google Sheets
+    const eventId = `pur_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+    const fbp = getCookie('_fbp');
+    let fbc = getCookie('_fbc');
+    if (!fbc && typeof window !== 'undefined') {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const fbclid = urlParams.get('fbclid');
+        if (fbclid) {
+          fbc = `fb.1.${Date.now()}.${fbclid}`;
+        }
+      } catch (err) {}
+    }
+
+    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Purchase (với eventID để khử trùng lặp CAPI)
+    try {
+      if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+        window.fbq('track', 'Purchase', {
+          value: activeOffer.price || 5400000,
+          currency: 'VND',
+          content_name: activeOffer.name || 'Khóa học TOEIC ONLINE PRO 36 Buổi Live',
+          content_type: 'product'
+        }, { eventID: eventId });
+      }
+    } catch (fbErr) {
+      console.warn('FB Pixel Purchase track error:', fbErr);
+    }
+
+    // Record payment confirmation to backend & Google Sheets & Meta Conversions API
     try {
       fetch('/api/lead', {
         method: 'POST',
@@ -467,7 +500,11 @@ export default function PaymentContent() {
           phone: student.phone,
           email: student.email,
           url: typeof window !== 'undefined' ? window.location.href : '',
-          payment_status: 'Đã thanh toán (Chờ xác nhận)'
+          payment_status: 'Đã thanh toán (Chờ xác nhận)',
+          event_id: eventId,
+          event_name: 'Purchase',
+          fbp: fbp || undefined,
+          fbc: fbc || undefined
         }),
         keepalive: true
       }).catch(() => {});
