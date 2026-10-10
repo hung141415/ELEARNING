@@ -639,7 +639,7 @@ function getCookie(name) {
             </h1>
 
             <p className="hero-sub-text">
-              Chỉ còn một bước quét mã chuyển khoản để chính thức đồng hành cùng Thầy Hưng (985/990 TOEIC ETS) trong 36 buổi Live Zoom và nhận trọn bộ 5 quà tặng độc quyền trị giá 5.400.000₫!
+              Chỉ còn một bước quét mã chuyển khoản để chính thức đồng hành cùng Thầy Hưng (985/990 TOEIC ETS) trong 36 buổi Live Zoom và nhận trọn bộ quà tặng độc quyền trị giá 4.800.000₫!
             </p>
 
             {/* Live Urgency Countdown Bar */}
@@ -713,7 +713,7 @@ function getCookie(name) {
                     <span id="order-item-price-standard">{formatMoney(activeOffer.originalPrice)}</span>
                   </div>
                   <div className="breakdown-item" style={{ fontSize: '0.85rem' }}>
-                    <span>Trọn bộ 5 Quà Tặng VIP (App luyện đề, Ebook, Record, Thi thử)</span>
+                    <span>Trọn bộ Quà Tặng Độc Quyền (App tracking tiến độ, Phòng luyện thi ảo, File 1.000 từ vựng)</span>
                     <span style={{ color: 'var(--color-accent-light)' }}>Được Tặng Kèm (0₫)</span>
                   </div>
                   <div className="breakdown-item discount-item">
@@ -747,7 +747,7 @@ function getCookie(name) {
                     Những Điều Cần Làm Tiếp Theo Sau Khi Chuyển Khoản
                   </h3>
                   <span className="card-tag-pill" style={{ background: 'rgba(16, 185, 129, 0.15)', color: '#34d399', borderColor: 'rgba(16, 185, 129, 0.3)' }}>
-                    2 Bước Quan Trọng
+                    Hỗ Trợ & Hướng Dẫn
                   </span>
                 </div>
 
@@ -795,6 +795,36 @@ function getCookie(name) {
                       <div className="next-step-commitment-chip">
                         <Sparkles style={{ width: '15px', height: '15px', color: 'var(--color-accent)' }} />
                         <span>Đảm bảo chuẩn 600+, Tự tin đạt 800+</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step 3: Hỗ Trợ & Thắc Mắc Qua Zalo */}
+                  <div className="next-step-box step-support" style={{ borderColor: 'rgba(0, 104, 255, 0.35)', background: 'rgba(0, 104, 255, 0.04)' }}>
+                    <div className="next-step-badge-wrap">
+                      <div className="next-step-number" style={{ background: 'linear-gradient(135deg, #0068ff 0%, #0099ff 100%)', color: '#ffffff', boxShadow: '0 4px 14px rgba(0, 104, 255, 0.4)' }}>
+                        <MessageCircle style={{ width: '18px', height: '18px' }} />
+                      </div>
+                      <span className="next-step-pill-label" style={{ color: '#60a5fa' }}>HỖ TRỢ</span>
+                    </div>
+                    <div className="next-step-content">
+                      <h4 className="next-step-title" style={{ color: '#93c5fd' }}>
+                        NẾU CÓ THẮC MẮC GÌ THÌ LIÊN HỆ THẦY HƯNG QUA ZALO
+                      </h4>
+                      <p className="next-step-desc">
+                        Nếu bạn có bất kỳ thắc mắc nào trong quá trình chuyển khoản hoặc cần tư vấn thêm về khóa học, đừng ngần ngại liên hệ trực tiếp cho Thầy Hưng qua Zalo số <strong>0904.244.824</strong> để được hỗ trợ ngay lập tức:
+                      </p>
+                      <div className="next-step-action-row">
+                        <a
+                          href="https://zalo.me/0904244824"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-zalo-step-action"
+                          style={{ background: 'linear-gradient(135deg, #0068ff 0%, #004ecc 100%)', padding: '0.75rem 1.25rem' }}
+                        >
+                          <MessageCircle style={{ width: '16px', height: '16px' }} />
+                          <span>Liên Hệ Thầy Hưng Qua Zalo: 0904.244.824</span>
+                        </a>
                       </div>
                     </div>
                   </div>

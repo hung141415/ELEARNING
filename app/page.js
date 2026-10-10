@@ -192,46 +192,52 @@ export default function Home() {
           5 năm qua đồng hành cùng hàng nghìn học viên, mình nhận ra hầu hết những ai tự học TOEIC mãi không tiến bộ đều đang mắc kẹt trong <strong>6 nỗi đau cốt lõi</strong> này:
         </p>
 
-        <div className="story-points-list">
-          <div className="story-point-item point-struggle">
-            <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-            <div>
-              <strong>1. Cày từ vựng hùng hục nhưng hôm sau quên sạch:</strong> Mua sổ tay, flashcard học 30–50 từ mỗi ngày nhưng học rời rạc, không gắn vào ngữ cảnh đề thi thật ETS nên vào phòng thi hoàn toàn không nhận diện được từ vựng.
+        <div className="story-points-grid">
+          {/* Cột trái: 3 nỗi đau */}
+          <div className="story-points-col">
+            <div className="story-point-item point-struggle">
+              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
+              <div>
+                <strong>1. Cày từ vựng hùng hục nhưng hôm sau quên sạch:</strong> Mua sổ tay, flashcard học 30–50 từ mỗi ngày nhưng học rời rạc, không gắn vào ngữ cảnh đề thi thật ETS nên vào phòng thi hoàn toàn không nhận diện được từ vựng.
+              </div>
+            </div>
+
+            <div className="story-point-item point-struggle">
+              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
+              <div>
+                <strong>2. Bật audio nghe như "vịt nghe sấm", phản xạ không kịp:</strong> Tốc độ người bản xứ quá nhanh, hiện tượng nuốt âm, nối âm lướt qua trong 0.5 giây — bạn nghe chữ được chữ mất, đành chọn đáp án theo linh cảm và đánh lụi.
+              </div>
+            </div>
+
+            <div className="story-point-item point-struggle">
+              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
+              <div>
+                <strong>3. Part 5 mất cả phút một câu vì loay hoay dịch nghĩa:</strong> Cố gắng dịch nghĩa từng từ thay vì nhìn ra bản đồ cấu trúc ngữ pháp, bẫy từ loại và quy luật đề thi để chốt đáp án chính xác trong 10–15 giây.
+              </div>
             </div>
           </div>
 
-          <div className="story-point-item point-struggle">
-            <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-            <div>
-              <strong>2. Bật audio nghe như "vịt nghe sấm", phản xạ không kịp:</strong> Tốc độ người bản xứ quá nhanh, hiện tượng nuốt âm, nối âm lướt qua trong 0.5 giây — bạn nghe chữ được chữ mất, đành chọn đáp án theo linh cảm và đánh lụi.
+          {/* Cột phải: 3 nỗi đau còn lại */}
+          <div className="story-points-col">
+            <div className="story-point-item point-struggle">
+              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
+              <div>
+                <strong>4. Part 7 là ác mộng kinh hoàng, đọc trước quên sau:</strong> Bài đọc dài dằng dặc, thiếu kỹ năng định vị thông tin, đồng hồ báo còn 15 phút mà còn 25–30 câu chưa làm — đành nhắm mắt khoanh bừa hàng loạt.
+              </div>
             </div>
-          </div>
 
-          <div className="story-point-item point-struggle">
-            <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-            <div>
-              <strong>3. Part 5 mất cả phút một câu vì loay hoay dịch nghĩa:</strong> Cố gắng dịch nghĩa từng từ thay vì nhìn ra bản đồ cấu trúc ngữ pháp, bẫy từ loại và quy luật đề thi để chốt đáp án chính xác trong 10–15 giây.
+            <div className="story-point-item point-struggle">
+              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
+              <div>
+                <strong>5. Càng tự học càng hoang mang, mất phương hướng:</strong> Tải hàng chục GB tài liệu, mua video thu sẵn nhưng học được vài ngày là nản, phát âm sai không ai sửa, làm đề sai không ai chỉ ra nguyên nhân gốc rễ.
+              </div>
             </div>
-          </div>
 
-          <div className="story-point-item point-struggle">
-            <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-            <div>
-              <strong>4. Part 7 là ác mộng kinh hoàng, đọc trước quên sau:</strong> Bài đọc dài dằng dặc, thiếu kỹ năng định vị thông tin, đồng hồ báo còn 15 phút mà còn 25–30 câu chưa làm — đành nhắm mắt khoanh bừa hàng loạt.
-            </div>
-          </div>
-
-          <div className="story-point-item point-struggle">
-            <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-            <div>
-              <strong>5. Càng tự học càng hoang mang, mất phương hướng:</strong> Tải hàng chục GB tài liệu, mua video thu sẵn nhưng học được vài ngày là nản, phát âm sai không ai sửa, làm đề sai không ai chỉ ra nguyên nhân gốc rễ.
-            </div>
-          </div>
-
-          <div className="story-point-item point-struggle">
-            <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-            <div>
-              <strong>6. Điểm số giậm chân tại chỗ 300–400, lỡ dở cơ hội tương lai:</strong> Thi đi thi lại tốn kém tiền bạc, trễ hạn nộp bằng tốt nghiệp ra trường và tuột mất các cơ hội ứng tuyển, thăng tiến công việc mơ ước.
+            <div className="story-point-item point-struggle">
+              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
+              <div>
+                <strong>6. Điểm số giậm chân tại chỗ 300–400, lỡ dở cơ hội tương lai:</strong> Thi đi thi lại tốn kém tiền bạc, trễ hạn nộp bằng tốt nghiệp ra trường và tuột mất các cơ hội ứng tuyển, thăng tiến công việc mơ ước.
+              </div>
             </div>
           </div>
         </div>
@@ -246,7 +252,7 @@ export default function Home() {
           </div>
           <div className="truth-single-thesis">
             <p className="truth-lead-text" style={{ fontSize: '1.15rem', fontWeight: '700', color: '#0F172A', lineHeight: '1.6', margin: '0' }}>
-              Vấn đề không phải bạn kém cỏi hay thiếu nỗ lực, mà là bạn chưa từng được tiếp cận với một phương pháp học thực chiến và người thầy kèm cặp bóc tách từng lỗi sai ngay trong phòng thi.
+              Vấn đề không phải bạn kém cỏi hay thiếu nỗ lực, mà là bạn chưa từng được tiếp cận với một phương pháp học thực chiến và người thầy kèm cặp trực tiếp, bóc tách từng lỗi sai hay gặp trong phòng thi.
             </p>
           </div>
         </div>
@@ -257,7 +263,7 @@ export default function Home() {
             <span className="bridge-tag">KẾT QUẢ THỰC TẾ NÓI LÊN TẤT CẢ</span>
           </div>
           <p className="bridge-quote-text" style={{ marginTop: '0.5rem', fontSize: '1.05rem', lineHeight: '1.6', color: '#334155' }}>
-            Hàng trăm học viên xuất phát điểm từ con số 0 đã chứng minh: Chỉ cần đúng lộ trình và được kèm cặp sát sao, bứt phá 600 – 800+ TOEIC hoàn toàn nằm trong tầm tay của bạn. Dưới đây là kết quả và cảm nhận thực tế từ họ:
+            Hàng trăm học viên của mình có xuất phát điểm từ con số 0 đã chứng minh điều đó . Dưới đây là KẾT QUẢ  và CẢM NHẬN THỰC TẾ từ họ sau khi học xong khoá TOEIC ONLINE PRO này:
           </p>
         </div>
       </div>
@@ -1006,28 +1012,8 @@ export default function Home() {
           </p>
 
           <p className="instructor-narrative">
-            Đến nay, mình đã trực tiếp kèm cặp và giúp hơn <strong>400+ bạn học viên</strong> bứt phá thành công mốc 600 - 850+ TOEIC, tự tin ra trường đúng hạn, ứng tuyển tiếp viên hàng không và nâng tầm thu nhập.
+            Đến nay, mình đã trực tiếp kèm cặp hơn <strong>400+ bạn học viên</strong>, giúp rất nhiều bạn bứt phá thành công mốc 600 - 850+ TOEIC, tự tin ra trường đúng hạn, ứng tuyển việc làm và nâng tầm thu nhập.
           </p>
-
-          {/*  Core Credentials Checklist  */}
-          <div className="credentials-list">
-            <div className="credential-item">
-              <i data-lucide="check-circle" style={{ width: '18px', height: '18px' }}></i>
-              <span><strong>985/990 TOEIC ETS</strong> — Điểm số gần như tuyệt đối, trực tiếp đứng lớp 100% các buổi Zoom Live.</span>
-            </div>
-            <div className="credential-item">
-              <i data-lucide="check-circle" style={{ width: '18px', height: '18px' }}></i>
-              <span><strong>Đã trực tiếp thi TOEIC nhiều lần</strong> — Bắt trọn mọi xu hướng ra đề và bẫy gián tiếp mới nhất của ETS.</span>
-            </div>
-            <div className="credential-item">
-              <i data-lucide="check-circle" style={{ width: '18px', height: '18px' }}></i>
-              <span><strong>Hơn 400 học viên đạt mục tiêu</strong> — Tỉ lệ học viên đạt chuẩn đầu ra ngay sau khóa học đạt trên 92%.</span>
-            </div>
-            <div className="credential-item">
-              <i data-lucide="check-circle" style={{ width: '18px', height: '18px' }}></i>
-              <span><strong>Kèm cặp cá nhân hóa 1-1</strong> — Trực tiếp chấm bài tập, sửa phát âm và định hướng điểm yếu riêng cho từng bạn.</span>
-            </div>
-          </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '1.75rem' }}>
             <a href="#dang-ky" className="btn btn-accent" style={{ margin: '0 auto', textAlign: 'center' }}>
@@ -1180,22 +1166,32 @@ export default function Home() {
     <div className="container">
       <div className="text-center">
         <span className="section-badge">Hệ Sinh Thái Kèm Cặp Toàn Diện</span>
-        <h2 className="section-title">5 Phần Quà Tặng Kèm & Quyền Lợi Độc Quyền</h2>
+        <h2 className="section-title">Quyền Lợi Khóa Học & Quà Tặng Độc Quyền</h2>
         <p className="section-subtitle" style={{ marginBottom: '2.5rem' }}>
           Không đơn thuần là một khóa học, đây là giải pháp trọn gói đảm bảo bạn<br />
           vững vàng 600+ và tự tin bứt phá 800+ TOEIC:
         </p>
       </div>
 
-      {/*  Mentorship Highlight Top Banner  */}
+      {/* KHỐI 1: QUYỀN LỢI KHÓA HỌC */}
+      <div style={{ marginBottom: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        <span style={{ background: 'rgba(196, 160, 124, 0.2)', color: 'var(--color-accent)', padding: '0.35rem 0.85rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: '800', letterSpacing: '0.05em' }}>
+          ĐẶC QUYỀN KHÓA HỌC
+        </span>
+        <h3 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#FFFFFF', margin: 0 }}>
+          4 Quyền Lợi Cốt Lõi Khi Tham Gia Khóa Học
+        </h3>
+      </div>
+
+      {/* 4 Quyền Lợi Trong Banner Kèm Cặp */}
       <div className="exclusive-mentorship-banner" style={{ marginTop: '1rem' }}>
         <div className="mentorship-highlight-card">
           <div className="mentorship-highlight-icon">
             <i data-lucide="video" style={{ width: '24px', height: '24px' }}></i>
           </div>
           <div>
-            <h4>Dạy Live 100% Bởi Thầy Hưng Tất Cả Các Buổi</h4>
-            <p>Không dùng video thu sẵn, không để trợ giảng dạy thay. Thầy Hưng 985 TOEIC trực tiếp đứng lớp 36 buổi, tương tác 2 chiều và sửa bài cho từng bạn.</p>
+            <h4>Dạy Live 100% Bởi Thầy Hưng</h4>
+            <p>Không dùng video thu sẵn, không để trợ giảng dạy thay. Thầy Hưng 985 TOEIC trực tiếp đứng lớp 36 buổi, gọi tương tác ,sửa bài và sửa phát âm cho từng bạn.</p>
           </div>
         </div>
 
@@ -1204,70 +1200,63 @@ export default function Home() {
             <i data-lucide="message-square" style={{ width: '24px', height: '24px' }}></i>
           </div>
           <div>
-            <h4>Hỗ Trợ Giải Đáp Thắc Mắc Qua Tin Nhắn 1-1</h4>
-            <p>Sau giờ học, bất cứ bài tập hay câu hỏi nào chưa hiểu, bạn được nhắn tin Zalo trực tiếp cho Thầy Hưng để được bóc tách và giải thích cặn kẽ.</p>
+            <h4>Hỗ Trợ Giải Đáp Qua Tin Nhắn</h4>
+            <p>Sau giờ học, bất cứ bài tập hay câu hỏi nào chưa hiểu, bạn được nhắn tin Zalo trực tiếp cho Thầy Hưng để được bóc tách và giải thích cặn kẽ 24/7.</p>
+          </div>
+        </div>
+
+        <div className="mentorship-highlight-card">
+          <div className="mentorship-highlight-icon">
+            <i data-lucide="play-circle" style={{ width: '24px', height: '24px' }}></i>
+          </div>
+          <div>
+            <h4>Có Video Record Xem Lại Sau Mỗi Buổi</h4>
+            <p>Toàn bộ các buổi Live qua Zoom đều được ghi hình sắc nét và up lên hệ thống. Video record được lưu trữ tối đa 1 tuần để bạn ôn tập kỹ lưỡng hoặc xem lại khi có việc đột xuất.</p>
+          </div>
+        </div>
+
+        <div className="mentorship-highlight-card">
+          <div className="mentorship-highlight-icon">
+            <i data-lucide="shield-check" style={{ width: '24px', height: '24px' }}></i>
+          </div>
+          <div>
+            <h4>Đảm Bảo Chuẩn Đầu Ra 600+ TOEIC</h4>
+            <p>Học viên tham gia học đầy đủ các buổi Live qua Zoom và làm bài theo hướng dẫn của Thầy Hưng được đảm bảo chuẩn đầu ra 600+ TOEIC (học lại 100% hoàn toàn miễn phí nếu không đạt mục tiêu).</p>
           </div>
         </div>
       </div>
 
-      {/*  5 Split Gifts with Designated GIF Placeholder Frames  */}
-      <div className="gifts-split-list" style={{ marginTop: '2.75rem' }}>
-        {/*  Gift 1  */}
+      {/* KHỐI 2: QUÀ TẶNG ĐỘC QUYỀN */}
+      <div style={{ marginTop: '3.5rem', marginBottom: '1.75rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        <span style={{ background: 'rgba(239, 68, 68, 0.2)', color: '#F87171', padding: '0.35rem 0.85rem', borderRadius: '50px', fontSize: '0.85rem', fontWeight: '800', letterSpacing: '0.05em' }}>
+          QUÀ TẶNG ĐÍNH KÈM
+        </span>
+        <h3 style={{ fontSize: '1.35rem', fontWeight: '800', color: '#FFFFFF', margin: 0 }}>
+          3 Phần Quà Tặng Độc Quyền Kèm Theo
+        </h3>
+      </div>
+
+      {/* 3 Quà Tặng Split Cards */}
+      <div className="gifts-split-list" style={{ marginTop: '1.5rem' }}>
+        {/*  Quà 1: App Tracking  */}
         <div className="gift-card-split">
           <div className="gift-content-side">
             <div className="gift-top-row">
               <span className="right-number-badge">🎁 QUÀ TẶNG #01</span>
-              <span className="gift-val-badge">Trị giá: 1.200.000₫</span>
+              <span className="gift-val-badge">Trị giá: 2.500.000₫</span>
             </div>
-            <h3 className="gift-card-split-title">Video Record Xem Lại Sau Mỗi Buổi Học</h3>
+            <h3 className="gift-card-split-title">App Tracking Tiến Độ Học Tập</h3>
             <p className="gift-card-split-desc">
-              Toàn bộ các buổi Live qua Zoom đều được ghi hình sắc nét và up lên hệ thống. Video record được lưu trữ tối đa 1 tuần kể từ ngày up để bạn ôn tập kỹ lưỡng hoặc xem lại khi có việc đột xuất.
+              Tặng tài khoản nền tảng app độc quyền tích hợp: làm bài tập sau mỗi buổi, học từ vựng bóc tách từ đề thi và hệ thống tự động tracking tiến độ học tập từng ngày của học viên.
             </p>
             <div className="gift-bullet-checks">
-              <div className="gift-bullet-line">
-                <i data-lucide="check" style={{ width: '16px', height: '16px' }}></i>
-                <span>Không lo mất bài khi có việc đột xuất</span>
-              </div>
-              <div className="gift-bullet-line">
-                <i data-lucide="check" style={{ width: '16px', height: '16px' }}></i>
-                <span>Lưu trữ 1 tuần • Xem lại không giới hạn số lần</span>
-              </div>
-            </div>
-          </div>
-          <div className="gift-media-side">
-            <div className="gift-media-mockup-frame">
-              <div className="mockup-header-dots">
-                <span className="mockup-dot dot-red"></span>
-                <span className="mockup-dot dot-yellow"></span>
-                <span className="mockup-dot dot-green"></span>
-                <span className="mockup-title-text">record-player-zoom.mp4</span>
-              </div>
-              <div className="gift-media-slot-inner">
-                <img src="/image/quyen-loi-record.webp" alt="Video Record Xem Lại Sau Mỗi Buổi Học" className="gift-benefit-img" loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/*  Gift 2  */}
-        <div className="gift-card-split">
-          <div className="gift-content-side">
-            <div className="gift-top-row">
-              <span className="right-number-badge">🎁 QUÀ TẶNG #02</span>
-              <span className="gift-val-badge">Trị giá: 1.500.000₫</span>
-            </div>
-            <h3 className="gift-card-split-title">App Luyện Thi Sát Đề 90% & Tracking Tiến Độ Học Tập</h3>
-            <p className="gift-card-split-desc">
-              Tặng tài khoản nền tảng app độc quyền tích hợp: làm bài tập sau mỗi buổi, luyện thi các bộ đề bám sát thi thật 90%, học từ vựng bóc tách từ đề thi và hệ thống tự động tracking tiến độ từng ngày của học viên.
-            </p>
-            <div className="gift-bullet-checks">
-              <div className="gift-bullet-line">
-                <i data-lucide="check" style={{ width: '16px', height: '16px' }}></i>
-                <span>Đề thi sát thật 90% với ngân hàng câu hỏi mới nhất</span>
-              </div>
               <div className="gift-bullet-line">
                 <i data-lucide="check" style={{ width: '16px', height: '16px' }}></i>
                 <span>Tự động theo dõi tiến độ, phân tích điểm mạnh - điểm yếu</span>
+              </div>
+              <div className="gift-bullet-line">
+                <i data-lucide="check" style={{ width: '16px', height: '16px' }}></i>
+                <span>Giao diện trực quan, làm bài tập và luyện từ vựng mọi lúc mọi nơi</span>
               </div>
             </div>
           </div>
@@ -1280,20 +1269,57 @@ export default function Home() {
                 <span className="mockup-title-text">app-tracking-dashboard.io</span>
               </div>
               <div className="gift-media-slot-inner">
-                <img src="/image/quyen-loi-tracking.webp" alt="App Luyện Thi Sát Đề 90% & Tracking Tiến Độ Học Tập" className="gift-benefit-img" loading="lazy" />
+                <img src="/image/quyen-loi-tracking.webp" alt="App Tracking Tiến Độ Học Tập" className="gift-benefit-img" loading="lazy" />
               </div>
             </div>
           </div>
         </div>
 
-        {/*  Gift 3  */}
+        {/*  Quà 2: Phòng Luyện Thi Ảo Trọn Đời Kèm Kiểm Tra Trình Độ Định Kỳ  */}
+        <div className="gift-card-split">
+          <div className="gift-content-side">
+            <div className="gift-top-row">
+              <span className="right-number-badge">🎁 QUÀ TẶNG #02</span>
+              <span className="gift-val-badge">Sử dụng trọn đời</span>
+            </div>
+            <h3 className="gift-card-split-title">Phòng Luyện Thi Ảo Trọn Đời Kèm Các Bài Kiểm Tra Trình Độ Định Kỳ</h3>
+            <p className="gift-card-split-desc">
+              Hệ thống phòng thi ảo chuẩn format ETS giúp bạn cọ xát với ngân hàng đề thi bám sát đề thật 90%, thi thử áp lực 120 phút và thực hiện các bài kiểm tra trình độ định kỳ để đo lường sự tiến bộ chuẩn xác.
+            </p>
+            <div className="gift-bullet-checks">
+              <div className="gift-bullet-line">
+                <i data-lucide="check" style={{ width: '16px', height: '16px' }}></i>
+                <span>Đề thi sát thật 90% với ngân hàng câu hỏi mới nhất</span>
+              </div>
+              <div className="gift-bullet-line">
+                <i data-lucide="check" style={{ width: '16px', height: '16px' }}></i>
+                <span>Mô phỏng áp lực 120 phút & kiểm tra trình độ định kỳ chuẩn ETS</span>
+              </div>
+            </div>
+          </div>
+          <div className="gift-media-side">
+            <div className="gift-media-mockup-frame">
+              <div className="mockup-header-dots">
+                <span className="mockup-dot dot-red"></span>
+                <span className="mockup-dot dot-yellow"></span>
+                <span className="mockup-dot dot-green"></span>
+                <span className="mockup-title-text">ets-exam-simulator.live</span>
+              </div>
+              <div className="gift-media-slot-inner">
+                <img src="/image/quyen-loi-phong-thi.webp" alt="Phòng Luyện Thi Ảo Trọn Đời Kèm Các Bài Kiểm Tra Trình Độ Định Kỳ" className="gift-benefit-img" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/*  Quà 3: File 1.000 Từ Vựng  */}
         <div className="gift-card-split">
           <div className="gift-content-side">
             <div className="gift-top-row">
               <span className="right-number-badge">🎁 QUÀ TẶNG #03</span>
-              <span className="gift-val-badge">Trị giá: 800.000₫</span>
+              <span className="gift-val-badge">Trị giá: 1.500.000₫</span>
             </div>
-            <h3 className="gift-card-split-title">File 1.000 Từ Vựng Sát Đề Thi Thật Bứt Phá 600 – 800+</h3>
+            <h3 className="gift-card-split-title">File 1.000 Từ Vựng Sát Đề Thi Thật ETS Bứt Phá 600 – 800+</h3>
             <p className="gift-card-split-desc">
               Bộ tài liệu độc quyền cô đọng 1.000 từ vựng có tần suất xuất hiện cao nhất trong các đề thi ETS mới nhất. Kèm ví dụ ngữ cảnh thực tế và phiên âm IPA chuẩn, giúp bạn tiết kiệm 70% thời gian cày cuốc.
             </p>
@@ -1317,81 +1343,7 @@ export default function Home() {
                 <span className="mockup-title-text">vocab-flashcard-ets.app</span>
               </div>
               <div className="gift-media-slot-inner">
-                <img src="/image/quyen-loi-tu-vung.webp" alt="File 1.000 Từ Vựng Sát Đề Thi Thật Bứt Phá 600 – 800+" className="gift-benefit-img" loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/*  Gift 4  */}
-        <div className="gift-card-split">
-          <div className="gift-content-side">
-            <div className="gift-top-row">
-              <span className="right-number-badge">🎁 QUÀ TẶNG #04</span>
-              <span className="gift-val-badge">Trị giá: 1.300.000₫</span>
-            </div>
-            <h3 className="gift-card-split-title">Phòng Luyện Thi & Thi Thử Định Kỳ Chuẩn ETS Áp Lực 120 Phút</h3>
-            <p className="gift-card-split-desc">
-              Các bài Mini Tests và Full Tests định kỳ mô phỏng chính xác áp lực phòng thi thật. Thầy Hưng trực tiếp chấm điểm, phân tích ma trận lỗi sai riêng và hướng dẫn cách khắc phục triệt để.
-            </p>
-            <div className="gift-bullet-checks">
-              <div className="gift-bullet-line">
-                <i data-lucide="check" style={{ width: '16px', height: '16px' }}></i>
-                <span>Mô phỏng áp lực 120 phút & 200 câu hỏi liên tục</span>
-              </div>
-              <div className="gift-bullet-line">
-                <i data-lucide="check" style={{ width: '16px', height: '16px' }}></i>
-                <span>Thầy Hưng trực tiếp phân tích ma trận điểm mạnh - điểm yếu</span>
-              </div>
-            </div>
-          </div>
-          <div className="gift-media-side">
-            <div className="gift-media-mockup-frame">
-              <div className="mockup-header-dots">
-                <span className="mockup-dot dot-red"></span>
-                <span className="mockup-dot dot-yellow"></span>
-                <span className="mockup-dot dot-green"></span>
-                <span className="mockup-title-text">ets-exam-simulator.live</span>
-              </div>
-              <div className="gift-media-slot-inner">
-                <img src="/image/quyen-loi-phong-thi.webp" alt="Phòng Luyện Thi & Thi Thử Định Kỳ Chuẩn ETS Áp Lực 120 Phút" className="gift-benefit-img" loading="lazy" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/*  Gift 5  */}
-        <div className="gift-card-split right-card-special">
-          <div className="gift-content-side">
-            <div className="gift-top-row">
-              <span className="right-number-badge badge-special">🎁 QUÀ TẶNG #05 — ĐẶC QUYỀN CAO NHẤT</span>
-              <span className="gift-val-badge" style={{ background: 'rgba(16, 185, 129, 0.2)', color: '#34D399', borderColor: 'rgba(16, 185, 129, 0.4)' }}>GIÁ TRỊ VÔ GIÁ</span>
-            </div>
-            <h3 className="gift-card-split-title title-special">Đảm Bảo Chuẩn Đầu Ra 600+ TOEIC (Tự Tin Đạt 800+)</h3>
-            <p className="gift-card-split-desc">
-              Học viên tham gia học đầy đủ các buổi Live qua Zoom và làm bài theo hướng dẫn của Thầy Hưng được <strong>ĐẢM BẢO CHUẨN ĐẦU RA 600+ TOEIC</strong> (nếu không đạt, bạn được <strong>học lại 100% hoàn toàn miễn phí nếu không đạt MỤC TIÊU</strong> trong khóa tiếp theo). Đồng thời, phương pháp thực chiến tối ưu điểm số giúp bạn hoàn toàn có thể bứt phá 800+ bình thường!
-            </p>
-            <div className="gift-bullet-checks">
-              <div className="gift-bullet-line">
-                <i data-lucide="check" style={{ color: '#34D399', width: '16px', height: '16px' }}></i>
-                <span>Đảm bảo chuẩn 600+ sau khi học xong • Tự tin bứt phá 800+</span>
-              </div>
-              <div className="gift-bullet-line">
-                <i data-lucide="check" style={{ color: '#34D399', width: '16px', height: '16px' }}></i>
-                <span>Học lại 100% miễn phí nếu không đạt mục tiêu</span>
-              </div>
-            </div>
-          </div>
-          <div className="gift-media-side">
-            <div className="gift-media-mockup-frame" style={{ borderColor: '#10B981' }}>
-              <div className="mockup-header-dots" style={{ background: 'rgba(16, 185, 129, 0.15)' }}>
-                <span className="mockup-dot dot-red"></span>
-                <span className="mockup-dot dot-yellow"></span>
-                <span className="mockup-dot dot-green"></span>
-                <span className="mockup-title-text" style={{ color: '#34D399' }}>official-ets-guarantee.cert</span>
-              </div>
-              <div className="gift-media-slot-inner">
-                <img src="/image/quyen-loi-cam-ket.webp" alt="Cam Kết Chuẩn Đầu Ra 600+ Học Lại Miễn Phí" className="gift-benefit-img" loading="lazy" />
+                <img src="/image/quyen-loi-tu-vung.webp" alt="File 1.000 Từ Vựng Sát Đề Thi Thật ETS" className="gift-benefit-img" loading="lazy" />
               </div>
             </div>
           </div>
@@ -1499,15 +1451,15 @@ export default function Home() {
             <div className="pricing-val-item">
               <div className="val-check">
                 <i data-lucide="check" style={{ width: '16px', height: '16px', color: '#10B981', flexShrink: '0' }}></i>
-                <span>BONUS 1: Video Record 36 Buổi Học Lưu Trữ Xem Lại Linh Hoạt</span>
+                <span>BONUS 1: Hệ Thống App Luyện Thi Sát Đề 90% trọn đời & Tracking Tiến Độ</span>
               </div>
-              <span className="val-price">1.200.000₫</span>
+              <span className="val-price">2.500.000₫</span>
             </div>
 
             <div className="pricing-val-item">
               <div className="val-check">
                 <i data-lucide="check" style={{ width: '16px', height: '16px', color: '#10B981', flexShrink: '0' }}></i>
-                <span>BONUS 2: Hệ Thống App Luyện Thi Sát Đề 90% & Tracking Tiến Độ</span>
+                <span>BONUS 2: Bộ Tài Liệu Độc Quyền + 1.000 Từ Vựng Sát Đề Thi Thật ETS</span>
               </div>
               <span className="val-price">1.500.000₫</span>
             </div>
@@ -1515,25 +1467,9 @@ export default function Home() {
             <div className="pricing-val-item">
               <div className="val-check">
                 <i data-lucide="check" style={{ width: '16px', height: '16px', color: '#10B981', flexShrink: '0' }}></i>
-                <span>BONUS 3: Bộ Tài Liệu Độc Quyền 1.000 Từ Vựng Sát Đề Thi Thật ETS</span>
+                <span>BONUS 3: Cộng Đồng Học Viên Kèm Cặp & Giải Đáp 24/7</span>
               </div>
               <span className="val-price">800.000₫</span>
-            </div>
-
-            <div className="pricing-val-item">
-              <div className="val-check">
-                <i data-lucide="check" style={{ width: '16px', height: '16px', color: '#10B981', flexShrink: '0' }}></i>
-                <span>BONUS 4: Phòng Luyện Thi Thử Định Kỳ Chuẩn ETS Áp Lực 120 Phút</span>
-              </div>
-              <span className="val-price">1.300.000₫</span>
-            </div>
-
-            <div className="pricing-val-item">
-              <div className="val-check">
-                <i data-lucide="check" style={{ width: '16px', height: '16px', color: '#10B981', flexShrink: '0' }}></i>
-                <span>BONUS 5: Cộng Đồng Học Viên Kèm Cặp & Giải Đáp 24/7</span>
-              </div>
-              <span className="val-price">500.000₫</span>
             </div>
           </div>
 
@@ -1580,7 +1516,7 @@ export default function Home() {
             </div>
 
             <button type="submit" className="btn-reg-gold">
-              <span>ĐĂNG KÝ NGAY</span>
+              <span>ĐĂNG KÍ TƯ VẤN NGAY</span>
             </button>
 
             {/*  Khối Đếm Ngược Ngay Dưới Nút Bấm Chuẩn Ảnh 2  */}
