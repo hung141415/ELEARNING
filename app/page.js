@@ -780,7 +780,180 @@ export default function Home() {
   </section>
 
   {/*  ==========================================================================
-       SECTION 3: LỘ TRÌNH HỌC LUÔN (5 - 6 GẠCH ĐẦU DÒNG CÔ ĐỌNG THỰC CHIẾN)
+       SECTION 3: GIỚI THIỆU GIẢNG VIÊN (THẦY HƯNG 985 TOEIC + 5 SLOTS CHỨNG CHỈ)
+       ==========================================================================  */}
+  <section className="section-padding instructor-spotlight-section" id="giang-vien">
+    <div className="container">
+      <div className="text-center" style={{ marginBottom: '2.5rem', display: 'flex', justifyContent: 'center' }}>
+        <span className="section-badge" style={{ margin: '0 auto' }}>Người Trực Tiếp Đồng Hành Cùng Bạn</span>
+      </div>
+      <div className="instructor-spotlight-grid">
+        {/*  Photo Column  */}
+        <div className="instructor-portrait-card">
+          <img src="/image/1-web.webp" alt="Thầy Hưng 985/990 TOEIC" width="1067" height="1600" />
+          <div className="instructor-score-overlay">
+            <div className="score-number">985</div>
+            <div className="score-label">TOEIC ETS</div>
+          </div>
+        </div>
+
+        {/*  Instructor Details Column  */}
+        <div className="instructor-details">
+          <h2 className="instructor-name-title">Thầy Hưng <span className="accent-name">(Mr. Hưng TOEIC)</span></h2>
+          <div className="instructor-role-badge">Người đào tạo TOEIC đạt 985/990 TOEIC • Đã thi TOEIC nhiều lần • 5 năm kinh nghiệm</div>
+
+          <p className="instructor-narrative">
+            <strong>Xin chào các bạn! Mình là Hưng – Người đào tạo TOEIC đạt 985/990 TOEIC với 5 năm kinh nghiệm trực tiếp giảng dạy TOEIC chuyên sâu.</strong>
+          </p>
+
+          <p className="instructor-narrative">
+            Là một người <strong>tự học TOEIC hoàn toàn từ con số 0</strong>, mình hiểu sâu sắc từng cảm giác bất lực của người mất gốc: học từ vựng trước quên sau, nghe audio bị ngợp, đọc dịch chậm chạp.
+          </p>
+
+          <p className="instructor-narrative">
+            Chính vì vậy, mình đã <strong>trực tiếp đi thi TOEIC nhiều lần</strong> để cập nhật liên tục mọi thay đổi trong format ra đề của ETS, từ đó đúc kết nên <em>Hệ thống 36 buổi Live thực chiến phòng thi</em> — dạy trực tiếp qua Zoom, gọi từng người đọc dịch, sửa từng âm IPA để bạn học 1 lần là chắc chắn đạt mục tiêu.
+          </p>
+
+          <p className="instructor-narrative">
+            Đến nay, mình đã trực tiếp kèm cặp hơn <strong>400+ bạn học viên</strong>, giúp rất nhiều bạn bứt phá thành công mốc 600 - 850+ TOEIC, tự tin ra trường đúng hạn, ứng tuyển việc làm và nâng tầm thu nhập.
+          </p>
+
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '1.75rem' }}>
+            <a href="#dang-ky" className="btn btn-accent" style={{ margin: '0 auto', textAlign: 'center' }}>
+              <span>Đăng Ký Học Live Cùng Thầy Hưng</span>
+              <i data-lucide="arrow-right" style={{ width: '18px', height: '18px' }}></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/*  Single Certificate Showcase Container (1 phần chuyên nghiệp duy nhất để bỏ ảnh chứng chỉ)  */}
+      <div className="certificates-showcase-box">
+        <div className="certificates-showcase-header">
+          <div className="cert-single-top-badge">
+            <i data-lucide="award" style={{ width: '16px', height: '16px' }}></i>
+            <span>BẢNG ĐIỂM THỰC TẾ IIG VIỆT NAM • ETS</span>
+          </div>
+          <h3 className="certificates-showcase-title">
+            Chứng Chỉ Điểm Số TOEIC ETS Thầy Hưng
+          </h3>
+          <p className="certificates-showcase-subtitle">
+            Minh chứng năng lực từ người thầy đạt 985/990 TOEIC ETS thực chiến.
+          </p>
+        </div>
+
+        <div className="certificate-single-display-card" id="teacher-cert-card" style={{ cursor: 'pointer' }} title="Click để phóng to chứng chỉ Thầy Hưng 985/990">
+          <div className="cert-card-media-wrap">
+            <img src="/image/chung-chi-thay-hung.webp" alt="Bảng điểm TOEIC chính thức Thầy Hưng đạt 985/990 ETS" className="cert-actual-img" id="teacher-cert-img" loading="lazy" />
+            <div className="cert-zoom-hint">
+              <i data-lucide="zoom-in" style={{ width: '16px', height: '16px' }}></i>
+              <span>Click để xem rõ bảng điểm gốc</span>
+            </div>
+          </div>
+          <div className="cert-card-bottom-info">
+            <div className="cert-score-callout">
+              <div className="cert-big-score">985 <span className="cert-score-denominator">/ 990 TOEIC</span></div>
+              <div className="cert-score-label">Listening 495 • Reading 490</div>
+            </div>
+            <div className="cert-meta-details">
+              <div className="cert-org-title">Chứng Chỉ Khảo Thí Quốc Tế Do ETS & IIG Việt Nam Cấp</div>
+              <div className="cert-org-desc">Thầy Hưng (985 TOEIC) trực tiếp đứng lớp 100% các buổi Zoom Live.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/*  ==========================================================================
+       SECTION 4: BẢNG SO SÁNH 2 BÊN (TRƯỚC KHÓA HỌC VS SAU KHÓA HỌC)
+       ==========================================================================  */}
+  <section className="section-padding comparison-section section-light" id="so-sanh">
+    <div className="container">
+      <div className="text-center">
+        <span className="section-badge">Bảng Đối Chiếu Thực Tế</span>
+        <h2 className="section-title">Sự Chuyển Hóa Rõ Rệt: <span className="highlight">Trước & Sau Khóa Học</span></h2>
+        <p className="section-subtitle">
+          Giải quyết dứt điểm các vướng mắc kinh niên của người học TOEIC dựa trên giáo trình thực chiến MrH:
+        </p>
+      </div>
+
+      <div className="comparison-table-wrapper">
+        {/*  Column 1: Before  */}
+        <div className="comparison-col col-before">
+          <div className="comparison-col-header">
+            <span className="comparison-badge">TRƯỚC KHÓA HỌC</span>
+            <h3 className="comparison-title">Những Vấn Đề Khiến Bạn Bế Tắc</h3>
+          </div>
+
+          <div className="comparison-list">
+            <div className="comparison-item">
+              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
+              <div><strong>Nghe hiểu kém:</strong> Bật audio người bản xứ lên nghe như vịt nghe sấm, không nhận ra từ quen thuộc vì tự đọc sai trong đầu.</div>
+            </div>
+
+            <div className="comparison-item">
+              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
+              <div><strong>Đọc hiểu kém:</strong> Đọc dịch part 7 từng chữ, đến câu 175 là hết giờ, còn 25 câu nhắm mắt tô bừa C hoặc D cầu may.</div>
+            </div>
+
+            <div className="comparison-item">
+              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
+              <div><strong>Kĩ năng làm bài kém:</strong> Không biết cách xử lí các dạng câu hỏi trong phòng thi sao cho hiệu quả. Làm bài tuỳ tiện, không có chiến lược rõ ràng.</div>
+            </div>
+
+            <div className="comparison-item">
+              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
+              <div><strong>Từ vựng học trước quên sau:</strong> Mua sổ tay cày hàng ngàn từ lan man, không gắn vào ngữ cảnh thực tế của đề thi ETS mới.</div>
+            </div>
+
+            <div className="comparison-item">
+              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
+              <div><strong>Chán nản khi tự học:</strong> Không có người kiểm tra khi tự học, phát âm sai không ai sửa, học được vài ngày nản lòng bỏ xó, mất tiền oan.</div>
+            </div>
+          </div>
+        </div>
+
+        {/*  Column 2: After  */}
+        <div className="comparison-col col-after">
+          <div className="comparison-col-header">
+            <span className="comparison-badge">SAU KHÓA HỌC CÙNG THẦY HƯNG</span>
+            <h3 className="comparison-title">Kết Quả Bứt Phá Thực Chiến</h3>
+          </div>
+
+          <div className="comparison-list">
+            <div className="comparison-item">
+              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
+              <div><strong>Nghe hiểu tốt:</strong> Tai bắt trọn âm nối, nuốt âm của người bản xứ, nghe rõ từng từ khóa trong audio và tăng 300+ điểm Listening.</div>
+            </div>
+
+            <div className="comparison-item">
+              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
+              <div><strong>Đọc hiểu tốt:</strong> Xử lý mượt các đoạn đơn, đoạn đôi, đoạn ba và Message Chain bằng Kỹ thuật Scanning - Skimming , làm xong bài vẫn thừa 5–10 phút.</div>
+            </div>
+
+            <div className="comparison-item">
+              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
+              <div><strong>Kĩ năng làm bài tốt:</strong> Có chiến lược hợp lí khi xử lí bài thi, biết làm câu nào trước câu nào sau, biết cách chia thời gian làm bài và cách xử lí các dạng câu hỏi hiệu quả.</div>
+            </div>
+
+            <div className="comparison-item">
+              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
+              <div><strong>Nắm trọn 1.000 từ vựng sát đề 90%:</strong> Bộ tài liệu độc quyền lọc sát đề thi thật, nhớ sâu qua ngữ cảnh và ứng dụng tức thì vào bài đọc.</div>
+            </div>
+
+            <div className="comparison-item">
+              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
+              <div><strong>Thầy Hưng kèm Live 90p/buổi:</strong> Gọi đọc dịch, sửa từng âm 1-1, giải đáp qua Zalo 24/7, đảm bảo chuẩn đầu ra 600+, rèn kỹ năng tối ưu đạt 800+ bình thường (học lại 100% hoàn toàn miễn phí nếu không đạt mục tiêu).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/*  ==========================================================================
+       SECTION 5: LỘ TRÌNH HỌC LUÔN (5 - 6 GẠCH ĐẦU DÒNG CÔ ĐỌNG THỰC CHIẾN)
        ==========================================================================  */}
     <section className="section-padding curriculum-compact-section" id="lo-trinh">
     <div className="container">
@@ -969,189 +1142,6 @@ export default function Home() {
                   <span>Cam kết đầu ra: Tự tin bước vào phòng thi thật ETS và cầm chắc chứng chỉ 600+ đến 800+ TOEIC ngay lần thi đầu tiên!</span>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/*  ==========================================================================
-       SECTION 4: GIỚI THIỆU GIẢNG VIÊN (THẦY HƯNG 985 TOEIC + 5 SLOTS CHỨNG CHỈ)
-       ==========================================================================  */}
-  <section className="section-padding instructor-spotlight-section" id="giang-vien">
-    <div className="container">
-      <div className="text-center" style={{ marginBottom: '2.5rem', display: 'flex', justifyContent: 'center' }}>
-        <span className="section-badge" style={{ margin: '0 auto' }}>Người Trực Tiếp Đồng Hành Cùng Bạn</span>
-      </div>
-      <div className="instructor-spotlight-grid">
-        {/*  Photo Column  */}
-        <div className="instructor-portrait-card">
-          <img src="/image/1-web.webp" alt="Thầy Hưng 985/990 TOEIC" width="1067" height="1600" />
-          <div className="instructor-score-overlay">
-            <div className="score-number">985</div>
-            <div className="score-label">TOEIC ETS</div>
-          </div>
-        </div>
-
-        {/*  Instructor Details Column  */}
-        <div className="instructor-details">
-          <h2 className="instructor-name-title">Thầy Hưng <span className="accent-name">(Mr. Hưng TOEIC)</span></h2>
-          <div className="instructor-role-badge">Người đào tạo TOEIC đạt 985/990 TOEIC • Đã thi TOEIC nhiều lần • 5 năm kinh nghiệm</div>
-
-          <p className="instructor-narrative">
-            <strong>Xin chào các bạn! Mình là Hưng – Người đào tạo TOEIC đạt 985/990 TOEIC với 5 năm kinh nghiệm trực tiếp giảng dạy TOEIC chuyên sâu.</strong>
-          </p>
-
-          <p className="instructor-narrative">
-            Là một người <strong>tự học TOEIC hoàn toàn từ con số 0</strong>, mình hiểu sâu sắc từng cảm giác bất lực của người mất gốc: học từ vựng trước quên sau, nghe audio bị ngợp, đọc dịch chậm chạp.
-          </p>
-
-          <p className="instructor-narrative">
-            Chính vì vậy, mình đã <strong>trực tiếp đi thi TOEIC nhiều lần</strong> để cập nhật liên tục mọi thay đổi trong format ra đề của ETS, từ đó đúc kết nên <em>Hệ thống 36 buổi Live thực chiến phòng thi</em> — dạy trực tiếp qua Zoom, gọi từng người đọc dịch, sửa từng âm IPA để bạn học 1 lần là chắc chắn đạt mục tiêu.
-          </p>
-
-          <p className="instructor-narrative">
-            Đến nay, mình đã trực tiếp kèm cặp hơn <strong>400+ bạn học viên</strong>, giúp rất nhiều bạn bứt phá thành công mốc 600 - 850+ TOEIC, tự tin ra trường đúng hạn, ứng tuyển việc làm và nâng tầm thu nhập.
-          </p>
-
-          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '1.75rem' }}>
-            <a href="#dang-ky" className="btn btn-accent" style={{ margin: '0 auto', textAlign: 'center' }}>
-              <span>Đăng Ký Học Live Cùng Thầy Hưng</span>
-              <i data-lucide="arrow-right" style={{ width: '18px', height: '18px' }}></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/*  Single Certificate Showcase Container (1 phần chuyên nghiệp duy nhất để bỏ ảnh chứng chỉ)  */}
-      <div className="certificates-showcase-box">
-        <div className="certificates-showcase-header">
-          <div className="cert-single-top-badge">
-            <i data-lucide="award" style={{ width: '16px', height: '16px' }}></i>
-            <span>BẢNG ĐIỂM THỰC TẾ IIG VIỆT NAM • ETS</span>
-          </div>
-          <h3 className="certificates-showcase-title">
-            Chứng Chỉ Điểm Số TOEIC ETS Thầy Hưng
-          </h3>
-          <p className="certificates-showcase-subtitle">
-            Minh chứng năng lực từ người thầy đạt 985/990 TOEIC ETS thực chiến.
-          </p>
-        </div>
-
-        <div className="certificate-single-display-card" id="teacher-cert-card" style={{ cursor: 'pointer' }} title="Click để phóng to chứng chỉ Thầy Hưng 985/990">
-          <div className="cert-card-media-wrap">
-            <img src="/image/chung-chi-thay-hung.webp" alt="Bảng điểm TOEIC chính thức Thầy Hưng đạt 985/990 ETS" className="cert-actual-img" id="teacher-cert-img" loading="lazy" />
-            <div className="cert-zoom-hint">
-              <i data-lucide="zoom-in" style={{ width: '16px', height: '16px' }}></i>
-              <span>Click để xem rõ bảng điểm gốc</span>
-            </div>
-          </div>
-          <div className="cert-card-bottom-info">
-            <div className="cert-score-callout">
-              <div className="cert-big-score">985 <span className="cert-score-denominator">/ 990 TOEIC</span></div>
-              <div className="cert-score-label">Listening 495 • Reading 490</div>
-            </div>
-            <div className="cert-meta-details">
-              <div className="cert-org-title">Chứng Chỉ Khảo Thí Quốc Tế Do ETS & IIG Việt Nam Cấp</div>
-              <div className="cert-org-desc">Thầy Hưng (985 TOEIC) trực tiếp đứng lớp 100% các buổi Zoom Live.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/*  ==========================================================================
-       SECTION 5: BẢNG SO SÁNH 2 BÊN (TRƯỚC KHÓA HỌC VS SAU KHÓA HỌC)
-       ==========================================================================  */}
-  <section className="section-padding comparison-section section-light" id="so-sanh">
-    <div className="container">
-      <div className="text-center">
-        <span className="section-badge">Bảng Đối Chiếu Thực Tế</span>
-        <h2 className="section-title">Sự Chuyển Hóa Rõ Rệt: <span className="highlight">Trước & Sau Khóa Học</span></h2>
-        <p className="section-subtitle">
-          Giải quyết dứt điểm các vướng mắc kinh niên của người học TOEIC dựa trên giáo trình thực chiến MrH:
-        </p>
-      </div>
-
-      <div className="comparison-table-wrapper">
-        {/*  Column 1: Before  */}
-        <div className="comparison-col col-before">
-          <div className="comparison-col-header">
-            <span className="comparison-badge">TRƯỚC KHÓA HỌC</span>
-            <h3 className="comparison-title">Những Vấn Đề Khiến Bạn Bế Tắc</h3>
-          </div>
-
-          <div className="comparison-list">
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Phát âm sai IPA:</strong> Bật audio người bản xứ lên nghe như vịt nghe sấm, không nhận ra từ quen thuộc vì tự đọc sai trong đầu.</div>
-            </div>
-
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Part 2 dễ bị mất tập trung:</strong> Dính bẫy từ đồng âm khác nghĩa và lúng túng trước các câu trả lời gián tiếp của đề thi ETS.</div>
-            </div>
-
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Part 5 mất cả phút một câu:</strong> Loay hoay dịch nghĩa từng từ, làm bài chậm chạp và không nhìn ra cấu trúc ngữ pháp cốt lõi.</div>
-            </div>
-
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Part 7 cháy giờ kinh niên:</strong> Đọc dịch từng chữ, đến câu 175 là hết giờ, còn 25 câu nhắm mắt tô bừa C hoặc D cầu may.</div>
-            </div>
-
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Từ vựng học trước quên sau:</strong> Mua sổ tay cày hàng ngàn từ lan man, không gắn vào ngữ cảnh thực tế của đề thi ETS mới.</div>
-            </div>
-
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="x" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Tự học video cô độc:</strong> Không có người kiểm tra, phát âm sai không ai sửa, học được vài ngày nản lòng bỏ xó, mất tiền oan.</div>
-            </div>
-          </div>
-        </div>
-
-        {/*  Column 2: After  */}
-        <div className="comparison-col col-after">
-          <div className="comparison-col-header">
-            <span className="comparison-badge">SAU KHÓA HỌC CÙNG THẦY HƯNG</span>
-            <h3 className="comparison-title">Kết Quả Bứt Phá Thực Chiến</h3>
-          </div>
-
-          <div className="comparison-list">
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Chuẩn hóa 44 âm IPA:</strong> Tai bắt trọn âm nối, nuốt âm của người bản xứ, nghe rõ từng từ khóa trong audio và tăng 150+ điểm Listening.</div>
-            </div>
-
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Làm chủ bẫy gián tiếp Part 2:</strong> Phản xạ loại trừ bẫy trong 3 giây, tự tin đạt tỷ lệ đúng trên 80% cho toàn bộ 25 câu hỏi Part 2.</div>
-            </div>
-
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Giải quyết Part 5 trong 15s/câu:</strong> Nhìn vị trí từ loại và đuôi từ chọn ngay đáp án, tiết kiệm tối thiểu 15 phút dồn sức cho bài đọc.</div>
-            </div>
-
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Kỹ thuật Scanning - Skimming đỉnh cao:</strong> Xử lý mượt mà đoạn đơn, đoạn đôi, đoạn ba và Message Chain, làm xong bài vẫn thừa 5–10 phút.</div>
-            </div>
-
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Nắm trọn 1.000 từ vựng sát đề 90%:</strong> Bộ tài liệu độc quyền lọc sát đề thi thật, nhớ sâu qua ngữ cảnh và ứng dụng tức thì vào bài đọc.</div>
-            </div>
-
-            <div className="comparison-item">
-              <div className="comparison-icon"><i data-lucide="check" style={{ width: '14px', height: '14px' }}></i></div>
-              <div><strong>Thầy Hưng kèm Live 90p/buổi:</strong> Gọi đọc dịch, sửa từng âm 1-1, giải đáp qua Zalo 24/7, đảm bảo chuẩn đầu ra 600+, rèn kỹ năng tối ưu đạt 800+ bình thường (học lại 100% hoàn toàn miễn phí nếu không đạt mục tiêu).</div>
             </div>
           </div>
         </div>
