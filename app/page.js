@@ -872,7 +872,7 @@ export default function Home() {
     <div className="container">
       <div className="text-center">
         <span className="section-badge">Bảng Đối Chiếu Thực Tế</span>
-        <h2 className="section-title">Sự Chuyển Hóa Rõ Rệt: <span className="highlight">Trước & Sau Khóa Học</span></h2>
+        <h2 className="section-title">Sự Chuyển Hóa Rõ Rệt Bạn Có Thể Đạt Được:<br /><span className="highlight">Trước & Sau Khóa Học</span></h2>
         <p className="section-subtitle">
           Giải quyết dứt điểm các vướng mắc kinh niên của người học TOEIC dựa trên giáo trình thực chiến MrH:
         </p>
@@ -1369,7 +1369,7 @@ export default function Home() {
 
             <div className="fit-item">
               <i data-lucide="check" style={{ width: '18px', height: '18px' }}></i>
-              <div>Người đi làm bận rộn muốn nâng điểm TOEIC để ứng tuyển công ty đa quốc gia, mở rộng cơ hội thăng tiến, tăng lương, hoặc ứng tuyển Tiếp viên hàng không.</div>
+              <div>Người đi làm bận rộn muốn nâng điểm TOEIC để ứng tuyển công ty đa quốc gia, mở rộng cơ hội thăng tiến, tăng lương, hoặc ứng tuyển công việc.</div>
             </div>
 
             <div className="fit-item">
