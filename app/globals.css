@@ -5374,9 +5374,9 @@ ul, ol {
   gap: 0.5rem;
   padding: 0.45rem 1.15rem;
   border-radius: 999px;
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  color: #E5C378;
+  background: rgba(196, 160, 124, 0.1);
+  border: 1px solid rgba(196, 160, 124, 0.35);
+  color: #C4A07C;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -5384,7 +5384,7 @@ ul, ol {
 }
 
 .reg-badge-dot {
-  color: #E5C378;
+  color: #C4A07C;
   font-size: 1.1rem;
   line-height: 1;
 }
@@ -5417,11 +5417,11 @@ ul, ol {
   height: 44px;
   border-radius: 12px;
   background: rgba(15, 31, 56, 0.85);
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  border: 1px solid rgba(196, 160, 124, 0.28);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #E5C378;
+  color: #C4A07C;
   flex-shrink: 0;
 }
 
@@ -5446,8 +5446,9 @@ ul, ol {
   line-height: 1.4;
 }
 
-.reg-info-val.highlight-gold {
-  color: #E5C378;
+.reg-info-val.highlight-gold,
+.reg-info-val.highlight-light-brown {
+  color: #C4A07C;
   font-weight: 800;
 }
 
@@ -5457,7 +5458,7 @@ ul, ol {
   align-items: flex-start;
   gap: 1rem;
   background: rgba(11, 24, 46, 0.7);
-  border: 1px solid rgba(212, 175, 55, 0.28);
+  border: 1px solid rgba(196, 160, 124, 0.3);
   border-radius: 14px;
   padding: 1.25rem 1.4rem;
   color: #CBD5E1;
@@ -5466,13 +5467,13 @@ ul, ol {
 }
 
 .reg-warning-icon {
-  color: #E5C378;
+  color: #C4A07C;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .reg-warning-content strong {
-  color: #E5C378;
+  color: #C4A07C;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -5485,10 +5486,10 @@ ul, ol {
 
 .reg-form-card {
   background: #081528;
-  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  border: 1.5px solid rgba(196, 160, 124, 0.35);
   border-radius: 24px;
   padding: 2.75rem 2.25rem;
-  box-shadow: 0 0 50px rgba(13, 30, 60, 0.6), 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(212, 175, 55, 0.12);
+  box-shadow: 0 0 50px rgba(13, 30, 60, 0.6), 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(196, 160, 124, 0.12);
   position: relative;
 }
 
@@ -5553,9 +5554,9 @@ ul, ol {
 
 .reg-form-input:focus,
 .reg-form-textarea:focus {
-  border-color: #E5C378;
+  border-color: #C4A07C;
   background: #152b4d;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 15px rgba(196, 160, 124, 0.25);
 }
 
 .reg-form-textarea {
@@ -5565,8 +5566,8 @@ ul, ol {
 
 .btn-reg-luxury {
   width: 100%;
-  background: linear-gradient(135deg, #DFBA73 0%, #C49A50 100%);
-  color: #0C0F14;
+  background: linear-gradient(135deg, #C4A07C 0%, #A67C52 100%);
+  color: #071120;
   font-weight: 900;
   font-size: 1.05rem;
   letter-spacing: 0.08em;
@@ -5575,15 +5576,16 @@ ul, ol {
   border-radius: 10px;
   padding: 1.15rem 1.5rem;
   cursor: pointer;
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 8px 30px rgba(196, 160, 124, 0.32);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   margin-top: 0.5rem;
 }
 
 .btn-reg-luxury:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
-  filter: brightness(1.06);
+  background: linear-gradient(135deg, #D4B896 0%, #C4A07C 100%);
+  box-shadow: 0 12px 35px rgba(196, 160, 124, 0.45);
+  filter: brightness(1.05);
 }
 
 .reg-privacy-note {
@@ -5619,14 +5621,14 @@ ul, ol {
 
 .consult-modal-card {
   background: #111317;
-  border: 1.5px solid rgba(212, 175, 55, 0.25);
+  border: 1.5px solid rgba(196, 160, 124, 0.28);
   border-radius: 24px;
   padding: 2.75rem 2.25rem;
   max-width: 480px;
   width: 100%;
   position: relative;
   text-align: center;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 50px rgba(212, 175, 55, 0.08);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 50px rgba(196, 160, 124, 0.08);
   transform: translateY(20px) scale(0.97);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -5670,9 +5672,9 @@ ul, ol {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  border: 1.5px solid #DFBA73;
-  background: rgba(212, 175, 55, 0.08);
-  color: #DFBA73;
+  border: 1.5px solid #C4A07C;
+  background: rgba(196, 160, 124, 0.1);
+  color: #C4A07C;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -5722,7 +5724,7 @@ ul, ol {
   background: #16181D;
   padding: 8px;
   border-radius: 14px;
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  border: 1px solid rgba(196, 160, 124, 0.28);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -5744,7 +5746,7 @@ ul, ol {
 }
 
 .consult-contact-phone {
-  color: #DFBA73;
+  color: #C4A07C;
   font-weight: 800;
   font-size: 1.25rem;
   letter-spacing: 0.05em;
@@ -5804,7 +5806,7 @@ ul, ol {
 }
 
 .hero-discount-text .highlight-discount {
-  color: #FBBF24;
+  color: #C4A07C;
   font-size: 1.2rem;
   font-weight: 900;
 }
@@ -5822,9 +5824,9 @@ ul, ol {
   gap: 0.4rem;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #DFBA73;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: #C4A07C;
+  background: rgba(196, 160, 124, 0.12);
+  border: 1px solid rgba(196, 160, 124, 0.3);
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
 }
