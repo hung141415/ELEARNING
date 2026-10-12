@@ -1,5 +1,5 @@
 /**
- * Interactive Client Logic for TOEIC ONLINE PRO (Next.js)
+ * Interactive Client Logic for Khóa Học TOEIC ONLINE (Next.js)
  * Handles: Countdown Timer, Horizontal Infinite Feedback Carousel,
  * Lightbox Modal, 36-Session Curriculum Filtering & Accordion,
  * FAQ Accordion, Registration Form & VietQR Bank Transfer Modal,
@@ -215,14 +215,40 @@ function getCookie(name) {
 }
 
 /* ==========================================================================
-   4. REGISTRATION FORM & VIETQR MODAL
+/* ==========================================================================
+   4. REGISTRATION FORM & SUCCESS CONSULTATION MODAL (MATCHING IMAGE 2)
    ========================================================================== */
 function initRegistrationModal() {
   const form = document.getElementById('toeic-registration-form');
-  const modal = document.getElementById('vietqr-modal');
-  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const modal = document.getElementById('consult-success-modal') || document.getElementById('vietqr-modal');
+  const modalCloseBtn = document.getElementById('consult-modal-close-btn') || document.getElementById('modal-close-btn');
 
   if (!form) return;
+
+  function closeModal() {
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeModal);
+  }
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -230,6 +256,8 @@ function initRegistrationModal() {
     const name = (form.querySelector('[name="name"]')?.value || form.querySelector('[name="fullname"]')?.value || '').trim();
     const phone = (form.querySelector('[name="phone"]')?.value || '').trim();
     const email = (form.querySelector('[name="email"]')?.value || '').trim();
+    const occupation = (form.querySelector('[name="occupation"]')?.value || '').trim();
+    const reason = (form.querySelector('[name="reason"]')?.value || '').trim();
 
     if (!name || !phone) {
       alert('Vui lòng nhập đầy đủ Họ tên và Số điện thoại!');
@@ -248,12 +276,11 @@ function initRegistrationModal() {
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.style.opacity = '0.85';
-      submitBtn.innerHTML = '<span>⏳ Đang giữ chỗ & mở trang thanh toán...</span>';
+      submitBtn.innerHTML = '<span>⏳ Đang gửi thông tin đăng ký...</span>';
     }
 
-    // Sinh mã định danh duy nhất (event_id) để khử trùng lặp giữa Browser Pixel và Server Conversions API
-    const eventId = `pur_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
-    const leadEventId = `lead_${eventId}`;
+    // Sinh mã định danh duy nhất (event_id)
+    const eventId = `lead_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
     const fbp = getCookie('_fbp');
     let fbc = getCookie('_fbc');
     if (!fbc && typeof window !== 'undefined') {
@@ -266,16 +293,18 @@ function initRegistrationModal() {
       } catch (err) {}
     }
 
-    // Send lead data to backend API (to backup locally, sync to Google Sheets & fire Meta Conversions API)
+    // Gửi lead lên backend API
     try {
       const leadPayload = {
         name: name,
         phone: cleanPhone,
         email: email,
+        occupation: occupation,
+        reason: reason,
         url: window.location.href,
-        payment_status: 'Chưa thanh toán',
+        payment_status: 'Đăng ký tư vấn',
         event_id: eventId,
-        event_name: 'Purchase',
+        event_name: 'Lead',
         fbp: fbp || undefined,
         fbc: fbc || undefined
       };
@@ -292,62 +321,36 @@ function initRegistrationModal() {
       }
     } catch (e) {}
 
-    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Purchase (Mã Pixel: 1509215804565827)
+    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Lead
     try {
       if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
-        window.fbq('track', 'Purchase', {
-          value: 5400000,
-          currency: 'VND',
-          content_name: 'Khóa học TOEIC ONLINE PRO 36 Buổi Live',
-          content_type: 'product'
+        window.fbq('track', 'Lead', {
+          content_name: 'Khóa học TOEIC ONLINE',
+          content_category: 'E-learning'
         }, { eventID: eventId });
       }
     } catch (fbErr) {
-      console.warn('FB Pixel Purchase track error:', fbErr);
+      console.warn('FB Pixel Lead track error:', fbErr);
     }
 
-    // Save buyer info to localStorage for instant hydration on /payment
-    try {
-      localStorage.setItem('mrh_buyer_info', JSON.stringify({
-        fullname: name,
-        phone: cleanPhone,
-        email: email
-      }));
-    } catch (err) {}
+    // Hiển thị thông tin học viên trên modal xác nhận
+    const userInfoEl = document.getElementById('consult-modal-user-info') || document.getElementById('modal-user-phone');
+    if (userInfoEl) {
+      userInfoEl.textContent = `${name} — ${phone}`;
+    }
 
-    // Redirect to payment page with query params (đặt 600ms để đảm bảo In-App Browser Facebook gửi xong beacon)
-    const query = new URLSearchParams({
-      name: name,
-      phone: cleanPhone,
-      email: email
-    }).toString();
-
+    // Mở popup modal cảm ơn (chuẩn Ảnh 2) - KHÔNG chuyển trang thanh toán
     setTimeout(() => {
-      window.location.href = `/payment?${query}`;
-    }, 600);
-  });
-
-  if (!modal) return;
-
-  function closeModal() {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  if (modalCloseBtn) {
-    modalCloseBtn.addEventListener('click', closeModal);
-  }
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeModal();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
-      closeModal();
-    }
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.innerHTML = originalBtnText;
+      }
+    }, 400);
   });
 }
 

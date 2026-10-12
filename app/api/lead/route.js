@@ -42,10 +42,12 @@ export async function POST(request) {
     const name = (body.name || body.fullname || '').trim();
     const phone = (body.phone || '').trim();
     const email = (body.email || '').trim();
+    const occupation = (body.occupation || '').trim();
+    const reason = (body.reason || '').trim();
     const url = body.url || body.registration_url || 'https://mrhtoeic.com';
-    const paymentStatus = body.payment_status || 'Chưa thanh toán';
+    const paymentStatus = body.payment_status || 'Đăng ký tư vấn';
     const eventId = body.event_id;
-    const eventName = body.event_name || 'Purchase';
+    const eventName = body.event_name || 'Lead';
     const fbp = body.fbp;
     const fbc = body.fbc;
 
@@ -61,6 +63,8 @@ export async function POST(request) {
       name,
       phone,
       email,
+      occupation,
+      reason,
       url,
       payment_status: paymentStatus
     };
@@ -141,30 +145,11 @@ export async function POST(request) {
             action_source: 'website',
             user_data: userData,
             custom_data: {
-              currency: 'VND',
-              value: 5400000,
-              content_name: 'Khóa học TOEIC ONLINE PRO 36 Buổi Live',
-              content_type: 'product'
+              content_name: 'Khóa học TOEIC ONLINE',
+              content_category: 'E-learning'
             }
           }
         ];
-
-        // Nếu là sự kiện từ form trang chủ (khách giữ chỗ), gửi thêm sự kiện Lead để nuôi máy học cho Ads
-        if (eventName === 'Purchase' && paymentStatus === 'Chưa thanh toán') {
-          capiEvents.push({
-            event_name: 'Lead',
-            event_time: Math.floor(Date.now() / 1000),
-            event_id: `lead_${eventId}`,
-            event_source_url: url,
-            action_source: 'website',
-            user_data: userData,
-            custom_data: {
-              currency: 'VND',
-              value: 5400000,
-              content_name: 'Khóa học TOEIC ONLINE PRO 36 Buổi Live'
-            }
-          });
-        }
 
         const capiPayload = {
           data: capiEvents,

@@ -42,18 +42,17 @@ export default function Home() {
       <div className="hero-center-header">
         <div className="hero-badge-row hero-badge-center">
           <span className="cohort-pill-limit">
-            <i data-lucide="users" style={{ width: '15px', height: '15px' }}></i>
-            DÀNH CHO SINH VIÊN VÀ NGƯỜI ĐI LÀM
+            <i data-lucide="video" style={{ width: '15px', height: '15px' }}></i>
+            DẠY LIVE TRỰC TIẾP QUA ZOOM
           </span>
         </div>
 
         <h1 className="hero-headline-centered">
-          <span className="hero-brand-name">TOEIC ONLINE PRO</span>
+          <span className="hero-brand-name">KHOÁ HỌC TOEIC ONLINE</span>
           <span className="hero-title-main">
-            Hành trình lấy <span className="highlight-capsule">600 + TOEIC</span>
-            <span className="hero-title-break">Sau 36 Buổi THỰC CHIẾN</span>
+            LUYỆN THI TOEIC CẤP TỐC TỪ MẤT GỐC ĐẾN <span className="highlight-capsule">600+ TOEIC</span>
           </span>
-          <span className="hero-title-sub">Học Trực Tuyến 100% Zoom Live — Đảm Bảo Chuẩn 600+ , Tự Tin Bứt Phá 800+!</span>
+          <span className="hero-title-sub">Học Xong Thi Luôn - Đảm Bảo Chuẩn 600+ , Tự Tin Bứt Phá 800+!</span>
         </h1>
 
         <p className="hero-lead-text-center">
@@ -68,23 +67,16 @@ export default function Home() {
       <div className="hero-split-grid">
         {/*  Left Side: Registration CTA & 3 Core Specifications (To lên, tinh gọn)  */}
         <div className="hero-left-col">
-          {/*  CTA Action Card  */}
-          <div className="hero-cta-card">
-            <div className="hero-urgency-timer">
-              <span className="pulse-dot"></span>
-              <span>Ưu đãi 50% kết thúc sau: <strong className="live-countdown">23:59:59</strong></span>
-            </div>
+          {/*  CTA Action Card (Chuẩn Ảnh 3: Bỏ giá, chỉ để ưu đãi 35% còn lại 5 suất, bỏ đếm ngược)  */}
+          <div className="hero-cta-card hero-cta-card-v2">
             <a href="#dang-ky" className="btn btn-accent btn-lg btn-pulse hero-main-cta-btn">
               <span>ĐĂNG KÝ TƯ VẤN & GIỮ CHỖ</span>
               <i data-lucide="arrow-right" style={{ width: '20px', height: '20px' }}></i>
             </a>
-            <div className="hero-price-tag-row">
-              <span className="hero-price-badge">Học phí ưu đãi đặc biệt:</span>
-              <strong className="hero-price-current">5.400.000₫</strong>
-              <span className="hero-price-original">(Giá gốc: 10.800.000₫)</span>
-            </div>
-            <div className="hero-price-expire-note">
-              *Hết thời gian đếm ngược sẽ quay về giá gốc 10.800.000₫
+            <div className="hero-price-tag-row hero-discount-only-row">
+              <span className="hero-discount-text">
+                Học phí ưu đãi giảm giá đặc biệt <strong className="highlight-discount">35%</strong> (còn lại 5 suất)
+              </span>
             </div>
           </div>
 
@@ -263,7 +255,7 @@ export default function Home() {
             <span className="bridge-tag">KẾT QUẢ THỰC TẾ NÓI LÊN TẤT CẢ</span>
           </div>
           <p className="bridge-quote-text" style={{ marginTop: '0.5rem', fontSize: '1.05rem', lineHeight: '1.6', color: '#334155' }}>
-            Hàng trăm học viên của mình có xuất phát điểm từ con số 0 đã chứng minh điều đó . Dưới đây là KẾT QUẢ  và CẢM NHẬN THỰC TẾ từ họ sau khi học xong khoá TOEIC ONLINE PRO này:
+            Hàng trăm học viên của mình có xuất phát điểm từ con số 0 đã chứng minh điều đó. Dưới đây là KẾT QUẢ và CẢM NHẬN THỰC TẾ từ họ sau khi học xong khóa học TOEIC ONLINE này:
           </p>
         </div>
       </div>
@@ -645,7 +637,7 @@ export default function Home() {
           </div>
 
           {/*  Slide 20  */}
-          <div className="feedback-slide" data-index="20" data-name="Học Viên Khóa Pro" data-score="Feedback Thực Tế • Chữa Bài Tận Tâm 1-1" data-full="/image/fb-card-20.webp">
+          <div className="feedback-slide" data-index="20" data-name="Học Viên Khóa TOEIC ONLINE" data-score="Feedback Thực Tế • Chữa Bài Tận Tâm 1-1" data-full="/image/fb-card-20.webp">
             <div className="feedback-poster-card">
               <div className="feedback-score-pill" style={{ background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)', color: '#fff' }}>⭐ ĐÁNH GIÁ 5 SAO</div>
               <div className="feedback-img-wrapper">
@@ -657,7 +649,7 @@ export default function Home() {
               </div>
             </div>
             <div className="feedback-student-meta">
-              <h4 className="feedback-student-name">Học Viên Khóa Pro</h4>
+              <h4 className="feedback-student-name">Học Viên Khóa TOEIC ONLINE</h4>
               <p className="feedback-student-sub">"Khóa học thực chiến nhất, thầy chữa bài cực kỳ tận tâm"</p>
             </div>
           </div>
@@ -699,7 +691,7 @@ export default function Home() {
           </div>
 
           {/*  Slide 23  */}
-          <div className="feedback-slide" data-index="23" data-name="Học Viên Khóa Pro" data-score="Feedback Thực Tế • Xóa Sổ Bẫy Gián Tiếp Part 2" data-full="/image/fb-card-23.webp">
+          <div className="feedback-slide" data-index="23" data-name="Học Viên Khóa TOEIC ONLINE" data-score="Feedback Thực Tế • Xóa Sổ Bẫy Gián Tiếp Part 2" data-full="/image/fb-card-23.webp">
             <div className="feedback-poster-card">
               <div className="feedback-score-pill" style={{ background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)', color: '#fff' }}>⭐ ĐÁNH GIÁ 5 SAO</div>
               <div className="feedback-img-wrapper">
@@ -711,7 +703,7 @@ export default function Home() {
               </div>
             </div>
             <div className="feedback-student-meta">
-              <h4 className="feedback-student-name">Học Viên Khóa Pro</h4>
+              <h4 className="feedback-student-name">Học Viên Khóa TOEIC ONLINE</h4>
               <p className="feedback-student-sub">"Bắt đúng keyword Part 2 không còn sợ bẫy đề ETS"</p>
             </div>
           </div>
@@ -735,7 +727,7 @@ export default function Home() {
           </div>
 
           {/*  Slide 25  */}
-          <div className="feedback-slide" data-index="25" data-name="Học Viên Khóa Pro" data-score="Feedback Thực Tế • Kỷ Luật Live Zoom 100%" data-full="/image/fb-card-25.webp">
+          <div className="feedback-slide" data-index="25" data-name="Học Viên Khóa TOEIC ONLINE" data-score="Feedback Thực Tế • Kỷ Luật Live Zoom 100%" data-full="/image/fb-card-25.webp">
             <div className="feedback-poster-card">
               <div className="feedback-score-pill" style={{ background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)', color: '#fff' }}>⭐ ĐÁNH GIÁ 5 SAO</div>
               <div className="feedback-img-wrapper">
@@ -747,7 +739,7 @@ export default function Home() {
               </div>
             </div>
             <div className="feedback-student-meta">
-              <h4 className="feedback-student-name">Học Viên Khóa Pro</h4>
+              <h4 className="feedback-student-name">Học Viên Khóa TOEIC ONLINE</h4>
               <p className="feedback-student-sub">"Thầy kèm sát sao từng buổi, học trực tiếp không lo lười"</p>
             </div>
           </div>
@@ -1233,7 +1225,7 @@ export default function Home() {
           <div className="gift-content-side">
             <div className="gift-top-row">
               <span className="right-number-badge">🎁 QUÀ TẶNG #01</span>
-              <span className="gift-val-badge">Trị giá: 2.500.000₫</span>
+              <span className="gift-val-badge">Đặc quyền học viên</span>
             </div>
             <h3 className="gift-card-split-title">App Tracking Tiến Độ Học Tập</h3>
             <p className="gift-card-split-desc">
@@ -1307,7 +1299,7 @@ export default function Home() {
           <div className="gift-content-side">
             <div className="gift-top-row">
               <span className="right-number-badge">🎁 QUÀ TẶNG #03</span>
-              <span className="gift-val-badge">Trị giá: 1.500.000₫</span>
+              <span className="gift-val-badge">Đặc quyền học viên</span>
             </div>
             <h3 className="gift-card-split-title">File 1.000 Từ Vựng Sát Đề Thi Thật ETS Bứt Phá 600 – 800+</h3>
             <p className="gift-card-split-desc">
@@ -1417,126 +1409,109 @@ export default function Home() {
   </section>
 
     {/*  ==========================================================================
-       SECTION 8: BẢNG GIÁ & FORM ĐĂNG KÝ (BỐ CỤC 2 CỘT CHUẨN ẢNH 1 & ẢNH 2)
+       SECTION 8: ĐĂNG KÝ THAM GIA CHƯƠNG TRÌNH (CHUẨN ẢNH 1 - CÓ THU PHÍ)
        ==========================================================================  */}
-  <section className="section-padding pricing-section" id="dang-ky">
-    <div className="container container-wide">
-      <div className="pricing-card-2col">
+  <section className="section-padding reg-section" id="dang-ky">
+    <div className="container reg-container">
+      <div className="reg-grid-2col">
         
-        {/*  CỘT TRÁI: TIÊU ĐỀ, BẢNG TÍNH GIÁ TRỊ, GIÁ GẠCH 10.800K & 5.400K SIÊU TO, PILLS  */}
-        <div className="pricing-col-left">
-          <h2 className="pricing-headline">
-            Sẵn sàng bứt phá <span className="highlight">600+ TOEIC</span> cùng Thầy Hưng?
+        {/*  CỘT TRÁI: THÔNG TIN CHƯƠNG TRÌNH & CẢNH BÁO CÓ THU PHÍ (CHUẨN ẢNH 1)  */}
+        <div className="reg-col-left">
+          <div className="reg-badge-wrap">
+            <span className="reg-badge-pill">
+              <span className="reg-badge-dot">•</span> ĐĂNG KÝ THAM GIA
+            </span>
+          </div>
+
+          <h2 className="reg-section-title">
+            ĐĂNG KÝ THAM GIA<br />CHƯƠNG TRÌNH
           </h2>
 
-          <div className="pricing-valuestack-list">
-            <div className="pricing-val-item">
-              <div className="val-check">
-                <i data-lucide="check" style={{ width: '16px', height: '16px', color: '#10B981', flexShrink: '0' }}></i>
-                <span>Khóa Học TOEIC ONLINE PRO 36 Buổi Live Cùng Thầy Hưng</span>
+          <div className="reg-info-list">
+            {/* 1. THỜI GIAN */}
+            <div className="reg-info-item">
+              <div className="reg-info-icon">
+                <i data-lucide="calendar" style={{ width: '22px', height: '22px' }}></i>
               </div>
-              <span className="val-price">6.000.000₫</span>
+              <div className="reg-info-text">
+                <div className="reg-info-label">THỜI GIAN</div>
+                <div className="reg-info-val">Thứ 6, ngày 6 tháng 11</div>
+              </div>
             </div>
 
-            <div className="pricing-val-item">
-              <div className="val-check">
-                <i data-lucide="check" style={{ width: '16px', height: '16px', color: '#10B981', flexShrink: '0' }}></i>
-                <span>BONUS 1: Hệ Thống App Luyện Thi Sát Đề 90% trọn đời & Tracking Tiến Độ</span>
+            {/* 2. HÌNH THỨC / ĐỊA ĐIỂM */}
+            <div className="reg-info-item">
+              <div className="reg-info-icon">
+                <i data-lucide="video" style={{ width: '22px', height: '22px' }}></i>
               </div>
-              <span className="val-price">2.500.000₫</span>
+              <div className="reg-info-text">
+                <div className="reg-info-label">HÌNH THỨC / ĐỊA ĐIỂM</div>
+                <div className="reg-info-val">Dạy Live trực tiếp 100% qua Zoom (Tương tác 2 chiều sửa lỗi 1-1)</div>
+              </div>
             </div>
 
-            <div className="pricing-val-item">
-              <div className="val-check">
-                <i data-lucide="check" style={{ width: '16px', height: '16px', color: '#10B981', flexShrink: '0' }}></i>
-                <span>BONUS 2: Bộ Tài Liệu Độc Quyền + 1.000 Từ Vựng Sát Đề Thi Thật ETS</span>
+            {/* 3. ƯU ĐÃI KHÓA HỌC */}
+            <div className="reg-info-item">
+              <div className="reg-info-icon">
+                <i data-lucide="sparkles" style={{ width: '22px', height: '22px' }}></i>
               </div>
-              <span className="val-price">1.500.000₫</span>
-            </div>
-
-            <div className="pricing-val-item">
-              <div className="val-check">
-                <i data-lucide="check" style={{ width: '16px', height: '16px', color: '#10B981', flexShrink: '0' }}></i>
-                <span>BONUS 3: Cộng Đồng Học Viên Kèm Cặp & Giải Đáp 24/7</span>
+              <div className="reg-info-text">
+                <div className="reg-info-label">ƯU ĐÃI ĐẶC BIỆT</div>
+                <div className="reg-info-val highlight-gold">Còn 5 suất để nhận ưu đãi giảm giá 35% giá trị khóa học</div>
               </div>
-              <span className="val-price">800.000₫</span>
             </div>
           </div>
 
-          {/*  Hiển thị Giá chuẩn Ảnh 1: Gạch 10.800.000đ và Giá to 5.400.000đ  */}
-          <div className="pricing-price-display">
-            <div className="price-strikethrough-row">
-              <span className="price-total-label">Tổng giá trị:</span>
-              <span className="price-strikethrough-pill">10.800.000₫</span>
+          {/* CẢNH BÁO CHƯƠNG TRÌNH CÓ THU PHÍ (CHUẨN ẢNH 1) */}
+          <div className="reg-warning-box">
+            <div className="reg-warning-icon">
+              <i data-lucide="alert-triangle" style={{ width: '20px', height: '20px' }}></i>
             </div>
-            <div className="pricing-giant-number">
-              5.400.000 <span className="currency-symbol">đ</span>
+            <div className="reg-warning-content">
+              Đây là chương trình đào tạo chuyên sâu <strong>CÓ THU PHÍ</strong>. Vui lòng chỉ đăng ký nếu bạn thực sự nghiêm túc với mục tiêu bứt phá điểm số TOEIC và sẵn sàng bám sát các yêu cầu thực hành.
             </div>
-          </div>
-
-          {/*  Các Feature Pill Badges chuẩn Ảnh 2  */}
-          <div className="pricing-feature-pills">
-            <span className="feat-pill"><i data-lucide="video" style={{ width: '14px', height: '14px' }}></i> Học Live Zoom 100%</span>
-            <span className="feat-pill"><i data-lucide="user-check" style={{ width: '14px', height: '14px' }}></i> Kèm cặp 1-1 sửa lỗi</span>
-            <span className="feat-pill"><i data-lucide="shield-check" style={{ width: '14px', height: '14px' }}></i> Cam kết học lại miễn phí</span>
-            <span className="feat-pill"><i data-lucide="sparkles" style={{ width: '14px', height: '14px' }}></i> Cam kết đạt mục tiêu</span>
           </div>
         </div>
 
-        {/*  CỘT PHẢI: LỜI DẪN, FORM ĐĂNG KÝ BÊN CẠNH & ĐỒNG HỒ ĐẾM NGƯỢC DƯỚI NÚT (ẢNH 2)  */}
-        <div className="pricing-col-right">
-          <p className="pricing-right-lead">
-            Đừng để nỗi sợ mất gốc tiếp tục giữ bạn lại — trong khi hàng trăm học viên đã tự tin bứt phá 600 – 800+ TOEIC để ra trường đúng hạn và nhân đôi cơ hội việc làm.
-          </p>
-
-          <form id="toeic-registration-form" action="/payment" method="GET" className="pricing-direct-form">
-            <div className="form-group-clean">
-              <label className="form-clean-label" htmlFor="fullname">Họ & tên <span className="req">*</span></label>
-              <input type="text" id="fullname" name="name" className="form-clean-input" placeholder="Nhập họ và tên của bạn" required />
-            </div>
-
-            <div className="form-group-clean">
-              <label className="form-clean-label" htmlFor="phone">Số điện thoại <span className="req">*</span></label>
-              <input type="tel" id="phone" name="phone" className="form-clean-input" placeholder="Nhập số điện thoại (có Zalo)" required />
-            </div>
-
-            <div className="form-group-clean">
-              <label className="form-clean-label" htmlFor="email">Email <span className="req">*</span></label>
-              <input type="email" id="email" name="email" className="form-clean-input" placeholder="Nhập email để nhận thông tin" required />
-            </div>
-
-            <button type="submit" className="btn-reg-gold">
-              <span>ĐĂNG KÍ TƯ VẤN NGAY</span>
-            </button>
-
-            {/*  Khối Đếm Ngược Ngay Dưới Nút Bấm Chuẩn Ảnh 2  */}
-            <div className="pricing-countdown-block">
-              <div className="cd-label">Ưu đãi có hạn và kết thúc sau:</div>
-              <div className="cd-timer-row">
-                <div className="cd-box">
-                  <span className="cd-num cd-hours">23</span>
-                  <span className="cd-unit">GIỜ</span>
+        {/*  CỘT PHẢI: FORM ĐĂNG KÝ (CHUẨN ẢNH 1)  */}
+        <div className="reg-col-right">
+          <div className="reg-form-card">
+            <form id="toeic-registration-form" className="reg-actual-form">
+              <div className="reg-form-row reg-form-2col">
+                <div className="reg-form-group">
+                  <label className="reg-form-label" htmlFor="fullname">HỌ VÀ TÊN</label>
+                  <input type="text" id="fullname" name="name" className="reg-form-input" placeholder="Nguyễn Văn A" required />
                 </div>
-                <span className="cd-colon">:</span>
-                <div className="cd-box">
-                  <span className="cd-num cd-minutes">59</span>
-                  <span className="cd-unit">PHÚT</span>
-                </div>
-                <span className="cd-colon">:</span>
-                <div className="cd-box">
-                  <span className="cd-num cd-seconds">59</span>
-                  <span className="cd-unit">GIÂY</span>
+                <div className="reg-form-group">
+                  <label className="reg-form-label" htmlFor="phone">SỐ ĐIỆN THOẠI</label>
+                  <input type="tel" id="phone" name="phone" className="reg-form-input" placeholder="0901 234 567" required />
                 </div>
               </div>
-            </div>
 
-            <div className="form-disclaimer">
-              <i data-lucide="lock" style={{ width: '14px', height: '14px', color: 'var(--color-accent)' }}></i>
-              <span>Thông tin của bạn được bảo mật tuyệt đối. Sau khi nhận đăng ký bạn sẽ được chuyển đến trang xác nhận.</span>
-            </div>
+              <div className="reg-form-group">
+                <label className="reg-form-label" htmlFor="email">EMAIL</label>
+                <input type="email" id="email" name="email" className="reg-form-input" placeholder="email@example.com" required />
+              </div>
 
+              <div className="reg-form-group">
+                <label className="reg-form-label" htmlFor="occupation">NGHỀ NGHIỆP / LĨNH VỰC</label>
+                <input type="text" id="occupation" name="occupation" className="reg-form-input" placeholder="VD: Sinh viên, Người đi làm, Mất gốc..." />
+              </div>
 
-          </form>
+              <div className="reg-form-group">
+                <label className="reg-form-label" htmlFor="reason">LÝ DO BẠN MUỐN THAM GIA?</label>
+                <textarea id="reason" name="reason" rows={3} className="reg-form-textarea" placeholder="Bạn đang gặp khó khăn gì trong việc học TOEIC và mục tiêu điểm số là bao nhiêu?"></textarea>
+              </div>
+
+              <button type="submit" id="btn-submit-registration" className="btn-reg-luxury">
+                <span>ĐĂNG KÝ NGAY</span>
+              </button>
+
+              <p className="reg-privacy-note">
+                Thông tin của bạn được bảo mật tuyệt đối.
+              </p>
+            </form>
+          </div>
         </div>
 
       </div>
@@ -1638,7 +1613,7 @@ export default function Home() {
           </div>
           <div className="faq-content-pane">
             <div className="faq-content-inner">
-              Đây chính xác là đối tượng mà khóa học TOEIC ONLINE PRO hướng tới. Khóa học được thiết kế bắt đầu ngay từ <strong>Giai đoạn 1: Xóa mù nền tảng &amp; Luyện nghe thực chiến từ số 0</strong>, giúp bạn nắm vững 1.000 từ vựng cốt lõi, công thức các thì cơ bản, câu bị động và kỹ thuật săn Keyword không cần dịch 100%. Trong mỗi buổi học 90 phút, Thầy Hưng sẽ gọi từng bạn đọc dịch và sửa bài 1-1, đảm bảo dù bạn mất gốc đến đâu cũng theo kịp tiến độ và tự tin đạt chuẩn 600+, làm bàn đạp bứt phá 800+.
+              Đây chính xác là đối tượng mà khóa học TOEIC ONLINE hướng tới. Khóa học được thiết kế bắt đầu ngay từ <strong>Giai đoạn 1: Xóa mù nền tảng &amp; Luyện nghe thực chiến từ số 0</strong>, giúp bạn nắm vững 1.000 từ vựng cốt lõi, công thức các thì cơ bản, câu bị động và kỹ thuật săn Keyword không cần dịch 100%. Trong mỗi buổi học 90 phút, Thầy Hưng sẽ gọi từng bạn đọc dịch và sửa bài 1-1, đảm bảo dù bạn mất gốc đến đâu cũng theo kịp tiến độ và tự tin đạt chuẩn 600+, làm bàn đạp bứt phá 800+.
             </div>
           </div>
         </div>
@@ -1698,12 +1673,12 @@ export default function Home() {
         {/*  FAQ Item 7  */}
         <div className="faq-item-container">
           <div className="faq-trigger">
-            <div className="faq-question-text">Học phí 5.400.000₫ gồm những gì và có phát sinh chi phí nào khác không?</div>
+            <div className="faq-question-text">Khóa học có thu phí như thế nào và có phát sinh chi phí nào khác không?</div>
             <div className="faq-toggle-circle">+</div>
           </div>
           <div className="faq-content-pane">
             <div className="faq-content-inner">
-              Mức học phí 5.400.000₫ (ưu đãi 50% từ giá gốc 10.800.000₫) là <strong>trọn gói cho toàn bộ 36 buổi Live (90 ngày)</strong>. Bạn được tặng kèm toàn bộ 5 quà tặng: Nền tảng app luyện thi sát đề 90%, File 1.000 từ vựng độc quyền, Video Record lưu 1 tuần, các bài thi thử chấm lỗi 1-1, và hỗ trợ Zalo 24/7. Hoàn toàn không phát sinh thêm bất kỳ chi phí nào!
+              Khóa học TOEIC ONLINE là chương trình đào tạo chuyên sâu <strong>có thu phí trọn gói cho toàn bộ 36 buổi Live (90 ngày)</strong> kèm ưu đãi giảm giá đặc biệt 35% cho 5 suất đăng ký sớm nhất. Bạn được tặng kèm toàn bộ quyền lợi: Nền tảng app luyện thi sát đề 90%, File 1.000 từ vựng độc quyền, Video Record lưu lại, các bài thi thử chấm sửa lỗi 1-1 và hỗ trợ giải đáp 24/7. Cam kết 100% không phát sinh thêm bất kỳ chi phí nào!
             </div>
           </div>
         </div>
@@ -1712,74 +1687,63 @@ export default function Home() {
   </section>
 
   {/*  ==========================================================================
-       VIETQR CHECKOUT MODAL
+       SUCCESS CONFIRMATION MODAL (CHUẨN ẢNH 2 - ZALO & HOTLINE 0904244824)
        ==========================================================================  */}
-  <div className="modal-overlay" id="vietqr-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div className="modal-container">
-      <div className="modal-header">
-        <div id="modal-title" className="modal-title">Thanh Toán Giữ Suất Ưu Đãi Lớp Live Zoom</div>
-        <button className="modal-close-btn" id="modal-close-btn" aria-label="Đóng cửa sổ">✕</button>
+  <div className="consult-modal-overlay" id="consult-success-modal" role="dialog" aria-modal="true" aria-labelledby="consult-modal-title">
+    <div className="consult-modal-card">
+      <button type="button" className="consult-modal-close" id="consult-modal-close-btn" aria-label="Đóng cửa sổ">
+        ✕
+      </button>
+
+      {/* Circle Checkmark at top */}
+      <div className="consult-modal-check-circle">
+        <i data-lucide="check" style={{ width: '28px', height: '28px', strokeWidth: 2.5 }}></i>
       </div>
 
-      <div className="modal-body">
-        <div className="qr-box">
-          <img id="modal-qr-img" src="" alt="Mã QR Chuyển khoản VietQR" className="qr-image" />
-          <div style={{ fontSize: '0.8rem', color: '#475569', marginTop: '0.5rem' }}>
-            Mở App ngân hàng bất kỳ để quét mã VietQR tự động điền số tiền và nội dung
-          </div>
+      <h3 id="consult-modal-title" className="consult-modal-title">
+        Cảm ơn bạn đã đăng ký tham gia chương trình.
+      </h3>
+
+      <p className="consult-modal-subtitle">
+        Đội ngũ tư vấn sẽ liên hệ với bạn qua điện thoại / Zalo đã đăng ký trong vòng <strong>30–60 phút</strong> (giờ hành chính).
+      </p>
+
+      <div className="consult-modal-prompt">
+        Hoặc, bạn có thể chủ động nhắn tin qua Zalo:
+      </div>
+
+      {/* QR Code & Zalo Contact Card */}
+      <div className="consult-zalo-card">
+        <div className="consult-qr-wrapper">
+          <img
+            src="/image/zalo-qr-0904244824.png"
+            alt="Mã QR Zalo 0904244824"
+            className="consult-qr-image"
+          />
+        </div>
+        
+        <div className="consult-contact-details">
+          <div className="consult-contact-name">Thầy Hưng TOEIC</div>
+          <div className="consult-contact-phone">0904 244 824</div>
         </div>
 
-        <div className="bank-info-grid">
-          <div className="bank-row">
-            <span className="bank-label">Ngân hàng:</span>
-            <span className="bank-value">MB Bank (Quân Đội)</span>
-          </div>
-
-          <div className="bank-row">
-            <span className="bank-label">Số tài khoản:</span>
-            <div className="bank-value">
-              <span id="modal-bank-acc">0904244824</span>
-              <button className="btn-copy" data-copy-target="modal-bank-acc">Sao chép</button>
-            </div>
-          </div>
-
-          <div className="bank-row">
-            <span className="bank-label">Chủ tài khoản:</span>
-            <span className="bank-value">NGUYEN THE HUNG</span>
-          </div>
-
-          <div className="bank-row">
-            <span className="bank-label">Học phí ưu đãi:</span>
-            <div className="bank-value" style={{ color: 'var(--color-accent)', fontSize: '1.15rem' }}>
-              <span>5.400.000₫</span>
-              <button className="btn-copy" data-copy-text="5400000">Sao chép</button>
-            </div>
-          </div>
-
-          <div className="modal-countdown-notice">
-            <i data-lucide="clock" style={{ width: '14px', height: '14px' }}></i>
-            <span>Ưu đãi hết hạn sau: <strong className="live-countdown">23:59:59</strong> (Quá hạn về giá gốc 10.800.000₫)</span>
-          </div>
-
-          <div className="bank-row">
-            <span className="bank-label">Nội dung chuyển khoản:</span>
-            <div className="bank-value">
-              <span id="modal-transfer-memo" style={{ color: 'var(--color-accent-light)', fontFamily: 'monospace' }}></span>
-              <button className="btn-copy" data-copy-target="modal-transfer-memo">Sao chép</button>
-            </div>
-          </div>
-        </div>
-
-        <a href="https://zalo.me/0904244824" target="_blank" rel="noopener noreferrer" className="btn btn-accent" style={{ width: '100%', textAlign: 'center', marginBottom: '0.65rem' }}>
-          <i data-lucide="check-circle" style={{ width: '18px', height: '18px' }}></i>
-          <span>TÔI ĐÃ CHUYỂN KHOẢN (XÁC NHẬN QUA ZALO)</span>
+        {/* Nút bấm vào phát qua Zalo luôn */}
+        <a
+          href="https://zalo.me/0904244824"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-zalo-direct-action"
+        >
+          <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4C12.95 4 4 12.95 4 24C4 28.38 5.41 32.44 7.82 35.73L5 44L13.56 41.25C16.69 43 20.24 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4Z" fill="#0068FF"/>
+            <path d="M35 30.5C34.4 32.2 32.8 33.4 30.9 33.5C28.2 33.7 23.3 31.6 18.9 27.2C14.5 22.8 12.4 17.9 12.6 15.2C12.7 13.3 13.9 11.7 15.6 11.1C16.3 10.9 17.1 11.2 17.5 11.8L19.4 15.2C19.7 15.8 19.6 16.5 19.1 17L17.7 18.4C18.6 20.4 20.2 22.1 22.2 23L23.6 21.6C24.1 21.1 24.8 21 25.4 21.3L28.8 23.2C29.4 23.6 29.7 24.4 29.5 25.1L35 30.5Z" fill="white"/>
+          </svg>
+          <span>Nhắn Tin Qua Zalo Ngay</span>
         </a>
+      </div>
 
-
-
-        <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center' }}>
-          Học viên đăng ký: <strong id="modal-user-phone" style={{ color: '#FFFFFF' }}></strong>
-        </div>
+      <div className="consult-modal-user-recap">
+        Học viên đăng ký: <strong id="consult-modal-user-info" style={{ color: '#FFFFFF' }}></strong>
       </div>
     </div>
   </div>
@@ -1806,21 +1770,19 @@ export default function Home() {
     </div>
   </div>
 
-  {/*  STICKY FLOATING BOTTOM BAR  */}
-  <aside className="sticky-floating-bar" id="sticky-floating-bar" aria-label="Thanh ưu đãi nổi">
+  {/*  STICKY FLOATING BOTTOM BAR (KHÔNG CÔNG KHAI GIÁ, ĐĂNG KÝ TƯ VẤN)  */}
+  <aside className="sticky-floating-bar" id="sticky-floating-bar" aria-label="Thanh tư vấn nổi">
     <div className="sticky-bar-inner">
       <div className="sticky-course-info">
-        <span className="sticky-title">TOEIC ONLINE PRO (Lớp Live Zoom 100%)</span>
-        <div className="sticky-price-row">
-          <span className="sticky-price-orig">10.800.000₫</span>
-          <span className="sticky-price-cur">5.400.000₫</span>
-          <span className="sticky-timer-pill">
-            <i data-lucide="clock" style={{ width: '13px', height: '13px' }}></i>
-            <span>Ưu đãi còn: <strong className="live-countdown">23:59:59</strong></span>
+        <span className="sticky-title">KHÓA HỌC TOEIC ONLINE (Lớp Live Zoom 100%)</span>
+        <div className="sticky-badge-row">
+          <span className="sticky-offer-badge">
+            <i data-lucide="sparkles" style={{ width: '13px', height: '13px' }}></i>
+            <span>Ưu đãi giảm 35% học phí (Còn 5 suất)</span>
           </span>
         </div>
       </div>
-      <a href="#dang-ky" className="btn btn-accent btn-pulse" style={{ padding: '0.65rem 1.4rem', fontSize: '0.875rem' }}>
+      <a href="#dang-ky" className="btn btn-accent btn-pulse" style={{ padding: '0.75rem 1.6rem', fontSize: '0.9rem', fontWeight: '700' }}>
         Đăng Ký Tư Vấn
       </a>
     </div>
@@ -1842,7 +1804,7 @@ export default function Home() {
       </div>
 
       <div className="footer-bottom">
-        © 2026 MrH TOEIC. All rights reserved. Khóa học TOEIC ONLINE PRO | Đảm bảo chuẩn đầu ra 600+ • Bứt phá 800+ thực chiến.
+        © 2026 MrH TOEIC. All rights reserved. Khóa học TOEIC ONLINE | Đảm bảo chuẩn đầu ra 600+ • Bứt phá 800+ thực chiến.
       </div>
     </div>
   </footer>

@@ -5,12 +5,12 @@ const FB_PIXEL_ID = '1509215804565827';
 
 export const metadata = {
   metadataBase: new URL('https://mrhtoeic.com'),
-  title: 'TOEIC ONLINE PRO — Khóa Học Live Zoom Thực Chiến 36 Buổi Cùng Thầy Hưng 985/990',
-  description: 'Khóa học TOEIC ONLINE PRO dạy Live 100% qua Zoom cùng Thầy Hưng 985/990 TOEIC. Đảm bảo chuẩn đầu ra 600+ sau khóa học, tự tin bứt phá 800+ thực chiến.',
-  keywords: 'TOEIC ONLINE PRO, học toeic live qua zoom, luyện thi toeic kèm 1-1, thầy hưng 985 toeic, đảm bảo đầu ra toeic 600+',
+  title: 'Khóa Học TOEIC ONLINE — Live Zoom Thực Chiến Cùng Thầy Hưng 985/990',
+  description: 'Khóa học TOEIC ONLINE dạy Live 100% qua Zoom cùng Thầy Hưng 985/990 TOEIC. Đảm bảo chuẩn đầu ra 600+ sau khóa học, tự tin bứt phá 800+ thực chiến.',
+  keywords: 'khóa học toeic online, học toeic live qua zoom, luyện thi toeic cấp tốc, thầy hưng 985 toeic, đảm bảo đầu ra toeic 600+',
   openGraph: {
     type: 'website',
-    title: 'TOEIC ONLINE PRO — Dạy Trực Tiếp Qua Zoom Live 36 Buổi',
+    title: 'Khóa Học TOEIC ONLINE — Dạy Trực Tiếp Qua Zoom Live',
     description: 'Không bán video thu sẵn. Lớp học Live tương tác 2 chiều, gọi từng học viên đọc dịch & sửa phát âm 1-1, đảm bảo đầu ra 600+, bứt phá 800+.',
     images: ['/image/4-nobg-web.webp'],
   },
