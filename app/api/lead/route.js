@@ -138,7 +138,7 @@ export async function POST(request) {
 
         const capiEvents = [
           {
-            event_name: eventName,
+            event_name: 'Lead',
             event_time: Math.floor(Date.now() / 1000),
             event_id: eventId,
             event_source_url: url,
@@ -147,6 +147,20 @@ export async function POST(request) {
             custom_data: {
               content_name: 'Khóa học TOEIC ONLINE',
               content_category: 'E-learning'
+            }
+          },
+          {
+            event_name: 'Purchase',
+            event_time: Math.floor(Date.now() / 1000),
+            event_id: `${eventId}_pur`,
+            event_source_url: url,
+            action_source: 'website',
+            user_data: userData,
+            custom_data: {
+              currency: 'VND',
+              value: 5400000,
+              content_name: 'Khóa học TOEIC ONLINE',
+              content_type: 'product'
             }
           }
         ];

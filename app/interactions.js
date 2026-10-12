@@ -321,16 +321,25 @@ function initRegistrationModal() {
       }
     } catch (e) {}
 
-    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Lead
+    // Ghi nhận sự kiện chuyển đổi Facebook Pixel: Lead & Purchase (giữ nguyên cài đặt ban đầu của trang)
     try {
       if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+        // 1. Sự kiện Lead
         window.fbq('track', 'Lead', {
           content_name: 'Khóa học TOEIC ONLINE',
           content_category: 'E-learning'
         }, { eventID: eventId });
+
+        // 2. Sự kiện Purchase (giữ nguyên cài đặt ban đầu của landing page)
+        window.fbq('track', 'Purchase', {
+          value: 5400000,
+          currency: 'VND',
+          content_name: 'Khóa học TOEIC ONLINE',
+          content_type: 'product'
+        }, { eventID: `${eventId}_pur` });
       }
     } catch (fbErr) {
-      console.warn('FB Pixel Lead track error:', fbErr);
+      console.warn('FB Pixel track error:', fbErr);
     }
 
     // Hiển thị thông tin học viên trên modal xác nhận
