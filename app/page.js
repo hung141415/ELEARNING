@@ -1419,12 +1419,12 @@ export default function Home() {
         <div className="reg-col-left">
           <div className="reg-badge-wrap">
             <span className="reg-badge-pill">
-              <span className="reg-badge-dot">•</span> ĐĂNG KÝ THAM GIA
+              <span className="reg-badge-dot">•</span> ĐĂNG KÝ TƯ VẤN
             </span>
           </div>
 
           <h2 className="reg-section-title">
-            ĐĂNG KÝ THAM GIA<br />CHƯƠNG TRÌNH
+            ĐĂNG KÝ TƯ VẤN<br />THAM GIA KHÓA HỌC
           </h2>
 
           <div className="reg-info-list">
@@ -1498,13 +1498,8 @@ export default function Home() {
                 <input type="text" id="occupation" name="occupation" className="reg-form-input" placeholder="VD: Sinh viên, Người đi làm, Mất gốc..." />
               </div>
 
-              <div className="reg-form-group">
-                <label className="reg-form-label" htmlFor="reason">LÝ DO BẠN MUỐN THAM GIA?</label>
-                <textarea id="reason" name="reason" rows={3} className="reg-form-textarea" placeholder="Bạn đang gặp khó khăn gì trong việc học TOEIC và mục tiêu điểm số là bao nhiêu?"></textarea>
-              </div>
-
               <button type="submit" id="btn-submit-registration" className="btn-reg-luxury">
-                <span>ĐĂNG KÝ NGAY</span>
+                <span>ĐĂNG KÍ TƯ VẤN NGAY</span>
               </button>
 
               <p className="reg-privacy-note">
