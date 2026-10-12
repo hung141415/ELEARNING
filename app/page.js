@@ -24,12 +24,33 @@ export default function Home() {
         <img src="/image/logo-white.png" alt="MrH TOEIC Logo" className="brand-logo-img" />
       </a>
 
+      <nav className="nav-menu" aria-label="Điều hướng chính">
+        <ul className="nav-links">
+          <li><a href="#noi-dau" className="nav-link">Khó Khăn Hay Gặp</a></li>
+          <li><a href="#feedback" className="nav-link">Kết Quả Học Viên</a></li>
+          <li><a href="#giang-vien" className="nav-link">Thông Tin Giảng Viên</a></li>
+          <li><a href="#chuyen-doi" className="nav-link">Kết Quả Sau Khi Học Xong</a></li>
+          <li><a href="#lo-trinh" className="nav-link">Lộ Trình Học Tập</a></li>
+        </ul>
+      </nav>
+
       <div className="nav-actions">
         <a href="#dang-ky" className="btn btn-accent nav-cta-btn">
           Đăng Ký Tư Vấn
         </a>
       </div>
     </div>
+
+    {/* Mobile Quick Navigation Strip */}
+    <nav className="navbar-mobile-nav" aria-label="Điều hướng nhanh mobile">
+      <div className="navbar-mobile-scroll">
+        <a href="#noi-dau" className="mobile-nav-link">Khó Khăn Hay Gặp</a>
+        <a href="#feedback" className="mobile-nav-link">Kết Quả Học Viên</a>
+        <a href="#giang-vien" className="mobile-nav-link">Thông Tin Giảng Viên</a>
+        <a href="#chuyen-doi" className="mobile-nav-link">Kết Quả Sau Khi Học Xong</a>
+        <a href="#lo-trinh" className="mobile-nav-link">Lộ Trình Học Tập</a>
+      </div>
+    </nav>
   </header>
 
   {/*  HERO SECTION  */}
@@ -168,14 +189,10 @@ export default function Home() {
   <section className="section-padding story-section section-light" id="noi-dau">
     <div className="container">
       
-      {/*  Big Opening Emotional Quote Card  */}
-      <div className="story-quote-card">
-        <blockquote>
-          “Tôi cày ngày cày đêm, mua cả đống sách, tải đủ thứ app về học từ vựng nhưng đi thi điểm vẫn giậm chân tại chỗ… <span className="quote-highlight">Phải chăng TOEIC không dành cho người mất gốc như tôi?”</span>
-        </blockquote>
-        <div className="story-quote-author">
-          — TRĂN TRỞ CỦA HƠN 85% NGƯỜI TỰ HỌC TOEIC MÃI KHÔNG THỂ BỨT PHÁ 600 – 800+
-        </div>
+      {/* Section Header */}
+      <div className="text-center" style={{ marginBottom: '2rem' }}>
+        <span className="section-badge">Khó Khăn Hay Gặp</span>
+        <h2 className="section-title">Bạn Có Đang Mắc Kẹt Trong <span className="highlight">6 Nỗi Đau Này?</span></h2>
       </div>
 
       {/*  6 Core Struggles Narrative Box  */}
@@ -189,22 +206,22 @@ export default function Home() {
           <div className="story-points-col">
             <div className="story-point-item point-struggle">
               <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div>
-                <strong>1. Cày từ vựng hùng hục nhưng hôm sau quên sạch:</strong> Mua sổ tay, flashcard học 30–50 từ mỗi ngày nhưng học rời rạc, không gắn vào ngữ cảnh đề thi thật ETS nên vào phòng thi hoàn toàn không nhận diện được từ vựng.
+              <div className="story-point-title">
+                <strong>1. Cày từ vựng hùng hục nhưng hôm sau quên sạch</strong>
               </div>
             </div>
 
             <div className="story-point-item point-struggle">
               <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div>
-                <strong>2. Bật audio nghe như "vịt nghe sấm", phản xạ không kịp:</strong> Tốc độ người bản xứ quá nhanh, hiện tượng nuốt âm, nối âm lướt qua trong 0.5 giây — bạn nghe chữ được chữ mất, đành chọn đáp án theo linh cảm và đánh lụi.
+              <div className="story-point-title">
+                <strong>2. Bật audio nghe như "vịt nghe sấm", phản xạ không kịp</strong>
               </div>
             </div>
 
             <div className="story-point-item point-struggle">
               <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div>
-                <strong>3. Part 5 mất cả phút một câu vì loay hoay dịch nghĩa:</strong> Cố gắng dịch nghĩa từng từ thay vì nhìn ra bản đồ cấu trúc ngữ pháp, bẫy từ loại và quy luật đề thi để chốt đáp án chính xác trong 10–15 giây.
+              <div className="story-point-title">
+                <strong>3. Part 5 mất cả phút một câu vì loay hoay dịch nghĩa</strong>
               </div>
             </div>
           </div>
@@ -213,22 +230,22 @@ export default function Home() {
           <div className="story-points-col">
             <div className="story-point-item point-struggle">
               <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div>
-                <strong>4. Part 7 là ác mộng kinh hoàng, đọc trước quên sau:</strong> Bài đọc dài dằng dặc, thiếu kỹ năng định vị thông tin, đồng hồ báo còn 15 phút mà còn 25–30 câu chưa làm — đành nhắm mắt khoanh bừa hàng loạt.
+              <div className="story-point-title">
+                <strong>4. Part 7 là ác mộng kinh hoàng, đọc trước quên sau</strong>
               </div>
             </div>
 
             <div className="story-point-item point-struggle">
               <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div>
-                <strong>5. Càng tự học càng hoang mang, mất phương hướng:</strong> Tải hàng chục GB tài liệu, mua video thu sẵn nhưng học được vài ngày là nản, phát âm sai không ai sửa, làm đề sai không ai chỉ ra nguyên nhân gốc rễ.
+              <div className="story-point-title">
+                <strong>5. Càng tự học càng hoang mang, mất phương hướng</strong>
               </div>
             </div>
 
             <div className="story-point-item point-struggle">
               <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div>
-                <strong>6. Điểm số giậm chân tại chỗ 300–400, lỡ dở cơ hội tương lai:</strong> Thi đi thi lại tốn kém tiền bạc, trễ hạn nộp bằng tốt nghiệp ra trường và tuột mất các cơ hội ứng tuyển, thăng tiến công việc mơ ước.
+              <div className="story-point-title">
+                <strong>6. Điểm số giậm chân tại chỗ 300–400, lỡ dở cơ hội tương lai</strong>
               </div>
             </div>
           </div>
@@ -860,7 +877,8 @@ export default function Home() {
   {/*  ==========================================================================
        SECTION 4: BẢNG SO SÁNH 2 BÊN (TRƯỚC KHÓA HỌC VS SAU KHÓA HỌC)
        ==========================================================================  */}
-  <section className="section-padding comparison-section section-light" id="so-sanh">
+  <section className="section-padding comparison-section section-light" id="chuyen-doi">
+    <span id="so-sanh" style={{ display: 'none' }}></span>
     <div className="container">
       <div className="text-center">
         <span className="section-badge">Bảng Đối Chiếu Thực Tế</span>
