@@ -1446,24 +1446,24 @@ export default function Home() {
           </h2>
 
           <div className="reg-info-list">
-            {/* 1. THỜI GIAN */}
+            {/* 1. NGÀY KHAI GIẢNG */}
             <div className="reg-info-item">
               <div className="reg-info-icon">
                 <i data-lucide="calendar" style={{ width: '22px', height: '22px' }}></i>
               </div>
               <div className="reg-info-text">
-                <div className="reg-info-label">THỜI GIAN</div>
+                <div className="reg-info-label">NGÀY KHAI GIẢNG</div>
                 <div className="reg-info-val">Thứ 6, ngày 6 tháng 11</div>
               </div>
             </div>
 
-            {/* 2. HÌNH THỨC / ĐỊA ĐIỂM */}
+            {/* 2. HÌNH THỨC HỌC */}
             <div className="reg-info-item">
               <div className="reg-info-icon">
                 <i data-lucide="video" style={{ width: '22px', height: '22px' }}></i>
               </div>
               <div className="reg-info-text">
-                <div className="reg-info-label">HÌNH THỨC / ĐỊA ĐIỂM</div>
+                <div className="reg-info-label">HÌNH THỨC HỌC</div>
                 <div className="reg-info-val">Dạy Live trực tiếp 100% qua Zoom (Tương tác 2 chiều sửa lỗi 1-1)</div>
               </div>
             </div>

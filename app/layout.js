@@ -3,6 +3,13 @@ import './globals.css';
 
 const FB_PIXEL_ID = '1509215804565827';
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover',
+};
+
 export const metadata = {
   metadataBase: new URL('https://mrhtoeic.com'),
   title: 'Khóa Học TOEIC ONLINE — Live Zoom Thực Chiến Cùng Thầy Hưng 985/990',
