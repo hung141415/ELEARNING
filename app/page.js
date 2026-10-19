@@ -99,6 +99,36 @@ export default function Home() {
                 Học phí ưu đãi giảm giá đặc biệt <strong className="highlight-discount">35%</strong> (còn lại 5 suất)
               </span>
             </div>
+
+            {/* Mục liên hệ Zalo trực tiếp ngay nếu có câu hỏi (không cần điền form và chờ đợi) */}
+            <div className="hero-instant-zalo-wrap">
+              <div className="hero-zalo-divider">
+                <span>HOẶC CẦN HỎI ĐÁP NHANH VỚI THẦY HƯNG</span>
+              </div>
+              <a
+                href="https://zalo.me/0904244824"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-hero-zalo-instant"
+                title="Chat Zalo trực tiếp cùng Thầy Hưng 0904 244 824"
+              >
+                <div className="hero-zalo-icon-badge">
+                  <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 4C12.95 4 4 12.95 4 24C4 28.38 5.41 32.44 7.82 35.73L5 44L13.56 41.25C16.69 43 20.24 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4Z" fill="#0068FF"/>
+                    <path d="M35 30.5C34.4 32.2 32.8 33.4 30.9 33.5C28.2 33.7 23.3 31.6 18.9 27.2C14.5 22.8 12.4 17.9 12.6 15.2C12.7 13.3 13.9 11.7 15.6 11.1C16.3 10.9 17.1 11.2 17.5 11.8L19.4 15.2C19.7 15.8 19.6 16.5 19.1 17L17.7 18.4C18.6 20.4 20.2 22.1 22.2 23L23.6 21.6C24.1 21.1 24.8 21 25.4 21.3L28.8 23.2C29.4 23.6 29.7 24.4 29.5 25.1L35 30.5Z" fill="white"/>
+                  </svg>
+                  <span className="live-status-dot"></span>
+                </div>
+                <div className="hero-zalo-details">
+                  <span className="hero-zalo-label">BẠN CÓ CÂU HỎI CẦN GIẢI ĐÁP NGAY?</span>
+                  <span className="hero-zalo-action-text">Hotline / Zalo Thầy Hưng: <strong>0904 244 824</strong> (Online)</span>
+                </div>
+                <div className="hero-zalo-arrow">
+                  <span>Nhắn ngay</span>
+                  <i data-lucide="arrow-up-right" style={{ width: '16px', height: '16px' }}></i>
+                </div>
+              </a>
+            </div>
           </div>
 
           {/*  3 Core Specs Kept & Made Larger (Dạy Live, Đảm bảo đầu ra 600, Kèm 1-1)  */}
@@ -1535,6 +1565,37 @@ export default function Home() {
               <p className="reg-privacy-note">
                 Thông tin của bạn được bảo mật tuyệt đối.
               </p>
+
+              {/* Mục liên hệ Zalo trực tiếp cho người không muốn điền form & chờ đợi */}
+              <div className="reg-instant-zalo-card">
+                <div className="reg-zalo-divider">
+                  <span>HOẶC BẠN KHÔNG MUỐN ĐIỀN FORM VÀ ĐỢI?</span>
+                </div>
+                <a
+                  href="https://zalo.me/0904244824"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-reg-zalo-direct"
+                  title="Nhắn Zalo trực tiếp với Thầy Hưng"
+                >
+                  <div className="btn-reg-zalo-left">
+                    <div className="btn-reg-zalo-icon-box">
+                      <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4C12.95 4 4 12.95 4 24C4 28.38 5.41 32.44 7.82 35.73L5 44L13.56 41.25C16.69 43 20.24 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4Z" fill="#0068FF"/>
+                        <path d="M35 30.5C34.4 32.2 32.8 33.4 30.9 33.5C28.2 33.7 23.3 31.6 18.9 27.2C14.5 22.8 12.4 17.9 12.6 15.2C12.7 13.3 13.9 11.7 15.6 11.1C16.3 10.9 17.1 11.2 17.5 11.8L19.4 15.2C19.7 15.8 19.6 16.5 19.1 17L17.7 18.4C18.6 20.4 20.2 22.1 22.2 23L23.6 21.6C24.1 21.1 24.8 21 25.4 21.3L28.8 23.2C29.4 23.6 29.7 24.4 29.5 25.1L35 30.5Z" fill="white"/>
+                      </svg>
+                      <span className="live-status-dot"></span>
+                    </div>
+                    <div className="btn-reg-zalo-info">
+                      <span className="btn-reg-zalo-lead">Nhắn Tin Trực Tiếp Với Thầy Hưng Qua Zalo</span>
+                      <span className="btn-reg-zalo-sub">Hotline Zalo: <strong>0904 244 824</strong> • Nhận tư vấn &amp; giải đáp ngay</span>
+                    </div>
+                  </div>
+                  <span className="btn-reg-zalo-badge">
+                    Nhắn Ngay ➔
+                  </span>
+                </a>
+              </div>
             </form>
           </div>
         </div>
@@ -1819,9 +1880,24 @@ export default function Home() {
           </span>
         </div>
       </div>
-      <a href="#dang-ky" className="btn btn-accent btn-pulse" style={{ padding: '0.75rem 1.6rem', fontSize: '0.9rem', fontWeight: '700' }}>
-        Đăng Ký Tư Vấn
-      </a>
+      <div className="sticky-cta-group">
+        <a
+          href="https://zalo.me/0904244824"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-sticky-zalo"
+          title="Nhắn Zalo Thầy Hưng 0904 244 824"
+        >
+          <svg width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4C12.95 4 4 12.95 4 24C4 28.38 5.41 32.44 7.82 35.73L5 44L13.56 41.25C16.69 43 20.24 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4Z" fill="#0068FF"/>
+            <path d="M35 30.5C34.4 32.2 32.8 33.4 30.9 33.5C28.2 33.7 23.3 31.6 18.9 27.2C14.5 22.8 12.4 17.9 12.6 15.2C12.7 13.3 13.9 11.7 15.6 11.1C16.3 10.9 17.1 11.2 17.5 11.8L19.4 15.2C19.7 15.8 19.6 16.5 19.1 17L17.7 18.4C18.6 20.4 20.2 22.1 22.2 23L23.6 21.6C24.1 21.1 24.8 21 25.4 21.3L28.8 23.2C29.4 23.6 29.7 24.4 29.5 25.1L35 30.5Z" fill="white"/>
+          </svg>
+          <span className="sticky-zalo-text">Zalo Thầy Hưng</span>
+        </a>
+        <a href="#dang-ky" className="btn btn-accent btn-pulse sticky-reg-btn">
+          Đăng Ký Tư Vấn
+        </a>
+      </div>
     </div>
   </aside>
 

@@ -23,10 +23,12 @@ export function initAllInteractions() {
   const clearSticky = initStickyBar();
   initCopyButtons();
   initSmoothScroll();
+  const clearScrollSpy = initNavbarScrollSpy();
 
   return () => {
     if (clearTimer) clearTimer();
     if (clearSticky) clearSticky();
+    if (clearScrollSpy) clearScrollSpy();
   };
 }
 
@@ -376,12 +378,12 @@ function initStickyBar() {
   const handleScroll = () => {
     const heroBottom = heroSection.getBoundingClientRect().bottom;
 
-    // Khi người dùng đã cuộn tới khu vực form đăng ký:
-    // Tự động ẩn thanh sticky bar để không che nút "ĐĂNG KÍ TƯ VẤN NGAY" và giữ màn hình thông thoáng
+    // Khi người dùng đã cuộn tới khu vực form đăng ký (hoặc chân trang):
+    // Tự động ẩn thanh sticky bar để không che form đăng ký, nút tư vấn và nút Zalo trực tiếp
     let isInRegistrationArea = false;
     if (regSection) {
       const regRect = regSection.getBoundingClientRect();
-      if (regRect.top < window.innerHeight * 0.75 && regRect.bottom > 120) {
+      if (regRect.top < window.innerHeight * 0.85) {
         isInRegistrationArea = true;
       }
     }
@@ -924,4 +926,126 @@ function initRoadmapFlowEffect() {
 
   setTimeout(onResize, 300);
   setTimeout(onResize, 1000);
+}
+
+/* ==========================================================================
+   11. NAVBAR SCROLLSPY (HỌC VIÊN LƯỚT TỚI ĐÂU MỤC TƯƠNG ỨNG SÁNG RỰC LÊN ĐẾN ĐÓ)
+   ========================================================================== */
+function initNavbarScrollSpy() {
+  if (typeof window === 'undefined') return () => {};
+
+  const sectionIds = ['noi-dau', 'feedback', 'giang-vien', 'chuyen-doi', 'lo-trinh', 'dang-ky'];
+
+  const sections = sectionIds.map((id) => {
+    const el = document.getElementById(id);
+    const desktopLinks = document.querySelectorAll(`.nav-links a[href="#${id}"]`);
+    const mobileLinks = document.querySelectorAll(`.navbar-mobile-scroll a[href="#${id}"]`);
+    return { id, el, desktopLinks, mobileLinks };
+  }).filter(item => item.el);
+
+  const regCtaBtns = document.querySelectorAll('.nav-cta-btn');
+  const mobileScrollContainer = document.querySelector('.navbar-mobile-scroll');
+
+  let currentActiveId = null;
+  let ticking = false;
+
+  function updateActiveNav() {
+    const scrollY = window.pageYOffset;
+    const windowH = window.innerHeight;
+    const docH = document.documentElement.scrollHeight;
+
+    // Khi ở đầu trang (Hero section): reset các mục active
+    if (scrollY < 180) {
+      if (currentActiveId !== null) {
+        currentActiveId = null;
+        sections.forEach(({ desktopLinks, mobileLinks }) => {
+          desktopLinks.forEach(a => a.classList.remove('active'));
+          mobileLinks.forEach(a => a.classList.remove('active'));
+        });
+        regCtaBtns.forEach(btn => btn.classList.remove('active-glow'));
+      }
+      return;
+    }
+
+    // Nếu cuộn gần chạm đáy trang: kích hoạt mục đăng ký
+    const isAtBottom = (windowH + scrollY) >= (docH - 180);
+    let matchedId = isAtBottom ? 'dang-ky' : null;
+
+    if (!matchedId) {
+      // Điểm quét mắt lý tưởng: khoảng 30% chiều cao màn hình dưới navbar
+      const focalY = scrollY + Math.max(110, windowH * 0.32);
+
+      for (let i = 0; i < sections.length; i++) {
+        const item = sections[i];
+        const rect = item.el.getBoundingClientRect();
+        const top = rect.top + scrollY;
+        const bottom = top + item.el.offsetHeight;
+
+        if (focalY >= (top - 40) && focalY < bottom) {
+          matchedId = item.id;
+          break;
+        }
+      }
+    }
+
+    if (matchedId && matchedId !== currentActiveId) {
+      currentActiveId = matchedId;
+
+      sections.forEach(({ id, desktopLinks, mobileLinks }) => {
+        const isActive = (id === matchedId);
+        desktopLinks.forEach((a) => {
+          if (isActive) a.classList.add('active');
+          else a.classList.remove('active');
+        });
+        mobileLinks.forEach((a) => {
+          if (isActive) {
+            a.classList.add('active');
+            // Tự động cuộn thanh ngang mobile để mục active luôn nằm ở giữa tầm nhìn
+            if (mobileScrollContainer) {
+              const aLeft = a.offsetLeft;
+              const aWidth = a.offsetWidth;
+              const containerWidth = mobileScrollContainer.clientWidth;
+              mobileScrollContainer.scrollTo({
+                left: aLeft - (containerWidth / 2) + (aWidth / 2),
+                behavior: 'smooth'
+              });
+            }
+          } else {
+            a.classList.remove('active');
+          }
+        });
+      });
+
+      // Kích hoạt hiệu ứng phát sáng cho nút CTA khi tới section đăng ký
+      regCtaBtns.forEach((btn) => {
+        if (matchedId === 'dang-ky') {
+          btn.classList.add('active-glow');
+        } else {
+          btn.classList.remove('active-glow');
+        }
+      });
+    }
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateActiveNav();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+
+  // Quét kiểm tra trạng thái ban đầu
+  setTimeout(updateActiveNav, 150);
+  setTimeout(updateActiveNav, 600);
+
+  return () => {
+    window.removeEventListener('scroll', onScroll);
+    window.removeEventListener('resize', onScroll);
+  };
 }

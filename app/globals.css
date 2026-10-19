@@ -2295,11 +2295,15 @@ div[id] {
   padding: 0.75rem 1rem;
   z-index: 35;
   transform: translateY(100%);
-  transition: transform var(--transition-normal);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform var(--transition-normal), visibility var(--transition-normal);
 }
 
 .sticky-floating-bar.visible {
   transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .sticky-bar-inner {
@@ -2381,25 +2385,45 @@ div[id] {
 
 @media (max-width: 640px) {
   .sticky-floating-bar {
-    padding: 0.55rem 0.85rem;
-    padding-bottom: calc(0.55rem + env(safe-area-inset-bottom, 0px));
+    padding: 0.5rem 0.85rem;
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
     box-sizing: border-box;
     max-width: 100vw;
   }
-  .sticky-course-info {
+  .sticky-bar-inner {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.1rem;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+  .sticky-course-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.35rem;
+  }
+  .sticky-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sticky-badge-row {
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+  .sticky-offer-badge {
+    font-size: 0.68rem;
+    padding: 0.12rem 0.45rem;
+    white-space: nowrap;
   }
   .sticky-timer-pill {
     display: none;
   }
   .sticky-price-cur {
     font-size: 1.05rem;
-  }
-  .sticky-bar-inner .btn {
-    padding: 0.45rem 0.85rem;
-    font-size: 0.8rem;
   }
 }
 
@@ -5996,6 +6020,339 @@ div[id] {
   border: 1px solid rgba(196, 160, 124, 0.3);
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
+}
+
+/* ==========================================================================
+   NAVBAR SCROLLSPY ACTIVE HIGHLIGHT (TƯƠNG TỰ PHẦN LỘ TRÌNH HỌC)
+   ========================================================================== */
+.nav-link.active {
+  color: #FFFFFF !important;
+  background: rgba(196, 160, 124, 0.2) !important;
+  border: 1px solid rgba(196, 160, 124, 0.7) !important;
+  box-shadow: 0 0 16px rgba(196, 160, 124, 0.5), inset 0 0 10px rgba(196, 160, 124, 0.2) !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-1px);
+}
+
+.mobile-nav-link.active {
+  background: rgba(196, 160, 124, 0.28) !important;
+  color: #FFFFFF !important;
+  border-color: #C4A07C !important;
+  box-shadow: 0 0 14px rgba(196, 160, 124, 0.6), inset 0 0 8px rgba(196, 160, 124, 0.25) !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 8px rgba(196, 160, 124, 0.6) !important;
+  transform: scale(1.04);
+}
+
+.nav-cta-btn.active-glow {
+  box-shadow: 0 0 25px rgba(196, 160, 124, 0.85), 0 0 10px #FFFFFF !important;
+  border-color: #FFFFFF !important;
+  transform: scale(1.04);
+}
+
+/* ==========================================================================
+   HERO DIRECT ZALO CONSULTATION
+   ========================================================================== */
+.hero-instant-zalo-wrap {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.hero-zalo-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #64748B;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-zalo-divider::before,
+.hero-zalo-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-zalo-divider span {
+  padding: 0 0.75rem;
+}
+
+.btn-hero-zalo-instant {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: linear-gradient(135deg, rgba(0, 104, 255, 0.12) 0%, rgba(13, 30, 60, 0.85) 100%);
+  border: 1.5px solid rgba(0, 104, 255, 0.45);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 104, 255, 0.15);
+}
+
+.btn-hero-zalo-instant:hover {
+  background: linear-gradient(135deg, rgba(0, 104, 255, 0.22) 0%, rgba(16, 36, 75, 0.95) 100%);
+  border-color: #0084FF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 104, 255, 0.35);
+}
+
+.hero-zalo-icon-badge {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #0068FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 104, 255, 0.45);
+}
+
+.live-status-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  background: #10B981;
+  border: 2px solid #071120;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10B981;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.7; }
+}
+
+.hero-zalo-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-align: left;
+}
+
+.hero-zalo-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #94A3B8;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-zalo-action-text {
+  font-size: 0.88rem;
+  color: #FFFFFF;
+  line-height: 1.35;
+}
+
+.hero-zalo-action-text strong {
+  color: #00A6FF;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+.hero-zalo-arrow {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #00A6FF;
+  background: rgba(0, 104, 255, 0.15);
+  border: 1px solid rgba(0, 104, 255, 0.3);
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   STICKY BOTTOM BAR ZALO CTA GROUP
+   ========================================================================== */
+.sticky-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.btn-sticky-zalo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #0068FF 0%, #0084FF 100%);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 104, 255, 0.35);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-sticky-zalo:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 104, 255, 0.5);
+  filter: brightness(1.08);
+}
+
+.sticky-reg-btn {
+  padding: 0.7rem 1.35rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .sticky-cta-group {
+    gap: 0.4rem;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.3rem;
+  }
+  .btn-sticky-zalo {
+    flex: 1;
+    justify-content: center;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.78rem;
+    gap: 0.3rem;
+  }
+  .sticky-reg-btn {
+    flex: 1.1;
+    justify-content: center;
+    padding: 0.55rem 0.65rem !important;
+    font-size: 0.78rem !important;
+  }
+}
+
+/* ==========================================================================
+   REGISTRATION FORM DIRECT ZALO CTA
+   ========================================================================== */
+.reg-instant-zalo-card {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reg-zalo-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #64748B;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reg-zalo-divider::before,
+.reg-zalo-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reg-zalo-divider span {
+  padding: 0 0.65rem;
+}
+
+.btn-reg-zalo-direct {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, rgba(0, 104, 255, 0.1) 0%, rgba(15, 31, 56, 0.9) 100%);
+  border: 1.5px solid rgba(0, 104, 255, 0.4);
+  border-radius: 14px;
+  padding: 0.85rem 1.1rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.btn-reg-zalo-direct:hover {
+  background: linear-gradient(135deg, rgba(0, 104, 255, 0.2) 0%, rgba(20, 42, 75, 0.95) 100%);
+  border-color: #0084FF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(0, 104, 255, 0.35);
+}
+
+.btn-reg-zalo-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-reg-zalo-icon-box {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #0068FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 104, 255, 0.4);
+}
+
+.btn-reg-zalo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-align: left;
+}
+
+.btn-reg-zalo-lead {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+}
+
+.btn-reg-zalo-sub {
+  font-size: 0.76rem;
+  color: #94A3B8;
+  line-height: 1.35;
+}
+
+.btn-reg-zalo-sub strong {
+  color: #00A6FF;
+}
+
+.btn-reg-zalo-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  background: #0068FF;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 104, 255, 0.3);
+}
+
+@media (max-width: 480px) {
+  .btn-reg-zalo-direct {
+    padding: 0.75rem 0.85rem;
+  }
+  .btn-reg-zalo-badge {
+    display: none;
+  }
 }
 
 }
