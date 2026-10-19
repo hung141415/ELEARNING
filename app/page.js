@@ -853,7 +853,7 @@ export default function Home() {
 
         <div className="certificate-single-display-card" id="teacher-cert-card" style={{ cursor: 'pointer' }} title="Click để phóng to chứng chỉ Thầy Hưng 985/990">
           <div className="cert-card-media-wrap">
-            <img src="/image/chung-chi-thay-hung.webp" alt="Bảng điểm TOEIC chính thức Thầy Hưng đạt 985/990 ETS" className="cert-actual-img" id="teacher-cert-img" loading="lazy" />
+            <img src="/image/chung-chi-thay-hung.webp" alt="Bảng điểm TOEIC chính thức Thầy Hưng đạt 985/990 ETS" className="cert-actual-img" id="teacher-cert-img" width="2048" height="1536" loading="lazy" />
             <div className="cert-zoom-hint">
               <i data-lucide="zoom-in" style={{ width: '16px', height: '16px' }}></i>
               <span>Click để xem rõ bảng điểm gốc</span>
@@ -1493,7 +1493,7 @@ export default function Home() {
 
         {/*  CỘT PHẢI: FORM ĐĂNG KÝ (CHUẨN ẢNH 1)  */}
         <div className="reg-col-right">
-          <div className="reg-form-card">
+          <div className="reg-form-card" id="reg-form-card">
             <form id="toeic-registration-form" className="reg-actual-form">
               <div className="reg-form-row reg-form-2col">
                 <div className="reg-form-group">
@@ -1501,8 +1501,20 @@ export default function Home() {
                   <input type="text" id="fullname" name="name" className="reg-form-input" placeholder="Nguyễn Văn A" required />
                 </div>
                 <div className="reg-form-group">
-                  <label className="reg-form-label" htmlFor="phone">SỐ ĐIỆN THOẠI</label>
-                  <input type="tel" id="phone" name="phone" className="reg-form-input" placeholder="0901 234 567" required />
+                  <label className="reg-form-label" htmlFor="phone">
+                    SỐ ĐIỆN THOẠI <span className="reg-label-highlight">(LIÊN HỆ ZALO)</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="reg-form-input"
+                    placeholder="0901 234 567 (Dùng Zalo)"
+                    required
+                  />
+                  <span className="reg-input-hint">
+                    Đội ngũ Thầy Hưng sẽ liên hệ tư vấn qua Zalo này
+                  </span>
                 </div>
               </div>
 
@@ -1720,6 +1732,18 @@ export default function Home() {
       <p className="consult-modal-subtitle">
         Đội ngũ tư vấn sẽ liên hệ với bạn qua điện thoại / Zalo đã đăng ký trong vòng <strong>30–60 phút</strong> (giờ hành chính).
       </p>
+
+      {/* Thông báo nhắc check tin nhắn chờ & kết bạn Zalo */}
+      <div className="consult-modal-notice-box">
+        <div className="consult-modal-notice-icon">
+          <i data-lucide="bell-ring" style={{ width: '20px', height: '20px' }}></i>
+        </div>
+        <div className="consult-modal-notice-text">
+          <span>
+            <strong>Lưu ý quan trọng:</strong> Bạn nhớ kiểm tra phần <strong>Tin nhắn chờ</strong> và mục <strong>Lời mời kết bạn</strong> (trên Zalo) để đội ngũ Thầy Hưng có thể tư vấn kịp thời và hỗ trợ bạn chu đáo nhất nhé!
+          </span>
+        </div>
+      </div>
 
       <div className="consult-modal-prompt">
         Hoặc, bạn có thể chủ động nhắn tin qua Zalo:

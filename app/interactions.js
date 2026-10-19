@@ -369,12 +369,24 @@ function initRegistrationModal() {
 function initStickyBar() {
   const stickyBar = document.getElementById('sticky-floating-bar');
   const heroSection = document.querySelector('.hero-section');
+  const regSection = document.getElementById('dang-ky');
 
   if (!stickyBar || !heroSection) return () => {};
 
   const handleScroll = () => {
     const heroBottom = heroSection.getBoundingClientRect().bottom;
-    if (heroBottom < 100) {
+
+    // Khi người dùng đã cuộn tới khu vực form đăng ký:
+    // Tự động ẩn thanh sticky bar để không che nút "ĐĂNG KÍ TƯ VẤN NGAY" và giữ màn hình thông thoáng
+    let isInRegistrationArea = false;
+    if (regSection) {
+      const regRect = regSection.getBoundingClientRect();
+      if (regRect.top < window.innerHeight * 0.75 && regRect.bottom > 120) {
+        isInRegistrationArea = true;
+      }
+    }
+
+    if (heroBottom < 100 && !isInRegistrationArea) {
       stickyBar.classList.add('visible');
     } else {
       stickyBar.classList.remove('visible');
@@ -422,13 +434,72 @@ function initCopyButtons() {
 }
 
 /* ==========================================================================
-   7. SMOOTH SCROLLING
+   7. SMOOTH SCROLLING (TỐI ƯU CẢ ĐIỆN THOẠI VÀ MÁY TÍNH - HIỆN FORM ĐẦY ĐỦ NHƯ ẢNH 2)
    ========================================================================== */
+function scrollToRegistrationDestination() {
+  const isMobile = window.innerWidth < 960;
+  const navbarEl = document.getElementById('navbar');
+  const navHeight = navbarEl ? navbarEl.offsetHeight : 70;
+
+  // Trên desktop: cuộn tới #dang-ky để hiển thị trọn vẹn cả 2 cột (thông tin + form) y hệt Ảnh 2
+  // Trên mobile: cuộn trực tiếp tới form card để người dùng thấy ngay form đăng ký đầy đủ
+  const target = isMobile
+    ? (document.getElementById('reg-form-card') || document.querySelector('.reg-form-card') || document.getElementById('toeic-registration-form') || document.getElementById('dang-ky'))
+    : (document.getElementById('dang-ky') || document.getElementById('reg-form-card'));
+
+  if (!target) return;
+
+  const expectedTop = isMobile ? (navHeight + 10) : (navHeight + 15);
+
+  let targetY = target.getBoundingClientRect().top + window.pageYOffset - expectedTop;
+  const distance = Math.abs(targetY - window.pageYOffset);
+
+  // Nếu cự ly cuộn quá xa (> 2500px):
+  // Lướt nhanh đến cự ly gần (cách 600px - 800px) rồi smooth scroll vào đích,
+  // giúp loại bỏ hoàn toàn hiện tượng browser bị timeout hoặc dừng giữa chừng do lazy loading/layout shift
+  if (distance > 2500) {
+    const glideY = targetY > window.pageYOffset ? (targetY - 700) : (targetY + 700);
+    window.scrollTo({ top: glideY, behavior: 'instant' });
+  }
+
+  // Cuộn mượt vào đích chính xác
+  targetY = target.getBoundingClientRect().top + window.pageYOffset - expectedTop;
+  window.scrollTo({ top: targetY, behavior: 'smooth' });
+
+  // Kiểm tra và căn chỉnh lại sau 500ms và 950ms đề phòng có ảnh tải muộn làm xê dịch layout
+  setTimeout(() => {
+    const diff = Math.abs(target.getBoundingClientRect().top - expectedTop);
+    if (diff > 15) {
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.pageYOffset - expectedTop,
+        behavior: 'smooth'
+      });
+    }
+  }, 500);
+
+  setTimeout(() => {
+    const diff = Math.abs(target.getBoundingClientRect().top - expectedTop);
+    if (diff > 12) {
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.pageYOffset - expectedTop,
+        behavior: 'auto'
+      });
+    }
+  }, 950);
+}
+
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
       if (href === '#' || href === '#!') return;
+
+      // Xử lý chuyên biệt cho nút đăng ký tư vấn để đảm bảo hiển thị hoàn hảo như Ảnh 2 trên mọi thiết bị
+      if (href === '#dang-ky' || href === '#dangky') {
+        e.preventDefault();
+        scrollToRegistrationDestination();
+        return;
+      }
 
       const target = document.querySelector(href);
       if (target) {
