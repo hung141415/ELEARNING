@@ -86,7 +86,7 @@ export default function Home() {
       <div className="hero-split-grid">
         {/*  Left Side: Registration CTA & 3 Core Specifications (To lên, tinh gọn)  */}
         <div className="hero-left-col">
-          {/*  CTA Action Card (Chuẩn Ảnh 3: Bỏ giá, ưu đãi giảm 1 triệu 800 tiền học, chỉ còn 3 suất)  */}
+          {/*  CTA Action Card (Chuẩn Ảnh 3: Bỏ giá, ưu đãi giảm 25% học phí, chỉ còn 3 suất)  */}
           <div className="hero-cta-card hero-cta-card-v2">
             <a href="#dang-ky" className="btn btn-accent btn-lg btn-pulse hero-main-cta-btn">
               <span>ĐĂNG KÝ TƯ VẤN & GIỮ CHỖ</span>
@@ -94,7 +94,7 @@ export default function Home() {
             </a>
             <div className="hero-price-tag-row hero-discount-only-row">
               <span className="hero-discount-text">
-                Học phí ưu đãi <strong className="highlight-discount">giảm 1 triệu 800 tiền học</strong> (chỉ còn 3 suất áp dụng giảm giá)
+                Học phí ưu đãi <strong className="highlight-discount">giảm 25% học phí</strong> (chỉ còn 3 suất áp dụng giảm giá)
               </span>
             </div>
 
@@ -197,7 +197,7 @@ export default function Home() {
         <div className="stats-lbl">TOEIC</div>
       </div>
       <div className="stats-col-item">
-        <div className="stats-num" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', whiteSpace: 'nowrap' }}>Hàng trăm</div>
+        <div className="stats-num">400+</div>
         <div className="stats-lbl">Học Viên</div>
       </div>
       <div className="stats-col-item">
@@ -756,7 +756,7 @@ export default function Home() {
           </p>
 
           <p className="instructor-narrative">
-            Đến nay, mình đã trực tiếp kèm cặp <strong>hàng trăm học viên</strong>, giúp rất nhiều bạn bứt phá thành công mốc 600 - 850+ TOEIC, tự tin ra trường đúng hạn, ứng tuyển việc làm và nâng tầm thu nhập.
+            Đến nay, mình đã trực tiếp kèm cặp <strong>400+ học viên</strong>, giúp rất nhiều bạn bứt phá thành công mốc 600 - 850+ TOEIC, tự tin ra trường đúng hạn, ứng tuyển việc làm và nâng tầm thu nhập.
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '1.75rem' }}>
@@ -1333,7 +1333,7 @@ export default function Home() {
               </div>
               <div className="reg-info-text">
                 <div className="reg-info-label">ƯU ĐÃI ĐẶC BIỆT</div>
-                <div className="reg-info-val highlight-gold">Ưu đãi giảm 1 triệu 800 tiền học (chỉ còn 3 suất áp dụng giảm giá)</div>
+                <div className="reg-info-val highlight-gold">Ưu đãi giảm 25% học phí (chỉ còn 3 suất áp dụng giảm giá)</div>
               </div>
             </div>
           </div>
@@ -1594,7 +1594,7 @@ export default function Home() {
           </div>
           <div className="faq-content-pane">
             <div className="faq-content-inner">
-              Khóa học TOEIC ONLINE là chương trình đào tạo chuyên sâu <strong>có thu phí trọn gói cho toàn bộ 36 buổi Live (90 ngày)</strong> kèm ưu đãi giảm 1 triệu 800 tiền học (chỉ còn 3 suất áp dụng giảm giá). Bạn được tặng kèm toàn bộ quyền lợi: Nền tảng app luyện thi sát đề 90%, File 1.000 từ vựng độc quyền, Video Record lưu lại, các bài thi thử chấm sửa lỗi 1-1 và hỗ trợ giải đáp 24/7. Cam kết 100% không phát sinh thêm bất kỳ chi phí nào!
+              Khóa học TOEIC ONLINE là chương trình đào tạo chuyên sâu <strong>có thu phí trọn gói cho toàn bộ 36 buổi Live (90 ngày)</strong> kèm ưu đãi giảm 25% học phí (chỉ còn 3 suất áp dụng giảm giá). Bạn được tặng kèm toàn bộ quyền lợi: Nền tảng app luyện thi sát đề 90%, File 1.000 từ vựng độc quyền, Video Record lưu lại, các bài thi thử chấm sửa lỗi 1-1 và hỗ trợ giải đáp 24/7. Cam kết 100% không phát sinh thêm bất kỳ chi phí nào!
             </div>
           </div>
         </div>
@@ -1706,7 +1706,7 @@ export default function Home() {
         <div className="sticky-badge-row">
           <span className="sticky-offer-badge">
             <i data-lucide="sparkles" style={{ width: '13px', height: '13px' }}></i>
-            <span>Ưu đãi giảm 1 triệu 800 tiền học (Chỉ còn 3 suất áp dụng giảm giá)</span>
+            <span>Ưu đãi giảm 25% học phí (Chỉ còn 3 suất áp dụng giảm giá)</span>
           </span>
         </div>
       </div>
