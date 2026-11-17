@@ -934,7 +934,7 @@ function initRoadmapFlowEffect() {
 function initNavbarScrollSpy() {
   if (typeof window === 'undefined') return () => {};
 
-  const sectionIds = ['noi-dau', 'feedback', 'giang-vien', 'chuyen-doi', 'lo-trinh', 'dang-ky'];
+  const sectionIds = ['feedback', 'giang-vien', 'chuyen-doi', 'lo-trinh', 'dang-ky'];
 
   const sections = sectionIds.map((id) => {
     const el = document.getElementById(id);

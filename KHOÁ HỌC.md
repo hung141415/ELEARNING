@@ -1,4 +1,4 @@
-﻿"Tôi đang tạo một sản phẩm số hoàn chỉnh cho [THỊ TRƯỜNG MỤC TIÊU] đang gặp [VẤN ĐỀ].\
+"Tôi đang tạo một sản phẩm số hoàn chỉnh cho [THỊ TRƯỜNG MỤC TIÊU] đang gặp [VẤN ĐỀ].\
 \
 Tôi muốn viết nội dung trang bán hàng (Sales Page).\
 \
@@ -390,8 +390,8 @@ NỘI DUNG KHÓA HỌC:
 
 THÔNG TIN GIẢNG VIÊN:
 
-Xin chào! Mình là Hưng – Người đào tạo TOEIC đạt 985/990 TOEIC với 5 năm kinh nghiệm giảng dạy TOEIC. LÀ 1 NGƯỜI TỰ HỌC TOEIC, TÔI ĐÃ ĐÚC KẾT ĐƯỢC QUY TRÌNH HỌC TOEIC THỰC CHIẾN
+Xin chào! Mình là Hưng – Người đào tạo TOEIC đạt 985/990 TOEIC với 4 năm kinh nghiệm giảng dạy TOEIC. LÀ 1 NGƯỜI TỰ HỌC TOEIC, TÔI ĐÃ ĐÚC KẾT ĐƯỢC QUY TRÌNH HỌC TOEIC THỰC CHIẾN
 
-VÀ đã giúp hơn 400 bạn HỌC VIÊN đạt mục tiêu TOEIC,cải thiện kỹ năng Nghe – Đọc và tự tin hơn trong học tập, công việc.
+VÀ đã giúp hàng trăm học viên đạt mục tiêu TOEIC,cải thiện kỹ năng Nghe – Đọc và tự tin hơn trong học tập, công việc.
 
 

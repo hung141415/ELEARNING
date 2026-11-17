@@ -26,7 +26,6 @@ export default function Home() {
 
       <nav className="nav-menu" aria-label="Điều hướng chính">
         <ul className="nav-links">
-          <li><a href="#noi-dau" className="nav-link">Khó Khăn Hay Gặp</a></li>
           <li><a href="#feedback" className="nav-link">Kết Quả Học Viên</a></li>
           <li><a href="#giang-vien" className="nav-link">Thông Tin Giảng Viên</a></li>
           <li><a href="#chuyen-doi" className="nav-link">Kết Quả Sau Khi Học Xong</a></li>
@@ -44,7 +43,6 @@ export default function Home() {
     {/* Mobile Quick Navigation Strip */}
     <nav className="navbar-mobile-nav" aria-label="Điều hướng nhanh mobile">
       <div className="navbar-mobile-scroll">
-        <a href="#noi-dau" className="mobile-nav-link">Khó Khăn Hay Gặp</a>
         <a href="#feedback" className="mobile-nav-link">Kết Quả Học Viên</a>
         <a href="#giang-vien" className="mobile-nav-link">Thông Tin Giảng Viên</a>
         <a href="#chuyen-doi" className="mobile-nav-link">Kết Quả Sau Khi Học Xong</a>
@@ -88,7 +86,7 @@ export default function Home() {
       <div className="hero-split-grid">
         {/*  Left Side: Registration CTA & 3 Core Specifications (To lên, tinh gọn)  */}
         <div className="hero-left-col">
-          {/*  CTA Action Card (Chuẩn Ảnh 3: Bỏ giá, chỉ để ưu đãi 35% còn lại 5 suất, bỏ đếm ngược)  */}
+          {/*  CTA Action Card (Chuẩn Ảnh 3: Bỏ giá, ưu đãi giảm 1 triệu 800 tiền học, chỉ còn 3 suất)  */}
           <div className="hero-cta-card hero-cta-card-v2">
             <a href="#dang-ky" className="btn btn-accent btn-lg btn-pulse hero-main-cta-btn">
               <span>ĐĂNG KÝ TƯ VẤN & GIỮ CHỖ</span>
@@ -96,7 +94,7 @@ export default function Home() {
             </a>
             <div className="hero-price-tag-row hero-discount-only-row">
               <span className="hero-discount-text">
-                Học phí ưu đãi giảm giá đặc biệt <strong className="highlight-discount">35%</strong> (còn lại 5 suất)
+                Học phí ưu đãi <strong className="highlight-discount">giảm 1 triệu 800 tiền học</strong> (chỉ còn 3 suất áp dụng giảm giá)
               </span>
             </div>
 
@@ -199,7 +197,7 @@ export default function Home() {
         <div className="stats-lbl">TOEIC</div>
       </div>
       <div className="stats-col-item">
-        <div className="stats-num">500+</div>
+        <div className="stats-num" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.2rem)', whiteSpace: 'nowrap' }}>Hàng trăm</div>
         <div className="stats-lbl">Học Viên</div>
       </div>
       <div className="stats-col-item">
@@ -209,102 +207,6 @@ export default function Home() {
       <div className="stats-col-item">
         <div className="stats-num">50+</div>
         <div className="stats-lbl">Đề Thi</div>
-      </div>
-    </div>
-  </section>
-
-    {/*  ==========================================================================
-       SECTION 1: NỖI ĐAU HỌC VIÊN (6 NỖI ĐAU CỐT LÕI & CÂU DẪN GIẢI PHÁP)
-       ==========================================================================  */}
-  <section className="section-padding story-section section-light" id="noi-dau">
-    <div className="container">
-      
-      {/* Section Header */}
-      <div className="text-center" style={{ marginBottom: '2rem' }}>
-        <span className="section-badge">Khó Khăn Hay Gặp</span>
-        <h2 className="section-title">Bạn Có Đang Mắc Kẹt Trong <span className="highlight">6 Nỗi Đau Này?</span></h2>
-      </div>
-
-      {/*  6 Core Struggles Narrative Box  */}
-      <div className="story-narrative-container">
-        <p className="story-lead-sentence">
-          5 năm qua đồng hành cùng hàng nghìn học viên, mình nhận ra hầu hết những ai tự học TOEIC mãi không tiến bộ đều đang mắc kẹt trong <strong>6 nỗi đau cốt lõi</strong> này:
-        </p>
-
-        <div className="story-points-grid">
-          {/* Cột trái: 3 nỗi đau */}
-          <div className="story-points-col">
-            <div className="story-point-item point-struggle">
-              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div className="story-point-title">
-                <strong>1. Cày từ vựng hùng hục nhưng hôm sau quên sạch</strong>
-              </div>
-            </div>
-
-            <div className="story-point-item point-struggle">
-              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div className="story-point-title">
-                <strong>2. Bật audio nghe như "vịt nghe sấm", phản xạ không kịp</strong>
-              </div>
-            </div>
-
-            <div className="story-point-item point-struggle">
-              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div className="story-point-title">
-                <strong>3. Part 5 mất cả phút một câu vì loay hoay dịch nghĩa</strong>
-              </div>
-            </div>
-          </div>
-
-          {/* Cột phải: 3 nỗi đau còn lại */}
-          <div className="story-points-col">
-            <div className="story-point-item point-struggle">
-              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div className="story-point-title">
-                <strong>4. Part 7 là ác mộng kinh hoàng, đọc trước quên sau</strong>
-              </div>
-            </div>
-
-            <div className="story-point-item point-struggle">
-              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div className="story-point-title">
-                <strong>5. Càng tự học càng hoang mang, mất phương hướng</strong>
-              </div>
-            </div>
-
-            <div className="story-point-item point-struggle">
-              <i data-lucide="x-circle" style={{ color: '#EF4444', width: '20px', height: '20px', flexShrink: '0' }}></i>
-              <div className="story-point-title">
-                <strong>6. Điểm số giậm chân tại chỗ 300–400, lỡ dở cơ hội tương lai</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/*  1 Câu dẫn đến giải pháp theo đúng yêu cầu người dùng  */}
-        <div className="story-truth-box" style={{ marginTop: '2rem' }}>
-          <div className="story-truth-header">
-            <span className="truth-header-badge">
-              <i data-lucide="sparkles" style={{ width: '14px', height: '14px' }}></i>
-              SỰ THẬT CỐT LÕI
-            </span>
-          </div>
-          <div className="truth-single-thesis">
-            <p className="truth-lead-text" style={{ fontSize: '1.15rem', fontWeight: '700', color: '#0F172A', lineHeight: '1.6', margin: '0' }}>
-              Vấn đề không phải bạn kém cỏi hay thiếu nỗ lực, mà là bạn chưa từng được tiếp cận với một phương pháp học thực chiến và người thầy kèm cặp trực tiếp, bóc tách từng lỗi sai hay gặp trong phòng thi.
-            </p>
-          </div>
-        </div>
-
-        {/*  Transition Bridge: Dẫn dắt mượt mà vào Feedback học viên  */}
-        <div className="story-bridge-transition" style={{ marginTop: '1.75rem' }}>
-          <div className="bridge-tag-row">
-            <span className="bridge-tag">KẾT QUẢ THỰC TẾ NÓI LÊN TẤT CẢ</span>
-          </div>
-          <p className="bridge-quote-text" style={{ marginTop: '0.5rem', fontSize: '1.05rem', lineHeight: '1.6', color: '#334155' }}>
-            Hàng trăm học viên của mình có xuất phát điểm từ con số 0 đã chứng minh điều đó. Dưới đây là KẾT QUẢ và CẢM NHẬN THỰC TẾ từ họ sau khi học xong khóa học TOEIC ONLINE này:
-          </p>
-        </div>
       </div>
     </div>
   </section>
@@ -839,10 +741,10 @@ export default function Home() {
         {/*  Instructor Details Column  */}
         <div className="instructor-details">
           <h2 className="instructor-name-title">Thầy Hưng <span className="accent-name">(Mr. Hưng TOEIC)</span></h2>
-          <div className="instructor-role-badge">Người đào tạo TOEIC đạt 985/990 TOEIC • Đã thi TOEIC nhiều lần • 5 năm kinh nghiệm</div>
+          <div className="instructor-role-badge">Người đào tạo TOEIC đạt 985/990 TOEIC • Đã thi TOEIC nhiều lần • 4 năm kinh nghiệm</div>
 
           <p className="instructor-narrative">
-            <strong>Xin chào các bạn! Mình là Hưng – Người đào tạo TOEIC đạt 985/990 TOEIC với 5 năm kinh nghiệm trực tiếp giảng dạy TOEIC chuyên sâu.</strong>
+            <strong>Xin chào các bạn! Mình là Hưng – Người đào tạo TOEIC đạt 985/990 TOEIC với 4 năm kinh nghiệm trực tiếp giảng dạy TOEIC chuyên sâu.</strong>
           </p>
 
           <p className="instructor-narrative">
@@ -854,7 +756,7 @@ export default function Home() {
           </p>
 
           <p className="instructor-narrative">
-            Đến nay, mình đã trực tiếp kèm cặp hơn <strong>400+ bạn học viên</strong>, giúp rất nhiều bạn bứt phá thành công mốc 600 - 850+ TOEIC, tự tin ra trường đúng hạn, ứng tuyển việc làm và nâng tầm thu nhập.
+            Đến nay, mình đã trực tiếp kèm cặp <strong>hàng trăm học viên</strong>, giúp rất nhiều bạn bứt phá thành công mốc 600 - 850+ TOEIC, tự tin ra trường đúng hạn, ứng tuyển việc làm và nâng tầm thu nhập.
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '1.75rem' }}>
@@ -1383,80 +1285,6 @@ export default function Home() {
   </section>
 
   {/*  ==========================================================================
-       SECTION 7: ĐỐI TƯỢNG PHÙ HỢP VÀ KHÔNG PHÙ HỢP (SCREENSHOT 2 STYLE)
-       ==========================================================================  */}
-  <section className="section-padding audience-fit-section section-light" id="phu-hop">
-    <div className="container">
-      <div className="text-center">
-        <h2 className="section-title">Chương trình này có thực sự <span className="highlight">phù hợp với bạn?</span></h2>
-        <p className="section-subtitle">
-          Chúng tôi đặt chất lượng và kết quả học viên lên hàng đầu, do đó khóa học chỉ dành cho những bạn thực sự nghiêm túc:
-        </p>
-      </div>
-
-      <div className="audience-fit-grid">
-        {/*  Fit Box: YES  */}
-        <div className="fit-card fit-yes">
-          <div className="fit-card-title">
-            CHƯƠNG TRÌNH NÀY SẼ HOÀN HẢO NẾU BẠN LÀ:
-          </div>
-
-          <div className="fit-list">
-            <div className="fit-item">
-              <i data-lucide="check" style={{ width: '18px', height: '18px' }}></i>
-              <div><strong>Sinh viên & người đi làm cần chuẩn 600+ hoặc muốn bứt phá 700 – 800+ TOEIC:</strong> Khóa học đảm bảo đầu ra 600+ sau khi hoàn thành cho các bạn mất gốc, nhưng giá trị và kinh nghiệm thực chiến của Thầy Hưng thừa sức giúp những bạn đã có nền tảng đạt 700, 800+, thậm chí 895 TOEIC bình thường để đổi điểm, xin việc và thăng tiến!</div>
-            </div>
-
-            <div className="fit-item">
-              <i data-lucide="check" style={{ width: '18px', height: '18px' }}></i>
-              <div>Người đi làm bận rộn muốn nâng điểm TOEIC để ứng tuyển công ty đa quốc gia, mở rộng cơ hội thăng tiến, tăng lương, hoặc ứng tuyển công việc.</div>
-            </div>
-
-            <div className="fit-item">
-              <i data-lucide="check" style={{ width: '18px', height: '18px' }}></i>
-              <div>Người mất gốc tiếng Anh lâu năm, sợ nghe, sợ đọc, cần một người thầy cầm tay chỉ việc, sửa từng lỗi phát âm và thúc đẩy kỷ luật mỗi ngày.</div>
-            </div>
-
-            <div className="fit-item">
-              <i data-lucide="check" style={{ width: '18px', height: '18px' }}></i>
-              <div>Bất kỳ ai đã mệt mỏi với việc tự học video thu sẵn chán nản, cày đề bừa bãi tốn hàng triệu đồng lệ phí thi mà điểm vẫn giậm chân tại chỗ.</div>
-            </div>
-          </div>
-        </div>
-
-        {/*  Fit Box: NO  */}
-        <div className="fit-card fit-no">
-          <div className="fit-card-title">
-            CHƯƠNG TRÌNH NÀY KHÔNG PHÙ HỢP NẾU BẠN LÀ:
-          </div>
-
-          <div className="fit-list">
-            <div className="fit-item">
-              <i data-lucide="x" style={{ width: '18px', height: '18px' }}></i>
-              <div>Người đang tìm kiếm các "công thức thần thánh", mẹo đánh lụi hay kiến thức "mì ăn liền" để có kết quả nhanh mà không muốn bỏ công sức thực hành.</div>
-            </div>
-
-            <div className="fit-item">
-              <i data-lucide="x" style={{ width: '18px', height: '18px' }}></i>
-              <div>Người lười biếng, vào lớp tắt cam tắt mic, không sẵn sàng bật mic tương tác và đọc dịch khi thầy gọi tên để sửa lỗi.</div>
-            </div>
-
-            <div className="fit-item">
-              <i data-lucide="x" style={{ width: '18px', height: '18px' }}></i>
-              <div>Người chỉ thích mua video lưu về máy để đó cho yên tâm chứ không muốn tham gia học Live tương tác 90 phút/buổi.</div>
-            </div>
-
-            <div className="fit-item">
-              <i data-lucide="x" style={{ width: '18px', height: '18px' }}></i>
-              <div>Người đã đạt trình độ 950+ TOEIC hoặc tìm kiếm các chứng chỉ sư phạm ngôn ngữ học thuật chuyên sâu.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    {/*  ==========================================================================
        SECTION 8: ĐĂNG KÝ THAM GIA CHƯƠNG TRÌNH (CHUẨN ẢNH 1 - CÓ THU PHÍ)
        ==========================================================================  */}
   <section className="section-padding reg-section" id="dang-ky">
@@ -1483,7 +1311,7 @@ export default function Home() {
               </div>
               <div className="reg-info-text">
                 <div className="reg-info-label">NGÀY KHAI GIẢNG</div>
-                <div className="reg-info-val">Thứ 6, ngày 6 tháng 11</div>
+                <div className="reg-info-val">Thứ 2, ngày 7 tháng 12</div>
               </div>
             </div>
 
@@ -1505,7 +1333,7 @@ export default function Home() {
               </div>
               <div className="reg-info-text">
                 <div className="reg-info-label">ƯU ĐÃI ĐẶC BIỆT</div>
-                <div className="reg-info-val highlight-gold">Còn 5 suất để nhận ưu đãi giảm giá 35% giá trị khóa học</div>
+                <div className="reg-info-val highlight-gold">Ưu đãi giảm 1 triệu 800 tiền học (chỉ còn 3 suất áp dụng giảm giá)</div>
               </div>
             </div>
           </div>
@@ -1525,40 +1353,42 @@ export default function Home() {
         <div className="reg-col-right">
           <div className="reg-form-card" id="reg-form-card">
             <form id="toeic-registration-form" className="reg-actual-form">
-              <div className="reg-form-row reg-form-2col">
-                <div className="reg-form-group">
-                  <label className="reg-form-label" htmlFor="fullname">HỌ VÀ TÊN</label>
-                  <input type="text" id="fullname" name="name" className="reg-form-input" placeholder="Nguyễn Văn A" required />
-                </div>
-                <div className="reg-form-group">
-                  <label className="reg-form-label" htmlFor="phone">
-                    SỐ ĐIỆN THOẠI <span className="reg-label-highlight">(LIÊN HỆ ZALO)</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="reg-form-input"
-                    placeholder="0901 234 567 (Dùng Zalo)"
-                    required
-                  />
-                  <span className="reg-input-hint">
-                    Đội ngũ Thầy Hưng sẽ liên hệ tư vấn qua Zalo này
-                  </span>
-                </div>
-              </div>
-
               <div className="reg-form-group">
-                <label className="reg-form-label" htmlFor="email">EMAIL</label>
-                <input type="email" id="email" name="email" className="reg-form-input" placeholder="email@example.com" required />
+                <label className="reg-form-label" htmlFor="fullname">HỌ VÀ TÊN</label>
+                <input type="text" id="fullname" name="name" className="reg-form-input" placeholder="Nguyễn Văn A" required />
               </div>
 
-              <div className="reg-form-group">
-                <label className="reg-form-label" htmlFor="occupation">NGHỀ NGHIỆP / LĨNH VỰC</label>
-                <input type="text" id="occupation" name="occupation" className="reg-form-input" placeholder="VD: Sinh viên, Người đi làm, Mất gốc..." />
+              <div className="reg-form-group" style={{ marginTop: '0.75rem' }}>
+                <label className="reg-form-label" htmlFor="phone">
+                  SỐ ĐIỆN THOẠI <span className="reg-label-highlight">(LIÊN HỆ ZALO)</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  className="reg-form-input"
+                  placeholder="0901 234 567 (Dùng Zalo)"
+                  required
+                />
+                <div className="reg-phone-notice" style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.45rem',
+                  marginTop: '0.5rem',
+                  padding: '0.55rem 0.75rem',
+                  background: 'rgba(217, 119, 6, 0.15)',
+                  border: '1px solid rgba(245, 158, 11, 0.4)',
+                  borderRadius: '6px',
+                  fontSize: '0.825rem',
+                  lineHeight: '1.45',
+                  color: '#FCD34D'
+                }}>
+                  <span style={{ fontSize: '1rem', lineHeight: '1', flexShrink: 0 }}>⚠️</span>
+                  <span>Bạn hãy để ý Zalo vì đội ngũ thầy Hưng sẽ liên hệ tư vấn qua số Zalo này.</span>
+                </div>
               </div>
 
-              <button type="submit" id="btn-submit-registration" className="btn-reg-luxury">
+              <button type="submit" id="btn-submit-registration" className="btn-reg-luxury" style={{ marginTop: '1.25rem' }}>
                 <span>ĐĂNG KÍ TƯ VẤN NGAY</span>
               </button>
 
@@ -1764,7 +1594,7 @@ export default function Home() {
           </div>
           <div className="faq-content-pane">
             <div className="faq-content-inner">
-              Khóa học TOEIC ONLINE là chương trình đào tạo chuyên sâu <strong>có thu phí trọn gói cho toàn bộ 36 buổi Live (90 ngày)</strong> kèm ưu đãi giảm giá đặc biệt 35% cho 5 suất đăng ký sớm nhất. Bạn được tặng kèm toàn bộ quyền lợi: Nền tảng app luyện thi sát đề 90%, File 1.000 từ vựng độc quyền, Video Record lưu lại, các bài thi thử chấm sửa lỗi 1-1 và hỗ trợ giải đáp 24/7. Cam kết 100% không phát sinh thêm bất kỳ chi phí nào!
+              Khóa học TOEIC ONLINE là chương trình đào tạo chuyên sâu <strong>có thu phí trọn gói cho toàn bộ 36 buổi Live (90 ngày)</strong> kèm ưu đãi giảm 1 triệu 800 tiền học (chỉ còn 3 suất áp dụng giảm giá). Bạn được tặng kèm toàn bộ quyền lợi: Nền tảng app luyện thi sát đề 90%, File 1.000 từ vựng độc quyền, Video Record lưu lại, các bài thi thử chấm sửa lỗi 1-1 và hỗ trợ giải đáp 24/7. Cam kết 100% không phát sinh thêm bất kỳ chi phí nào!
             </div>
           </div>
         </div>
@@ -1876,7 +1706,7 @@ export default function Home() {
         <div className="sticky-badge-row">
           <span className="sticky-offer-badge">
             <i data-lucide="sparkles" style={{ width: '13px', height: '13px' }}></i>
-            <span>Ưu đãi giảm 35% học phí (Còn 5 suất)</span>
+            <span>Ưu đãi giảm 1 triệu 800 tiền học (Chỉ còn 3 suất áp dụng giảm giá)</span>
           </span>
         </div>
       </div>
