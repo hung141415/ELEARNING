@@ -29,7 +29,6 @@ export default function Home() {
           <li><a href="#feedback" className="nav-link">Kết Quả Học Viên</a></li>
           <li><a href="#giang-vien" className="nav-link">Thông Tin Giảng Viên</a></li>
           <li><a href="#chuyen-doi" className="nav-link">Kết Quả Sau Khi Học Xong</a></li>
-          <li><a href="#lo-trinh" className="nav-link">Lộ Trình Học Tập</a></li>
         </ul>
       </nav>
 
@@ -46,7 +45,6 @@ export default function Home() {
         <a href="#feedback" className="mobile-nav-link">Kết Quả Học Viên</a>
         <a href="#giang-vien" className="mobile-nav-link">Thông Tin Giảng Viên</a>
         <a href="#chuyen-doi" className="mobile-nav-link">Kết Quả Sau Khi Học Xong</a>
-        <a href="#lo-trinh" className="mobile-nav-link">Lộ Trình Học Tập</a>
       </div>
     </nav>
   </header>
@@ -74,9 +72,6 @@ export default function Home() {
           <span className="hero-title-sub">Học Xong Thi Luôn - Đảm Bảo Chuẩn 600+ , Tự Tin Bứt Phá 800+!</span>
         </h1>
 
-        <p className="hero-lead-text-center">
-          Xóa bỏ nỗi sợ tiếng Anh với lộ trình 36 buổi bứt phá trọn vẹn CẤP TỐC trong 90 ngày. Trải nghiệm hệ thống cô đọng, tập trung 100% vào <strong className="text-light-brown">KĨ NĂNG THỰC CHIẾN PHÒNG THI</strong> thay vì cày cuốc lý thuyết rập khuôn. Khóa học đảm bảo chuẩn đầu ra 600+ sau khi học xong, đồng thời tối ưu hóa kỹ năng xử lý bài thi để bạn hoàn toàn có thể bứt phá 800+ bình thường.
-        </p>
         <p className="hero-lead-zero-note">
           (Nếu như bạn MẤT GỐC thì KHÔNG SAO vì đây là lộ trình dạy CHI TIẾT TỪ CON SỐ 0)
         </p>
@@ -743,63 +738,32 @@ export default function Home() {
           <h2 className="instructor-name-title">Thầy Hưng <span className="accent-name">(Mr. Hưng TOEIC)</span></h2>
           <div className="instructor-role-badge">Người đào tạo TOEIC đạt 985/990 TOEIC • Đã thi TOEIC nhiều lần • 4 năm kinh nghiệm</div>
 
-          <p className="instructor-narrative">
-            <strong>Xin chào các bạn! Mình là Hưng – Người đào tạo TOEIC đạt 985/990 TOEIC với 4 năm kinh nghiệm trực tiếp giảng dạy TOEIC chuyên sâu.</strong>
-          </p>
+          {/*  Chứng chỉ điểm số TOEIC ETS Thầy Hưng đưa trực tiếp vào đây  */}
+          <div className="certificate-single-display-card" id="teacher-cert-card" style={{ cursor: 'pointer', marginTop: '1.25rem' }} title="Click để phóng to chứng chỉ Thầy Hưng 985/990">
+            <div className="cert-card-media-wrap" style={{ minHeight: 'unset', padding: '1rem' }}>
+              <img src="/image/chung-chi-thay-hung.webp" alt="Bảng điểm TOEIC chính thức Thầy Hưng đạt 985/990 ETS" className="cert-actual-img" id="teacher-cert-img" width="2048" height="1536" loading="lazy" style={{ maxHeight: '340px' }} />
+              <div className="cert-zoom-hint">
+                <i data-lucide="zoom-in" style={{ width: '16px', height: '16px' }}></i>
+                <span>Click để xem rõ bảng điểm gốc</span>
+              </div>
+            </div>
+            <div className="cert-card-bottom-info" style={{ padding: '1.1rem 1.4rem' }}>
+              <div className="cert-score-callout">
+                <div className="cert-big-score" style={{ fontSize: '1.85rem' }}>985 <span className="cert-score-denominator">/ 990 TOEIC</span></div>
+                <div className="cert-score-label">Listening 495 • Reading 490</div>
+              </div>
+              <div className="cert-meta-details">
+                <div className="cert-org-title" style={{ fontSize: '0.925rem' }}>Chứng Chỉ Khảo Thí Quốc Tế Do ETS & IIG Việt Nam Cấp</div>
+                <div className="cert-org-desc" style={{ fontSize: '0.8rem' }}>Thầy Hưng (985 TOEIC) trực tiếp đứng lớp 100% các buổi Zoom Live.</div>
+              </div>
+            </div>
+          </div>
 
-          <p className="instructor-narrative">
-            Là một người <strong>tự học TOEIC hoàn toàn từ con số 0</strong>, mình hiểu sâu sắc từng cảm giác bất lực của người mất gốc: học từ vựng trước quên sau, nghe audio bị ngợp, đọc dịch chậm chạp.
-          </p>
-
-          <p className="instructor-narrative">
-            Chính vì vậy, mình đã <strong>trực tiếp đi thi TOEIC nhiều lần</strong> để cập nhật liên tục mọi thay đổi trong format ra đề của ETS, từ đó đúc kết nên <em>Hệ thống 36 buổi Live thực chiến phòng thi</em> — dạy trực tiếp qua Zoom, gọi từng người đọc dịch, sửa từng âm IPA để bạn học 1 lần là chắc chắn đạt mục tiêu.
-          </p>
-
-          <p className="instructor-narrative">
-            Đến nay, mình đã trực tiếp kèm cặp <strong>400+ học viên</strong>, giúp rất nhiều bạn bứt phá thành công mốc 600 - 850+ TOEIC, tự tin ra trường đúng hạn, ứng tuyển việc làm và nâng tầm thu nhập.
-          </p>
-
-          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '1.75rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '1.5rem' }}>
             <a href="#dang-ky" className="btn btn-accent" style={{ margin: '0 auto', textAlign: 'center' }}>
               <span>Đăng Ký Học Live Cùng Thầy Hưng</span>
               <i data-lucide="arrow-right" style={{ width: '18px', height: '18px' }}></i>
             </a>
-          </div>
-        </div>
-      </div>
-
-      {/*  Single Certificate Showcase Container (1 phần chuyên nghiệp duy nhất để bỏ ảnh chứng chỉ)  */}
-      <div className="certificates-showcase-box">
-        <div className="certificates-showcase-header">
-          <div className="cert-single-top-badge">
-            <i data-lucide="award" style={{ width: '16px', height: '16px' }}></i>
-            <span>BẢNG ĐIỂM THỰC TẾ IIG VIỆT NAM • ETS</span>
-          </div>
-          <h3 className="certificates-showcase-title">
-            Chứng Chỉ Điểm Số TOEIC ETS Thầy Hưng
-          </h3>
-          <p className="certificates-showcase-subtitle">
-            Minh chứng năng lực từ người thầy đạt 985/990 TOEIC ETS thực chiến.
-          </p>
-        </div>
-
-        <div className="certificate-single-display-card" id="teacher-cert-card" style={{ cursor: 'pointer' }} title="Click để phóng to chứng chỉ Thầy Hưng 985/990">
-          <div className="cert-card-media-wrap">
-            <img src="/image/chung-chi-thay-hung.webp" alt="Bảng điểm TOEIC chính thức Thầy Hưng đạt 985/990 ETS" className="cert-actual-img" id="teacher-cert-img" width="2048" height="1536" loading="lazy" />
-            <div className="cert-zoom-hint">
-              <i data-lucide="zoom-in" style={{ width: '16px', height: '16px' }}></i>
-              <span>Click để xem rõ bảng điểm gốc</span>
-            </div>
-          </div>
-          <div className="cert-card-bottom-info">
-            <div className="cert-score-callout">
-              <div className="cert-big-score">985 <span className="cert-score-denominator">/ 990 TOEIC</span></div>
-              <div className="cert-score-label">Listening 495 • Reading 490</div>
-            </div>
-            <div className="cert-meta-details">
-              <div className="cert-org-title">Chứng Chỉ Khảo Thí Quốc Tế Do ETS & IIG Việt Nam Cấp</div>
-              <div className="cert-org-desc">Thầy Hưng (985 TOEIC) trực tiếp đứng lớp 100% các buổi Zoom Live.</div>
-            </div>
           </div>
         </div>
       </div>
@@ -894,202 +858,6 @@ export default function Home() {
     </div>
   </section>
 
-  {/*  ==========================================================================
-       SECTION 5: LỘ TRÌNH HỌC LUÔN (5 - 6 GẠCH ĐẦU DÒNG CÔ ĐỌNG THỰC CHIẾN)
-       ==========================================================================  */}
-    <section className="section-padding curriculum-compact-section" id="lo-trinh">
-    <div className="container">
-      <div className="text-center">
-        <span className="section-badge">NỘI DUNG CHƯƠNG TRÌNH ĐÀO TẠO</span>
-        <h2 className="section-title">Lộ Trình Bứt Phá <span className="highlight">600 + TOEIC Thực Chiến</span><br /><span className="title-sub-break">Trong 36 Buổi</span></h2>
-        <p className="section-subtitle">
-          Đảm bảo chuẩn 600+ sau khóa học cho người mất gốc — Đồng thời rèn luyện kỹ năng xử lý đề ETS để bạn hoàn toàn có thể bứt phá 800+ bình thường. Được thiết kế theo trục thời gian 3 giai đoạn tinh gọn &amp; thực chiến:
-        </p>
-      </div>
-
-      {/*  Mạnh Vibe Hanoi Style 3-Column Timeline Roadmap  */}
-      <div className="mv-roadmap-wrapper">
-        <div className="mv-roadmap-timeline" id="mv-roadmap-timeline">
-          {/*  Flowing Progress Beam Track (Mạnh Vibe style: Dòng chảy khi lướt xuống)  */}
-          <div className="mv-roadmap-track">
-            <div className="mv-roadmap-beam" id="mv-roadmap-beam"></div>
-          </div>
-
-          {/*  Giai Đoạn 01  */}
-          <div className="mv-roadmap-row">
-            <div className="mv-roadmap-left">
-              <span className="mv-stage-pill">• GIAI ĐOẠN 01</span>
-              <h3 className="mv-stage-left-title">Xóa Mù Nền Tảng &amp; Luyện Nghe Thực Chiến</h3>
-              <div className="mv-stage-sessions-tag">Xây Nền Vững Chắc • Listening Part 1 – 4</div>
-              <div className="mv-stage-illustration-wrap">
-                <img
-                  src="/image/stage-1-illustration.jpg"
-                  alt="Minh họa Giai đoạn 01: Xóa Mù Nền Tảng & Luyện Nghe Thực Chiến"
-                  className="mv-stage-illustration-img"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="mv-roadmap-center">
-              <div className="mv-roadmap-node">01</div>
-              <div className="mv-roadmap-spine"></div>
-            </div>
-            <div className="mv-roadmap-right">
-              <div className="mv-roadmap-card">
-                <div className="mv-mobile-stage-bar">
-                  <span className="mv-stage-pill">• GIAI ĐOẠN 01</span>
-                  <span className="mv-stage-sessions-tag">Xây Nền Vững Chắc • Listening Part 1 – 4</span>
-                </div>
-                <div className="mv-mobile-stage-illustration">
-                  <img
-                    src="/image/stage-1-illustration.jpg"
-                    alt="Minh họa Giai đoạn 01: Xóa Mù Nền Tảng & Luyện Nghe Thực Chiến"
-                    className="mv-stage-illustration-img"
-                    loading="lazy"
-                  />
-                </div>
-                <h4 className="mv-card-headline">Xóa Mù Nền Tảng &amp; Làm Chủ Kỹ Thuật Nghe Thực Chiến Part 1 – Part 4</h4>
-                <div className="mv-card-bullets">
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span><strong>Nắm trọn bẫy phần NGHE TOEIC:</strong> Kỹ thuật "săn" Keyword và phương pháp nghe hiểu từ Part 1 đến Part 4 mà không cần phải dịch 100% bài nghe.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span><strong>Kiến thức siêu nền tảng:</strong> Nắm chắc công thức, cách dùng của các thì cơ bản và công thức câu bị động trong tiếng Anh.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span><strong>1.000 từ vựng cốt lõi:</strong> Tích lũy 1.000 từ vựng tiếng Anh cơ bản, giúp bạn xóa bỏ hoàn toàn tình trạng nghe tiếng Anh mãi mà không hiểu gì.</span>
-                  </div>
-                </div>
-                <div className="mv-deliverable-badge">
-                  <i data-lucide="target" style={{ width: '16px', height: '16px' }}></i>
-                  <span>Mục tiêu giai đoạn: Xóa sạch mất gốc, làm chủ phản xạ bẫy nghe Part 1 - 4 và tự tin đạt 350+ Listening.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/*  Giai Đoạn 02  */}
-          <div className="mv-roadmap-row">
-            <div className="mv-roadmap-left">
-              <span className="mv-stage-pill">• GIAI ĐOẠN 02</span>
-              <h3 className="mv-stage-left-title">Reading Bứt Phá &amp; Mẹo Giải Nhanh 3 Giây</h3>
-              <div className="mv-stage-sessions-tag">Đột Phá Điểm Số • Reading Part 5, 6 &amp; 7</div>
-              <div className="mv-stage-illustration-wrap">
-                <img
-                  src="/image/stage-2-illustration.jpg"
-                  alt="Minh họa Giai đoạn 02: Reading Bứt Phá & Mẹo Giải Nhanh 3 Giây"
-                  className="mv-stage-illustration-img"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="mv-roadmap-center">
-              <div className="mv-roadmap-node">02</div>
-              <div className="mv-roadmap-spine"></div>
-            </div>
-            <div className="mv-roadmap-right">
-              <div className="mv-roadmap-card">
-                <div className="mv-mobile-stage-bar">
-                  <span className="mv-stage-pill">• GIAI ĐOẠN 02</span>
-                  <span className="mv-stage-sessions-tag">Đột Phá Điểm Số • Reading Part 5, 6 &amp; 7</span>
-                </div>
-                <div className="mv-mobile-stage-illustration">
-                  <img
-                    src="/image/stage-2-illustration.jpg"
-                    alt="Minh họa Giai đoạn 02: Reading Bứt Phá & Mẹo Giải Nhanh 3 Giây"
-                    className="mv-stage-illustration-img"
-                    loading="lazy"
-                  />
-                </div>
-                <h4 className="mv-card-headline">Reading Bứt Phá: Mẹo Giải Nhanh 3 Giây &amp; Tuyệt Chiêu Xử Lý Part 7</h4>
-                <div className="mv-card-bullets">
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span><strong>Nền tảng Đọc Hiểu toàn diện:</strong> Chỉ dạy toàn bộ tất cả kiến thức nền tảng cần thiết để bạn làm thật tốt phần ĐỌC HIỂU.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span><strong>Kỹ năng giải nhanh Part 5 &amp; 6:</strong> Nhìn phát biết ngay câu nào dùng mẹo chọn đáp án trong 3 giây, câu nào cần dịch nghĩa.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span><strong>Kỹ thuật xử lý Part 7 đọc hiểu:</strong> Định vị thông tin chuẩn xác, không cần đọc hết cả bài văn vẫn có thể chọn được đáp án đúng.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span><strong>Chiến thuật thực chiến &amp; chia thời gian:</strong> Trang bị kỹ năng làm bài, chiến thuật chia thời gian và cách xử lý các dạng câu hỏi hiệu quả trong bài thi TOEIC.</span>
-                  </div>
-                </div>
-                <div className="mv-deliverable-badge">
-                  <i data-lucide="target" style={{ width: '16px', height: '16px' }}></i>
-                  <span>Mục tiêu giai đoạn: Quét sạch 46 câu Part 5+Part 6 trong chớp mắt, dứt điểm Part 7 không lo cháy giờ, bứt phá 350+ Reading.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/*  Giai Đoạn 03  */}
-          <div className="mv-roadmap-row">
-            <div className="mv-roadmap-left">
-              <span className="mv-stage-pill">• GIAI ĐOẠN 03</span>
-              <h3 className="mv-stage-left-title">Luyện Đề Format Chuẩn Thi Thật</h3>
-              <div className="mv-stage-sessions-tag">Sát Phòng Thi ETS • Chấm Chữa &amp; Kèm Cặp 1-1</div>
-              <div className="mv-stage-illustration-wrap">
-                <img
-                  src="/image/stage-3-illustration.jpg"
-                  alt="Minh họa Giai đoạn 03: Luyện Đề Format Chuẩn Thi Thật"
-                  className="mv-stage-illustration-img"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="mv-roadmap-center">
-              <div className="mv-roadmap-node">03</div>
-              <div className="mv-roadmap-spine" style={{ display: 'none' }}></div>
-            </div>
-            <div className="mv-roadmap-right">
-              <div className="mv-roadmap-card">
-                <div className="mv-mobile-stage-bar">
-                  <span className="mv-stage-pill">• GIAI ĐOẠN 03</span>
-                  <span className="mv-stage-sessions-tag">Sát Phòng Thi ETS • Chấm Chữa &amp; Kèm Cặp 1-1</span>
-                </div>
-                <div className="mv-mobile-stage-illustration">
-                  <img
-                    src="/image/stage-3-illustration.jpg"
-                    alt="Minh họa Giai đoạn 03: Luyện Đề Format Chuẩn Thi Thật"
-                    className="mv-stage-illustration-img"
-                    loading="lazy"
-                  />
-                </div>
-                <h4 className="mv-card-headline">Luyện Đề Chuẩn Format Thi Thật Trên Nền Tảng Chấm Chữa &amp; Kèm Cặp Sát Sao</h4>
-                <div className="mv-card-bullets">
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span><strong>Luyện đề trên nền tảng riêng:</strong> Luyện đề trên nền tảng có chấm chữa chi tiết với hình thức và độ khó sát thi do Thầy Hưng thiết kế riêng cho học viên trong lớp.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span><strong>Chấm điểm &amp; chữa lỗi trực tiếp:</strong> Làm xong đề hệ thống chấm bạn được bao nhiêu điểm từng kỹ năng và chữa lỗi sai trực tiếp cho bạn.</span>
-                  </div>
-                  <div className="mv-bullet-item">
-                    <i data-lucide="check-circle" style={{ width: '16px', height: '16px' }}></i>
-                    <span><strong>Cam kết không học một mình:</strong> Thầy Hưng sẽ trực tiếp đồng hành, kèm cặp sát sao đến khi nào bạn thi được thì thôi!</span>
-                  </div>
-                </div>
-                <div className="mv-deliverable-badge mv-deliverable-award">
-                  <i data-lucide="award" style={{ width: '16px', height: '16px' }}></i>
-                  <span>Cam kết đầu ra: Tự tin bước vào phòng thi thật ETS và cầm chắc chứng chỉ 600+ đến 800+ TOEIC ngay lần thi đầu tiên!</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   {/*  ==========================================================================
        SECTION 6: QUYỀN LỢI KHI HỌC (5 PHẦN QUÀ TẶNG KÈM THEO + HỖ TRỢ TIN NHẮN)
